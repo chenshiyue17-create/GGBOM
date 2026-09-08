@@ -1,0 +1,2 @@
+pipeline: DamageSource -> DamageRequest -> AttackerAttributes -> ContentModifiers
+  -> Crit -> Defense -> Status -> FinalDamage -> DamageResult -> Health

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MS Mutation Request",
+  "type": "object",
+  "required": [
+    "stableId",
+    "operation",
+    "mode",
+    "fieldMask"
+  ],
+  "properties": {
+    "stableId": {
+      "type": "string"
+    },
+    "operation": {
+      "enum": [
+        "CREATE",
+        "UPDATE",
+        "REPLACE",
+        "REMOVE",
+        "MIGRATE"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "STRICT_PATCH",
+        "MERGE",
+        "REGENERATE_GENERATED",
+        "MIGRATION"
+      ]
+    },
+    "fieldMask": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "patch": {
+      "type": "object"
+    },
+    "expectedRevision": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    }
+  }
+}

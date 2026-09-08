@@ -1,0 +1,18 @@
+{
+  "P01_STATUS": "PASS",
+  "P01_A": "PASS",
+  "P01_B": "PASS",
+  "ImportFailCount": 0,
+  "NEXT_GATE": "ALLOW_P02",
+  "Player8Dir": "PASS",
+  "Enemy4Dir": "PASS",
+  "Boss4Dir": "PASS",
+  "ProjectileStrict4Equal": "PASS",
+  "VFX": "PASS",
+  "Props": "PASS",
+  "UI": "PASS",
+  "MapsGroundOverhead": "PASS",
+  "P01_C": "PASS",
+  "P01_D": "PASS",
+  "P01_E": "PASS"
+}

@@ -1,0 +1,10 @@
+attributes:
+- Health
+- MaxHealth
+- MoveSpeed
+- AttackPower
+- Defense
+- CritRate
+- CritMultiplier
+- FireRateMultiplier
+- CooldownReduction

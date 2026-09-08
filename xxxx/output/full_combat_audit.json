@@ -1,0 +1,105 @@
+{
+  "world_loaded": true,
+  "projectiles": {
+    "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase.BP_ProjectileBase_C' (0x81c8f18d800) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Combat/Projectiles/BP_Combat_HitExplosion": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Combat/Projectiles/BP_Combat_HitExplosion.BP_Combat_HitExplosion_C' (0x81c8fa88000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Projectile_Base": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Projectile_Base.BP_Projectile_Base_C' (0x81c8fa8c000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_KineticPistol": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_KineticPistol.BP_Bullet_KineticPistol_C' (0x81c8fa8e800) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_AssaultRifle": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_AssaultRifle.BP_Bullet_AssaultRifle_C' (0x81c8fb90000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_Buckshot": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_Buckshot.BP_Bullet_Buckshot_C' (0x81c8fb92000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_LaserRail": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_LaserRail.BP_Bullet_LaserRail_C' (0x81c8fb94000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_MicroMissile": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_MicroMissile.BP_Bullet_MicroMissile_C' (0x81c8fb96000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_PlasmaArc": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_PlasmaArc.BP_Bullet_PlasmaArc_C' (0x81c8fb98000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_Incendiary": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_Incendiary.BP_Bullet_Incendiary_C' (0x81c8fb9a000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_BioAcid": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_BioAcid.BP_Bullet_BioAcid_C' (0x81c8fb9c000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_ToxicSpore": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_ToxicSpore.BP_Bullet_ToxicSpore_C' (0x81c8fb9e000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_VenomHeavy": {
+      "exists": true,
+      "gen_class": "<Object '/Game/Blueprints/Projectiles/BP_Bullet_VenomHeavy.BP_Bullet_VenomHeavy_C' (0x81c8fbf0000) Class 'BlueprintGeneratedClass'>",
+      "components": [],
+      "cdo_vars": {}
+    }
+  },
+  "weapons": {
+    "/Game/Blueprints/Combat/Weapons/BP_WeaponBase": {
+      "exists": true,
+      "class": "Blueprint",
+      "cdo_props": {}
+    },
+    "/Game/Blueprints/Combat/Components/BPC_WeaponComponent": {
+      "exists": true,
+      "class": "Blueprint",
+      "cdo_props": {}
+    },
+    "/Game/Blueprints/Core/Components/BPC_WeaponInventory": {
+      "exists": true,
+      "class": "Blueprint",
+      "cdo_props": {}
+    },
+    "/Game/Blueprints/Player/BP_Player_Medic": {
+      "exists": true,
+      "class": "Blueprint",
+      "cdo_props": {}
+    }
+  }
+}

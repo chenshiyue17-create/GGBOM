@@ -1,0 +1,10 @@
+steps:
+- 1. Create Change Set governance records
+- 2. Build L_Preview_Weapon environment & test script
+- 3. Implement unified BP_Projectile_Base with Muzzle/Impact VFX pipeline
+- 4. Implement BPC_WeaponInventory component & refactor BP_Player_Medic
+- 5. Implement AR01 and SG01 weapon definitions & spread burst math
+- 6. Implement KineticPistol with Core Diff = 0 validation
+- 7. Bind WBP_HUD_WeaponSlot to BPC_WeaponInventory events & mock view model
+- 8. Run Preview Review gate & StandAlone regression validation
+- 9. Lock approved assets in art_registry.yaml and update completeness reports

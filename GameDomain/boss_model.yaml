@@ -1,0 +1,4 @@
+bosses:
+- id: Boss_Overlord
+  phases: 3
+  skills_count: 10

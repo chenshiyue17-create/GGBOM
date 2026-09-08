@@ -1,0 +1,27 @@
+{
+  "BP_ProjectileBase_Saved": true,
+  "Final_Node_Count": 21,
+  "Nodes": [
+    "事件BeginPlay",
+    "Delay",
+    "Destroy Actor",
+    "事件ActorBeginOverlap",
+    "事件Hit",
+    "GetPlayerController",
+    "Get Controlled Pawn",
+    "Not Equal (Object)",
+    "分支",
+    "Get Actor Location",
+    "MakeTransform",
+    "BeginDeferredActorSpawnFromClass",
+    "FinishSpawningActor",
+    "ApplyDamage",
+    "Destroy Actor",
+    "Not Equal (Object)",
+    "分支",
+    "BeginDeferredActorSpawnFromClass",
+    "FinishSpawningActor",
+    "ApplyDamage",
+    "Destroy Actor"
+  ]
+}

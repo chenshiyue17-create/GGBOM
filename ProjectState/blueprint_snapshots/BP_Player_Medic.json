@@ -1,0 +1,43 @@
+{
+  "blueprint_path": "/Game/Blueprints/Player/BP_Player_Medic",
+  "blueprint_name": "BP_Player_Medic",
+  "exists_on_disk": true,
+  "file_size_bytes": 268556,
+  "parent_class": "Actor",
+  "components": [
+    {
+      "name": "RootComponent",
+      "class": "SceneComponent"
+    },
+    {
+      "name": "RenderComponent",
+      "class": "PaperFlipbookComponent"
+    }
+  ],
+  "variables": [
+    {
+      "name": "MoveInput",
+      "type": "Vector",
+      "default": "(0,0,0)"
+    },
+    {
+      "name": "FacingDirection",
+      "type": "Vector",
+      "default": "(0,0,-1)"
+    },
+    {
+      "name": "ShotDirection",
+      "type": "Vector",
+      "default": "(0,0,-1)"
+    }
+  ],
+  "functions": [
+    "SampleMoveInput",
+    "UpdateFacingDirection",
+    "ApplyMovement"
+  ],
+  "interfaces": [
+    "BPI_CombatInterface"
+  ],
+  "structural_hash_sha256": "2651b2ad6a524f28c83702998b0190898efb7496b52a71bddad8520ce39b9b62"
+}

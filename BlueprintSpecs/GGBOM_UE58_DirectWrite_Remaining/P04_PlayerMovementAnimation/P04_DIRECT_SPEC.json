@@ -1,0 +1,38 @@
+{
+  "phase": "P04",
+  "name": "PlayerMovementAnimation",
+  "precondition": "P03_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Player/BP_Player_Medic",
+    "/Game/Blueprints/Player/ABP_Player_Medic",
+    "/Game/Tests/P04/BP_Test_PlayerProbe"
+  ],
+  "variables_and_defaults": [
+    "MoveSpeed=320",
+    "DashSpeed=900",
+    "DashDuration=0.22",
+    "DashInvulnerableDuration=0.25",
+    "DashCooldown=1.2",
+    "MoveInput Vector2D=(0,0)",
+    "FacingIndex=0",
+    "bMoving=false",
+    "bDead=false",
+    "FacingIndex: 0=S,1=SW,2=W,3=NW,4=N,5=NE,6=E,7=SE",
+    "YSort=Clamp(500+Round(WorldY*-0.1),300,800)"
+  ],
+  "functions_and_dispatchers": [
+    "BP_Player_Medic: HandleMove, UpdateFacing8, DoDash, UpdateYSort, HandleDeath, HandleRevive",
+    "ABP states: Idle, Run, Attack, Reload, Dash, Hurt, Death, Revive"
+  ],
+  "data_rows_or_constants": [
+    "Animation FPS: Idle10 Run12 ShootLight16 ShootHeavy14 Deploy10 Throw12 Dash16 Hurt12 Reload10 Death10 Revive12"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

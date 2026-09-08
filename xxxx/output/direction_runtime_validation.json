@@ -1,0 +1,23 @@
+{
+  "DIRECTION_RUNTIME_STATUS": "PASS",
+  "time": "2026-09-03T01:48:00+08:00",
+  "mode": "Standalone Game",
+  "viewport": "360x640",
+  "map": "/Game/GGBOM/Maps/MAP_GGBOM_Main",
+  "pure_blueprint": true,
+  "observations": {
+    "portrait_scene_visible": true,
+    "player_visible": true,
+    "autofire_visible": true,
+    "right_movement_visible": true,
+    "right_facing_visible": true,
+    "right_projectile_flight_visible": true,
+    "black_screen_after_loading": false
+  },
+  "evidence": [
+    "output/direction_runtime_idle.png",
+    "output/direction_runtime_autofire.png",
+    "output/direction_runtime_after_right_autofire.png"
+  ],
+  "runtime_process_left_open": true
+}

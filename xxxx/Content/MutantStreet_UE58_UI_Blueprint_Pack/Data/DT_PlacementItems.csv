@@ -1,0 +1,6 @@
+﻿RowName,DisplayName,Icon,PlaceActorClass,DefaultCount,FootprintX,FootprintY,ZOffset,RotationStep
+Barrier,路障,/Game/UI/Icons/T_UI_Item_Barrier,/Game/Gameplay/Placeables/BP_Placeable_Barrier,8,120,50,0,90
+ExplosiveBarrel,爆炸桶,/Game/UI/Icons/T_UI_Item_ExplosiveBarrel,/Game/Gameplay/Placeables/BP_Placeable_ExplosiveBarrel,6,70,70,0,90
+ToxicBarrel,毒液桶,/Game/UI/Icons/T_UI_Item_ToxicBarrel,/Game/Gameplay/Placeables/BP_Placeable_ToxicBarrel,5,70,70,0,90
+LandMine,地雷,/Game/UI/Icons/T_UI_Item_LandMine,/Game/Gameplay/Placeables/BP_Placeable_LandMine,7,55,55,2,45
+HealingStation,治疗站,/Game/UI/Icons/T_UI_Item_HealingStation,/Game/Gameplay/Placeables/BP_Placeable_HealingStation,4,85,85,0,90

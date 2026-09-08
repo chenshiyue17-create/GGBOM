@@ -1,0 +1,32 @@
+{
+  "audit_scope": "string",
+  "status": "PASS|FAIL|BLOCKED",
+  "layers": {
+    "asset": "PASS|FAIL|N/A",
+    "structure": "PASS|FAIL|N/A",
+    "logic": "PASS|FAIL|N/A",
+    "functional": "PASS|FAIL|N/A",
+    "integration": "PASS|FAIL|N/A",
+    "network": "PASS|FAIL|N/A",
+    "performance": "PASS|FAIL|N/A",
+    "logs": "PASS|FAIL|N/A",
+    "evidence": "PASS|FAIL|N/A",
+    "pass_marker_integrity": "PASS|FAIL|N/A"
+  },
+  "issues": [
+    {
+      "issue_id": "string",
+      "severity": "BLOCKER|FAIL|WARN",
+      "asset": "string",
+      "graph_or_function": "string",
+      "input": "string",
+      "precondition": "string",
+      "expected": "string",
+      "actual": "string",
+      "evidence": "string",
+      "required_change": "string",
+      "retest": "string"
+    }
+  ],
+  "result_gate": "ALLOW|BLOCK|N/A"
+}

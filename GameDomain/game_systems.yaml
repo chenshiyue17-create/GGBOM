@@ -1,0 +1,3 @@
+game_loop: Realtime 2D Action Rogue-lite
+target_fps: 30
+tick_policy: Single-threaded Tick with delta smoothing

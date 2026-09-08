@@ -1,0 +1,50 @@
+{
+  "phase": "P05",
+  "name": "CombatWeaponsProjectiles",
+  "precondition": "P04_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Projectiles/BP_Projectile_Base",
+    "/Game/Blueprints/Projectiles/BP_Bullet_KineticPistol",
+    "/Game/Blueprints/Projectiles/BP_Bullet_AssaultRifle",
+    "/Game/Blueprints/Projectiles/BP_Bullet_Buckshot",
+    "/Game/Blueprints/Projectiles/BP_Bullet_BioAcid",
+    "/Game/Blueprints/Projectiles/BP_Bullet_ToxicSpore",
+    "/Game/Blueprints/Projectiles/BP_Bullet_VenomHeavy",
+    "/Game/Blueprints/Projectiles/BP_Bullet_Incendiary",
+    "/Game/Blueprints/Projectiles/BP_Bullet_PlasmaArc",
+    "/Game/Blueprints/Projectiles/BP_Bullet_MicroMissile",
+    "/Game/Blueprints/Projectiles/BP_Bullet_LaserRail",
+    "/Game/Tests/P05/BP_Test_CombatDummy"
+  ],
+  "variables_and_defaults": [
+    "BP_Projectile_Base components: SphereCollision, PaperFlipbook, ProjectileMovement",
+    "RuntimeData FProjectileRuntimeData; HitActors ActorArray; LifeSeconds=3",
+    "PlayerProjectile collision: Enemy Overlap, World Block, Prop Overlap, Player Ignore, Pickup Ignore",
+    "AutoFireCheckInterval=0.05"
+  ],
+  "functions_and_dispatchers": [
+    "Projectile funcs: InitializeProjectile, HandleOverlap, HandleWorldHit, ApplyExplosion, DestroyOrPool",
+    "WeaponInventory.RequestFire扣弹并广播OnFireRequested",
+    "Player监听OnFireRequested后按ProjectilesPerShot+Spread生成Projectile"
+  ],
+  "data_rows_or_constants": [
+    "WPN_KineticPistol|25|0.25|1|0|1|1200|30|1.5|0|Damage.Kinetic",
+    "WPN_AssaultRifle|18|0.10|1|1.5|1|1600|30|1.8|0|Damage.Kinetic",
+    "WPN_Buckshot|14|0.75|7|18|1|1300|6|2.0|0|Damage.Kinetic",
+    "WPN_BioAcid|32|0.60|1|2|1|900|8|2.0|120|Damage.Acid",
+    "WPN_ToxicSpore|16|0.28|2|8|1|1050|20|1.8|70|Damage.Toxic",
+    "WPN_VenomMortar|55|1.10|1|3|1|700|5|2.4|180|Damage.Toxic",
+    "WPN_Incendiary|22|0.16|1|3|1|1450|24|1.9|0|Damage.Fire",
+    "WPN_PlasmaArc|26|0.22|1|0|2|1350|18|2.0|0|Damage.Electric",
+    "WPN_MicroMissile|80|1.00|1|2|1|850|4|2.6|230|Damage.Explosion",
+    "WPN_LaserRail|140|1.40|1|0|999|3000|3|2.8|0|Damage.Electric"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

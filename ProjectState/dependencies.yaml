@@ -1,0 +1,41 @@
+dependency_chains:
+- feature: Feature.Weapon.AR01
+  gameplay_capabilities:
+  - CAP.AUTOSHOOT_DIRECTION_LOCK
+  - CAP.PROJECTILE_STRAIGHT_FLIGHT
+  presentation_requirements:
+  - role: weapon_visual
+    semantic_id: WPN.AUTO_RIFLE.VISUAL
+    status: APPROVED
+  - role: projectile
+    semantic_id: PROJ.AUTO_RIFLE.BULLET
+    status: APPROVED
+  - role: muzzle_vfx
+    semantic_id: VFX.AUTO_RIFLE.MUZZLE
+    status: MISSING
+  - role: impact_vfx
+    semantic_id: VFX.AUTO_RIFLE.IMPACT
+    status: CANDIDATE
+  - role: icon
+    semantic_id: ICON.WPN.AUTO_RIFLE
+    status: APPROVED
+  overall_status: INCOMPLETE
+- feature: Feature.Player.Movement8Way
+  gameplay_capabilities:
+  - CAP.WASD_8WAY_MOVE
+  - CAP.FLIPBOOK_ANIM_PROTECTION
+  - CAP.ORTHO_DUAL_LAYER_RENDER
+  presentation_requirements:
+  - role: idle_flipbooks
+    semantic_id: CHR.MEDIC.IDLE.*
+    status: APPROVED
+  - role: run_flipbooks
+    semantic_id: CHR.MEDIC.RUN.*
+    status: APPROVED
+  - role: stage00_ground
+    semantic_id: MAP.STAGE00.GROUND
+    status: APPROVED
+  - role: stage00_overhead
+    semantic_id: MAP.STAGE00.OVERHEAD
+    status: APPROVED
+  overall_status: PASS

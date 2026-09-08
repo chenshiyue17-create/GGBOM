@@ -1,0 +1,10 @@
+steps:
+  - 1. Create Change Set governance records (CHG-P2-ENEMY-SYSTEM)
+  - 2. Map & verify all 20 enemy sprite sheets (Zombie, VenomShooter, MutantHound)
+  - 3. Establish 4-direction mathematical facing & animation playback protection
+  - 4. Build L_Preview_Enemy review environment & offline preview tools
+  - 5. Implement BP_EnemyBase2D core logic (Chase, KeepDistance, HitStun, Death)
+  - 6. Implement BP_Enemy_Zombie (Patrol -> Chase -> Claw/Vomit)
+  - 7. Implement BP_Enemy_VenomShooter (KeepDistance -> Aim -> SingleSpit/Barrage)
+  - 8. Implement BP_Enemy_MutantHound (Leap -> Pounce -> Bite)
+  - 9. Run full regression in StandAlone 30FPS & lock approved assets in registry

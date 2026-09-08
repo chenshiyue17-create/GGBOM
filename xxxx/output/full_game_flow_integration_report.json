@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "exp_gem": true,
+  "projectile": false,
+  "zombie": false,
+  "hound": false,
+  "boss": false,
+  "wave_manager": false,
+  "map_deployed": false,
+  "error": "'BlueprintGraphEditor' object has no attribute 'add_event_node'"
+}

@@ -1,0 +1,3604 @@
+{
+  "player": {
+    "path": "/Game/Blueprints/Player/BP_Player_Medic",
+    "found": true,
+    "variables": [
+      "MoveInput",
+      "FacingDirection",
+      "ShotDirection",
+      "MoveSpeed",
+      "ProjectileSpeed",
+      "FireCooldown",
+      "FireCooldownRemaining"
+    ],
+    "node_count": 14,
+    "compiler_errors": [],
+    "graphs": [
+      {
+        "name": "UserConstructionScript",
+        "node_count": 1,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "Construction Script",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SampleMoveInput",
+        "node_count": 14,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "SampleMoveInput",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_0",
+            "title": "GetPlayerController",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "PlayerIndex",
+                "value": "0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 4,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1",
+                  "K2Node_CallFunction_2",
+                  "K2Node_CallFunction_3",
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_1",
+            "title": "IsInputKeyDown",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              },
+              {
+                "name": "Key",
+                "value": "A",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_5"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_2",
+            "title": "IsInputKeyDown",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              },
+              {
+                "name": "Key",
+                "value": "D",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_3",
+            "title": "IsInputKeyDown",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              },
+              {
+                "name": "Key",
+                "value": "W",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_7"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_4",
+            "title": "IsInputKeyDown",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              },
+              {
+                "name": "Key",
+                "value": "S",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_8"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_5",
+            "title": "SelectFloat",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "7.5",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "B",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bPickA",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_6",
+            "title": "SelectFloat",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "-7.5",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "B",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bPickA",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_7",
+            "title": "SelectFloat",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "7.5",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "B",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bPickA",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_8",
+            "title": "SelectFloat",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "-7.5",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "B",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bPickA",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_0",
+            "title": "float + float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_5"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_6"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_9"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_1",
+            "title": "float + float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_7"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_8"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_9"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_9",
+            "title": "MakeVector",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "X",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              },
+              {
+                "name": "Y",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Z",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableSet_0",
+            "title": "Set MoveInput",
+            "class": "K2Node_VariableSet",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_FunctionEntry_0"
+                ]
+              },
+              {
+                "name": "MoveInput",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_9"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Output_Get",
+                "value": "0, 0, 0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateFacingDirection",
+        "node_count": 7,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "UpdateFacingDirection",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_0",
+            "title": "Get MoveInput",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "MoveInput",
+                "value": "0, 0, 0",
+                "linked_count": 2,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0",
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_0",
+            "title": "Vector_IsNearlyZero",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              },
+              {
+                "name": "Tolerance",
+                "value": "0.000100",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_1",
+            "title": "NOT Boolean",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_1",
+            "title": "Get FacingDirection",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "FacingDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_2",
+            "title": "SelectVector",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_1"
+                ]
+              },
+              {
+                "name": "bPickA",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableSet_0",
+            "title": "Set FacingDirection",
+            "class": "K2Node_VariableSet",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_FunctionEntry_0"
+                ]
+              },
+              {
+                "name": "FacingDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Output_Get",
+                "value": "0, 0, 0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateFacingScale",
+        "node_count": 8,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "UpdateFacingScale",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_0",
+            "title": "Get FacingDirection",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "FacingDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_0",
+            "title": "BreakVector",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "InVec",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "X",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              },
+              {
+                "name": "Y",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Z",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_0",
+            "title": "float < float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_1",
+            "title": "SelectFloat",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "-0.45",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "B",
+                "value": "0.45",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bPickA",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_2",
+            "title": "MakeVector",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "X",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              },
+              {
+                "name": "Y",
+                "value": "0.45",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Z",
+                "value": "0.45",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_3",
+            "title": "GetComponentByClass",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ComponentClass",
+                "value": "/Script/Paper2D.PaperFlipbookComponent",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_4",
+            "title": "SetRelativeScale3D",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_FunctionEntry_0"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3"
+                ]
+              },
+              {
+                "name": "NewScale3D",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateRunAnimation",
+        "node_count": 17,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "UpdateRunAnimation",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_0",
+            "title": "Get MoveInput",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "MoveInput",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_0",
+            "title": "Vector_IsNearlyZero",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              },
+              {
+                "name": "Tolerance",
+                "value": "0.000100",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_1",
+            "title": "NOT Boolean",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_IfThenElse_0",
+            "title": "分支",
+            "class": "K2Node_IfThenElse",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_FunctionEntry_0"
+                ]
+              },
+              {
+                "name": "Condition",
+                "value": "true",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_1"
+                ]
+              },
+              {
+                "name": "else",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_1",
+            "title": "Get FacingDirection",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "FacingDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_2",
+            "title": "BreakVector",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "InVec",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "X",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3"
+                ]
+              },
+              {
+                "name": "Y",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Z",
+                "value": "0.0",
+                "linked_count": 2,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4",
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_3",
+            "title": "Absolute (Float)",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_4",
+            "title": "Absolute (Float)",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_0",
+            "title": "float > float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_1",
+            "title": "float > float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_5",
+            "title": "GetComponentByClass",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ComponentClass",
+                "value": "/Script/Paper2D.PaperFlipbookComponent",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 3,
+                "linked_nodes": [
+                  "K2Node_CallFunction_6",
+                  "K2Node_CallFunction_7",
+                  "K2Node_CallFunction_8"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_IfThenElse_1",
+            "title": "分支",
+            "class": "K2Node_IfThenElse",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              },
+              {
+                "name": "Condition",
+                "value": "true",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_6"
+                ]
+              },
+              {
+                "name": "else",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_6",
+            "title": "SetFlipbook",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_1"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_5"
+                ]
+              },
+              {
+                "name": "NewFlipbook",
+                "value": "/Game/P01/Imported/Content/Asset/Art/01_Player/01_Idle_Run/Dir_03_Left/Run/Flipbooks/FB_T_Player_Medic_Run_Dir_03_Left_Sheet.FB_T_Player_Medic_Run_Dir_03_Left_Sheet",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_IfThenElse_2",
+            "title": "分支",
+            "class": "K2Node_IfThenElse",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_1"
+                ]
+              },
+              {
+                "name": "Condition",
+                "value": "true",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_7"
+                ]
+              },
+              {
+                "name": "else",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_8"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_7",
+            "title": "SetFlipbook",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_2"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_5"
+                ]
+              },
+              {
+                "name": "NewFlipbook",
+                "value": "/Game/P01/Imported/Content/Asset/Art/01_Player/01_Idle_Run/Dir_05_Up/Run/Flipbooks/FB_T_Player_Medic_Run_Dir_05_Up_Sheet.FB_T_Player_Medic_Run_Dir_05_Up_Sheet",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_8",
+            "title": "SetFlipbook",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_2"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_5"
+                ]
+              },
+              {
+                "name": "NewFlipbook",
+                "value": "/Game/P01/Imported/Content/Asset/Art/01_Player/01_Idle_Run/Dir_01_Down/Run/Flipbooks/FB_T_Player_Medic_Run_Dir_01_Down_Sheet.FB_T_Player_Medic_Run_Dir_01_Down_Sheet",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateIdleAnimation",
+        "node_count": 16,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "UpdateIdleAnimation",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_0",
+            "title": "Get MoveInput",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "MoveInput",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_0",
+            "title": "Vector_IsNearlyZero",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              },
+              {
+                "name": "Tolerance",
+                "value": "0.000100",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_IfThenElse_0",
+            "title": "分支",
+            "class": "K2Node_IfThenElse",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_FunctionEntry_0"
+                ]
+              },
+              {
+                "name": "Condition",
+                "value": "true",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_1"
+                ]
+              },
+              {
+                "name": "else",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_1",
+            "title": "Get FacingDirection",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "FacingDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_1",
+            "title": "BreakVector",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "InVec",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "X",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              },
+              {
+                "name": "Y",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Z",
+                "value": "0.0",
+                "linked_count": 2,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3",
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_2",
+            "title": "Absolute (Float)",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_3",
+            "title": "Absolute (Float)",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_0",
+            "title": "float > float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_1",
+            "title": "float > float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_4",
+            "title": "GetComponentByClass",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ComponentClass",
+                "value": "/Script/Paper2D.PaperFlipbookComponent",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 3,
+                "linked_nodes": [
+                  "K2Node_CallFunction_5",
+                  "K2Node_CallFunction_6",
+                  "K2Node_CallFunction_7"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_IfThenElse_1",
+            "title": "分支",
+            "class": "K2Node_IfThenElse",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              },
+              {
+                "name": "Condition",
+                "value": "true",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_5"
+                ]
+              },
+              {
+                "name": "else",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_5",
+            "title": "SetFlipbook",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_1"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              },
+              {
+                "name": "NewFlipbook",
+                "value": "/Game/P01/Imported/Content/Asset/Art/01_Player/01_Idle_Run/Dir_03_Left/Idle/Flipbooks/FB_T_Player_Medic_Idle_Dir_03_Left_Sheet.FB_T_Player_Medic_Idle_Dir_03_Left_Sheet",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_IfThenElse_2",
+            "title": "分支",
+            "class": "K2Node_IfThenElse",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_1"
+                ]
+              },
+              {
+                "name": "Condition",
+                "value": "true",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_6"
+                ]
+              },
+              {
+                "name": "else",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_7"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_6",
+            "title": "SetFlipbook",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_2"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              },
+              {
+                "name": "NewFlipbook",
+                "value": "/Game/P01/Imported/Content/Asset/Art/01_Player/01_Idle_Run/Dir_05_Up/Idle/Flipbooks/FB_T_Player_Medic_Idle_Dir_05_Up_Sheet.FB_T_Player_Medic_Idle_Dir_05_Up_Sheet",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_7",
+            "title": "SetFlipbook",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_2"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              },
+              {
+                "name": "NewFlipbook",
+                "value": "/Game/P01/Imported/Content/Asset/Art/01_Player/01_Idle_Run/Dir_01_Down/Idle/Flipbooks/FB_T_Player_Medic_Idle_Dir_01_Down_Sheet.FB_T_Player_Medic_Idle_Dir_01_Down_Sheet",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ReturnValue",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateFireCooldown",
+        "node_count": 7,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "UpdateFireCooldown",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_0",
+            "title": "Get FireCooldownRemaining",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "FireCooldownRemaining",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_0",
+            "title": "GetWorldDeltaSeconds",
+            "class": "K2Node_CallFunction",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_0",
+            "title": "float - float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 2,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1",
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_1",
+            "title": "float > float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_1",
+            "title": "SelectFloat",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bPickA",
+                "value": "false",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableSet_0",
+            "title": "Set FireCooldownRemaining",
+            "class": "K2Node_VariableSet",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_FunctionEntry_0"
+                ]
+              },
+              {
+                "name": "FireCooldownRemaining",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Output_Get",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SpawnDirectionalProjectile",
+        "node_count": 9,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "SpawnDirectionalProjectile",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_0",
+            "title": "Get Actor Location",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_0",
+            "title": "Get ShotDirection",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "ShotDirection",
+                "value": "0, 0, 0",
+                "linked_count": 2,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0",
+                  "K2Node_CallFunction_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_0",
+            "title": "vector + vector",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_1",
+            "title": "vector + vector",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "0,-5,55",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_1",
+            "title": "MakeRotFromX",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "X",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_2",
+            "title": "MakeTransform",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "Location",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_1"
+                ]
+              },
+              {
+                "name": "Rotation",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_1"
+                ]
+              },
+              {
+                "name": "Scale",
+                "value": "1.000000,1.000000,1.000000",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 2,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3",
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_3",
+            "title": "BeginDeferredActorSpawnFromClass",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_FunctionEntry_0"
+                ]
+              },
+              {
+                "name": "ActorClass",
+                "value": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase.BP_ProjectileBase_C",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "SpawnTransform",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              },
+              {
+                "name": "CollisionHandlingOverride",
+                "value": "Undefined",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "Owner",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "TransformScaleMethod",
+                "value": "MultiplyWithRoot",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              },
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_4",
+            "title": "FinishSpawningActor",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3"
+                ]
+              },
+              {
+                "name": "Actor",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_3"
+                ]
+              },
+              {
+                "name": "SpawnTransform",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_2"
+                ]
+              },
+              {
+                "name": "TransformScaleMethod",
+                "value": "MultiplyWithRoot",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "TryFireProjectile",
+        "node_count": 9,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "TryFireProjectile",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_0",
+            "title": "Get FireCooldownRemaining",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "FireCooldownRemaining",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_0",
+            "title": "float <= float",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_0"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_IfThenElse_0",
+            "title": "分支",
+            "class": "K2Node_IfThenElse",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_FunctionEntry_0"
+                ]
+              },
+              {
+                "name": "Condition",
+                "value": "true",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_0"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              },
+              {
+                "name": "else",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_1",
+            "title": "Get FireCooldown",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "FireCooldown",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableSet_0",
+            "title": "Set FireCooldownRemaining",
+            "class": "K2Node_VariableSet",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_IfThenElse_0"
+                ]
+              },
+              {
+                "name": "FireCooldownRemaining",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_1"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_1"
+                ]
+              },
+              {
+                "name": "Output_Get",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_2",
+            "title": "Get FacingDirection",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "FacingDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableSet_1",
+            "title": "Set ShotDirection",
+            "class": "K2Node_VariableSet",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_0"
+                ]
+              },
+              {
+                "name": "ShotDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_2"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_0"
+                ]
+              },
+              {
+                "name": "Output_Get",
+                "value": "0, 0, 0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_0",
+            "title": "SpawnDirectionalProjectile",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_1"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "EventGraph",
+        "node_count": 14,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_Event_0",
+            "title": "事件BeginPlay",
+            "class": "K2Node_Event",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "OutputDelegate",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_12"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_Event_2",
+            "title": "事件Tick",
+            "class": "K2Node_Event",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "OutputDelegate",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_15"
+                ]
+              },
+              {
+                "name": "DeltaSeconds",
+                "value": "0.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_11",
+            "title": "GetPlayerController",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "PlayerIndex",
+                "value": "0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_13"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_12",
+            "title": "GetActorOfClass",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_Event_0"
+                ]
+              },
+              {
+                "name": "ActorClass",
+                "value": "/Script/Engine.CameraActor",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_13"
+                ]
+              },
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_13"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_13",
+            "title": "SetViewTargetWithBlend",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_12"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_11"
+                ]
+              },
+              {
+                "name": "NewViewTarget",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_12"
+                ]
+              },
+              {
+                "name": "BlendTime",
+                "value": "0.000000",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "BlendFunc",
+                "value": "VTBlend_Linear",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "BlendExp",
+                "value": "0.000000",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bLockOutgoing",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_1",
+            "title": "Get MoveInput",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "MoveInput",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_14"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_14",
+            "title": "Add Actor World Offset",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_16"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "DeltaLocation",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_1"
+                ]
+              },
+              {
+                "name": "bSweep",
+                "value": "true",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bTeleport",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_17"
+                ]
+              },
+              {
+                "name": "SweepHitResult",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_15",
+            "title": "SampleMoveInput",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_Event_2"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_16"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_16",
+            "title": "UpdateFacingDirection",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_15"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_14"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_17",
+            "title": "UpdateFacingScale",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_14"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_18"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_18",
+            "title": "UpdateFireCooldown",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_17"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_19"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_19",
+            "title": "UpdateRunAnimation",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_18"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_20"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_20",
+            "title": "UpdateIdleAnimation",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_19"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_21"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_21",
+            "title": "TryFireProjectile",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_20"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "projectile": {
+    "path": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+    "found": true,
+    "variables": [
+      "ShotDirection",
+      "ProjectileSpeed"
+    ],
+    "node_count": 11,
+    "compiler_errors": [],
+    "graphs": [
+      {
+        "name": "UserConstructionScript",
+        "node_count": 1,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_FunctionEntry_0",
+            "title": "Construction Script",
+            "class": "K2Node_FunctionEntry",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "EventGraph",
+        "node_count": 11,
+        "compiler_errors": [],
+        "nodes": [
+          {
+            "name": "K2Node_Event_0",
+            "title": "事件BeginPlay",
+            "class": "K2Node_Event",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "OutputDelegate",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_Event_2",
+            "title": "事件Tick",
+            "class": "K2Node_Event",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "OutputDelegate",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_7"
+                ]
+              },
+              {
+                "name": "DeltaSeconds",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_3"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_4",
+            "title": "GetActorForwardVector",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_1"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableSet_1",
+            "title": "Set ShotDirection",
+            "class": "K2Node_VariableSet",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_Event_0"
+                ]
+              },
+              {
+                "name": "ShotDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_4"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_5"
+                ]
+              },
+              {
+                "name": "Output_Get",
+                "value": "0, 0, 0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_5",
+            "title": "SetLifeSpan",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableSet_1"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "InLifespan",
+                "value": "3.0",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_2",
+            "title": "Get ShotDirection",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "ShotDirection",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_6"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_6",
+            "title": "Normalize",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_2"
+                ]
+              },
+              {
+                "name": "Tolerance",
+                "value": "0.000100",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_VariableGet_3",
+            "title": "Get ProjectileSpeed",
+            "class": "K2Node_VariableGet",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "ProjectileSpeed",
+                "value": "0.0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_2"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_2",
+            "title": "vector * vector",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_6"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_VariableGet_3"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_3"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_PromotableOperator_3",
+            "title": "vector * vector",
+            "class": "K2Node_PromotableOperator",
+            "inputs": [
+              {
+                "name": "A",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_2"
+                ]
+              },
+              {
+                "name": "B",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_Event_2"
+                ]
+              }
+            ],
+            "outputs": [
+              {
+                "name": "ReturnValue",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_CallFunction_7"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "K2Node_CallFunction_7",
+            "title": "Add Actor World Offset",
+            "class": "K2Node_CallFunction",
+            "inputs": [
+              {
+                "name": "execute",
+                "value": "",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_Event_2"
+                ]
+              },
+              {
+                "name": "self",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "DeltaLocation",
+                "value": "0, 0, 0",
+                "linked_count": 1,
+                "linked_nodes": [
+                  "K2Node_PromotableOperator_3"
+                ]
+              },
+              {
+                "name": "bSweep",
+                "value": "true",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "bTeleport",
+                "value": "false",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ],
+            "outputs": [
+              {
+                "name": "then",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              },
+              {
+                "name": "SweepHitResult",
+                "value": "",
+                "linked_count": 0,
+                "linked_nodes": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+exp_curve: Level_N_XP = 100 * (1.25 ^ (N - 1))
+max_level: 30

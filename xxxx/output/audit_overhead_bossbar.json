@@ -1,0 +1,104 @@
+{
+  "fill_sprite_pivot_mode": "<SpritePivotMode.CENTER_LEFT: 3>",
+  "is_center_left": true,
+  "boss_found": true,
+  "boss_label": "Live_Boss_Overlord",
+  "ui_actors": {
+    "BossBar_Armor": {
+      "label": "BossBar_Armor",
+      "tags": [
+        "BossBar_Overhead_HUD"
+      ],
+      "attached_to": "Live_Boss_Overlord",
+      "location": [
+        0.0,
+        -3.0,
+        605.0
+      ],
+      "scale": [
+        0.38,
+        1.0,
+        0.34
+      ]
+    },
+    "BossBar_Track": {
+      "label": "BossBar_Track",
+      "tags": [
+        "BossBar_Overhead_HUD"
+      ],
+      "attached_to": "Live_Boss_Overlord",
+      "location": [
+        0.0,
+        -4.0,
+        605.0
+      ],
+      "scale": [
+        0.36,
+        1.0,
+        0.36
+      ]
+    },
+    "BossBar_Fill": {
+      "label": "BossBar_Fill",
+      "tags": [
+        "BossBar_Overhead_HUD",
+        "BossBar_Fill"
+      ],
+      "attached_to": "Live_Boss_Overlord",
+      "location": [
+        -52.0,
+        -5.0,
+        605.0
+      ],
+      "scale": [
+        0.36,
+        1.0,
+        0.33
+      ]
+    },
+    "BossBar_Insignia": {
+      "label": "BossBar_Insignia",
+      "tags": [
+        "BossBar_Overhead_HUD"
+      ],
+      "attached_to": "Live_Boss_Overlord",
+      "location": [
+        -85.0,
+        -6.0,
+        605.0
+      ],
+      "scale": [
+        0.28,
+        1.0,
+        0.28
+      ]
+    }
+  },
+  "presenter_in_level": true,
+  "presenter_node_count": 21,
+  "has_tick": true,
+  "has_set_scale": false,
+  "all_node_names": [
+    "K2Node_Event_1",
+    "K2Node_CallFunction_0",
+    "K2Node_CallFunction_1",
+    "K2Node_IfThenElse_0",
+    "K2Node_VariableGet_0",
+    "K2Node_PromotableOperator_0",
+    "K2Node_CallFunction_2",
+    "K2Node_PromotableOperator_1",
+    "K2Node_CallFunction_3",
+    "K2Node_CallFunction_4",
+    "K2Node_CallArrayFunction_5",
+    "K2Node_CallFunction_5",
+    "K2Node_CallFunction_17",
+    "K2Node_CallArrayFunction_6",
+    "K2Node_CallFunction_18",
+    "K2Node_CallArrayFunction_7",
+    "K2Node_CallFunction_19",
+    "K2Node_CallArrayFunction_8",
+    "K2Node_CallFunction_20",
+    "K2Node_CallArrayFunction_9",
+    "K2Node_CallFunction_21"
+  ]
+}

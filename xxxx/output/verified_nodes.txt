@@ -1,0 +1,57 @@
+[FIX_VERIFY] BP_Boss_Overlord 节点总数: 56
+  [K2Node_Event] 事件BeginPlay
+  [K2Node_Event] 事件Tick
+  [K2Node_Event] 事件ActorBeginOverlap
+  [K2Node_CallFunction] GetPlayerPawn
+  [K2Node_CallFunction] Get Actor Location
+  [K2Node_CallFunction] Get Actor Location
+  [K2Node_CallFunction] Distance (Vector)
+  [K2Node_PromotableOperator] float > float
+  [K2Node_IfThenElse] 分支
+  [K2Node_PromotableOperator] vector - vector
+  [K2Node_CallFunction] Normalize
+  [K2Node_CallFunction] BreakVector
+  [K2Node_PromotableOperator] float * float
+  [K2Node_PromotableOperator] float * float
+  [K2Node_CallFunction] MakeVector
+  [K2Node_CallFunction] Add Actor World Offset
+  [K2Node_PromotableOperator] float * float
+  [K2Node_PromotableOperator] float * float
+  [K2Node_CallFunction] MakeVector
+  [K2Node_CallFunction] Add Actor World Offset
+  [K2Node_CallFunction] GetComponentByClass
+  [K2Node_CallFunction] Absolute (Float)
+  [K2Node_CallFunction] Absolute (Float)
+  [K2Node_PromotableOperator] float > float
+  [K2Node_IfThenElse] 分支
+  [K2Node_PromotableOperator] float > float
+  [K2Node_IfThenElse] 分支
+  [K2Node_CallFunction] SetFlipbook
+  [K2Node_CallFunction] SetFlipbook
+  [K2Node_PromotableOperator] float > float
+  [K2Node_IfThenElse] 分支
+  [K2Node_CallFunction] SetFlipbook
+  [K2Node_CallFunction] SetFlipbook
+  [K2Node_CallFunction] SetFlipbook
+  [K2Node_CallFunction] GetPlayerPawn
+  [K2Node_PromotableOperator] Not Equal (Object)
+  [K2Node_IfThenElse] 分支
+  [K2Node_CallFunction] Get Actor Location
+  [K2Node_CallFunction] Get Actor Location
+  [K2Node_PromotableOperator] vector - vector
+  [K2Node_CallFunction] Normalize
+  [K2Node_PromotableOperator] vector * vector
+  [K2Node_Event] 事件AnyDamage
+  [K2Node_VariableGet] Get CurrentHealth
+  [K2Node_PromotableOperator] float - float
+  [K2Node_VariableSet] Set CurrentHealth
+  [K2Node_PromotableOperator] float <= float
+  [K2Node_IfThenElse] 分支
+  [K2Node_CallFunction] Destroy Actor
+  [K2Node_PromotableOperator] float / float
+  [K2Node_CallFunction] Clamp (Float)
+  [K2Node_PromotableOperator] float * float
+  [K2Node_CallFunction] MakeVector
+  [K2Node_PromotableOperator] float * float
+  [K2Node_PromotableOperator] float + float
+  [K2Node_CallFunction] MakeVector

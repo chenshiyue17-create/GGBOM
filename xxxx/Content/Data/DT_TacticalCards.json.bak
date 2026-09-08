@@ -1,0 +1,56 @@
+{
+  "CARD_HighPower_Gunpowder": {
+    "DisplayName": "高能重压火药",
+    "Rarity": "Rare",
+    "Description": "子弹基础伤害提升 +35%",
+    "BuffType": "StatMultiplier",
+    "TargetStat": "Damage",
+    "Value": 1.35,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Card_AutoRifle"
+  },
+  "CARD_Rapid_Barrel": {
+    "DisplayName": "高频速射枪管",
+    "Rarity": "Rare",
+    "Description": "武器射击间隔缩短 -25%",
+    "BuffType": "StatMultiplier",
+    "TargetStat": "FireRate",
+    "Value": 0.75,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Card_Shotgun"
+  },
+  "CARD_Armor_Piercing": {
+    "DisplayName": "穿甲复合弹头",
+    "Rarity": "Epic",
+    "Description": "子弹穿透目标数量 +2",
+    "BuffType": "StatAdd",
+    "TargetStat": "PierceCount",
+    "Value": 2,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Card_Rocket"
+  },
+  "CARD_Bio_Toxic_Coat": {
+    "DisplayName": "死疫腐蚀涂层",
+    "Rarity": "Epic",
+    "Description": "子弹附带 100% 致命强酸 Debuff",
+    "BuffType": "StatusEffect",
+    "TargetStat": "InflictDebuff",
+    "Value": 1,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Card_Tesla"
+  },
+  "CARD_Field_Emergency": {
+    "DisplayName": "战地紧急注射",
+    "Rarity": "Common",
+    "Description": "立即恢复 40% 生命值",
+    "BuffType": "InstantHeal",
+    "TargetStat": "Health",
+    "Value": 0.4,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Health"
+  },
+  "CARD_Tactical_Booster": {
+    "DisplayName": "生化外骨骼加速",
+    "Rarity": "Common",
+    "Description": "移动速度提升 +20%",
+    "BuffType": "StatMultiplier",
+    "TargetStat": "MoveSpeed",
+    "Value": 1.2,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Tactical_Barricade"
+  }
+}

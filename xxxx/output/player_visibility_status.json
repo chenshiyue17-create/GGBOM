@@ -1,0 +1,32 @@
+{
+  "time": "2026-09-02T19:30:43",
+  "status": "PASS",
+  "pure_blueprint": true,
+  "map": "/Game/GGBOM/Maps/MAP_GGBOM_Main",
+  "player_blueprint": "/Game/Blueprints/Player/BP_Player_Medic",
+  "player_label": "Player_Medic_Runtime",
+  "blueprint": {
+    "bp_found": true,
+    "flipbook_found": true,
+    "flipbook_component_found": true,
+    "flipbook_component_added": true,
+    "camera_component_found": true,
+    "camera_component_added": true,
+    "collision_component_found": true,
+    "collision_component_added": true,
+    "compiled": true,
+    "saved": true
+  },
+  "placed_player": {
+    "placed": true,
+    "spawned": false,
+    "label": "Player_Medic_Runtime",
+    "location": [
+      0.0,
+      -20.0,
+      -560.0
+    ],
+    "visible_component": true
+  },
+  "map_saved": true
+}

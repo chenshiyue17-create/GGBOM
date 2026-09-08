@@ -1,0 +1,14 @@
+project:
+  name: "GGBOM: 终末医疗兵"
+  engine: "Unreal Engine 5.8"
+  runtime: "Blueprint + Paper2D"
+  aspect_ratio: "9:16"
+  viewport: [562, 1000]
+gameplay:
+  movement_keys: [A, D]
+  auto_fire_interval_seconds: 4.0
+  enemy_speed_units_per_second: 72
+  round_seconds: 40
+assets:
+  allowed_source_root: "Content/美术/Art"
+  generated_root: "Content/GGBOM"

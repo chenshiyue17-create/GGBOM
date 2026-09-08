@@ -1,0 +1,12 @@
+{
+  "title": "Inferno Shock 命中爆炸装配落地报告",
+  "target_flipbook": "/Game/Blueprints/Combat/Projectiles/FB_Combat_Inferno_Shock.FB_Combat_Inferno_Shock",
+  "source_pngs": [
+    "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/05_VFX/02_Inferno_Shock/T_VFX_Inferno_Shock_01.png",
+    "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/05_VFX/02_Inferno_Shock/T_VFX_Inferno_Shock_02.png",
+    "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/05_VFX/02_Inferno_Shock/T_VFX_Inferno_Shock_03.png",
+    "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/05_VFX/02_Inferno_Shock/T_VFX_Inferno_Shock_04.png"
+  ],
+  "BP_Combat_HitExplosion": "UPDATED_WITH_INFERNO_SHOCK",
+  "BP_ProjectileBase": "CLEAN_COMPILED_ZERO_WARNINGS"
+}

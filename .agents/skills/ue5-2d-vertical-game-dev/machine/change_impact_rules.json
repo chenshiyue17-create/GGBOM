@@ -1,0 +1,155 @@
+{
+  "rules": [
+    {
+      "path": "Character.Stats.MaxHealth",
+      "impact": [
+        "Gameplay",
+        "Balance"
+      ],
+      "artStale": false,
+      "tests": [
+        "CharacterTest"
+      ]
+    },
+    {
+      "path": "Character.Stats.MoveSpeed",
+      "impact": [
+        "Gameplay",
+        "Balance"
+      ],
+      "artStale": false,
+      "tests": [
+        "CharacterMoveTest"
+      ]
+    },
+    {
+      "path": "Character.Portrait",
+      "impact": [
+        "UIArt"
+      ],
+      "artStale": false,
+      "tests": [
+        "CharacterSelectUI"
+      ]
+    },
+    {
+      "path": "Character.AnimationProfile",
+      "impact": [
+        "AnimationBinding"
+      ],
+      "artStale": false,
+      "tests": [
+        "CharacterAnimationTest"
+      ]
+    },
+    {
+      "path": "Character.MasterVisual",
+      "impact": [
+        "AllCharacterVisualDependencies"
+      ],
+      "artStale": true,
+      "tests": [
+        "FullCharacterVisualTest"
+      ]
+    },
+    {
+      "path": "Animation.Run.NE",
+      "impact": [
+        "SingleAnimationChain",
+        "SiblingSourceSheetRevalidate"
+      ],
+      "artStale": true,
+      "tests": [
+        "RunNETest"
+      ]
+    },
+    {
+      "path": "Weapon.Damage",
+      "impact": [
+        "Balance"
+      ],
+      "artStale": false,
+      "tests": [
+        "WeaponDamageTest",
+        "DPSRecalc"
+      ]
+    },
+    {
+      "path": "Weapon.FireRate",
+      "impact": [
+        "Balance",
+        "FireCadence"
+      ],
+      "artStale": false,
+      "tests": [
+        "WeaponFireTest",
+        "DPSRecalc"
+      ]
+    },
+    {
+      "path": "Weapon.ProjectileDefinition",
+      "impact": [
+        "WeaponRuntime",
+        "ProjectileRuntime"
+      ],
+      "artStale": false,
+      "tests": [
+        "WeaponProjectileTest"
+      ]
+    },
+    {
+      "path": "Projectile.Speed",
+      "impact": [
+        "ProjectileRuntime",
+        "DependentWeapons"
+      ],
+      "artStale": false,
+      "tests": [
+        "ProjectileSpeedTest"
+      ]
+    },
+    {
+      "path": "UITheme",
+      "impact": [
+        "UIVisual"
+      ],
+      "artStale": false,
+      "tests": [
+        "UIRegression"
+      ]
+    },
+    {
+      "path": "Wave.SpawnRate",
+      "impact": [
+        "EncounterBalance",
+        "Performance"
+      ],
+      "artStale": false,
+      "tests": [
+        "WaveTest",
+        "PerformanceTest"
+      ]
+    },
+    {
+      "path": "Blueprint.Parent",
+      "impact": [
+        "ArchitectureWide"
+      ],
+      "artStale": false,
+      "tests": [
+        "AllAffectedChildrenCompile",
+        "PIERegression"
+      ]
+    },
+    {
+      "path": "SharedComponent.Logic",
+      "impact": [
+        "FrameworkWide"
+      ],
+      "artStale": false,
+      "tests": [
+        "AllComponentUsersRegression"
+      ]
+    }
+  ]
+}

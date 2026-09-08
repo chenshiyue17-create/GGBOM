@@ -1,0 +1,54 @@
+{
+  "time": "2026-09-02T20:08:08",
+  "status": "PASS",
+  "pure_blueprint": true,
+  "map": "/Game/GGBOM/Maps/MAP_GGBOM_Main",
+  "camera": {
+    "camera_label": "Master_Orthographic_Camera",
+    "transform": {
+      "location": true,
+      "rotation": true
+    },
+    "auto_activate_player0": true,
+    "camera_props": {
+      "projection_mode": true,
+      "ortho_width": true,
+      "aspect_ratio": true,
+      "constrain_aspect_ratio": true,
+      "use_pawn_control_rotation": true,
+      "auto_calculate_ortho_planes": true,
+      "ortho_near_clip_plane": true,
+      "ortho_far_clip_plane": true
+    },
+    "location": [
+      0.0,
+      -1000.0,
+      0.0
+    ],
+    "rotation": [
+      0.0,
+      89.99999999437944,
+      -0.0
+    ]
+  },
+  "pawn": {
+    "pawn_found": true,
+    "auto_receive_input": true,
+    "auto_possess_player": true,
+    "compiled": true,
+    "saved": true
+  },
+  "game_mode": {
+    "game_mode_found": true,
+    "pawn_found": true,
+    "default_pawn_set": true,
+    "compiled": true,
+    "saved": true
+  },
+  "world_settings": {
+    "world_settings_found": true,
+    "game_mode_override_set": true
+  },
+  "map_saved": true,
+  "recommended_test_command": "Tools/launch_lightweight_game.sh /Game/GGBOM/Maps/MAP_GGBOM_Main"
+}

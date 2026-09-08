@@ -1,0 +1,63 @@
+{
+  "Stage_01_Main": {
+    "TotalDuration": 40,
+    "VictoryTriggerTime": 40,
+    "SpawnLanesX": [
+      -120,
+      -40,
+      40,
+      120
+    ],
+    "SpawnTopZ": 420,
+    "Waves": [
+      {
+        "TimeOffset": 2,
+        "LaneIndex": 1,
+        "EnemyType": "Enemy_Zombie_Walker",
+        "Count": 2,
+        "Interval": 1,
+        "DangerAlert": false
+      },
+      {
+        "TimeOffset": 6,
+        "LaneIndex": 2,
+        "EnemyType": "Enemy_Zombie_Walker",
+        "Count": 3,
+        "Interval": 0.8,
+        "DangerAlert": false
+      },
+      {
+        "TimeOffset": 12,
+        "LaneIndex": 0,
+        "EnemyType": "Enemy_Mutant_Hound",
+        "Count": 2,
+        "Interval": 0.6,
+        "DangerAlert": false
+      },
+      {
+        "TimeOffset": 18,
+        "LaneIndex": 3,
+        "EnemyType": "Enemy_Venom_Shooter",
+        "Count": 2,
+        "Interval": 1.2,
+        "DangerAlert": false
+      },
+      {
+        "TimeOffset": 25,
+        "LaneIndex": 1,
+        "EnemyType": "Enemy_Zombie_Walker",
+        "Count": 4,
+        "Interval": 0.5,
+        "DangerAlert": false
+      },
+      {
+        "TimeOffset": 30,
+        "LaneIndex": 2,
+        "EnemyType": "Boss_Overlord",
+        "Count": 1,
+        "Interval": 0,
+        "DangerAlert": true
+      }
+    ]
+  }
+}

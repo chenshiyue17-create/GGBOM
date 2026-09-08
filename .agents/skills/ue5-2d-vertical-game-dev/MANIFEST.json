@@ -1,0 +1,157 @@
+{
+  "name": "ue5-2d-vertical-game-dev",
+  "version": "1.0.0",
+  "target": "UE5.8",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "bf7f21d10aa5be55177316eac2d70df60cfcc502729e9e95d7d59298745cef0d",
+      "bytes": 1983
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "946c2804051ceb23b75bf54ba8123370280253da0724f35d49455c9466fe049d",
+      "bytes": 2145
+    },
+    {
+      "path": "SOP_MASTER.md",
+      "sha256": "7e97659e5bf0d4c194109bb70e07e1aaa9509667e2401c268ad5d58f231b9821",
+      "bytes": 2416
+    },
+    {
+      "path": "machine/change_impact_rules.json",
+      "sha256": "2da7827c961c01686ae7aab4f8aacd71fd0e4e9012362435ee58d743ef6094fc",
+      "bytes": 2801
+    },
+    {
+      "path": "machine/mutation_request.schema.json",
+      "sha256": "44de2de569e47a027d639cc33163053e821ae2ad8848d5209256527ac471e0f9",
+      "bytes": 784
+    },
+    {
+      "path": "machine/object_registry.schema.json",
+      "sha256": "afbf3f0498deb2629f4d4134e5bb7129861ee619fd0401bd6682a6e7d15d4638",
+      "bytes": 812
+    },
+    {
+      "path": "machine/project_snapshot.schema.json",
+      "sha256": "847716c9367960040cb45c5efc06742d6ef8268ce6e9646d72203192e5498459",
+      "bytes": 1284
+    },
+    {
+      "path": "machine/validation_report.schema.json",
+      "sha256": "0fa4d4a5fabd58e243cf074ea4ffbd1afb123424cce5402dbc14a735472c4dbe",
+      "bytes": 684
+    },
+    {
+      "path": "references/01_PROJECT_ARCHITECTURE.md",
+      "sha256": "716923c520899adf8fcd8daa69b500b29a5cdbe35bba3776b4cc3b776cf6a0ae",
+      "bytes": 1117
+    },
+    {
+      "path": "references/02_BLUEPRINT_INHERITANCE.md",
+      "sha256": "c7a17d4a9a9905ab1f5181811c377ca99cdfdf98e6bc43f585a83e72f499cd2c",
+      "bytes": 1631
+    },
+    {
+      "path": "references/03_DATA_OWNERSHIP_AND_CHINESE_PROPERTIES.md",
+      "sha256": "e16000306db9da22dfeeaf2ce30761d338b2eb5a67b30c6ad354f4c4d09eaaf6",
+      "bytes": 1195
+    },
+    {
+      "path": "references/04_OBJECT_WORKBENCH_DASHBOARD.md",
+      "sha256": "f7942c5ea9c4529949ab6abe8dde24f2d4df3c9d3bf0d81840b86d017784ead4",
+      "bytes": 2251
+    },
+    {
+      "path": "references/05_SOURCE_ART_AND_PAPER2D_PIPELINE.md",
+      "sha256": "8bfc43da55dae7f65242ff008417b5eb6445726f1ccef8e0e409e0183ae8015b",
+      "bytes": 1547
+    },
+    {
+      "path": "references/06_UPDATE_PROTOCOL.md",
+      "sha256": "f51a2bfee426cf9a9eb918d44f2c366d1a90fcd8dc1445552ed681bbc9278fbf",
+      "bytes": 2458
+    },
+    {
+      "path": "references/07_CHANGE_IMPACT_MATRIX.md",
+      "sha256": "631a1418b2606dbf3d1cdcb4cc3ee4aa3d23e2fc6dd634af470552a2d1033a5c",
+      "bytes": 1606
+    },
+    {
+      "path": "references/08_AI_TASK_PROTOCOL.md",
+      "sha256": "a7633209c7061dec62ec9122e1209864e23703f9768473c79fafc4cf307bd405",
+      "bytes": 1752
+    },
+    {
+      "path": "references/09_VALIDATION_GATES.md",
+      "sha256": "e3052a1651d8678915aa146bc0e11edcecaf9259c4b3ef4e38fd933135ff2491",
+      "bytes": 971
+    },
+    {
+      "path": "references/10_TEST_AND_PERFORMANCE.md",
+      "sha256": "4c673137f89bf165aa2273cb60dffd0dc1cee8b896666547cedcf0ad951910df",
+      "bytes": 1395
+    },
+    {
+      "path": "references/11_NAMING_AND_FOLDERS.md",
+      "sha256": "7ee8fcf070447c8bc91efa0617281339a95097e536844586ef5d320908a921e5",
+      "bytes": 608
+    },
+    {
+      "path": "references/12_DEFINITION_OF_DONE.md",
+      "sha256": "6aac0556e99d98be5973178cac95d73749fca5d19eb7dbe4324bd5a8fa120f4f",
+      "bytes": 1287
+    },
+    {
+      "path": "references/13_OBJECT_SCHEMAS.md",
+      "sha256": "bd6671402a38520e5dc1e443cf8f1c3ea829594323257d28657d55466eb4c133",
+      "bytes": 1949
+    },
+    {
+      "path": "templates/ART_QA_REPORT.md",
+      "sha256": "d7c962841fc199f1494d79ff5a63c9980670cf12624f5b1c4bda7bd261d78a41",
+      "bytes": 411
+    },
+    {
+      "path": "templates/CHANGE_PLAN.md",
+      "sha256": "6fc0eeac35c75ff919f9e949c57d2954c617a5cc05f7e167d87f8b687a95ad14",
+      "bytes": 223
+    },
+    {
+      "path": "templates/CHARACTER_BALANCE.csv",
+      "sha256": "4f7a2fc29752df5a4a89a376e6c01db82971238d64fc3282a6f6d3087df559c2",
+      "bytes": 173
+    },
+    {
+      "path": "templates/FINAL_REPORT.md",
+      "sha256": "db7471cef93f452d53b608e7ff729c1a9f95d569a72e4aa7b224c7df4f6e7777",
+      "bytes": 296
+    },
+    {
+      "path": "templates/OBJECT_REGISTRY.csv",
+      "sha256": "2ba5d3adf80133618fa4827cd83ab68add1ddcd61babf93ce06e42176dedaa47",
+      "bytes": 265
+    },
+    {
+      "path": "templates/PERFORMANCE_BUDGET.csv",
+      "sha256": "8c28b21a39baa9afced9f5e7d641cca6dbc9f2fc6adfe21d297d8b0497c606f8",
+      "bytes": 399
+    },
+    {
+      "path": "templates/PROJECT_SCAN_REPORT.md",
+      "sha256": "d0f86738416542396b5dce91baeac86395eb7ba8983d3835a0c786a16c9a08eb",
+      "bytes": 275
+    },
+    {
+      "path": "templates/WAVE_BALANCE.csv",
+      "sha256": "5c19c6d27bddf847be80f40fe53ca1d0e0444697440dcb8045a8d30ec5881618",
+      "bytes": 207
+    },
+    {
+      "path": "templates/WEAPON_BALANCE.csv",
+      "sha256": "28ac4d748a48516c8f22274134c95c264a350d34a4f661d590bbf0113a8ceec7",
+      "bytes": 221
+    }
+  ]
+}

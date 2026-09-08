@@ -1,0 +1,8 @@
+{
+  "/Game/Blueprints/Player/BP_Player_Medic": [],
+  "/Game/Blueprints/Combat/Weapons/BP_WeaponBase": [],
+  "/Game/Blueprints/Combat/Components/BPC_WeaponComponent": [],
+  "/Game/Blueprints/Core/Components/BPC_WeaponInventory": [],
+  "/Game/Blueprints/Projectiles/BP_Projectile_Base": [],
+  "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase": []
+}

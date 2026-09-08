@@ -1,0 +1,11 @@
+{
+  "skill_name": "ue5-blueprint-auditor",
+  "target": "Google Antigravity IDE",
+  "install_scope_supported": [
+    "project",
+    "global"
+  ],
+  "project_path": ".agents/skills/ue5-blueprint-auditor",
+  "global_primary_path": "~/.gemini/antigravity/skills/ue5-blueprint-auditor",
+  "global_compat_path": "~/.gemini/config/skills/ue5-blueprint-auditor"
+}

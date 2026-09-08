@@ -1,0 +1,174 @@
+{
+  "design_resolution": [
+    1080,
+    1920
+  ],
+  "aspect_ratio": "9:16",
+  "widgets": {
+    "BossHUD": {
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "alignment": [
+        0.5,
+        0.0
+      ],
+      "offset": [
+        0,
+        18
+      ],
+      "size": [
+        560,
+        86
+      ],
+      "z_order": 20
+    },
+    "ZoneRail": {
+      "anchor": [
+        0.0,
+        0.5
+      ],
+      "alignment": [
+        0.0,
+        0.5
+      ],
+      "offset": [
+        18,
+        -10
+      ],
+      "size": [
+        112,
+        1050
+      ],
+      "z_order": 15
+    },
+    "TopRightCounters": {
+      "anchor": [
+        1.0,
+        0.0
+      ],
+      "alignment": [
+        1.0,
+        0.0
+      ],
+      "offset": [
+        -18,
+        18
+      ],
+      "size": [
+        212,
+        182
+      ],
+      "z_order": 25
+    },
+    "PlayerStatus": {
+      "anchor": [
+        0.0,
+        1.0
+      ],
+      "alignment": [
+        0.0,
+        1.0
+      ],
+      "offset": [
+        18,
+        -18
+      ],
+      "size": [
+        224,
+        202
+      ],
+      "z_order": 25
+    },
+    "WeaponBar": {
+      "anchor": [
+        0.5,
+        1.0
+      ],
+      "alignment": [
+        0.5,
+        1.0
+      ],
+      "offset": [
+        -22,
+        -18
+      ],
+      "size": [
+        552,
+        218
+      ],
+      "z_order": 25
+    },
+    "ItemPlacementBar": {
+      "anchor": [
+        1.0,
+        0.5
+      ],
+      "alignment": [
+        1.0,
+        0.5
+      ],
+      "offset": [
+        -18,
+        120
+      ],
+      "size": [
+        238,
+        790
+      ],
+      "z_order": 30
+    },
+    "PlacementHint": {
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "alignment": [
+        0.5,
+        0.5
+      ],
+      "offset": [
+        0,
+        420
+      ],
+      "size": [
+        440,
+        72
+      ],
+      "z_order": 40
+    }
+  },
+  "slot_contracts": {
+    "WeaponSlot": {
+      "size": [
+        132,
+        202
+      ],
+      "icon_box": [
+        112,
+        112
+      ],
+      "icon_alignment": "Center/Center",
+      "icon_draw_type": "Image",
+      "selected_outline_padding": 0,
+      "text_area_height": 70
+    },
+    "ItemSlot": {
+      "size": [
+        206,
+        138
+      ],
+      "icon_box": [
+        92,
+        92
+      ],
+      "icon_alignment": "Center/Center",
+      "count_box": [
+        48,
+        30
+      ],
+      "drag_pivot": "CenterCenter"
+    }
+  }
+}

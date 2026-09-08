@@ -1,0 +1,46 @@
+{
+  "package": "UE58_PlayerUI_Blueprint_Package",
+  "engine": "UE5.8",
+  "implementation": "Blueprint",
+  "widgets": [
+    "WBP_GameHUD",
+    "WBP_PlayerStatus",
+    "WBP_HealthBar",
+    "WBP_ExperienceBar",
+    "WBP_LevelUp"
+  ],
+  "player_variables": {
+    "MaxHealth": {
+      "type": "Float",
+      "default": 100
+    },
+    "CurrentHealth": {
+      "type": "Float",
+      "default": 100
+    },
+    "CurrentLevel": {
+      "type": "Integer",
+      "default": 1
+    },
+    "CurrentXP": {
+      "type": "Float",
+      "default": 0
+    },
+    "XPToNextLevel": {
+      "type": "Float",
+      "default": 40
+    }
+  },
+  "dispatchers": [
+    "OnHealthChanged",
+    "OnExperienceChanged",
+    "OnLevelUp"
+  ],
+  "rules": {
+    "property_binding_hp_xp": false,
+    "tick_polling_hp_xp": false,
+    "event_driven": true,
+    "xp_overflow_preserved": true,
+    "multi_level_up_supported": true
+  }
+}

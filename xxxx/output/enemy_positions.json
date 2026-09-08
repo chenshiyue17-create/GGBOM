@@ -1,0 +1,72 @@
+[
+  {
+    "name": "PlayerStart_0",
+    "label": "PlayerStart",
+    "class": "PlayerStart",
+    "loc": [
+      0.0,
+      0.0,
+      -480.0
+    ]
+  },
+  {
+    "name": "BP_Enemy_ZombieWalker_C_3",
+    "label": "Live_Zombie_01",
+    "class": "BP_Enemy_ZombieWalker_C",
+    "loc": [
+      -150.0,
+      0.0,
+      220.0
+    ]
+  },
+  {
+    "name": "BP_Enemy_ZombieWalker_C_4",
+    "label": "Live_Zombie_02",
+    "class": "BP_Enemy_ZombieWalker_C",
+    "loc": [
+      0.0,
+      0.0,
+      280.0
+    ]
+  },
+  {
+    "name": "BP_Enemy_ZombieWalker_C_5",
+    "label": "Live_Zombie_03",
+    "class": "BP_Enemy_ZombieWalker_C",
+    "loc": [
+      150.0,
+      0.0,
+      240.0
+    ]
+  },
+  {
+    "name": "BP_Enemy_MutantHound_C_1",
+    "label": "Live_Hound_01",
+    "class": "BP_Enemy_MutantHound_C",
+    "loc": [
+      -180.0,
+      0.0,
+      360.0
+    ]
+  },
+  {
+    "name": "BP_Enemy_MutantHound_C_2",
+    "label": "Live_Hound_02",
+    "class": "BP_Enemy_MutantHound_C",
+    "loc": [
+      180.0,
+      0.0,
+      390.0
+    ]
+  },
+  {
+    "name": "BP_Boss_Overlord_C_1",
+    "label": "Live_Boss_Overlord",
+    "class": "BP_Boss_Overlord_C",
+    "loc": [
+      0.0,
+      0.0,
+      520.0
+    ]
+  }
+]

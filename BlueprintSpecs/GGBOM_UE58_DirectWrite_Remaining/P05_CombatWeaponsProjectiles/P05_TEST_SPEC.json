@@ -1,0 +1,11 @@
+{
+  "required_log": "P05_COMBAT_OK",
+  "checks": {
+    "weapon_rows": 10,
+    "projectile_children": 10,
+    "pistol_damage": 25,
+    "dummy_hp": 100,
+    "shotgun_projectiles": 7
+  },
+  "next_gate": "ALLOW_P06"
+}

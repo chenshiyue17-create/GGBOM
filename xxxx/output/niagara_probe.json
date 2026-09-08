@@ -1,0 +1,15 @@
+{
+  "has_NiagaraSystem": true,
+  "has_NiagaraEmitter": true,
+  "has_NiagaraComponent": true,
+  "has_NiagaraFunctionLibrary": true,
+  "has_NiagaraSystemFactoryNew": true,
+  "has_NiagaraEmitterFactoryNew": true,
+  "engine_assets": {
+    "/Niagara/DefaultAssets/DefaultSystem": false,
+    "/Niagara/DefaultAssets/Templates/SimpleSpriteBurst": false,
+    "/Niagara/DefaultAssets/Templates/Fountain": false,
+    "/Niagara/DefaultAssets/Templates/Grid2DGas_Emitter": false,
+    "/Niagara/DefaultAssets/DefaultSpriteMaterial": false
+  }
+}

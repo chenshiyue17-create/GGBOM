@@ -1,0 +1,2 @@
+targeting: Directional + Nearest Neighbor
+hitbox_policy: Pixel-tight 2D Box / Capsule Collision

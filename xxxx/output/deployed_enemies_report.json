@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "built_blueprints": [
+    "BP_Enemy_ZombieWalker",
+    "BP_Enemy_ZombieRunner",
+    "BP_Enemy_VenomShooter",
+    "BP_Enemy_ArmoredGuard",
+    "BP_Enemy_MutantBrute",
+    "BP_Enemy_MutantHound",
+    "BP_Boss_Overlord"
+  ],
+  "deployed_actors": [
+    {
+      "label": "Enemy_Zombie_01",
+      "blueprint": "BP_Enemy_ZombieWalker",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        -160.0,
+        15.0,
+        180.0
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_02",
+      "blueprint": "BP_Enemy_ZombieWalker",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        0.0,
+        15.0,
+        140.0
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_03",
+      "blueprint": "BP_Enemy_ZombieWalker",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        160.0,
+        15.0,
+        180.0
+      ]
+    },
+    {
+      "label": "Enemy_Runner_01",
+      "blueprint": "BP_Enemy_ZombieRunner",
+      "class": "BP_Enemy_ZombieRunner_C",
+      "location": [
+        -120.0,
+        15.0,
+        260.0
+      ]
+    },
+    {
+      "label": "Enemy_VenomShooter_01",
+      "blueprint": "BP_Enemy_VenomShooter",
+      "class": "BP_Enemy_VenomShooter_C",
+      "location": [
+        120.0,
+        15.0,
+        260.0
+      ]
+    },
+    {
+      "label": "Enemy_ArmoredGuard_01",
+      "blueprint": "BP_Enemy_ArmoredGuard",
+      "class": "BP_Enemy_ArmoredGuard_C",
+      "location": [
+        0.0,
+        15.0,
+        290.0
+      ]
+    },
+    {
+      "label": "Enemy_Hound_01",
+      "blueprint": "BP_Enemy_MutantHound",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        -220.0,
+        15.0,
+        350.0
+      ]
+    },
+    {
+      "label": "Enemy_Hound_02",
+      "blueprint": "BP_Enemy_MutantHound",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        220.0,
+        15.0,
+        350.0
+      ]
+    },
+    {
+      "label": "Enemy_Brute_Elite",
+      "blueprint": "BP_Enemy_MutantBrute",
+      "class": "BP_Enemy_MutantBrute_C",
+      "location": [
+        0.0,
+        15.0,
+        430.0
+      ]
+    },
+    {
+      "label": "Boss_Overlord_Live",
+      "blueprint": "BP_Boss_Overlord",
+      "class": "BP_Boss_Overlord_C",
+      "location": [
+        0.0,
+        15.0,
+        560.0
+      ]
+    }
+  ]
+}

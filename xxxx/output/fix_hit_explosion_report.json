@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "flipbook_path": "/Game/Blueprints/Combat/Projectiles/FB_Combat_Inferno_Shock",
+  "pure_fire_frames": 4,
+  "scale": [
+    0.75,
+    0.75,
+    0.75
+  ],
+  "sp_impact_removed": true,
+  "saved": true
+}

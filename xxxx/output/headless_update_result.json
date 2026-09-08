@@ -1,0 +1,110 @@
+{
+  "title": "虚幻引擎官方 API 执行全量审计证据报告",
+  "engine_version": "UE 5.8",
+  "start_time": "2026-09-07 14:53:41",
+  "targets": {
+    "/Game/Blueprints/Combat/Projectiles/BP_Combat_HitExplosion": {
+      "status": "SUCCESS",
+      "saved": true
+    },
+    "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase": {
+      "status": "SUCCESS",
+      "sphere_fixed": true,
+      "fb_fixed": true,
+      "sprite_fixed": true,
+      "move_fixed": true,
+      "saved": true
+    },
+    "/Game/Blueprints/Projectiles/BP_Projectile_Base": {
+      "status": "SUCCESS",
+      "sphere_fixed": false,
+      "fb_fixed": false,
+      "sprite_fixed": false,
+      "move_fixed": false,
+      "saved": true
+    },
+    "/Game/Blueprints/Projectiles/BP_Bullet_KineticPistol": {
+      "status": "SUCCESS",
+      "sphere_fixed": false,
+      "fb_fixed": false,
+      "sprite_fixed": false,
+      "move_fixed": false,
+      "saved": true
+    },
+    "/Game/GGBOM/Blueprints/BP_GGBOM_Projectile": {
+      "status": "SUCCESS",
+      "sphere_fixed": false,
+      "fb_fixed": false,
+      "sprite_fixed": true,
+      "move_fixed": true,
+      "saved": true
+    },
+    "/Game/GGBOM/Blueprints/Projectiles/BP_Projectile_Base": {
+      "status": "SUCCESS",
+      "sphere_fixed": false,
+      "fb_fixed": false,
+      "sprite_fixed": false,
+      "move_fixed": false,
+      "saved": true
+    },
+    "/Game/GGBOM/Blueprints/Enemies/BP_Enemy_Zombie": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a484e950) {x: 35.000000, y: 35.000000, z: 50.000000}>"
+    },
+    "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a484da50) {x: 35.000000, y: 35.000000, z: 50.000000}>"
+    },
+    "/Game/Blueprints/Combat/BP_ENE_ZombieWalker": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a6d1a9f0) {x: 35.000000, y: 35.000000, z: 50.000000}>"
+    },
+    "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieRunner": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a486e900) {x: 32.000000, y: 32.000000, z: 45.000000}>"
+    },
+    "/Game/Blueprints/Characters/Enemies/BP_Enemy_MutantHound": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a486eb30) {x: 28.000000, y: 28.000000, z: 26.000000}>"
+    },
+    "/Game/GGBOM/Blueprints/Enemies/BP_Enemy_Hound": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a486fe90) {x: 28.000000, y: 28.000000, z: 26.000000}>"
+    },
+    "/Game/Blueprints/Characters/Enemies/BP_Enemy_VenomShooter": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a486ec70) {x: 35.000000, y: 35.000000, z: 50.000000}>"
+    },
+    "/Game/Blueprints/Characters/Enemies/BP_Enemy_MutantBrute": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a486ec20) {x: 45.000000, y: 45.000000, z: 65.000000}>"
+    },
+    "/Game/Blueprints/Characters/Enemies/BP_Enemy_ArmoredGuard": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a486ebd0) {x: 42.000000, y: 42.000000, z: 60.000000}>"
+    },
+    "/Game/GGBOM/Blueprints/Enemies/BP_Boss_Overlord": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a486eb80) {x: 65.000000, y: 65.000000, z: 85.000000}>"
+    },
+    "/Game/Blueprints/Characters/Enemies/BP_Boss_Overlord": {
+      "configured": true,
+      "extent": "<Struct 'Vector' (0x3a493f440) {x: 65.000000, y: 65.000000, z: 85.000000}>"
+    },
+    "/Game/Blueprints/Player/BP_Player_Medic": {
+      "saved": true,
+      "status": "SUCCESS"
+    }
+  },
+  "visual_assets": {
+    "FB_Combat_Kinetic_Flight": "/Game/Blueprints/Combat/Projectiles/FB_Combat_Kinetic_Flight.FB_Combat_Kinetic_Flight",
+    "FB_Combat_Inferno_Shock": "/Game/Blueprints/Combat/Projectiles/FB_Combat_Inferno_Shock.FB_Combat_Inferno_Shock"
+  },
+  "level_map": {
+    "saved": true,
+    "updated_instances": 6,
+    "added_instances": 0
+  },
+  "elapsed_seconds": 1.42,
+  "status": "ALL_UPDATE_TASKS_COMPLETED_SUCCESSFULLY"
+}

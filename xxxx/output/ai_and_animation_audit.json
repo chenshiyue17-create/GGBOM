@@ -1,0 +1,107 @@
+{
+  "BP_Boss_Overlord": {
+    "loaded": true,
+    "is_zombie_4frame_family": false,
+    "projectile_movement_removed": true,
+    "has_pawn_box_collision": true,
+    "box_extent": [
+      55.0,
+      90.0,
+      65.0
+    ],
+    "source_flipbook": "FB_T_Boss_Walk_Dir_01_Down_Sheet",
+    "has_player_ai_chase": false,
+    "sweep_offset_nodes_count": 0,
+    "branch_state_nodes_count": 4
+  },
+  "BP_Enemy_MutantHound": {
+    "loaded": true,
+    "is_zombie_4frame_family": false,
+    "projectile_movement_removed": true,
+    "has_pawn_box_collision": true,
+    "box_extent": [
+      30.0,
+      70.0,
+      32.0
+    ],
+    "source_flipbook": "FB_T_Hound_Run_Dir_01_Down_Sheet",
+    "has_player_ai_chase": false,
+    "sweep_offset_nodes_count": 0,
+    "branch_state_nodes_count": 4
+  },
+  "BP_Enemy_ZombieWalker": {
+    "loaded": true,
+    "is_zombie_4frame_family": true,
+    "projectile_movement_removed": true,
+    "has_pawn_box_collision": true,
+    "box_extent": [
+      25.0,
+      60.0,
+      35.0
+    ],
+    "source_flipbook": "FB_T_Zombie_WalkerBasic_Sheet",
+    "has_player_ai_chase": false,
+    "sweep_offset_nodes_count": 0,
+    "branch_state_nodes_count": 0
+  },
+  "BP_Enemy_ZombieRunner": {
+    "loaded": true,
+    "is_zombie_4frame_family": true,
+    "projectile_movement_removed": true,
+    "has_pawn_box_collision": true,
+    "box_extent": [
+      25.0,
+      60.0,
+      35.0
+    ],
+    "source_flipbook": "FB_T_Zombie_RunnerAgile_Sheet",
+    "has_player_ai_chase": false,
+    "sweep_offset_nodes_count": 0,
+    "branch_state_nodes_count": 0
+  },
+  "BP_Enemy_VenomShooter": {
+    "loaded": true,
+    "is_zombie_4frame_family": true,
+    "projectile_movement_removed": true,
+    "has_pawn_box_collision": true,
+    "box_extent": [
+      25.0,
+      60.0,
+      35.0
+    ],
+    "source_flipbook": "FB_T_Zombie_SpitterMinor_Sheet",
+    "has_player_ai_chase": false,
+    "sweep_offset_nodes_count": 0,
+    "branch_state_nodes_count": 0
+  },
+  "BP_Enemy_ArmoredGuard": {
+    "loaded": true,
+    "is_zombie_4frame_family": true,
+    "projectile_movement_removed": true,
+    "has_pawn_box_collision": true,
+    "box_extent": [
+      30.0,
+      70.0,
+      40.0
+    ],
+    "source_flipbook": "FB_T_Zombie_ArmoredGuard_Sheet",
+    "has_player_ai_chase": false,
+    "sweep_offset_nodes_count": 0,
+    "branch_state_nodes_count": 0
+  },
+  "BP_Enemy_MutantBrute": {
+    "loaded": true,
+    "is_zombie_4frame_family": true,
+    "projectile_movement_removed": true,
+    "has_pawn_box_collision": true,
+    "box_extent": [
+      35.0,
+      75.0,
+      45.0
+    ],
+    "source_flipbook": "FB_T_Zombie_ShamblerHeavy_Sheet",
+    "has_player_ai_chase": false,
+    "sweep_offset_nodes_count": 0,
+    "branch_state_nodes_count": 0
+  }
+}

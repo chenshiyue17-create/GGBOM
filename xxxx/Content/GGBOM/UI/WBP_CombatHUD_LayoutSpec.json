@@ -1,0 +1,215 @@
+{
+  "RootWidget": "WBP_GGBOM_CombatHUD",
+  "DesignResolution": {
+    "Width": 1080,
+    "Height": 1920
+  },
+  "DpiScaleRule": "ShortestSide",
+  "Panels": {
+    "TopBossHeader": {
+      "Anchor": "TopCenter",
+      "Offsets": {
+        "Left": -340,
+        "Top": 40,
+        "Right": 340,
+        "Bottom": 120
+      },
+      "Elements": [
+        {
+          "Type": "Image",
+          "Name": "BossIcon",
+          "Texture": "T_Boss_Idle_Dir_01_Down_01",
+          "Size": [
+            72,
+            72
+          ]
+        },
+        {
+          "Type": "ProgressBar",
+          "Name": "BossHealthBar",
+          "Bg": "T_UI_BossBar_04_Frame_Bg",
+          "Fill": "T_UI_BossBar_01_Seg1_Fill",
+          "Size": [
+            520,
+            36
+          ]
+        },
+        {
+          "Type": "TextBlock",
+          "Name": "BossTitle",
+          "Text": "BOSS",
+          "FontSize": 24,
+          "Color": "#FFFFFF"
+        }
+      ]
+    },
+    "TopRightStats": {
+      "Anchor": "TopRight",
+      "Offsets": {
+        "Left": -200,
+        "Top": 40,
+        "Right": -30,
+        "Bottom": 110
+      },
+      "Elements": [
+        {
+          "Type": "Image",
+          "Name": "SkullIcon",
+          "Texture": "T_UI_BossBar_05_Skull_Normal",
+          "Size": [
+            32,
+            32
+          ]
+        },
+        {
+          "Type": "TextBlock",
+          "Name": "KillCount",
+          "Text": "342",
+          "FontSize": 22
+        },
+        {
+          "Type": "Image",
+          "Name": "GemIcon",
+          "Texture": "T_ExpGem_01",
+          "Size": [
+            32,
+            32
+          ]
+        },
+        {
+          "Type": "TextBlock",
+          "Name": "CrystalCount",
+          "Text": "1.68K",
+          "FontSize": 22
+        },
+        {
+          "Type": "Button",
+          "Name": "PauseBtn",
+          "Texture": "T_UI_Settings_11_Btn_Resume",
+          "Size": [
+            52,
+            52
+          ]
+        }
+      ]
+    },
+    "LeftZoneTracker": {
+      "Anchor": "LeftCenter",
+      "Offsets": {
+        "Left": 25,
+        "Top": -280,
+        "Right": 105,
+        "Bottom": 280
+      },
+      "Nodes": [
+        "BOSS_ZONE",
+        "Z5",
+        "Z4",
+        "Z3",
+        "Z2",
+        "Z1_ACTIVE"
+      ]
+    },
+    "RightTacticalSidebar": {
+      "Anchor": "RightCenter",
+      "Offsets": {
+        "Left": -135,
+        "Top": -240,
+        "Right": -20,
+        "Bottom": 380
+      },
+      "Slots": [
+        {
+          "ID": "BARRIER",
+          "Count": 8,
+          "Icon": "T_Prop_Barricade_01_Intact",
+          "Active": false
+        },
+        {
+          "ID": "EXPLOSIVE_BARREL",
+          "Count": 6,
+          "Icon": "T_Prop_Barrel_Red_01_Idle",
+          "Active": true,
+          "Glow": "Blue"
+        },
+        {
+          "ID": "TOXIC_BARREL",
+          "Count": 5,
+          "Icon": "T_Prop_Barrel_Green_01_Idle",
+          "Active": false
+        },
+        {
+          "ID": "LAND_MINE",
+          "Count": 7,
+          "Icon": "T_Prop_LandMine",
+          "Active": false
+        },
+        {
+          "ID": "HEALING_STATION",
+          "Count": 4,
+          "Icon": "T_Prop_MedSupply_01_Closed",
+          "Active": false
+        }
+      ]
+    },
+    "BottomPlayerStatus": {
+      "Anchor": "BottomLeft",
+      "Offsets": {
+        "Left": 30,
+        "Top": -130,
+        "Right": 290,
+        "Bottom": -30
+      },
+      "Elements": [
+        {
+          "Type": "ProgressBar",
+          "Name": "HPBar",
+          "Fill": "T_UI_HUD_01_HealthBar_Fill",
+          "Text": "1200/1200"
+        },
+        {
+          "Type": "ProgressBar",
+          "Name": "ExpBar",
+          "Fill": "T_UI_HUD_04_ExpBar_Fill",
+          "Text": "LV.10"
+        }
+      ]
+    },
+    "BottomWeaponBar": {
+      "Anchor": "BottomCenter",
+      "Offsets": {
+        "Left": -180,
+        "Top": -140,
+        "Right": 340,
+        "Bottom": -20
+      },
+      "Weapons": [
+        {
+          "ID": "AUTO_RIFLE",
+          "Ammo": "30/∞",
+          "Icon": "T_Weapon_AssaultRifle_01_Side",
+          "Active": true,
+          "Glow": "Gold"
+        },
+        {
+          "ID": "SHOTGUN",
+          "Ammo": "6/∞",
+          "Icon": "T_Weapon_Shotgun_01_Side",
+          "Active": false
+        },
+        {
+          "ID": "ROCKET_LAUNCHER",
+          "Ammo": "12/∞",
+          "Icon": "T_Weapon_Rocket_01_Side",
+          "Active": false
+        },
+        {
+          "ID": "TESLA_GUN",
+          "Ammo": "8/∞",
+          "Icon": "T_Weapon_Tesla_01_Side",
+          "Active": false
+        }
+      ]
+    }
+  }
+}

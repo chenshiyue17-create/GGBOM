@@ -1,0 +1,22 @@
+{
+  "boss_origin": [
+    0.0,
+    0.0,
+    663.98
+  ],
+  "boss_extent": [
+    206.19,
+    82.95,
+    238.78
+  ],
+  "calculated_head_top_z": 927.75,
+  "boss_loc": [
+    0.0,
+    0.0,
+    520.0
+  ],
+  "available_niagara_systems": [
+    "/Game/Blueprints/Combat/Niagara/NS_MegaBulletSystem_GPU"
+  ],
+  "available_niagara_emitters": []
+}

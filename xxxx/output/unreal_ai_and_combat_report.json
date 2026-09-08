@@ -1,0 +1,36 @@
+{
+  "title": "UE5.8 战斗物理图表修复与官方 Unreal MCP 落实报告",
+  "projectile_graph_node_count": 10,
+  "projectile_graph_status": "PASS",
+  "unreal_mcp": {
+    "START_SERVER": {
+      "command": "ModelContextProtocol.StartServer 8000",
+      "status": "executed"
+    },
+    "GEN_CONFIG_ALL": {
+      "command": "ModelContextProtocol.GenerateClientConfig All",
+      "status": "executed"
+    },
+    "REFRESH_TOOLS": {
+      "command": "ModelContextProtocol.RefreshTools",
+      "status": "executed"
+    },
+    "client_config": {
+      "exists": true,
+      "content": {
+        "mcpServers": {
+          "unreal-mcp": {
+            "type": "http",
+            "url": "http://127.0.0.1:8000/mcp"
+          }
+        }
+      },
+      "note": "generated_via_official_spec"
+    }
+  },
+  "official_docs": {
+    "mcp_url": "https://dev.epicgames.com/documentation/unreal-engine/unreal-mcp-in-unreal-editor",
+    "ai_features_url": "https://dev.epicgames.com/documentation/unreal-engine/ai-features-tools-and-plugins-in-unreal-engine",
+    "server_endpoint": "http://127.0.0.1:8000/mcp"
+  }
+}

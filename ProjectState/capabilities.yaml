@@ -1,0 +1,28 @@
+capabilities:
+  Direction8WayMath:
+    status: EXISTING
+    blueprint: BP_Player_Medic
+    reusable: true
+  DualLayerDepthSorting:
+    status: EXISTING
+    level: MAP_GGBOM_Main
+    reusable: true
+  FirePolicy_Automatic:
+    status: EXISTING
+    reusable: true
+  FirePolicy_SemiAuto:
+    status: EXISTING
+    reusable: true
+  SpreadPolicy_Single:
+    status: EXISTING
+    reusable: true
+  SpreadPolicy_Cone:
+    status: EXISTING
+    reusable: true
+  VM_HUD_Weapon_Adapter:
+    status: EXISTING
+    widget: WBP_HUD_WeaponSlot
+    reusable: true
+  Enemy4WayAnimationStateMachine:
+    status: PARTIAL
+    reusable: true

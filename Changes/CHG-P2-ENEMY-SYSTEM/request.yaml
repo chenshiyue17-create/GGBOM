@@ -1,0 +1,12 @@
+change_id: CHG-P2-ENEMY-SYSTEM
+title: Enemy AI, 4-Direction Animation Pipeline & Behavioral Diversity
+category: SYSTEM_EXTENSION
+date: "2026-09-03"
+owner: Antigravity AI Engine
+scope:
+  - SYS.ENEMY_AI
+  - SYS.ANIMATION
+  - SYS.HEALTH_COMBAT
+  - SYS.PROJECTILE
+  - SYS.VFX
+description: Establish 4-direction math facing, state-driven Flipbooks, hurt hitstun, gore/death, and behavioral AI for ZombieWalker, VenomShooter, and MutantHound.

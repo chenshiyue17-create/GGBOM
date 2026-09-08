@@ -1,0 +1,7 @@
+stages:
+- Stage00_Start
+- Stage01_Z1
+- Stage02_Z2
+- Stage03_Z3
+- Stage04_Boss
+camera_ortho_width: 941.0

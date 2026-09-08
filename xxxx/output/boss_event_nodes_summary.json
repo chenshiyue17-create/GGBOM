@@ -1,0 +1,308 @@
+[
+  {
+    "title": "事件BeginPlay",
+    "class": "K2Node_Event",
+    "x": 0,
+    "y": 0
+  },
+  {
+    "title": "事件Tick",
+    "class": "K2Node_Event",
+    "x": 0,
+    "y": 0
+  },
+  {
+    "title": "事件ActorBeginOverlap",
+    "class": "K2Node_Event",
+    "x": 0,
+    "y": 480
+  },
+  {
+    "title": "GetPlayerPawn",
+    "class": "K2Node_CallFunction",
+    "x": 220,
+    "y": 100
+  },
+  {
+    "title": "Get Actor Location",
+    "class": "K2Node_CallFunction",
+    "x": 460,
+    "y": 40
+  },
+  {
+    "title": "Get Actor Location",
+    "class": "K2Node_CallFunction",
+    "x": 460,
+    "y": 180
+  },
+  {
+    "title": "Distance (Vector)",
+    "class": "K2Node_CallFunction",
+    "x": 700,
+    "y": -80
+  },
+  {
+    "title": "float > float",
+    "class": "K2Node_PromotableOperator",
+    "x": 940,
+    "y": -80
+  },
+  {
+    "title": "分支",
+    "class": "K2Node_IfThenElse",
+    "x": 1160,
+    "y": 0
+  },
+  {
+    "title": "vector - vector",
+    "class": "K2Node_PromotableOperator",
+    "x": 700,
+    "y": 120
+  },
+  {
+    "title": "Normalize",
+    "class": "K2Node_CallFunction",
+    "x": 920,
+    "y": 120
+  },
+  {
+    "title": "BreakVector",
+    "class": "K2Node_CallFunction",
+    "x": 1140,
+    "y": 120
+  },
+  {
+    "title": "float * float",
+    "class": "K2Node_PromotableOperator",
+    "x": 1380,
+    "y": 40
+  },
+  {
+    "title": "float * float",
+    "class": "K2Node_PromotableOperator",
+    "x": 1600,
+    "y": 40
+  },
+  {
+    "title": "MakeVector",
+    "class": "K2Node_CallFunction",
+    "x": 1820,
+    "y": 40
+  },
+  {
+    "title": "Add Actor World Offset",
+    "class": "K2Node_CallFunction",
+    "x": 2060,
+    "y": 40
+  },
+  {
+    "title": "float * float",
+    "class": "K2Node_PromotableOperator",
+    "x": 1380,
+    "y": 200
+  },
+  {
+    "title": "float * float",
+    "class": "K2Node_PromotableOperator",
+    "x": 1600,
+    "y": 200
+  },
+  {
+    "title": "MakeVector",
+    "class": "K2Node_CallFunction",
+    "x": 1820,
+    "y": 200
+  },
+  {
+    "title": "Add Actor World Offset",
+    "class": "K2Node_CallFunction",
+    "x": 2060,
+    "y": 200
+  },
+  {
+    "title": "GetComponentByClass",
+    "class": "K2Node_CallFunction",
+    "x": 1820,
+    "y": -260
+  },
+  {
+    "title": "Absolute (Float)",
+    "class": "K2Node_CallFunction",
+    "x": 1380,
+    "y": -40
+  },
+  {
+    "title": "Absolute (Float)",
+    "class": "K2Node_CallFunction",
+    "x": 1380,
+    "y": 10
+  },
+  {
+    "title": "float > float",
+    "class": "K2Node_PromotableOperator",
+    "x": 1600,
+    "y": -20
+  },
+  {
+    "title": "分支",
+    "class": "K2Node_IfThenElse",
+    "x": 2320,
+    "y": 40
+  },
+  {
+    "title": "float > float",
+    "class": "K2Node_PromotableOperator",
+    "x": 1820,
+    "y": -40
+  },
+  {
+    "title": "分支",
+    "class": "K2Node_IfThenElse",
+    "x": 2540,
+    "y": -40
+  },
+  {
+    "title": "SetFlipbook",
+    "class": "K2Node_CallFunction",
+    "x": 2780,
+    "y": -80
+  },
+  {
+    "title": "SetFlipbook",
+    "class": "K2Node_CallFunction",
+    "x": 2780,
+    "y": 0
+  },
+  {
+    "title": "float > float",
+    "class": "K2Node_PromotableOperator",
+    "x": 1820,
+    "y": 120
+  },
+  {
+    "title": "分支",
+    "class": "K2Node_IfThenElse",
+    "x": 2540,
+    "y": 120
+  },
+  {
+    "title": "SetFlipbook",
+    "class": "K2Node_CallFunction",
+    "x": 2780,
+    "y": 80
+  },
+  {
+    "title": "SetFlipbook",
+    "class": "K2Node_CallFunction",
+    "x": 2780,
+    "y": 160
+  },
+  {
+    "title": "SetFlipbook",
+    "class": "K2Node_CallFunction",
+    "x": 1380,
+    "y": -140
+  },
+  {
+    "title": "GetPlayerPawn",
+    "class": "K2Node_CallFunction",
+    "x": 220,
+    "y": 600
+  },
+  {
+    "title": "Not Equal (Object)",
+    "class": "K2Node_PromotableOperator",
+    "x": 460,
+    "y": 540
+  },
+  {
+    "title": "分支",
+    "class": "K2Node_IfThenElse",
+    "x": 680,
+    "y": 480
+  },
+  {
+    "title": "Get Actor Location",
+    "class": "K2Node_CallFunction",
+    "x": 680,
+    "y": 620
+  },
+  {
+    "title": "Get Actor Location",
+    "class": "K2Node_CallFunction",
+    "x": 680,
+    "y": 740
+  },
+  {
+    "title": "vector - vector",
+    "class": "K2Node_PromotableOperator",
+    "x": 920,
+    "y": 660
+  },
+  {
+    "title": "Normalize",
+    "class": "K2Node_CallFunction",
+    "x": 1140,
+    "y": 660
+  },
+  {
+    "title": "vector * vector",
+    "class": "K2Node_PromotableOperator",
+    "x": 1360,
+    "y": 660
+  },
+  {
+    "title": "事件AnyDamage",
+    "class": "K2Node_Event",
+    "x": 0,
+    "y": 1000
+  },
+  {
+    "title": "Get CurrentHealth",
+    "class": "K2Node_VariableGet",
+    "x": 240,
+    "y": 1140
+  },
+  {
+    "title": "float - float",
+    "class": "K2Node_PromotableOperator",
+    "x": 460,
+    "y": 1080
+  },
+  {
+    "title": "Max (Float)",
+    "class": "K2Node_CommutativeAssociativeBinaryOperator",
+    "x": 660,
+    "y": 1080
+  },
+  {
+    "title": "Set CurrentHealth",
+    "class": "K2Node_VariableSet",
+    "x": 860,
+    "y": 1000
+  },
+  {
+    "title": "float <= float",
+    "class": "K2Node_PromotableOperator",
+    "x": 1080,
+    "y": 1120
+  },
+  {
+    "title": "分支",
+    "class": "K2Node_IfThenElse",
+    "x": 1280,
+    "y": 1000
+  },
+  {
+    "title": "SetActorEnableCollision",
+    "class": "K2Node_CallFunction",
+    "x": 1500,
+    "y": 950
+  },
+  {
+    "title": "Destroy Actor",
+    "class": "K2Node_CallFunction",
+    "x": 1760,
+    "y": 950
+  }
+]

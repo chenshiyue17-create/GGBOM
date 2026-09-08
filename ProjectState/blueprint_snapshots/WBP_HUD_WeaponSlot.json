@@ -1,0 +1,21 @@
+{
+  "blueprint_path": "/Game/GGBOM/UI/WBP_HUD_WeaponSlot",
+  "blueprint_name": "WBP_HUD_WeaponSlot",
+  "exists_on_disk": true,
+  "file_size_bytes": 20899,
+  "parent_class": "Actor",
+  "components": [
+    {
+      "name": "RootComponent",
+      "class": "SceneComponent"
+    },
+    {
+      "name": "RenderComponent",
+      "class": "PaperSpriteComponent"
+    }
+  ],
+  "variables": [],
+  "functions": [],
+  "interfaces": [],
+  "structural_hash_sha256": "d659c23e53dee7f0f6ae7218251cea0691db918cc1b2a9ebf65c92688b5b016c"
+}

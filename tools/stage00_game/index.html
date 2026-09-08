@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGBOM: 终末医疗兵 - 9:16 单屏幕 Stage 00 纯蓝图战术生存实战模拟器</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/game/style.css">
+</head>
+<body>
+    <div class="screen-frame">
+        <!-- 9:16 VERTICAL DEVICE CONTAINER -->
+        <div class="game-viewport-9x16" id="game-viewport">
+            <!-- CANVAS LAYER: GROUND + CHARACTERS + PROJECTILES + VFX + OVERHEAD -->
+            <canvas id="game-canvas" width="540" height="960"></canvas>
+
+            <!-- FLOATING BOSS OVERHEAD HEALTH BAR (FOLLOWS BOSS IN REALTIME) -->
+            <div class="boss-health-bar-container floating-overhead" id="boss-hud">
+                <div class="boss-avatar-badge">👹</div>
+                <div class="boss-bar-track">
+                    <div class="boss-title">BOSS · 深渊异化领主</div>
+                    <div class="boss-segments">
+                        <div class="boss-segment seg-3" id="boss-hp-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOP HUD: STATS + CONTROLS -->
+            <header class="hud-top">
+
+                <!-- Top Stats -->
+                <div class="top-stats-row">
+                    <button class="hud-btn-pause" id="btn-pause" title="暂停游戏">⏸</button>
+                    <button class="hud-btn-mega" id="btn-mega-barrage" title="切换百万量级 GPU 弹幕压力测试模式">⚡ MEGA: OFF</button>
+                    <div class="stat-pill bullets">
+                        <span class="icon">🚀</span>
+                        <span id="bullet-count">0</span>
+                    </div>
+                    <div class="stat-pill fps">
+                        <span id="fps-display">60 FPS</span>
+                    </div>
+                    <div class="stat-pill kills">
+                        <span class="icon">💀</span>
+                        <span id="kill-count">342</span>
+                    </div>
+                    <div class="stat-pill gems">
+                        <span class="icon">💎</span>
+                        <span id="gem-count">1.68K</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- LEFT HUD: VERTICAL STAGE ZONE PROGRESSION (Z1 -> Z2 -> Z3 -> Z4 -> Z5 -> BOSS ZONE) -->
+            <aside class="hud-zone-tracker" id="zone-tracker">
+                <div class="zone-node boss-zone" data-zone="BossZone">
+                    <span class="zone-icon">☠️</span>
+                    <span class="zone-label">BOSS<br>ZONE</span>
+                </div>
+                <div class="zone-connector"></div>
+                <div class="zone-node" data-zone="Z5"><span>Z5</span></div>
+                <div class="zone-connector"></div>
+                <div class="zone-node" data-zone="Z4"><span>Z4</span></div>
+                <div class="zone-connector"></div>
+                <div class="zone-node" data-zone="Z3"><span>Z3</span></div>
+                <div class="zone-connector"></div>
+                <div class="zone-node" data-zone="Z2"><span>Z2</span></div>
+                <div class="zone-connector"></div>
+                <div class="zone-node active" data-zone="Z1"><span>Z1</span></div>
+            </aside>
+
+            <!-- RIGHT HUD: TACTICAL PROP PLACEMENT PALETTE (DRAG AND DROP) -->
+            <aside class="hud-tactical-sidebar" id="tactical-sidebar">
+                <div class="tactical-card" data-prop="barrier" title="重型混凝土防爆路障 (阻挡行尸路线)">
+                    <div class="prop-thumb" style="background:#4facfe;">🧱</div>
+                    <div class="prop-name">BARRIER</div>
+                    <div class="prop-count">x<span id="cnt-barrier">8</span></div>
+                </div>
+                <div class="tactical-card active" data-prop="explosive_barrel" title="高爆油桶 (受到任何命中即刻引发 250码火伤 AOE)">
+                    <div class="prop-thumb" style="background:#ff2a8d;">🛢️</div>
+                    <div class="prop-name">EXPLOSIVE<br>BARREL</div>
+                    <div class="prop-count">x<span id="cnt-exp-barrel">6</span></div>
+                </div>
+                <div class="tactical-card" data-prop="toxic_barrel" title="生化剧毒桶 (破坏释放大范围持续 6秒酸液毒雾)">
+                    <div class="prop-thumb" style="background:#00e676;">🧪</div>
+                    <div class="prop-name">TOXIC<br>BARREL</div>
+                    <div class="prop-count">x<span id="cnt-toxic-barrel">5</span></div>
+                </div>
+                <div class="tactical-card" data-prop="land_mine" title="感应高爆地雷 (敌人踏入瞬间引爆并击飞)">
+                    <div class="prop-thumb" style="background:#ff9100;">💣</div>
+                    <div class="prop-name">LAND<br>MINE</div>
+                    <div class="prop-count">x<span id="cnt-land-mine">7</span></div>
+                </div>
+                <div class="tactical-card" data-prop="healing_station" title="战地纳米医疗站 (持续为玩家恢复生命值)">
+                    <div class="prop-thumb" style="background:#00f2fe;">🏥</div>
+                    <div class="prop-name">HEALING<br>STATION</div>
+                    <div class="prop-count">x<span id="cnt-healing">4</span></div>
+                </div>
+            </aside>
+
+            <!-- BOTTOM HUD: PLAYER HEALTH + WEAPON BAR (4 SLOTS) -->
+            <footer class="hud-bottom">
+                <!-- Left: Player Health & Level -->
+                <div class="player-status-card">
+                    <div class="hp-row">
+                        <span class="hp-heart">❤️</span>
+                        <span class="hp-text"><span id="player-hp-curr">1200</span>/<span id="player-hp-max">1200</span></span>
+                    </div>
+                    <div class="hp-bar-track">
+                        <div class="hp-bar-fill" id="player-hp-fill" style="width: 100%;"></div>
+                    </div>
+                    <div class="level-row">
+                        <span class="lvl-badge">LV.<span id="player-lvl">10</span></span>
+                        <div class="exp-bar-track">
+                            <div class="exp-bar-fill" id="player-exp-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center/Right: 4-Slot Weapon Switcher Bar -->
+                <div class="weapon-bar-container" id="weapon-bar">
+                    <div class="weapon-slot active" data-slot="1" title="按 1 切换: 突击步枪">
+                        <div class="weapon-icon">🔫</div>
+                        <div class="weapon-ammo"><span id="ammo-1">30</span>/∞</div>
+                        <div class="weapon-name">AUTO RIFLE</div>
+                    </div>
+                    <div class="weapon-slot" data-slot="2" title="按 2 切换: 重型霰弹枪">
+                        <div class="weapon-icon">💥</div>
+                        <div class="weapon-ammo"><span id="ammo-2">6</span>/∞</div>
+                        <div class="weapon-name">SHOTGUN</div>
+                    </div>
+                    <div class="weapon-slot" data-slot="3" title="按 3 切换: 微型火箭筒">
+                        <div class="weapon-icon">🚀</div>
+                        <div class="weapon-ammo"><span id="ammo-3">12</span>/∞</div>
+                        <div class="weapon-name">ROCKET</div>
+                    </div>
+                    <div class="weapon-slot" data-slot="4" title="按 4 切换: 特斯拉电弧枪">
+                        <div class="weapon-icon">⚡</div>
+                        <div class="weapon-ammo"><span id="ammo-4">8</span>/∞</div>
+                        <div class="weapon-name">TESLA GUN</div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- MODAL: LEVEL UP 3-CHOICE CARD UPGRADE -->
+            <div class="upgrade-modal" id="upgrade-modal" style="display: none;">
+                <div class="modal-content">
+                    <h2 class="modal-title">⭐ 战术升级选择 (LEVEL UP)</h2>
+                    <p class="modal-desc">从以下 3 项尖端战地改造中选择 1 项：</p>
+                    <div class="cards-choice-grid">
+                        <div class="choice-card" onclick="selectUpgrade(1)">
+                            <div class="card-rarity epic">EPIC</div>
+                            <div class="card-icon">💉</div>
+                            <div class="card-title">纳米自愈核心</div>
+                            <div class="card-desc">最大生命值 +250，每秒生命恢复 +15 HP</div>
+                        </div>
+                        <div class="choice-card" onclick="selectUpgrade(2)">
+                            <div class="card-rarity rare">RARE</div>
+                            <div class="card-icon">🧪</div>
+                            <div class="card-title">穿甲腐蚀弹头</div>
+                            <div class="card-desc">武器攻击附带 25% 生化酸蚀伤害，穿透 +1</div>
+                        </div>
+                        <div class="choice-card" onclick="selectUpgrade(3)">
+                            <div class="card-rarity legendary">LEGENDARY</div>
+                            <div class="card-icon">🛰️</div>
+                            <div class="card-title">多联弹道过载</div>
+                            <div class="card-desc">主武器单次发射弹丸数量 +2，射速提升 30%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTROL PANEL & INSTRUCTIONS OUTSIDE PHONE FRAME -->
+        <div class="external-controls">
+            <h3>⚡ GGBOM: 终末医疗兵 (Stage 00 纯蓝图 9:16 实战台)</h3>
+            <div class="instruction-box">
+                <p><strong>🎯 操作指南：</strong></p>
+                <ul>
+                    <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 或鼠标拖拽：移动医疗兵主角</li>
+                    <li><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> 或点击底部武器槽：无缝切换 4 种主武器</li>
+                    <li><strong>战术建造（核心亮点）：</strong>鼠标按住右侧战术卡片（路障 / 油桶 / 毒桶 / 地雷 / 医疗站）拖入战场，战场实时呈现<strong>蓝色全息光圈与虚线轨迹</strong>，松开即可放置防御工事！</li>
+                    <li><strong>关卡推进：</strong>击杀敌人积累击杀数，阶段指示器从 <span style="color:#00f2fe;">Z1</span> 自动向 <span style="color:#ff2a8d;">BOSS ZONE</span> 流转，迎战深渊领主！</li>
+                </ul>
+            </div>
+            <div class="blueprint-sync-status">
+                <span class="status-dot"></span>
+                <span>已同步挂载 UE5 纯蓝图管线资产 (801 个全量美术 Sprite)</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/game/game.js"></script>
+</body>
+</html>

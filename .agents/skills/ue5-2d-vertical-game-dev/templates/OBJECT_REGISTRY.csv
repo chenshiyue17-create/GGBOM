@@ -1,0 +1,2 @@
+﻿StableID,ObjectType,DefinitionPath,RuntimeClassOrBlueprint,Parent,Status,SchemaVersion,ContentRevision
+Character.Assault,Character,/Game/Characters/Assault/Data/DA_CHR_Assault,/Game/Characters/Assault/Blueprints/BP_CHR_Assault,BP_CHR_PlayerBase,INCOMPLETE,1,1

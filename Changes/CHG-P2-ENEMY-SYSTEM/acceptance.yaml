@@ -1,0 +1,8 @@
+criteria:
+  - enemy_4way_animation_transitions: PASS
+  - hitstun_and_flashred_decoupling: PASS
+  - projectile_reuse_bioacid: PASS
+  - preview_room_views_generated: PASS
+  - standalone_30fps_enemy_loop: PASS
+  - blueprint_runtime_errors: 0
+  - accessed_none_count: 0

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MS Object Registry",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "stableId",
+      "objectType",
+      "definitionPath"
+    ],
+    "properties": {
+      "stableId": {
+        "type": "string"
+      },
+      "objectType": {
+        "type": "string"
+      },
+      "definitionPath": {
+        "type": "string"
+      },
+      "runtimeClassOrBlueprint": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "parent": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "status": {
+        "type": "string"
+      },
+      "schemaVersion": {
+        "type": "integer"
+      },
+      "contentRevision": {
+        "type": "integer"
+      }
+    }
+  }
+}

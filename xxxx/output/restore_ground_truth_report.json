@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "camera_location": [
+    0.0,
+    -600.0,
+    0.0
+  ],
+  "camera_rotation": [
+    0.0,
+    90.0,
+    0.0
+  ],
+  "reset_sprite_count": 5,
+  "saved": true
+}

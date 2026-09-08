@@ -1,0 +1,21 @@
+{
+  "blueprint_path": "/Game/GGBOM/Blueprints/BP_GGBOM_Enemy",
+  "blueprint_name": "BP_GGBOM_Enemy",
+  "exists_on_disk": true,
+  "file_size_bytes": 27700,
+  "parent_class": "Actor",
+  "components": [
+    {
+      "name": "RootComponent",
+      "class": "SceneComponent"
+    },
+    {
+      "name": "RenderComponent",
+      "class": "PaperSpriteComponent"
+    }
+  ],
+  "variables": [],
+  "functions": [],
+  "interfaces": [],
+  "structural_hash_sha256": "e73ed23f1cd0673d131e55369c1bb07833c440a0cbb2d525c46a6d88ae13c82f"
+}

@@ -1,0 +1,49 @@
+{
+  "phase": "P08",
+  "name": "PropsPlacement",
+  "precondition": "P07_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Props/BP_DestructibleProp_Base",
+    "/Game/Blueprints/Placement/BP_PlacementManager",
+    "/Game/Blueprints/Placement/BP_Placeable_Barrier",
+    "/Game/Blueprints/Placement/BP_Placeable_ExplosiveBarrel",
+    "/Game/Blueprints/Placement/BP_Placeable_ToxicBarrel",
+    "/Game/Blueprints/Placement/BP_Placeable_LandMine",
+    "/Game/Blueprints/Placement/BP_Placeable_HealingStation",
+    "/Game/Data/DT_PlacementItems",
+    "/Game/Tests/P08/BP_Test_PropPlacement"
+  ],
+  "variables_and_defaults": [
+    "Prop state threshold: Damaged at HP<=50%, Destroyed at HP<=0",
+    "Placement GridSize=10, SlopeDotMin=0.92"
+  ],
+  "functions_and_dispatchers": [
+    "DestructibleProp: Apply state sprites, explosion, loot",
+    "PlacementManager: BeginPlacement, UpdatePlacement, ValidatePlacement, CommitPlacement, CancelPlacement"
+  ],
+  "data_rows_or_constants": [
+    "ExplosiveBarrel|HP120|Radius250|Damage200",
+    "ToxicWasteDrum|HP140|Radius180|Damage80",
+    "MilitaryCrate|HP100|NoExplosion",
+    "TechSafe|HP180|NoExplosion",
+    "MedSupplyPod|HP130|NoExplosion",
+    "CryoCanister|HP150|Radius160|Damage70",
+    "BatteryArray|HP160|Radius170|Damage90",
+    "BioContainer|HP170|Radius150|Damage60",
+    "SecurityBarricade|HP300|NoExplosion",
+    "OverloadTerminal|HP500|NoExplosion",
+    "Barrier|BP_Placeable_Barrier|Count8|Footprint120x50|Z0|Rot90",
+    "ExplosiveBarrel|BP_Placeable_ExplosiveBarrel|Count6|Footprint70x70|Z0|Rot90",
+    "ToxicBarrel|BP_Placeable_ToxicBarrel|Count5|Footprint70x70|Z0|Rot90",
+    "LandMine|BP_Placeable_LandMine|Count7|Footprint55x55|Z2|Rot45",
+    "HealingStation|BP_Placeable_HealingStation|Count4|Footprint85x85|Z0|Rot90"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

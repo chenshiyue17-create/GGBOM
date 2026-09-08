@@ -1,0 +1,9 @@
+﻿Metric,DisplayNameCN,PassMax,WarnMax,FailAtOrAbove,Unit
+EnemiesOnScreen,同屏敌人,50,60,70,count
+ProjectilesOnScreen,同屏弹丸,120,180,250,count
+ActiveVFX,活跃VFX,40,60,80,count
+TickActors,Actor Tick数量,50,80,120,count
+DrawCalls,Draw Calls,150,220,300,count
+GPUFrameMs,GPU帧时间,12,14,16.6,ms
+GameThreadMs,Game Thread帧时间,8,12,16.6,ms
+MemoryMB,内存,800,1000,1200,MB

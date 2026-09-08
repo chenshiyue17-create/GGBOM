@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GGBOM - UE5 数据表格 (DataTable) 与本地美术资产库配置中心</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- 顶部导航栏 -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-badge">UE5 DATATABLE STUDIO</div>
+        <h1 class="brand-title">GGBOM <span>数据表格与本地资产库配置中心</span></h1>
+        <span class="sub-title">联动本地美术素材库 (Content Browser) 与全实体 DataTable</span>
+      </div>
+
+      <div class="header-status">
+        <!-- 核心状态指示器：仅视口预览 vs 磁盘已同步 -->
+        <div class="sync-status-box is-synced" id="syncStatusBox">
+          <span class="sync-dot"></span>
+          <span id="syncStatusText">🟢 磁盘数据已就绪（当前配置已生效）</span>
+        </div>
+
+        <div class="status-tag">
+          <span class="icon">📐</span>
+          <span>9:16 正交视口 (941.0)</span>
+        </div>
+
+        <!-- 放弃所有未保存修改 (还原磁盘) -->
+        <button id="btnDiscardAllChanges" class="btn btn-secondary btn-sm btn-discard-glow" style="display: none;" title="放弃所有未保存的调试修改，完全还原为本地磁盘原始数据" onclick="discardAllChanges()">
+          <span>↩️</span> 放弃所有修改
+        </button>
+
+        <!-- 提交保存生效按钮 -->
+        <button id="btnCommitChanges" class="btn btn-primary glow" title="将当前所有模块调试预览的改动原子化写入本地磁盘文件，真正生效">
+          <span class="btn-icon">💾</span> <span id="btnCommitText">保存修改并生效</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 主布局 -->
+    <div class="main-layout">
+      <!-- 侧边导航栏 -->
+      <aside class="sidebar">
+        <div class="sidebar-section-label">UE5 数据表格 (DataTables)</div>
+        <nav class="nav-menu">
+          <button class="nav-item active" data-tab="tab-player">
+            <span class="nav-icon">🦸</span>
+            <div class="nav-text">
+              <span class="title">DT_Characters (主角)</span>
+              <span class="desc">全属性/罗盘动作/素材库替换</span>
+            </div>
+          </button>
+
+          <button class="nav-item" data-tab="tab-enemies">
+            <span class="nav-icon">👾</span>
+            <div class="nav-text">
+              <span class="title">DT_Enemies (敌人)</span>
+              <span class="desc">怪物体魄/移速/4帧Flipbook</span>
+            </div>
+          </button>
+
+          <button class="nav-item" data-tab="tab-weapons">
+            <span class="nav-icon">🔫</span>
+            <div class="nav-text">
+              <span class="title">DT_Weapons (武器与子弹)</span>
+              <span class="desc">伤害/射频/子弹贴图/弹道物理与特效</span>
+            </div>
+          </button>
+
+          <button class="nav-item" data-tab="tab-effects">
+            <span class="nav-icon">✨</span>
+            <div class="nav-text">
+              <span class="title">DT_HitEffects (战斗特效)</span>
+              <span class="desc">枪火/命中/爆炸/切片/顿帧与震屏</span>
+            </div>
+          </button>
+
+          <button class="nav-item" data-tab="tab-cards">
+            <span class="nav-icon">🃏</span>
+            <div class="nav-text">
+              <span class="title">DT_TacticalCards (卡牌)</span>
+              <span class="desc">强化倍率/品质/本地卡面切片</span>
+            </div>
+          </button>
+
+          <button class="nav-item" data-tab="tab-waves">
+            <span class="nav-icon">🌊</span>
+            <div class="nav-text">
+              <span class="title">DT_WaveProgression (波次)</span>
+              <span class="desc">40秒出怪时序/通道投放</span>
+            </div>
+          </button>
+
+          <button class="nav-item" data-tab="tab-tiles">
+            <span class="nav-icon">🗺️</span>
+            <div class="nav-text">
+              <span class="title">DT_MapTiles (土地地块)</span>
+              <span class="desc">地表贴图/阻力/环境毒沼</span>
+            </div>
+          </button>
+
+          <button class="nav-item" data-tab="tab-datatable">
+            <span class="nav-icon">📊</span>
+            <div class="nav-text">
+              <span class="title">全量 DataTable 网格表</span>
+              <span class="desc">多表全景查看/单元格直改</span>
+            </div>
+          </button>
+
+          <button class="nav-item" data-tab="tab-commits">
+            <span class="nav-icon">📋</span>
+            <div class="nav-text">
+              <span class="title">提交审计 & UE5热同步</span>
+              <span class="desc">原子保存履历/一键更新CDO</span>
+            </div>
+          </button>
+        </nav>
+
+        <div class="sidebar-quick-tools">
+          <h3 class="tools-title">⚡ 快速批处理工具</h3>
+          <div class="tools-group">
+            <button class="btn-tool" onclick="batchScaleEnemyHP(1.1)">全体怪物 HP +10%</button>
+            <button class="btn-tool" onclick="batchScaleEnemySpeed(1.15)">全体怪物 移速 +15%</button>
+            <button class="btn-tool" onclick="boostPlayerStats()">增强主角基础属性</button>
+            <button class="btn-tool" onclick="resetCurrentConfig()">重置全部未提交修改</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 主内容工作区 -->
+      <main class="content-area">
+        
+        <!-- ================================================================
+             选项卡 0：DT_Characters 主角全属性与动作素材联动工作台
+             ================================================================ -->
+        <section id="tab-player" class="tab-pane active">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>DT_Characters - 角色全属性与多方向动作工作台</h2>
+              <p>绑定 UE5 行结构体: <code>FCharacterRow</code> | 全属性可调、多朝向切片自定义与新角色扩展</p>
+            </div>
+            <div class="pane-action-bar" style="display: flex; gap: 10px; align-items: center;">
+              <select id="playerSelectDropdown" class="prop-asset-select" style="width: 200px; font-weight: 600;" onchange="switchPlayerCharacter(this.value)"></select>
+              <button class="btn btn-secondary btn-sm" onclick="discardPlayerChanges()" title="放弃当前角色的未保存调试改动，完全还原为磁盘原始数据">
+                <span>↩️</span> 还原角色草稿
+              </button>
+              <button class="btn btn-secondary glow-cyan" onclick="openAddNewRowModal('character')">
+                <span>➕</span> 新增角色 (FCharacterRow)
+              </button>
+            </div>
+          </div>
+
+          <div class="player-workspace">
+            <!-- 左侧：多动作与多方向放映台 -->
+            <div class="player-stage-card card">
+              <div class="card-header-flex">
+                <div class="stage-title-wrap">
+                  <div class="avatar-preview-box" id="avatarBoxTrigger" title="点击更换头像" onclick="openAssetPickerForAvatar()">
+                    <img id="playerAvatarImg" src="" alt="头像" />
+                    <span class="avatar-edit-overlay">改</span>
+                  </div>
+                  <div>
+                    <h3 id="playerStageName">终末医疗兵 (Player_Medic)</h3>
+                    <span id="playerStageMeta" class="stage-meta-tag">Idle | Dir_01_Down</span>
+                  </div>
+                </div>
+                <div class="action-status-badge" id="playerActionBadge">待机中 (IDLE)</div>
+              </div>
+
+              <!-- 动作状态切换工具栏 -->
+              <div class="action-btn-bar">
+                <button class="btn-action active" data-action="Idle" onclick="switchPlayerAction('Idle')">
+                  <span>🧘</span> 待机 (Idle)
+                </button>
+                <button class="btn-action" data-action="Run" onclick="switchPlayerAction('Run')">
+                  <span>🏃</span> 跑动 (Run)
+                </button>
+                <button class="btn-action" data-action="Attack" onclick="switchPlayerAction('Attack')">
+                  <span>🔫</span> 普攻 (Attack)
+                </button>
+                <button class="btn-action" data-action="Hurt" onclick="switchPlayerAction('Hurt')">
+                  <span>💥</span> 受击 (Hurt)
+                </button>
+                <button class="btn-action" data-action="Skill" onclick="switchPlayerAction('Skill')">
+                  <span>💉</span> 技能 (Skill)
+                </button>
+                <button class="btn-action" data-action="Death" onclick="switchPlayerAction('Death')">
+                  <span>💀</span> 倒地 (Death)
+                </button>
+              </div>
+
+              <!-- 放映窗视口与特效叠加层 -->
+              <div class="player-viewport">
+                <div class="viewport-grid-bg"></div>
+                <div class="sprite-actor-wrap">
+                  <img id="playerSpriteImg" class="player-live-sprite" src="" alt="主角动画" />
+                  <img id="vfxOverlayImg" class="vfx-overlay-sprite" src="" alt="特效" style="display: none;" />
+                </div>
+
+                <div class="viewport-badge-row">
+                  <span id="playerFrameIndicator" class="indicator-chip">FRAME: 1/4</span>
+                  <span id="playerDirIndicator" class="indicator-chip highlight">朝向: 朝下</span>
+                  <span id="vfxActiveIndicator" class="indicator-chip" style="display: none;">特效激活</span>
+                </div>
+              </div>
+
+                <div class="compass-wrap">
+                  <div class="compass-title">🧭 动作朝向 (严格 5 核心方向 | 右侧由 Paper2D 镜像驱动)</div>
+                  <div class="five-dir-selector">
+                    <button class="btn-dir" data-dir="Dir_05_Up" onclick="switchPlayerDirection('Dir_05_Up')">
+                      <span class="dir-arrow">↑</span>
+                      <span class="dir-txt">正上 (Up)</span>
+                    </button>
+                    <button class="btn-dir" data-dir="Dir_04_UpLeft" onclick="switchPlayerDirection('Dir_04_UpLeft')">
+                      <span class="dir-arrow">↖</span>
+                      <span class="dir-txt">左上 (UpLeft)</span>
+                    </button>
+                    <button class="btn-dir" data-dir="Dir_03_Left" onclick="switchPlayerDirection('Dir_03_Left')">
+                      <span class="dir-arrow">←</span>
+                      <span class="dir-txt">正侧 (Side)</span>
+                    </button>
+                    <button class="btn-dir" data-dir="Dir_02_DownLeft" onclick="switchPlayerDirection('Dir_02_DownLeft')">
+                      <span class="dir-arrow">↙</span>
+                      <span class="dir-txt">左下 (DownLeft)</span>
+                    </button>
+                    <button class="btn-dir active" data-dir="Dir_01_Down" onclick="switchPlayerDirection('Dir_01_Down')">
+                      <span class="dir-arrow">↓</span>
+                      <span class="dir-txt">正下 (Down)</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 步频与当前动作素材路径快速更换 -->
+                <div class="player-slice-dock">
+                  <div class="slider-label-row">
+                    <label>播放步频 (FPS / 移速联动):</label>
+                    <span id="playerFpsVal" class="slider-val">5.0 FPS</span>
+                  </div>
+                  <input type="range" id="playerFpsSlider" min="1" max="16" step="0.5" value="5">
+
+                  <div class="slot-binding-box">
+                    <div class="slot-binding-header">
+                      <span class="slot-title">当前动作方向绑定素材:</span>
+                      <div class="slot-btn-group" style="display: flex; gap: 6px;">
+                        <button class="btn btn-secondary btn-sm glow-cyan" title="选择整个文件夹作为动画帧序列" onclick="openAssetPickerForCurrentAction('folder')">
+                          <span>📁</span> 替换序列目录
+                        </button>
+                        <button class="btn btn-secondary btn-sm" title="从素材库挑选单张切片" onclick="openAssetPickerForCurrentAction('file')">
+                          <span>🖼️</span> 挑选单帧
+                        </button>
+                        <button class="btn btn-secondary btn-sm" title="恢复为工程初始切片" onclick="resetCurrentActionToDefault()">
+                          <span>🔄</span> 恢复默认
+                        </button>
+                      </div>
+                    </div>
+                    <div class="slot-path-text" id="currentSlotPath">01_Player/01_Idle_Run/Dir_01_Down/Idle</div>
+                  </div>
+
+                  <div class="frame-slices" id="playerFrameSlices"></div>
+
+                  <div class="vfx-trigger-row">
+                    <button class="btn btn-secondary btn-sm" onclick="triggerTestVFX('SkillVFX')">
+                      <span>✨</span> 测试技能特效
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="triggerTestVFX('HitVFX')">
+                      <span>🩸</span> 测试受击特效
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="triggerTestVFX('MuzzleVFX')">
+                      <span>🔥</span> 测试枪火特效
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 全动作与全朝向资产槽位总览矩阵 -->
+              <div class="action-slots-matrix-card">
+                <div class="matrix-header">
+                  <span class="matrix-title">🎬 全动作 & 全朝向资产槽位矩阵 (DataTable Animations Matrix)</span>
+                  <span style="font-size: 11px; color: #64748b;">点击任意槽位可从本地美术库直接替换素材</span>
+                </div>
+                <div id="actionSlotsMatrixContainer"></div>
+              </div>
+            </div>
+
+            <!-- 右侧：主角全属性配置 Details 检查器 -->
+            <div class="player-details-card card">
+              <div class="details-header">
+                <div class="details-header-title">
+                  <span class="details-icon">🛠️</span>
+                  <h3>DT_Characters 属性行详细检查器 (Row Details)</h3>
+                </div>
+              </div>
+
+              <div class="blueprint-props-tree" id="playerPropsTree"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             选项卡 1：DT_Enemies 敌人蓝图属性配置 Inspector
+             ================================================================ -->
+        <section id="tab-enemies" class="tab-pane">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>DT_Enemies - 敌人数据表格与蓝图属性检查器</h2>
+              <p>绑定 UE5 行结构体: <code>FEnemyRow</code> | 碰撞伤害、移速体魄、轻量单向4帧怪底层规则与新怪物扩展</p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-secondary btn-sm" onclick="discardEnemiesChanges()" title="放弃怪物的未保存调试改动，完全还原为磁盘原始数据">
+                <span>↩️</span> 还原怪物草稿
+              </button>
+              <button class="btn btn-secondary glow-cyan" onclick="openAddNewRowModal('enemy')">
+                <span>➕</span> 新增怪物 (FEnemyRow)
+              </button>
+            </div>
+          </div>
+
+          <div class="enemy-workspace">
+            <div class="card enemy-selector-card">
+              <div class="card-header-flex">
+                <h3 class="card-title">数据表行 (Rows)</h3>
+                <span class="badge-accent" id="enemyCountBadge">7 行</span>
+              </div>
+              <div class="enemy-list" id="enemyList"></div>
+            </div>
+
+            <div class="enemy-detail-panel">
+              <div class="blueprint-summary-card card">
+                <div class="blueprint-meta-header">
+                  <div class="bp-class-tag">
+                    <span class="bp-icon">BP</span>
+                    <div>
+                      <h3 id="currentBpTitle">BP_Enemy_ZombieWalker</h3>
+                      <span id="currentBpClassPath" class="bp-path">/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker.BP_Enemy_ZombieWalker_C</span>
+                    </div>
+                  </div>
+                  <div class="bp-status-badges">
+                    <span class="badge-pill green">PaperFlipbookActor</span>
+                    <span class="badge-pill cyan">4-Frame Unidirectional</span>
+                  </div>
+                </div>
+
+                <div class="animation-dock">
+                  <div class="dock-viewport">
+                    <div class="viewport-grid-bg"></div>
+                    <img id="spriteLiveImage" class="live-sprite" src="" alt="4帧动态怪" />
+                    <div class="viewport-badge-row">
+                      <span id="frameIndicator" class="indicator-chip">FRAME: 1/4</span>
+                      <span id="scaleIndicator" class="indicator-chip">SCALE: 0.45x</span>
+                      <span class="indicator-chip highlight">单向朝下 (0°开销)</span>
+                    </div>
+                  </div>
+
+                  <div class="dock-controls">
+                    <div class="slider-control">
+                      <div class="slider-label-row">
+                        <label>动画步频 (FPS / 移速步幅联动):</label>
+                        <span id="fpsValue" class="slider-val">4.0 FPS</span>
+                      </div>
+                      <input type="range" id="fpsSlider" min="1" max="16" step="0.5" value="4">
+                    </div>
+                    <div class="frame-slices" id="frameSlices"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card details-inspector-card">
+                <div class="details-header">
+                  <div class="details-header-title">
+                    <span class="details-icon">⚙️</span>
+                    <h3>蓝图默认属性 (Blueprint Class Defaults)</h3>
+                  </div>
+                  <div class="details-search">
+                    <input type="text" id="propSearchInput" placeholder="🔍 过滤蓝图属性名称..." class="input-search" />
+                  </div>
+                </div>
+
+                <div class="blueprint-props-tree" id="blueprintPropsTree"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             选项卡 2：DT_Weapons 武器与子弹全属性配置
+             ================================================================ -->
+        <section id="tab-weapons" class="tab-pane">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>DT_Weapons - 武器与子弹全属性及视觉资产配置</h2>
+              <p>绑定 UE5 行结构体: <code>FWeaponRow</code> | 武器大卡牌图标、飞行子弹贴图/缩放/物理弹道(初速/穿透/存活/碰撞胶囊/溅射爆炸)、枪火与受击特效全要素自定义</p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-secondary btn-sm" onclick="discardWeaponsChanges()" title="放弃武器与子弹的未保存调试改动，完全还原为磁盘原始数据">
+                <span>↩️</span> 还原武器草稿
+              </button>
+              <button class="btn btn-secondary glow-cyan" onclick="openAddNewRowModal('weapon')">
+                <span>➕</span> 新增武器 (FWeaponRow)
+              </button>
+            </div>
+          </div>
+
+          <!-- 军械库战力与全局参数 HUD 概览栏 (消除大面积死黑空白) -->
+          <div class="weapons-summary-hud">
+            <div class="hud-item">
+              <span class="hud-icon">🔫</span>
+              <div class="hud-meta">
+                <span class="hud-title">军械库武器配置</span>
+                <span class="hud-val" id="hudWeaponCount">3 门主力武器已就绪</span>
+              </div>
+            </div>
+            <div class="hud-item">
+              <span class="hud-icon">⚡</span>
+              <div class="hud-meta">
+                <span class="hud-title">平均理论火力</span>
+                <span class="hud-val" id="hudAvgDps">203 DPS</span>
+              </div>
+            </div>
+            <div class="hud-item">
+              <span class="hud-icon">🚀</span>
+              <div class="hud-meta">
+                <span class="hud-title">弹道弹体机制</span>
+                <span class="hud-val" style="color: #38bdf8;">动能直射 / 散射霰弹 / 腐蚀酸雾</span>
+              </div>
+            </div>
+            <div class="hud-item">
+              <span class="hud-icon">💥</span>
+              <div class="hud-meta">
+                <span class="hud-title">伤害杀伤载荷</span>
+                <span class="hud-val" style="color: #f59e0b;">纯物理穿甲 + 范围爆炸溅射</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="weapons-grid" id="weaponsGrid"></div>
+        </section>
+
+        <!-- ================================================================
+             选项卡：DT_HitEffects 战斗特效工作台 (VFX Live Studio)
+             ================================================================ -->
+        <section id="tab-effects" class="tab-pane">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>DT_HitEffects - 战斗特效数据表格与打击感调优工作台</h2>
+              <p>绑定 UE5 行结构体: <code>FHitEffectRow</code> | 枪口火光、命中火花、高爆烈焰、酸雾毒圈、播放步频、顿帧时间 (HitStop) 与摄像机震屏 (CameraShake)</p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-secondary btn-sm" onclick="discardEffectsChanges()" title="放弃战斗特效的未保存调试改动，完全还原为磁盘原始数据">
+                <span>↩️</span> 还原特效草稿
+              </button>
+              <button class="btn btn-secondary glow-cyan" onclick="openAddNewRowModal('effect')">
+                <span>➕</span> 新增战斗特效 (FHitEffectRow)
+              </button>
+            </div>
+          </div>
+
+          <div class="effects-workspace">
+            <!-- 左侧：特效行选择列表 -->
+            <div class="card effects-selector-card">
+              <div class="card-header-flex">
+                <h3 class="card-title">特效行 (FX Rows)</h3>
+                <span class="badge-accent" id="effectCountBadge">6 个特效</span>
+              </div>
+              <div class="effect-list" id="effectList"></div>
+            </div>
+
+            <!-- 中间：特效逐帧放映台与打击感测试 -->
+            <div class="effects-stage-panel">
+              <div class="card effect-stage-card">
+                <div class="effect-stage-header">
+                  <div class="effect-title-wrap">
+                    <span class="effect-icon-chip" id="effectTypeIcon">✨</span>
+                    <div>
+                      <h3 id="currentEffectTitle">金属动能跳弹火花</h3>
+                      <span id="currentEffectFolder" class="effect-folder-badge">05_VFX/11_Hit_Kinetic</span>
+                    </div>
+                  </div>
+                  <div class="effect-header-badges">
+                    <span class="badge-pill green" id="effectTypeBadge">HitImpact</span>
+                    <span class="badge-pill cyan" id="effectFramesCountBadge">8 帧序列</span>
+                  </div>
+                </div>
+
+                <!-- 视口放映区域 -->
+                <div class="effect-viewport" id="effectViewport">
+                  <div class="viewport-grid-bg"></div>
+                  <div class="effect-sprite-wrap" id="effectSpriteWrap">
+                    <img id="effectLiveSprite" class="effect-live-img" src="" alt="特效放映" />
+                  </div>
+                  <div class="viewport-badge-row">
+                    <span id="effectFrameIndicator" class="indicator-chip">FRAME: 1/8</span>
+                    <span id="effectScaleIndicator" class="indicator-chip">SCALE: 0.45x</span>
+                    <span id="effectFpsIndicator" class="indicator-chip">12.0 FPS</span>
+                    <span id="effectHitStopIndicator" class="indicator-chip highlight" style="display: none;">💥 HIT STOP 顿帧中</span>
+                  </div>
+                </div>
+
+                <!-- 控制操作区 -->
+                <div class="effect-stage-controls">
+                  <div class="effect-sliders-row">
+                    <div class="slider-control">
+                      <div class="slider-label-row">
+                        <label>播放帧率 (FPS):</label>
+                        <span id="effectFpsDisplay" class="slider-val">12.0 FPS</span>
+                      </div>
+                      <input type="range" id="effectFpsSlider" min="1" max="30" step="1" value="12" oninput="handleEffectFpsSlider(this.value)">
+                    </div>
+
+                    <div class="slider-control">
+                      <div class="slider-label-row">
+                        <label>尺寸缩放 (Scale):</label>
+                        <span id="effectScaleDisplay" class="slider-val">0.45x</span>
+                      </div>
+                      <input type="range" id="effectScaleSlider" min="0.1" max="2.0" step="0.05" value="0.45" oninput="handleEffectScaleSlider(this.value)">
+                    </div>
+                  </div>
+
+                  <!-- 打击感测试与素材挑选快捷栏 -->
+                  <div class="effect-actions-bar">
+                    <button class="btn btn-primary glow-red" id="btnTestHitStop" onclick="triggerHitImpactTest()">
+                      <span>💥</span> 模拟打击感测试 (顿帧 & 震屏)
+                    </button>
+                    <button class="btn btn-secondary glow-cyan" onclick="openAssetPickerForCurrentEffectFolder()">
+                      <span>📁</span> 从素材库挑选切片目录 (05_VFX)
+                    </button>
+                  </div>
+
+                  <!-- 胶卷横条 (Filmstrip) -->
+                  <div class="effect-filmstrip-wrap">
+                    <div class="filmstrip-label">特效切片序列 (Frame Slices):</div>
+                    <div class="effect-filmstrip" id="effectFilmstrip"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 右侧：FHitEffectRow 属性检查器 -->
+            <div class="card effect-details-card">
+              <div class="details-header">
+                <div class="details-header-title">
+                  <span class="details-icon">✨</span>
+                  <h3>FHitEffectRow 属性检查器 (Row Details)</h3>
+                </div>
+              </div>
+              <div class="blueprint-props-tree" id="effectPropsTree"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             选项卡 3：DT_TacticalCards 战术卡牌升级配置
+             ================================================================ -->
+        <section id="tab-cards" class="tab-pane">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>DT_TacticalCards - 局内战术卡牌升级数据表</h2>
+              <p>配置技能强化倍率、影响的目标属性、稀有度与本地卡面插画</p>
+            </div>
+          </div>
+
+          <div class="cards-grid" id="cardsGrid"></div>
+        </section>
+
+        <!-- ================================================================
+             选项卡 4：DT_WaveProgression 关卡波次推进
+             ================================================================ -->
+        <section id="tab-waves" class="tab-pane">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>DT_WaveProgression - Stage 01 关卡出怪波次推进表 (40s 时间轴)</h2>
+              <p>出怪时间偏移 (TimeOffset)、生成通道 (LaneIndex)、刷怪批次数量与间隔</p>
+            </div>
+          </div>
+
+          <div class="card wave-timeline-card">
+            <div class="timeline-header">
+              <span>时间轴推进甘特图 (0s - 40s)</span>
+              <div class="lane-legend">
+                <span class="lane-dot l0"></span>通道 0 (左外)
+                <span class="lane-dot l1"></span>通道 1 (左中)
+                <span class="lane-dot l2"></span>通道 2 (右中)
+                <span class="lane-dot l3"></span>通道 3 (右外)
+              </div>
+            </div>
+            <div class="timeline-body" id="waveTimelineBody"></div>
+          </div>
+
+          <div class="wave-table-card card">
+            <h3 class="card-title">波次详细参数表</h3>
+            <div class="table-responsive">
+              <table class="data-table" id="waveDataTable">
+                <thead>
+                  <tr>
+                    <th>时间点</th>
+                    <th>通道 (Lane)</th>
+                    <th>敌人类型</th>
+                    <th>数量</th>
+                    <th>生成间隔</th>
+                    <th>高危警报</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             选项卡 5：DT_MapTiles 土地与地图地块数据表
+             ================================================================ -->
+        <section id="tab-tiles" class="tab-pane">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>DT_MapTiles - 土地与地图地块数据表 (Landscape & Ground Tiles)</h2>
+              <p>绑定 UE5 行结构体: <code>FTileRow</code> | 地表贴图、高空遮罩层、地面摩擦阻力系数、环境持续伤害与新地块扩展</p>
+            </div>
+            <button class="btn btn-secondary glow-cyan" onclick="openAddNewRowModal('tile')">
+              <span>➕</span> 新增土地地块 (FTileRow)
+            </button>
+          </div>
+
+          <div class="tile-workspace" style="display: grid; grid-template-columns: 340px 1fr; gap: 20px;">
+            <!-- 左侧：土地列表与地表预览视口 -->
+            <div class="card" style="display: flex; flex-direction: column; gap: 14px;">
+              <div class="card-header-flex">
+                <h3 class="card-title">土地地块行 (Tiles)</h3>
+                <span class="badge-accent" id="tileCountBadge">4 块</span>
+              </div>
+              <div class="tile-list" id="tileList" style="display: flex; flex-direction: column; gap: 8px;"></div>
+
+              <div class="tile-viewport-card" style="background: #0a0e17; border: 1px solid #1e293b; border-radius: 6px; padding: 10px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                <div style="font-size: 11px; color: #94a3b8; font-family: var(--font-mono);">地表材质贴图放映视口</div>
+                <div style="width: 100%; height: 220px; background: repeating-conic-gradient(#151b28 0% 25%, #0f141f 0% 50%) 50% / 16px 16px; border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative;">
+                  <img id="tileLiveImg" src="" alt="地表贴图" style="max-width: 100%; max-height: 100%; object-fit: cover;" />
+                  <div style="position: absolute; bottom: 6px; left: 6px; background: rgba(0,0,0,0.7); padding: 2px 6px; border-radius: 3px; font-size: 10px; font-family: var(--font-mono); color: #38bdf8;" id="tileSpecBadge">摩擦力: 1.0x | 0 DPS</div>
+                </div>
+                <button class="btn btn-secondary btn-sm glow-cyan" style="width: 100%;" onclick="openAssetPickerForCurrentTile()">
+                  <span>📁</span> 从素材库挑选更换地表贴图
+                </button>
+              </div>
+            </div>
+
+            <!-- 右侧：土地地块属性 Details 检查器 -->
+            <div class="card">
+              <div class="details-header">
+                <div class="details-header-title">
+                  <span class="details-icon">🛠️</span>
+                  <h3 id="currentTileDetailsTitle">DT_MapTiles 属性行详细检查器 (Row Details)</h3>
+                </div>
+              </div>
+              <div class="blueprint-props-tree" id="tilePropsTree"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             选项卡 6：全量 DataTable 网格表 (DataTable Grid View)
+             ================================================================ -->
+        <section id="tab-datatable" class="tab-pane">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>全量 UE5 DataTable 网格总览 (DataTable Grid Inspector)</h2>
+              <p>像 UE5 编辑器一样横向浏览所有数据表格，支持直接在表格单元格内修改数值</p>
+            </div>
+            <div class="dt-selector-bar">
+              <span style="font-size: 12px; color: var(--text-muted);">切换数据表格:</span>
+              <button class="btn-chip" id="btnDtChars" onclick="switchGridTable('DT_Characters')">DT_Characters (主角表)</button>
+              <button class="btn-chip active" id="btnDtEnemies" onclick="switchGridTable('DT_Enemies')">DT_Enemies (敌人表)</button>
+              <button class="btn-chip" id="btnDtWeapons" onclick="switchGridTable('DT_Weapons')">DT_Weapons (武器表)</button>
+              <button class="btn-chip" id="btnDtEffects" onclick="switchGridTable('DT_HitEffects')">DT_HitEffects (战斗特效表)</button>
+              <button class="btn-chip" id="btnDtCards" onclick="switchGridTable('DT_TacticalCards')">DT_TacticalCards (卡牌表)</button>
+              <button class="btn-chip" id="btnDtTiles" onclick="switchGridTable('DT_MapTiles')">DT_MapTiles (土地表)</button>
+              <button class="btn btn-secondary btn-sm glow-cyan" style="margin-left: auto;" onclick="openAddNewRowModalFromCurrentGrid()">
+                <span>➕</span> 新增数据行
+              </button>
+            </div>
+          </div>
+
+          <div class="card datatable-card">
+            <div class="table-responsive" id="datatableGridWrap">
+              <table class="ue-data-table" id="universalDataTable">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             选项卡 6：提交审计与 UE5 热部署
+             ================================================================ -->
+        <section id="tab-commits" class="tab-pane">
+          <div class="pane-header">
+            <div class="pane-title-group">
+              <h2>DataTable 提交审计日志与 UE5 热同步</h2>
+              <p>查看属性修改履历，一键直接将修改同步至 UE5 关卡与蓝图 CDO</p>
+            </div>
+          </div>
+
+          <div class="commits-layout">
+            <div class="card deploy-panel-card">
+              <h3 class="card-title">🚀 UE5 引擎热部署与关卡同步</h3>
+              <p class="deploy-desc">
+                点击下方按钮将自动调用 <code>UnrealEditor-Cmd</code> 运行部署脚本，重新加载修改后的 <code>DT_Characters.json</code> 与 <code>DT_Enemies.json</code>，更新 <code>MAP_GGBOM_Main</code> 场景！
+              </p>
+              <div class="deploy-actions">
+                <button id="btnDeployUE5" class="btn btn-primary glow">
+                  <span>⚡</span> 一键热同步至 UE5 关卡
+                </button>
+                <span id="deployStatusText" class="deploy-status">就绪</span>
+              </div>
+              <div class="deploy-log-box" id="deployLogBox">等待执行...</div>
+            </div>
+
+            <div class="card commit-history-card">
+              <h3 class="card-title">📋 蓝图属性变更历史 (Audit Commits)</h3>
+              <div class="commit-list" id="commitList">
+                <div class="empty-hint">暂无提交记录</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       全功能本地美术素材库选择器 (Asset Browser Modal)
+       ================================================================ -->
+  <div class="modal-backdrop" id="assetBrowserModal">
+    <div class="asset-modal-box">
+      <div class="asset-modal-header">
+        <div class="asset-modal-title">
+          <span class="icon">📁</span>
+          <div>
+            <h3>本地美术素材库浏览器 (Content Browser)</h3>
+            <span class="sub" id="assetBrowserTargetDesc">为当前槽位挑选素材...</span>
+          </div>
+        </div>
+        <div class="asset-search-wrap">
+          <input type="text" id="assetSearchInput" placeholder="🔍 搜索素材库资源名 (如: Gun, Attack, Flash)..." class="input-asset-search" />
+        </div>
+        <button class="btn-close" onclick="closeAssetBrowser()">&times;</button>
+      </div>
+
+      <div class="asset-modal-body">
+        <!-- 左侧：目录分类树 -->
+        <aside class="asset-tree-panel">
+          <div class="asset-tree-title">素材分类 (Art Categories)</div>
+          <div class="asset-tree-list" id="assetTreeList"></div>
+        </aside>
+
+        <!-- 右侧：素材预览网格 -->
+        <div class="asset-content-panel">
+          <div class="asset-content-header">
+            <span id="currentFolderBreadcrumb" class="folder-breadcrumb">Content/美术/Art</span>
+            <span id="assetMatchCount" class="badge-accent">0 项素材</span>
+          </div>
+          <div class="asset-grid" id="assetGrid">
+            <!-- 动态渲染平铺的资产切片卡片 -->
+          </div>
+        </div>
+      </div>
+
+      <div class="asset-modal-footer">
+        <div class="selected-asset-preview-bar">
+          <span>已选中资产:</span>
+          <code id="selectedAssetPathDisplay">未选择</code>
+        </div>
+        <div class="footer-btn-group">
+          <button class="btn btn-secondary" onclick="closeAssetBrowser()">取消</button>
+          <button class="btn btn-primary glow" id="btnApplySelectedAsset">确定绑定此素材</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 提交确认抽屉 / 模态框 -->
+  <div class="modal-backdrop" id="commitModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>确认提交全实体与蓝图属性变更</h3>
+        <button class="btn-close" onclick="closeCommitModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">您在界面中修改的各项属性将直接被原子化保存到本地工程 <code>Content/Data/*.json</code>：</p>
+        
+        <div class="diff-preview-container">
+          <div class="diff-title">变更项目 Diff 预览:</div>
+          <div class="diff-list" id="modalDiffList"></div>
+        </div>
+
+        <div class="form-group">
+          <label>提交者 / 策划:</label>
+          <input type="text" id="commitAuthorInput" value="策划/开发者" class="input-text" />
+        </div>
+
+        <div class="form-group">
+          <label>变更说明 (Commit Note):</label>
+          <textarea id="commitNoteInput" rows="2" class="input-text" placeholder="例如：调整主角生命与移速，配置攻击与技能特效"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeCommitModal()">取消</button>
+        <button class="btn btn-primary glow" id="btnConfirmCommit">确认直接保存并提交</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 通用 UE5 行结构体新增实体模态框 (Add New Row Modal) -->
+  <div class="modal-backdrop" id="addEntityModal">
+    <div class="modal-box" style="width: 680px; max-width: 95vw;">
+      <div class="modal-header">
+        <div>
+          <div style="font-size: 11px; font-family: var(--font-mono); color: var(--accent-cyan);" id="newEntityStructBadge">USTRUCT: FTableRowBase</div>
+          <h3 id="newEntityModalTitle">新增数据表行 (New DataTable Row)</h3>
+        </div>
+        <button class="btn-close" onclick="closeAddNewRowModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label style="font-weight: 700; color: #f1f5f9;">数据表行标识名 (RowKey / Unique FName):</label>
+          <input type="text" id="newEntityRowKey" class="input-text" placeholder="例如: Player_Assault 或 WPN_Laser_Pulse" />
+          <span style="font-size: 11px; color: #64748b;">必须全工程唯一，作为 UE5 DataTable FindRow 索引主键</span>
+        </div>
+
+        <div id="newEntityFormFields" style="display: flex; flex-direction: column; gap: 12px; margin-top: 14px;">
+          <!-- 动态按结构体注入字段输入表单 -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeAddNewRowModal()">取消</button>
+        <button class="btn btn-primary glow" id="btnConfirmAddEntity" onclick="handleConfirmAddNewRow()">确认创建并加入数据表</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

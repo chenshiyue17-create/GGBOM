@@ -1,0 +1,68 @@
+visual_standards:
+  character_scale:
+    value: 160x160 uu box (visual height approx 150-180 uu in world space)
+    status: APPROVED
+    authority: PROJECT_LESSONS_AND_STABILITY_RULES.md
+  enemy_scale:
+    value: Standard 1.0 (150 uu), Elite 1.35 (200 uu), Lord Boss 2.0 (300 uu)
+    status: APPROVED
+    authority: rebuild_direction_state_v2.py
+  projectile_scale:
+    value: 32x32 to 48x48 uu in world space (calibrated 0.25 scale for KineticPistol)
+    status: APPROVED
+    authority: calibrated_dimensions_spec.py
+  camera_perspective:
+    value: Orthographic 2D Top-Down 45° Retro Action
+    status: APPROVED
+    authority: MAP_GGBOM_Main.umap
+  camera_framing:
+    value: OrthoWidth = 941.0, AspectRatio = 0.562799 (941/1672), 100% Fullscreen
+      Uncropped
+    status: APPROVED
+    authority: DefaultEngine.ini & Master_Orthographic_Camera
+  sprite_orientation:
+    value: Horizontal Mirroring via ScaleX (-1.0 for East, +1.0 for West)
+    status: APPROVED
+    authority: AI_HANDOFF_DIRECTION_STATE.md
+  character_pivot:
+    value: Bottom Center (X=0.5, Y=0.90) for precise ground foot alignment
+    status: APPROVED
+    authority: ART_ASSETS_CATALOG.md
+  animation_direction_conventions:
+    value: '8-Direction Player (5 unique sheets: Down, DownLeft, Left, UpLeft, Up
+      + Mirroring), 4-Direction Enemies'
+    status: APPROVED
+    authority: P01_final_report.md
+  lighting:
+    value: Unlit / Emissive 2D Flat Color, AutoExposure=0, Lumen GI=0, TonemapperFilm=0
+    status: APPROVED
+    authority: PROJECT_LESSONS_AND_STABILITY_RULES.md
+  pixel_language:
+    value: Dark Sci-Fi Apocalyptic Retro Action (sRGB pass-through, TA_Clamp sampling,
+      TMGS_NoMipmaps)
+    status: APPROVED
+    authority: apply_2d_color_spec_and_postprocess.py
+  hud_placement:
+    value: Screen Space 9-Slice & SafeZone Anchors, World Space HUD strictly prohibited
+    status: APPROVED
+    authority: AI_HANDOFF_SCENE_HUD_STRUCTURE.md
+  hud_component_style:
+    value: Sci-Fi Apocalyptic Medical Terminal (Dark Slate Blue + Neon Cyan + Crimson)
+    status: APPROVED
+    authority: WBP_GGBOM_CombatHUD
+  ui_scale:
+    value: DPI Scaler rule for 9:16 Portrait (360x640, 540x960, 1080x1920)
+    status: APPROVED
+    authority: DefaultEngine.ini
+  icon_style:
+    value: 512x512 High-Res Cards, 128x128 Rounded Square Weapon/Skill Icons
+    status: APPROVED
+    authority: ART_ASSETS_CATALOG.md
+  vfx_scale:
+    value: UNRESOLVED
+    status: UNRESOLVED
+    note: Individual world-space scaling standards for 18 VFX groups not yet locked.
+  scene_density:
+    value: UNRESOLVED
+    status: UNRESOLVED
+    note: Ratio of obstacle props to walkable combat lane width TBD.

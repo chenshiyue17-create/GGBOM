@@ -1,0 +1,12 @@
+=== BP_Boss_Overlord_C CDO 属性 ===
+  Property 'can_be_damaged' = True
+  Property 'get_life_span' (error: PaperFlipbookActor: Failed to find property 'get_life_span' for attribute 'get_life_span' on 'BP_Boss_Overlord_C')
+  Property 'initial_life_span' = 0.0
+  Property 'life_span' = 0.0
+  Property 'on_take_any_damage' (error: <method 'get_editor_property' of '_ObjectBase' objects> returned NULL without setting an exception)
+  Property 'on_take_point_damage' (error: <method 'get_editor_property' of '_ObjectBase' objects> returned NULL without setting an exception)
+  Property 'on_take_radial_damage' (error: <method 'get_editor_property' of '_ObjectBase' objects> returned NULL without setting an exception)
+  Property 'receive_any_damage' (error: PaperFlipbookActor: Failed to find property 'receive_any_damage' for attribute 'receive_any_damage' on 'BP_Boss_Overlord_C')
+  Property 'receive_point_damage' (error: PaperFlipbookActor: Failed to find property 'receive_point_damage' for attribute 'receive_point_damage' on 'BP_Boss_Overlord_C')
+  Property 'receive_radial_damage' (error: PaperFlipbookActor: Failed to find property 'receive_radial_damage' for attribute 'receive_radial_damage' on 'BP_Boss_Overlord_C')
+  Property 'set_life_span' (error: PaperFlipbookActor: Failed to find property 'set_life_span' for attribute 'set_life_span' on 'BP_Boss_Overlord_C')

@@ -1,0 +1,80 @@
+{
+  "P01_E": "PASS",
+  "cold_opened_assets": 10,
+  "flipbooks_playing": 5,
+  "map": "/Game/P01/Maps/MAP_P01_FlipbookValidation",
+  "checks": [
+    {
+      "source": "Content/美术/Art/01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_Sheet.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/01_Player/01_Idle_Run/Dir_01_Down/Idle/Textures/T_Player_Medic_Idle_Dir_01_Down_Sheet.T_Player_Medic_Idle_Dir_01_Down_Sheet",
+      "opened": true,
+      "flipbook": "/Game/P01/Imported/Content/Asset/Art/01_Player/01_Idle_Run/Dir_01_Down/Idle/Flipbooks/FB_T_Player_Medic_Idle_Dir_01_Down_Sheet.FB_T_Player_Medic_Idle_Dir_01_Down_Sheet",
+      "frames": 4,
+      "playing": true
+    },
+    {
+      "source": "Content/美术/Art/02_Enemies/Boss_Overlord/Actions/Death_Collapse/Dir_01_Down/T_Boss_Death_Dir_01_Down_Sheet.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Death_Collapse/Dir_01_Down/Textures/T_Boss_Death_Dir_01_Down_Sheet.T_Boss_Death_Dir_01_Down_Sheet",
+      "opened": true,
+      "flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Death_Collapse/Dir_01_Down/Flipbooks/FB_T_Boss_Death_Dir_01_Down_Sheet.FB_T_Boss_Death_Dir_01_Down_Sheet",
+      "frames": 4,
+      "playing": true
+    },
+    {
+      "source": "Content/美术/Art/02_Enemies/Zombie/01_Zombie_Walker_Basic/T_Zombie_WalkerBasic_01.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/01_Zombie_Walker_Basic/Textures/T_Zombie_WalkerBasic_01.T_Zombie_WalkerBasic_01",
+      "opened": true,
+      "sprite": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/01_Zombie_Walker_Basic/Sprites/SP_T_Zombie_WalkerBasic_01.SP_T_Zombie_WalkerBasic_01"
+    },
+    {
+      "source": "Content/美术/Art/04_Props/01_RedExplosiveBarrel/T_Prop_Barrel_Sheet.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/04_Props/01_RedExplosiveBarrel/Textures/T_Prop_Barrel_Sheet.T_Prop_Barrel_Sheet",
+      "opened": true,
+      "flipbook": "/Game/P01/Imported/Content/Asset/Art/04_Props/01_RedExplosiveBarrel/Flipbooks/FB_T_Prop_Barrel_Sheet.FB_T_Prop_Barrel_Sheet",
+      "frames": 3,
+      "playing": true
+    },
+    {
+      "source": "Content/美术/Art/05_VFX/01_Explosion_Fire/T_VFX_Explosion_Fire_Sheet.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/05_VFX/01_Explosion_Fire/Textures/T_VFX_Explosion_Fire_Sheet.T_VFX_Explosion_Fire_Sheet",
+      "opened": true,
+      "flipbook": "/Game/P01/Imported/Content/Asset/Art/05_VFX/01_Explosion_Fire/Flipbooks/FB_T_VFX_Explosion_Fire_Sheet.FB_T_VFX_Explosion_Fire_Sheet",
+      "frames": 4,
+      "playing": true
+    },
+    {
+      "source": "Content/美术/Art/06_Cards/01_UpgradeCards_3Choice/T_Card_Upgrade_01.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/06_Cards/01_UpgradeCards_3Choice/Textures/T_Card_Upgrade_01.T_Card_Upgrade_01",
+      "opened": true,
+      "sprite": "/Game/P01/Imported/Content/Asset/Art/06_Cards/01_UpgradeCards_3Choice/Sprites/SP_T_Card_Upgrade_01.SP_T_Card_Upgrade_01"
+    },
+    {
+      "source": "Content/美术/Art/07_UI/01_CombatHUD/T_UI_HUD_01_HealthBar_Fill.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/07_UI/01_CombatHUD/Textures/T_UI_HUD_01_HealthBar_Fill.T_UI_HUD_01_HealthBar_Fill",
+      "opened": true,
+      "sprite": "/Game/P01/Imported/Content/Asset/Art/07_UI/01_CombatHUD/Sprites/SP_T_UI_HUD_01_HealthBar_Fill.SP_T_UI_HUD_01_HealthBar_Fill"
+    },
+    {
+      "source": "Content/美术/Art/08_Maps/Stage00_Start/T_Map_Stage00_Start_Ground.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/08_Maps/Stage00_Start/Textures/T_Map_Stage00_Start_Ground.T_Map_Stage00_Start_Ground",
+      "opened": true,
+      "sprite": "/Game/P01/Imported/Content/Asset/Art/08_Maps/Stage00_Start/Sprites/SP_T_Map_Stage00_Start_Ground.SP_T_Map_Stage00_Start_Ground"
+    },
+    {
+      "source": "Content/美术/Art/08_Maps/Stage00_Start/T_Map_Stage00_Start_Overhead.png",
+      "texture": "/Game/P01/Imported/Content/Asset/Art/08_Maps/Stage00_Start/Textures/T_Map_Stage00_Start_Overhead.T_Map_Stage00_Start_Overhead",
+      "opened": true,
+      "sprite": "/Game/P01/Imported/Content/Asset/Art/08_Maps/Stage00_Start/Sprites/SP_T_Map_Stage00_Start_Overhead.SP_T_Map_Stage00_Start_Overhead"
+    },
+    {
+      "source": "Intermediate/P01/Generated/ProjectileFlight4/01_KineticPistol/T_Bullet_KineticPistol_02_Flight_Strict4.png",
+      "texture": "/Game/P01/Imported/Intermediate/P01/Generated/ProjectileFlight4/01_KineticPistol/Textures/T_Bullet_KineticPistol_02_Flight_Strict4.T_Bullet_KineticPistol_02_Flight_Strict4",
+      "opened": true,
+      "flipbook": "/Game/P01/Imported/Intermediate/P01/Generated/ProjectileFlight4/01_KineticPistol/Flipbooks/FB_T_Bullet_KineticPistol_02_Flight_Strict4.FB_T_Bullet_KineticPistol_02_Flight_Strict4",
+      "frames": 4,
+      "playing": true
+    }
+  ],
+  "failures": [],
+  "elapsed_seconds": 0.62
+}

@@ -1,0 +1,131 @@
+{
+  "BP_ProjectileBase": {
+    "cdo_initial_life_span": 2.5,
+    "components": [
+      {
+        "var_name": "None",
+        "class": "BP_ProjectileBase_C"
+      },
+      {
+        "var_name": "BulletSprite",
+        "class": "PaperSpriteComponent",
+        "collision_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+        "collision_profile_name": "Custom",
+        "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+        "responses": {
+          "<CollisionChannel.ECC_WORLD_STATIC: 0>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_PAWN: 2>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_VISIBILITY: 3>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_CAMERA: 4>": "<CollisionResponseType.ECR_OVERLAP: 1>"
+        }
+      },
+      {
+        "var_name": "CollisionSphere",
+        "class": "SphereComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile_name": "Custom",
+        "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+        "responses": {
+          "<CollisionChannel.ECC_WORLD_STATIC: 0>": "<CollisionResponseType.ECR_IGNORE: 0>",
+          "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_PAWN: 2>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_VISIBILITY: 3>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_CAMERA: 4>": "<CollisionResponseType.ECR_IGNORE: 0>"
+        }
+      },
+      {
+        "var_name": "BulletFlipbook",
+        "class": "PaperFlipbookComponent",
+        "collision_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+        "collision_profile_name": "Custom",
+        "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+        "responses": {
+          "<CollisionChannel.ECC_WORLD_STATIC: 0>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_PAWN: 2>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_VISIBILITY: 3>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_CAMERA: 4>": "<CollisionResponseType.ECR_OVERLAP: 1>"
+        }
+      },
+      {
+        "var_name": "BulletFlipbook",
+        "class": "PaperFlipbookComponent",
+        "collision_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+        "collision_profile_name": "Custom",
+        "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+        "responses": {
+          "<CollisionChannel.ECC_WORLD_STATIC: 0>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_PAWN: 2>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_VISIBILITY: 3>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_CAMERA: 4>": "<CollisionResponseType.ECR_OVERLAP: 1>"
+        }
+      },
+      {
+        "var_name": "BulletSprite",
+        "class": "PaperSpriteComponent",
+        "collision_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+        "collision_profile_name": "Custom",
+        "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+        "responses": {
+          "<CollisionChannel.ECC_WORLD_STATIC: 0>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_PAWN: 2>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_VISIBILITY: 3>": "<CollisionResponseType.ECR_OVERLAP: 1>",
+          "<CollisionChannel.ECC_CAMERA: 4>": "<CollisionResponseType.ECR_OVERLAP: 1>"
+        }
+      },
+      {
+        "var_name": "ProjectileMovement",
+        "class": "ProjectileMovementComponent",
+        "initial_speed": 1200.0,
+        "max_speed": 1200.0,
+        "gravity_scale": 0.0
+      }
+    ],
+    "graph_nodes": []
+  },
+  "BP_Enemy_ZombieWalker": {
+    "components": [
+      {
+        "var_name": "RenderComponent",
+        "class": "PaperFlipbookComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile_name": "BlockAllDynamic",
+        "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+        "responses": {
+          "<CollisionChannel.ECC_WORLD_STATIC: 0>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_PAWN: 2>": "<CollisionResponseType.ECR_BLOCK: 2>"
+        }
+      },
+      {
+        "var_name": "EnemyCollision",
+        "class": "BoxComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile_name": "Custom",
+        "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+        "responses": {
+          "<CollisionChannel.ECC_WORLD_STATIC: 0>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_PAWN: 2>": "<CollisionResponseType.ECR_BLOCK: 2>"
+        },
+        "box_extent": "<Struct 'Vector' (0xab516688b78) {x: 35.000000, y: 35.000000, z: 50.000000}>"
+      },
+      {
+        "var_name": "Box",
+        "class": "BoxComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile_name": "BlockAllDynamic",
+        "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+        "responses": {
+          "<CollisionChannel.ECC_WORLD_STATIC: 0>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>": "<CollisionResponseType.ECR_BLOCK: 2>",
+          "<CollisionChannel.ECC_PAWN: 2>": "<CollisionResponseType.ECR_BLOCK: 2>"
+        },
+        "box_extent": "<Struct 'Vector' (0xab516688478) {x: 30.000000, y: 30.000000, z: 45.000000}>"
+      }
+    ]
+  }
+}

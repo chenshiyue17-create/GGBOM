@@ -1,0 +1,882 @@
+{
+  "enemy_flipbooks": [
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Death_Collapse/Dir_01_Down/Flipbooks/FB_T_Boss_Death_Dir_01_Down_Sheet.FB_T_Boss_Death_Dir_01_Down_Sheet",
+      "name": "FB_T_Boss_Death_Dir_01_Down_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Death_Collapse/Dir_02_Right/Flipbooks/FB_T_Boss_Death_Dir_02_Right_Sheet.FB_T_Boss_Death_Dir_02_Right_Sheet",
+      "name": "FB_T_Boss_Death_Dir_02_Right_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Death_Collapse/Dir_03_Up/Flipbooks/FB_T_Boss_Death_Dir_03_Up_Sheet.FB_T_Boss_Death_Dir_03_Up_Sheet",
+      "name": "FB_T_Boss_Death_Dir_03_Up_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Death_Collapse/Dir_04_Left/Flipbooks/FB_T_Boss_Death_Dir_04_Left_Sheet.FB_T_Boss_Death_Dir_04_Left_Sheet",
+      "name": "FB_T_Boss_Death_Dir_04_Left_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Enrage_Roar/Dir_01_Down/Flipbooks/FB_T_Boss_Enrage_Dir_01_Down_Sheet.FB_T_Boss_Enrage_Dir_01_Down_Sheet",
+      "name": "FB_T_Boss_Enrage_Dir_01_Down_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Enrage_Roar/Dir_02_Right/Flipbooks/FB_T_Boss_Enrage_Dir_02_Right_Sheet.FB_T_Boss_Enrage_Dir_02_Right_Sheet",
+      "name": "FB_T_Boss_Enrage_Dir_02_Right_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Enrage_Roar/Dir_03_Up/Flipbooks/FB_T_Boss_Enrage_Dir_03_Up_Sheet.FB_T_Boss_Enrage_Dir_03_Up_Sheet",
+      "name": "FB_T_Boss_Enrage_Dir_03_Up_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Enrage_Roar/Dir_04_Left/Flipbooks/FB_T_Boss_Enrage_Dir_04_Left_Sheet.FB_T_Boss_Enrage_Dir_04_Left_Sheet",
+      "name": "FB_T_Boss_Enrage_Dir_04_Left_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Ground_Slam/Dir_01_Down/Flipbooks/FB_T_Boss_Slam_Dir_01_Down_Sheet.FB_T_Boss_Slam_Dir_01_Down_Sheet",
+      "name": "FB_T_Boss_Slam_Dir_01_Down_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Ground_Slam/Dir_02_Right/Flipbooks/FB_T_Boss_Slam_Dir_02_Right_Sheet.FB_T_Boss_Slam_Dir_02_Right_Sheet",
+      "name": "FB_T_Boss_Slam_Dir_02_Right_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Ground_Slam/Dir_03_Up/Flipbooks/FB_T_Boss_Slam_Dir_03_Up_Sheet.FB_T_Boss_Slam_Dir_03_Up_Sheet",
+      "name": "FB_T_Boss_Slam_Dir_03_Up_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Ground_Slam/Dir_04_Left/Flipbooks/FB_T_Boss_Slam_Dir_04_Left_Sheet.FB_T_Boss_Slam_Dir_04_Left_Sheet",
+      "name": "FB_T_Boss_Slam_Dir_04_Left_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Heavy_Cleave/Dir_01_Down/Flipbooks/FB_T_Boss_Cleave_Dir_01_Down_Sheet.FB_T_Boss_Cleave_Dir_01_Down_Sheet",
+      "name": "FB_T_Boss_Cleave_Dir_01_Down_Sheet",
+      "fps": 5.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Heavy_Cleave/Dir_02_Right/Flipbooks/FB_T_Boss_Cleave_Dir_02_Right_Sheet.FB_T_Boss_Cleave_Dir_02_Right_Sheet",
+      "name": "FB_T_Boss_Cleave_Dir_02_Right_Sheet",
+      "fps": 5.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Heavy_Cleave/Dir_03_Up/Flipbooks/FB_T_Boss_Cleave_Dir_03_Up_Sheet.FB_T_Boss_Cleave_Dir_03_Up_Sheet",
+      "name": "FB_T_Boss_Cleave_Dir_03_Up_Sheet",
+      "fps": 5.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Heavy_Cleave/Dir_04_Left/Flipbooks/FB_T_Boss_Cleave_Dir_04_Left_Sheet.FB_T_Boss_Cleave_Dir_04_Left_Sheet",
+      "name": "FB_T_Boss_Cleave_Dir_04_Left_Sheet",
+      "fps": 5.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Idle/Dir_01_Down/Flipbooks/FB_T_Boss_Idle_Dir_01_Down_Sheet.FB_T_Boss_Idle_Dir_01_Down_Sheet",
+      "name": "FB_T_Boss_Idle_Dir_01_Down_Sheet",
+      "fps": 8.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Idle/Dir_02_Right/Flipbooks/FB_T_Boss_Idle_Dir_02_Right_Sheet.FB_T_Boss_Idle_Dir_02_Right_Sheet",
+      "name": "FB_T_Boss_Idle_Dir_02_Right_Sheet",
+      "fps": 8.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Idle/Dir_03_Up/Flipbooks/FB_T_Boss_Idle_Dir_03_Up_Sheet.FB_T_Boss_Idle_Dir_03_Up_Sheet",
+      "name": "FB_T_Boss_Idle_Dir_03_Up_Sheet",
+      "fps": 8.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Idle/Dir_04_Left/Flipbooks/FB_T_Boss_Idle_Dir_04_Left_Sheet.FB_T_Boss_Idle_Dir_04_Left_Sheet",
+      "name": "FB_T_Boss_Idle_Dir_04_Left_Sheet",
+      "fps": 8.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Walk/Dir_01_Down/Flipbooks/FB_T_Boss_Walk_Dir_01_Down_Sheet.FB_T_Boss_Walk_Dir_01_Down_Sheet",
+      "name": "FB_T_Boss_Walk_Dir_01_Down_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Walk/Dir_02_Right/Flipbooks/FB_T_Boss_Walk_Dir_02_Right_Sheet.FB_T_Boss_Walk_Dir_02_Right_Sheet",
+      "name": "FB_T_Boss_Walk_Dir_02_Right_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Walk/Dir_03_Up/Flipbooks/FB_T_Boss_Walk_Dir_03_Up_Sheet.FB_T_Boss_Walk_Dir_03_Up_Sheet",
+      "name": "FB_T_Boss_Walk_Dir_03_Up_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Walk/Dir_04_Left/Flipbooks/FB_T_Boss_Walk_Dir_04_Left_Sheet.FB_T_Boss_Walk_Dir_04_Left_Sheet",
+      "name": "FB_T_Boss_Walk_Dir_04_Left_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Skills/01_FlameWave/Flipbooks/FB_T_BossSkill_FlameWave_Sheet.FB_T_BossSkill_FlameWave_Sheet",
+      "name": "FB_T_BossSkill_FlameWave_Sheet",
+      "fps": 7.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Skills/03_EarthSpikes/Flipbooks/FB_T_BossSkill_EarthSpikes_Sheet.FB_T_BossSkill_EarthSpikes_Sheet",
+      "name": "FB_T_BossSkill_EarthSpikes_Sheet",
+      "fps": 6.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Skills/04_AcidPool/Flipbooks/FB_T_BossSkill_AcidPool_Sheet.FB_T_BossSkill_AcidPool_Sheet",
+      "name": "FB_T_BossSkill_AcidPool_Sheet",
+      "fps": 5.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Skills/05_SporeBomb/Flipbooks/FB_T_BossSkill_SporeBomb_Sheet.FB_T_BossSkill_SporeBomb_Sheet",
+      "name": "FB_T_BossSkill_SporeBomb_Sheet",
+      "fps": 6.0,
+      "num_frames": 5,
+      "num_keyframes": 5
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Skills/06_EggSummon/Flipbooks/FB_T_BossSkill_EggSummon_Sheet.FB_T_BossSkill_EggSummon_Sheet",
+      "name": "FB_T_BossSkill_EggSummon_Sheet",
+      "fps": 5.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Skills/08_BlightBreath/Flipbooks/FB_T_BossSkill_BlightBreath_Sheet.FB_T_BossSkill_BlightBreath_Sheet",
+      "name": "FB_T_BossSkill_BlightBreath_Sheet",
+      "fps": 6.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Skills/09_MeteorRain/Flipbooks/FB_T_BossSkill_MeteorRain_Sheet.FB_T_BossSkill_MeteorRain_Sheet",
+      "name": "FB_T_BossSkill_MeteorRain_Sheet",
+      "fps": 7.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Skills/10_BioShield/Flipbooks/FB_T_BossSkill_BioShield_Sheet.FB_T_BossSkill_BioShield_Sheet",
+      "name": "FB_T_BossSkill_BioShield_Sheet",
+      "fps": 5.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Bite_Combo/Dir_01_Down/Flipbooks/FB_T_Hound_Bite_Dir_01_Down_Sheet.FB_T_Hound_Bite_Dir_01_Down_Sheet",
+      "name": "FB_T_Hound_Bite_Dir_01_Down_Sheet",
+      "fps": 6.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Bite_Combo/Dir_02_Right/Flipbooks/FB_T_Hound_Bite_Dir_02_Right_Sheet.FB_T_Hound_Bite_Dir_02_Right_Sheet",
+      "name": "FB_T_Hound_Bite_Dir_02_Right_Sheet",
+      "fps": 6.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Bite_Combo/Dir_03_Up/Flipbooks/FB_T_Hound_Bite_Dir_03_Up_Sheet.FB_T_Hound_Bite_Dir_03_Up_Sheet",
+      "name": "FB_T_Hound_Bite_Dir_03_Up_Sheet",
+      "fps": 6.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Bite_Combo/Dir_04_Left/Flipbooks/FB_T_Hound_Bite_Dir_04_Left_Sheet.FB_T_Hound_Bite_Dir_04_Left_Sheet",
+      "name": "FB_T_Hound_Bite_Dir_04_Left_Sheet",
+      "fps": 6.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Death/Dir_01_Down/Flipbooks/FB_T_Hound_Death_Dir_01_Down_Sheet.FB_T_Hound_Death_Dir_01_Down_Sheet",
+      "name": "FB_T_Hound_Death_Dir_01_Down_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Death/Dir_02_Right/Flipbooks/FB_T_Hound_Death_Dir_02_Right_Sheet.FB_T_Hound_Death_Dir_02_Right_Sheet",
+      "name": "FB_T_Hound_Death_Dir_02_Right_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Death/Dir_03_Up/Flipbooks/FB_T_Hound_Death_Dir_03_Up_Sheet.FB_T_Hound_Death_Dir_03_Up_Sheet",
+      "name": "FB_T_Hound_Death_Dir_03_Up_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Death/Dir_04_Left/Flipbooks/FB_T_Hound_Death_Dir_04_Left_Sheet.FB_T_Hound_Death_Dir_04_Left_Sheet",
+      "name": "FB_T_Hound_Death_Dir_04_Left_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Howl/Dir_01_Down/Flipbooks/FB_T_Hound_Howl_Dir_01_Down_Sheet.FB_T_Hound_Howl_Dir_01_Down_Sheet",
+      "name": "FB_T_Hound_Howl_Dir_01_Down_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Howl/Dir_02_Right/Flipbooks/FB_T_Hound_Howl_Dir_02_Right_Sheet.FB_T_Hound_Howl_Dir_02_Right_Sheet",
+      "name": "FB_T_Hound_Howl_Dir_02_Right_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Howl/Dir_03_Up/Flipbooks/FB_T_Hound_Howl_Dir_03_Up_Sheet.FB_T_Hound_Howl_Dir_03_Up_Sheet",
+      "name": "FB_T_Hound_Howl_Dir_03_Up_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Howl/Dir_04_Left/Flipbooks/FB_T_Hound_Howl_Dir_04_Left_Sheet.FB_T_Hound_Howl_Dir_04_Left_Sheet",
+      "name": "FB_T_Hound_Howl_Dir_04_Left_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Pounce/Dir_01_Down/Flipbooks/FB_T_Hound_Pounce_Dir_01_Down_Sheet.FB_T_Hound_Pounce_Dir_01_Down_Sheet",
+      "name": "FB_T_Hound_Pounce_Dir_01_Down_Sheet",
+      "fps": 5.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Pounce/Dir_02_Right/Flipbooks/FB_T_Hound_Pounce_Dir_02_Right_Sheet.FB_T_Hound_Pounce_Dir_02_Right_Sheet",
+      "name": "FB_T_Hound_Pounce_Dir_02_Right_Sheet",
+      "fps": 5.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Pounce/Dir_03_Up/Flipbooks/FB_T_Hound_Pounce_Dir_03_Up_Sheet.FB_T_Hound_Pounce_Dir_03_Up_Sheet",
+      "name": "FB_T_Hound_Pounce_Dir_03_Up_Sheet",
+      "fps": 5.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Pounce/Dir_04_Left/Flipbooks/FB_T_Hound_Pounce_Dir_04_Left_Sheet.FB_T_Hound_Pounce_Dir_04_Left_Sheet",
+      "name": "FB_T_Hound_Pounce_Dir_04_Left_Sheet",
+      "fps": 5.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Run/Dir_01_Down/Flipbooks/FB_T_Hound_Run_Dir_01_Down_Sheet.FB_T_Hound_Run_Dir_01_Down_Sheet",
+      "name": "FB_T_Hound_Run_Dir_01_Down_Sheet",
+      "fps": 6.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Run/Dir_02_Right/Flipbooks/FB_T_Hound_Run_Dir_02_Right_Sheet.FB_T_Hound_Run_Dir_02_Right_Sheet",
+      "name": "FB_T_Hound_Run_Dir_02_Right_Sheet",
+      "fps": 6.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Run/Dir_03_Up/Flipbooks/FB_T_Hound_Run_Dir_03_Up_Sheet.FB_T_Hound_Run_Dir_03_Up_Sheet",
+      "name": "FB_T_Hound_Run_Dir_03_Up_Sheet",
+      "fps": 6.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Run/Dir_04_Left/Flipbooks/FB_T_Hound_Run_Dir_04_Left_Sheet.FB_T_Hound_Run_Dir_04_Left_Sheet",
+      "name": "FB_T_Hound_Run_Dir_04_Left_Sheet",
+      "fps": 6.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/01_Zombie_Walker_Basic/Flipbooks/FB_T_Zombie_WalkerBasic_Sheet.FB_T_Zombie_WalkerBasic_Sheet",
+      "name": "FB_T_Zombie_WalkerBasic_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/02_Zombie_Crawler_Low/Flipbooks/FB_T_Zombie_CrawlerLow_Sheet.FB_T_Zombie_CrawlerLow_Sheet",
+      "name": "FB_T_Zombie_CrawlerLow_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/03_Zombie_Infected_Civilian/Flipbooks/FB_T_Zombie_InfectedCiv_Sheet.FB_T_Zombie_InfectedCiv_Sheet",
+      "name": "FB_T_Zombie_InfectedCiv_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/04_Zombie_Spitter_Minor/Flipbooks/FB_T_Zombie_SpitterMinor_Sheet.FB_T_Zombie_SpitterMinor_Sheet",
+      "name": "FB_T_Zombie_SpitterMinor_Sheet",
+      "fps": 3.799999952316284,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/05_Zombie_Runner_Agile/Flipbooks/FB_T_Zombie_RunnerAgile_Sheet.FB_T_Zombie_RunnerAgile_Sheet",
+      "name": "FB_T_Zombie_RunnerAgile_Sheet",
+      "fps": 5.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/06_Zombie_Bloater_Minor/Flipbooks/FB_T_Zombie_BloaterMinor_Sheet.FB_T_Zombie_BloaterMinor_Sheet",
+      "name": "FB_T_Zombie_BloaterMinor_Sheet",
+      "fps": 3.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/07_Zombie_Armored_Guard/Flipbooks/FB_T_Zombie_ArmoredGuard_Sheet.FB_T_Zombie_ArmoredGuard_Sheet",
+      "name": "FB_T_Zombie_ArmoredGuard_Sheet",
+      "fps": 3.200000047683716,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/08_Zombie_Acid_Carrier/Flipbooks/FB_T_Zombie_AcidCarrier_Sheet.FB_T_Zombie_AcidCarrier_Sheet",
+      "name": "FB_T_Zombie_AcidCarrier_Sheet",
+      "fps": 3.799999952316284,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/09_Zombie_Husk_Dried/Flipbooks/FB_T_Zombie_HuskDried_Sheet.FB_T_Zombie_HuskDried_Sheet",
+      "name": "FB_T_Zombie_HuskDried_Sheet",
+      "fps": 3.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/10_Zombie_Leaper_Small/Flipbooks/FB_T_Zombie_LeaperSmall_Sheet.FB_T_Zombie_LeaperSmall_Sheet",
+      "name": "FB_T_Zombie_LeaperSmall_Sheet",
+      "fps": 5.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/11_Zombie_Shambler_Heavy/Flipbooks/FB_T_Zombie_ShamblerHeavy_Sheet.FB_T_Zombie_ShamblerHeavy_Sheet",
+      "name": "FB_T_Zombie_ShamblerHeavy_Sheet",
+      "fps": 3.200000047683716,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/12_Zombie_Corrosive_Spawn/Flipbooks/FB_T_Zombie_CorrosiveSpawn_Sheet.FB_T_Zombie_CorrosiveSpawn_Sheet",
+      "name": "FB_T_Zombie_CorrosiveSpawn_Sheet",
+      "fps": 4.5,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/13_Zombie_Flesh_Stalker/Flipbooks/FB_T_Zombie_FleshStalker_Sheet.FB_T_Zombie_FleshStalker_Sheet",
+      "name": "FB_T_Zombie_FleshStalker_Sheet",
+      "fps": 4.199999809265137,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/14_Zombie_Decayed_Worker/Flipbooks/FB_T_Zombie_DecayedWorker_Sheet.FB_T_Zombie_DecayedWorker_Sheet",
+      "name": "FB_T_Zombie_DecayedWorker_Sheet",
+      "fps": 3.5999999046325684,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/15_Zombie_Mutated_Ghouls/Flipbooks/FB_T_Zombie_MutatedGhouls_Sheet.FB_T_Zombie_MutatedGhouls_Sheet",
+      "name": "FB_T_Zombie_MutatedGhouls_Sheet",
+      "fps": 4.800000190734863,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/16_Zombie_Toxic_Walker/Flipbooks/FB_T_Zombie_ToxicWalker_Sheet.FB_T_Zombie_ToxicWalker_Sheet",
+      "name": "FB_T_Zombie_ToxicWalker_Sheet",
+      "fps": 3.799999952316284,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/17_Zombie_Subterranean_Burrower/Flipbooks/FB_T_Zombie_Burrower_Sheet.FB_T_Zombie_Burrower_Sheet",
+      "name": "FB_T_Zombie_Burrower_Sheet",
+      "fps": 4.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/18_Zombie_Berserk_Thrall/Flipbooks/FB_T_Zombie_BerserkThrall_Sheet.FB_T_Zombie_BerserkThrall_Sheet",
+      "name": "FB_T_Zombie_BerserkThrall_Sheet",
+      "fps": 5.199999809265137,
+      "num_frames": 4,
+      "num_keyframes": 4
+    },
+    {
+      "path": "/Game/P01/Representative/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Death_Collapse/Dir_01_Down/Flipbooks/FB_T_Boss_Death_Dir_01_Down_Sheet.FB_T_Boss_Death_Dir_01_Down_Sheet",
+      "name": "FB_T_Boss_Death_Dir_01_Down_Sheet",
+      "fps": 8.0,
+      "num_frames": 4,
+      "num_keyframes": 4
+    }
+  ],
+  "enemy_blueprints": [
+    {
+      "path": "/Game/Blueprints/Characters/Enemies/BP_Boss_Overlord.BP_Boss_Overlord",
+      "name": "BP_Boss_Overlord",
+      "parent": "None"
+    },
+    {
+      "path": "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker.BP_Enemy_ZombieWalker",
+      "name": "BP_Enemy_ZombieWalker",
+      "parent": "None"
+    },
+    {
+      "path": "/Game/Blueprints/Combat/BP_ENE_ZombieWalker.BP_ENE_ZombieWalker",
+      "name": "BP_ENE_ZombieWalker",
+      "parent": "None"
+    },
+    {
+      "path": "/Game/Blueprints/Combat/Projectiles/BP_BossSkill_AcidBurst.BP_BossSkill_AcidBurst",
+      "name": "BP_BossSkill_AcidBurst",
+      "parent": "None"
+    },
+    {
+      "path": "/Game/GGBOM/Blueprints/BP_GGBOM_Enemy.BP_GGBOM_Enemy",
+      "name": "BP_GGBOM_Enemy",
+      "parent": "None"
+    },
+    {
+      "path": "/Game/GGBOM/Blueprints/Enemies/BP_Boss_Overlord.BP_Boss_Overlord",
+      "name": "BP_Boss_Overlord",
+      "parent": "None"
+    },
+    {
+      "path": "/Game/GGBOM/Blueprints/Enemies/BP_Enemy_Hound.BP_Enemy_Hound",
+      "name": "BP_Enemy_Hound",
+      "parent": "None"
+    },
+    {
+      "path": "/Game/GGBOM/Blueprints/Enemies/BP_Enemy_Shambler.BP_Enemy_Shambler",
+      "name": "BP_Enemy_Shambler",
+      "parent": "None"
+    },
+    {
+      "path": "/Game/GGBOM/Blueprints/Enemies/BP_Enemy_Zombie.BP_Enemy_Zombie",
+      "name": "BP_Enemy_Zombie",
+      "parent": "None"
+    }
+  ],
+  "level_actors": [
+    {
+      "label": "PlayerStart",
+      "class": "PlayerStart",
+      "pos": [
+        0.0,
+        0.0,
+        -480.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "label": "PortraitCamera_9x16",
+      "class": "CameraActor",
+      "pos": [
+        0.0,
+        -600.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "label": "Ground_Stage00",
+      "class": "PaperSpriteActor",
+      "pos": [
+        0.0,
+        80.0,
+        0.0
+      ],
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Ground.SP_Ground",
+      "sprite_hidden": false
+    },
+    {
+      "label": "Barricade_Top_L",
+      "class": "PaperSpriteActor",
+      "pos": [
+        -200.0,
+        30.0,
+        420.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+      "sprite_hidden": false
+    },
+    {
+      "label": "Barricade_Top_R",
+      "class": "PaperSpriteActor",
+      "pos": [
+        200.0,
+        30.0,
+        420.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+      "sprite_hidden": false
+    },
+    {
+      "label": "DefenseLine_L",
+      "class": "PaperSpriteActor",
+      "pos": [
+        -220.0,
+        30.0,
+        -50.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+      "sprite_hidden": false
+    },
+    {
+      "label": "DefenseLine_R",
+      "class": "PaperSpriteActor",
+      "pos": [
+        220.0,
+        30.0,
+        -50.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+      "sprite_hidden": false
+    },
+    {
+      "label": "Live_Zombie_Front",
+      "class": "PaperFlipbookActor",
+      "pos": [
+        0.0,
+        15.0,
+        160.0
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "source_flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/01_Zombie_Walker_Basic/Flipbooks/FB_T_Zombie_WalkerBasic_Sheet.FB_T_Zombie_WalkerBasic_Sheet",
+      "fb_hidden": false,
+      "fb_fps": 4.0,
+      "fb_num_frames": 4,
+      "fb_num_keyframes": 4
+    },
+    {
+      "label": "Live_Hound_L",
+      "class": "PaperFlipbookActor",
+      "pos": [
+        -160.0,
+        15.0,
+        300.0
+      ],
+      "scale": [
+        0.48,
+        0.48,
+        0.48
+      ],
+      "source_flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Run/Dir_01_Down/Flipbooks/FB_T_Hound_Run_Dir_01_Down_Sheet.FB_T_Hound_Run_Dir_01_Down_Sheet",
+      "fb_hidden": false,
+      "fb_fps": 6.0,
+      "fb_num_frames": 4,
+      "fb_num_keyframes": 4
+    },
+    {
+      "label": "Live_Zombie_Runner_R",
+      "class": "PaperFlipbookActor",
+      "pos": [
+        160.0,
+        15.0,
+        300.0
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "source_flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/05_Zombie_Runner_Agile/Flipbooks/FB_T_Zombie_RunnerAgile_Sheet.FB_T_Zombie_RunnerAgile_Sheet",
+      "fb_hidden": false,
+      "fb_fps": 5.5,
+      "fb_num_frames": 4,
+      "fb_num_keyframes": 4
+    },
+    {
+      "label": "Live_Shambler_Mid",
+      "class": "PaperFlipbookActor",
+      "pos": [
+        0.0,
+        15.0,
+        420.0
+      ],
+      "scale": [
+        0.58,
+        0.58,
+        0.58
+      ],
+      "source_flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/11_Zombie_Shambler_Heavy/Flipbooks/FB_T_Zombie_ShamblerHeavy_Sheet.FB_T_Zombie_ShamblerHeavy_Sheet",
+      "fb_hidden": false,
+      "fb_fps": 3.200000047683716,
+      "fb_num_frames": 4,
+      "fb_num_keyframes": 4
+    },
+    {
+      "label": "Live_Boss_Overlord",
+      "class": "PaperFlipbookActor",
+      "pos": [
+        0.0,
+        15.0,
+        560.0
+      ],
+      "scale": [
+        0.72,
+        0.72,
+        0.72
+      ],
+      "source_flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Walk/Dir_01_Down/Flipbooks/FB_T_Boss_Walk_Dir_01_Down_Sheet.FB_T_Boss_Walk_Dir_01_Down_Sheet",
+      "fb_hidden": false,
+      "fb_fps": 3.5,
+      "fb_num_frames": 4,
+      "fb_num_keyframes": 4
+    },
+    {
+      "label": "UI_BossBar_Bg",
+      "class": "PaperSpriteActor",
+      "pos": [
+        0.0,
+        -60.0,
+        720.0
+      ],
+      "scale": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Boss_Bar_Bg.SP_Boss_Bar_Bg",
+      "sprite_hidden": false
+    },
+    {
+      "label": "UI_BossBar_Fill",
+      "class": "PaperSpriteActor",
+      "pos": [
+        0.0,
+        -60.0,
+        720.0
+      ],
+      "scale": [
+        0.72,
+        0.72,
+        0.72
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Boss_Bar_Fill.SP_Boss_Bar_Fill",
+      "sprite_hidden": false
+    },
+    {
+      "label": "UI_Boss_SkullIcon",
+      "class": "PaperSpriteActor",
+      "pos": [
+        -200.0,
+        -60.0,
+        720.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Boss_Skull.SP_Boss_Skull",
+      "sprite_hidden": false
+    },
+    {
+      "label": "UI_Btn_Pause",
+      "class": "PaperSpriteActor",
+      "pos": [
+        360.0,
+        -60.0,
+        720.0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Btn_Pause.SP_Btn_Pause",
+      "sprite_hidden": false
+    },
+    {
+      "label": "UI_Player_HP_Bg",
+      "class": "PaperSpriteActor",
+      "pos": [
+        -200.0,
+        -60.0,
+        -680.0
+      ],
+      "scale": [
+        0.58,
+        0.58,
+        0.58
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_HUD_HP_Bg.SP_HUD_HP_Bg",
+      "sprite_hidden": false
+    },
+    {
+      "label": "UI_Player_HP_Fill",
+      "class": "PaperSpriteActor",
+      "pos": [
+        -200.0,
+        -60.0,
+        -680.0
+      ],
+      "scale": [
+        0.56,
+        0.56,
+        0.56
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_HUD_HP_Fill.SP_HUD_HP_Fill",
+      "sprite_hidden": false
+    },
+    {
+      "label": "UI_Player_EXP_Fill",
+      "class": "PaperSpriteActor",
+      "pos": [
+        -200.0,
+        -60.0,
+        -730.0
+      ],
+      "scale": [
+        0.48,
+        0.48,
+        0.48
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_HUD_Exp_Fill.SP_HUD_Exp_Fill",
+      "sprite_hidden": false
+    },
+    {
+      "label": "UI_HUD_AmmoRadial",
+      "class": "PaperSpriteActor",
+      "pos": [
+        320.0,
+        -60.0,
+        -680.0
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ],
+      "source_sprite": "/Game/GGBOM/Art/Sprites/SP_HUD_AmmoRadial.SP_HUD_AmmoRadial",
+      "sprite_hidden": false
+    }
+  ],
+  "data_tables": []
+}

@@ -1,0 +1,18 @@
+debts:
+- id: DEBT-01
+  system: EnemySystem
+  severity: MEDIUM
+  description: Scene actors use static single-frame placeholder sprites instead of
+    4-frame flipbooks
+  resolution_phase: Phase 2
+- id: DEBT-02
+  system: UISystem
+  severity: LOW
+  description: Card selection modal needs full UMG layout integration
+  resolution_phase: Phase 3
+- id: DEBT-03
+  system: VFXSystem
+  severity: LOW
+  description: Custom muzzle VFX work orders pending art creation; currently using
+    generic Spark/Flame
+  resolution_phase: Continuous

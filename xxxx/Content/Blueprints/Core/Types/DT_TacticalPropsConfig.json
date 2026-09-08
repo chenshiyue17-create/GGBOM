@@ -1,0 +1,62 @@
+[
+  {
+    "RowName": "Barrier",
+    "DisplayName": "BARRIER",
+    "PropType": "Barrier",
+    "MaxDurability": 450.0,
+    "InitialInventory": 8,
+    "Width": 220.0,
+    "Height": 70.0,
+    "EffectRadius": 0.0,
+    "DamageOnDestroy": 0.0,
+    "ActorClass": "/Game/Blueprints/TacticalProps/BP_Prop_Barrier"
+  },
+  {
+    "RowName": "ExplosiveBarrel",
+    "DisplayName": "EXPLOSIVE BARREL",
+    "PropType": "ExplosiveBarrel",
+    "MaxDurability": 50.0,
+    "InitialInventory": 6,
+    "Width": 64.0,
+    "Height": 85.0,
+    "EffectRadius": 260.0,
+    "DamageOnDestroy": 220.0,
+    "ActorClass": "/Game/Blueprints/TacticalProps/BP_Prop_ExplosiveBarrel"
+  },
+  {
+    "RowName": "ToxicBarrel",
+    "DisplayName": "TOXIC BARREL",
+    "PropType": "ToxicBarrel",
+    "MaxDurability": 60.0,
+    "InitialInventory": 5,
+    "Width": 62.0,
+    "Height": 82.0,
+    "EffectRadius": 200.0,
+    "DamageOnDestroy": 20.0,
+    "ActorClass": "/Game/Blueprints/TacticalProps/BP_Prop_ToxicBarrel"
+  },
+  {
+    "RowName": "LandMine",
+    "DisplayName": "LAND MINE",
+    "PropType": "LandMine",
+    "MaxDurability": 1.0,
+    "InitialInventory": 7,
+    "Width": 50.0,
+    "Height": 50.0,
+    "EffectRadius": 120.0,
+    "DamageOnDestroy": 190.0,
+    "ActorClass": "/Game/Blueprints/TacticalProps/BP_Prop_LandMine"
+  },
+  {
+    "RowName": "HealingStation",
+    "DisplayName": "HEALING STATION",
+    "PropType": "HealingStation",
+    "MaxDurability": 180.0,
+    "InitialInventory": 4,
+    "Width": 85.0,
+    "Height": 105.0,
+    "EffectRadius": 200.0,
+    "DamageOnDestroy": 0.0,
+    "ActorClass": "/Game/Blueprints/TacticalProps/BP_Prop_HealingStation"
+  }
+]

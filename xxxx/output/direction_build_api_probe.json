@@ -1,0 +1,62 @@
+{
+  "sequence": [
+    {
+      "candidate": "Utilities|Flow Control|Sequence",
+      "node": null
+    },
+    {
+      "candidate": "Utilities|FlowControl|Sequence",
+      "node": null
+    },
+    {
+      "candidate": "Flow Control|Sequence",
+      "node": null
+    },
+    {
+      "candidate": "工具|流程控制|Sequence",
+      "node": null
+    },
+    {
+      "candidate": "工具|流控制|Sequence",
+      "node": null
+    }
+  ],
+  "variables": {
+    "add_a": true,
+    "add_b": true,
+    "get_self": {
+      "class": "K2Node_VariableGet",
+      "title": "Get MoveInput",
+      "inputs": [],
+      "outputs": [
+        "MoveInput"
+      ]
+    },
+    "set_self": {
+      "class": "K2Node_VariableSet",
+      "title": "Set MoveInput",
+      "inputs": [
+        "execute",
+        "MoveInput"
+      ],
+      "outputs": [
+        "then",
+        "Output_Get"
+      ]
+    },
+    "b_class_path": "/Game/Tests/DirectionProbe/BP_ProbeB.BP_ProbeB_C",
+    "set_other": {
+      "class": "K2Node_VariableSet",
+      "title": "Set ShotDirection",
+      "inputs": [
+        "execute",
+        "ShotDirection",
+        "self"
+      ],
+      "outputs": [
+        "then",
+        "Output_Get"
+      ]
+    }
+  }
+}

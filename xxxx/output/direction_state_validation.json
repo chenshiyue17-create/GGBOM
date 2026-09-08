@@ -1,0 +1,38 @@
+{
+  "DIRECTION_STATE_VALIDATION": "PASS",
+  "source": "/Users/cc/Desktop/GGBOM/xxxx/output/direction_graph_after_fix.json",
+  "checks": {
+    "three_independent_player_variables": true,
+    "player_has_no_graph_errors": true,
+    "projectile_has_no_graph_errors": true,
+    "event_graph_is_canonical_size": true,
+    "single_tick_flow": true,
+    "movement_reads_only_move_input": true,
+    "movement_step_is_fast_30fps": true,
+    "wasd_world_mapping_is_correct": true,
+    "horizontal_flip_matches_world_mapping": true,
+    "facing_retains_last_nonzero_move": true,
+    "shot_is_facing_snapshot": true,
+    "spawn_rotation_uses_shot_direction": true,
+    "muzzle_is_above_player_feet": true,
+    "projectile_captures_spawn_forward_once": true,
+    "projectile_flight_reads_own_shot_direction": true
+  },
+  "summary": {
+    "player_event_nodes": 14,
+    "player_variables": [
+      "MoveInput",
+      "FacingDirection",
+      "ShotDirection",
+      "MoveSpeed",
+      "ProjectileSpeed",
+      "FireCooldown",
+      "FireCooldownRemaining"
+    ],
+    "projectile_event_nodes": 11,
+    "projectile_variables": [
+      "ShotDirection",
+      "ProjectileSpeed"
+    ]
+  }
+}

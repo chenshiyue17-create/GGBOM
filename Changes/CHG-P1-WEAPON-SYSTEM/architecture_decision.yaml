@@ -1,0 +1,8 @@
+decision_id: ADR-P1-001
+title: 统一投射物运行时与策略组件化架构
+decisions:
+- 1. 废弃并归档历史分裂的 BP_GGBOM_Projectile 与 BP_Projectile_Bullet，统一收敛至 BP_Projectile_Base
+- 2. 从 BP_Player_Medic 中剥离硬编码开火计时器，移入独立纯蓝图组件 BPC_WeaponInventory
+- 3. 引入 FWeaponDefinition 数据驱动结构体，支持直线单发 (StraightSingle) 与扇形散射 (SpreadBurst) 策略
+- 4. 引入语义 Asset ID 映射机制，解耦蓝图与具体 PNG 文件路径
+- 5. 建立 L_Preview_Weapon 独立预览关卡，实现离线视觉走查与第三把武器 Core Diff = 0 严苛验收

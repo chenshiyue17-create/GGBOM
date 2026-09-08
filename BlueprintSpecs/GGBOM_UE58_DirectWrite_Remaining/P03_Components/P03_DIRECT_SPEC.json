@@ -1,0 +1,47 @@
+{
+  "phase": "P03",
+  "name": "Components",
+  "precondition": "P02_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Core/Components/BPC_Health",
+    "/Game/Blueprints/Core/Components/BPC_Targeting",
+    "/Game/Blueprints/Core/Components/BPC_WeaponInventory",
+    "/Game/Blueprints/Core/Components/BPC_Experience",
+    "/Game/Blueprints/Core/Components/BPC_Inventory",
+    "/Game/Blueprints/Core/Components/BPC_StatusEffects",
+    "/Game/Blueprints/Core/Components/BPC_CardModifiers",
+    "/Game/Blueprints/Core/Components/BPC_LootDrop",
+    "/Game/Tests/P03/BP_Test_Components"
+  ],
+  "variables_and_defaults": [
+    "BPC_Health: MaxHP=100, CurrentHP=100, MaxShield=0, CurrentShield=0, bIsInvulnerable=false, bDeathTriggered=false",
+    "BPC_Targeting: SearchRadius=900, UpdateInterval=0.15, CurrentTarget=None, bEnabled=true",
+    "BPC_WeaponInventory: ActiveWeaponIndex=0, CurrentAmmo=30, bCanFire=true, DamageMultiplier=1, FireRateMultiplier=1, ProjectileSpeedMultiplier=1, BonusPierce=0, BonusProjectiles=0",
+    "BPC_Experience: Level=1, CurrentXP=0, XPToNext=100, GrowthMultiplier=1.22",
+    "BPC_Inventory: ItemCounts Map<Name,Int>",
+    "BPC_StatusEffects: ActiveTags GameplayTagContainer",
+    "BPC_CardModifiers: CardStacks Map<Name,Int>",
+    "BPC_LootDrop: XPDrop=10, CoinDropMin=0, CoinDropMax=2"
+  ],
+  "functions_and_dispatchers": [
+    "BPC_Health funcs: InitializeHealth, ApplyDamage, Heal, SetInvulnerable, RestoreFull, IsDead; dispatchers OnHealthChanged, OnShieldChanged, OnDamaged, OnDeath",
+    "BPC_Targeting funcs: StartTargeting, StopTargeting, RefreshTarget, ClearTarget, GetAimDirection; dispatcher OnTargetChanged",
+    "BPC_WeaponInventory funcs: LoadWeaponByRow, SelectWeaponIndex, RequestFire, Reload, SetAmmo, ApplyWeaponModifier; dispatchers OnWeaponChanged, OnAmmoChanged, OnFireRequested",
+    "BPC_Experience funcs: AddXP, GetXPRequiredForLevel, ResetRunXP; dispatchers OnXPChanged, OnLevelChanged, OnLevelUpRequested",
+    "BPC_Inventory funcs: AddItem, ConsumeItem, GetCount, ClearInventory; dispatcher OnItemCountChanged",
+    "BPC_StatusEffects funcs: AddTimedStatus, RemoveStatus, HasStatus; dispatchers OnStatusAdded, OnStatusRemoved",
+    "BPC_CardModifiers funcs: CanApplyCard, ApplyCard, GetCardStack, ClearRunCards; dispatcher OnCardApplied",
+    "BPC_LootDrop func: RequestLootDrop; dispatcher OnLootRequested"
+  ],
+  "data_rows_or_constants": [
+    "XP formula seed: XPToNext = Round(100 * Pow(1.22, Level-1))"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "required_log": "P08_PROP_PLACE_OK",
+  "checks": {
+    "explosive_radius": 250,
+    "explosive_damage": 200,
+    "barrier_valid_count": [
+      8,
+      7
+    ],
+    "invalid_consumes": false
+  },
+  "next_gate": "ALLOW_P09"
+}

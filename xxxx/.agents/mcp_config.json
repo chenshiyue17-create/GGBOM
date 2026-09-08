@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "unreal-mcp-official": {
+      "serverUrl": "http://127.0.0.1:8000/mcp"
+    },
+    "unreal-mcp-bridge": {
+      "command": "python3",
+      "args": [
+        "/Users/cc/Desktop/GGBOM/xxxx/Tools/unreal_mcp_bridge.py"
+      ]
+    }
+  }
+}

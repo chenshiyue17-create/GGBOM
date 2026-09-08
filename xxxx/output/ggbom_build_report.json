@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "runtime": "100% Blueprint/Paper2D; editor Python is authoring-only",
+  "source_policy": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art",
+  "source_files": {
+    "T_Ground": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/08_Maps/Stage00_Start/T_Map_Stage00_Start_Ground.png",
+    "T_Player": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_01.png",
+    "T_Zombie": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/02_Enemies/Zombie/01_Zombie_Walker_Basic/T_Zombie_WalkerBasic_01.png",
+    "T_Boss": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/02_Enemies/Boss_Overlord/Actions/Idle/Dir_01_Down/T_Boss_Idle_Dir_01_Down_01.png",
+    "T_Bullet": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/03_Weapons/02_AssaultRifle/T_Bullet_AssaultRifle_02_Flight.png",
+    "T_Barrier": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/04_Props/09_SecurityBarricade/T_Prop_Barricade_01_Intact.png",
+    "T_Health": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/07_UI/01_CombatHUD/T_UI_HUD_01_HealthBar_Fill.png",
+    "T_BossBar": "/Users/cc/Desktop/GGBOM/xxxx/Content/美术/Art/07_UI/03_BossHealthBar/T_UI_BossBar_01_Seg1_Fill.png"
+  },
+  "blueprints": [
+    {
+      "asset": "/Game/GGBOM/Blueprints/BP_GGBOM_Projectile.BP_GGBOM_Projectile",
+      "compiled": true,
+      "saved": true,
+      "errors": [],
+      "connections": 0
+    },
+    {
+      "asset": "/Game/GGBOM/Blueprints/BP_GGBOM_Enemy.BP_GGBOM_Enemy",
+      "compiled": true,
+      "saved": true,
+      "errors": [],
+      "connections": 0
+    },
+    {
+      "asset": "/Game/GGBOM/Blueprints/BP_GGBOM_Player.BP_GGBOM_Player",
+      "compiled": true,
+      "saved": true,
+      "errors": [],
+      "connections": 44
+    },
+    {
+      "asset": "/Game/GGBOM/Blueprints/BP_GGBOM_GameMode.BP_GGBOM_GameMode",
+      "compiled": true,
+      "saved": true,
+      "errors": [],
+      "connections": 0
+    }
+  ],
+  "maps": [
+    "/Game/GGBOM/Maps/MAP_GGBOM_Main",
+    "/Game/GGBOM/Maps/MAP_GGBOM_Win",
+    "/Game/GGBOM/Maps/MAP_GGBOM_Lose"
+  ],
+  "elapsed_seconds": 2.23
+}

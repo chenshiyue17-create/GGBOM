@@ -1,0 +1,110 @@
+features:
+  Player.Medic:
+    specification: PASS
+    gameplay: PASS
+    art: APPROVED
+    vfx: PARTIAL
+    audio: PASS
+    ui: PASS
+    integration: PASS
+    preview: NOT_REVIEWED
+    regression: PASS
+    placeholders: 0
+    status: PASS
+  Weapon.AR01_AutoRifle:
+    specification: PASS
+    gameplay: PASS
+    art: APPROVED
+    projectile: APPROVED
+    muzzle_vfx: APPROVED
+    impact_vfx: APPROVED
+    audio: PASS
+    ui: PASS
+    integration: PASS
+    preview: APPROVED
+    regression: PASS
+    placeholders: 0
+    status: PASS
+  Weapon.SG01_Shotgun:
+    specification: PASS
+    gameplay: PASS
+    art: APPROVED
+    projectile: APPROVED
+    muzzle_vfx: APPROVED
+    impact_vfx: APPROVED
+    audio: PASS
+    ui: PASS
+    integration: PASS
+    preview: APPROVED
+    regression: PASS
+    placeholders: 0
+    status: PASS
+  Weapon.Pistol_Kinetic:
+    specification: PASS
+    gameplay: PASS
+    art: APPROVED
+    projectile: APPROVED
+    muzzle_vfx: APPROVED
+    impact_vfx: APPROVED
+    audio: PASS
+    ui: PASS
+    integration: PASS
+    preview: APPROVED
+    regression: PASS
+    placeholders: 0
+    status: PASS
+  Enemy.ZombieWalker:
+    specification: PASS
+    gameplay: PARTIAL
+    art: CANDIDATE
+    vfx: MISSING
+    audio: CANDIDATE
+    ui: N/A
+    integration: PARTIAL
+    preview: NOT_AVAILABLE
+    placeholders: 1
+    status: INCOMPLETE
+  Enemy.Boss_Lord:
+    specification: PASS
+    gameplay: FAIL
+    art: CANDIDATE
+    vfx: CANDIDATE
+    audio: CANDIDATE
+    ui: PARTIAL
+    integration: FAIL
+    preview: NOT_AVAILABLE
+    placeholders: 1
+    status: INCOMPLETE
+  Environment.Stage00_DualLayer:
+    specification: PASS
+    gameplay: PASS
+    art: APPROVED
+    vfx: N/A
+    audio: PASS
+    ui: N/A
+    integration: PASS
+    preview: NOT_AVAILABLE
+    placeholders: 0
+    status: PASS
+  Props.Barricade:
+    specification: PASS
+    gameplay: PARTIAL
+    art: CANDIDATE
+    vfx: MISSING
+    audio: CANDIDATE
+    ui: N/A
+    integration: PARTIAL
+    preview: NOT_AVAILABLE
+    placeholders: 1
+    status: INCOMPLETE
+  UI.CombatHUD:
+    specification: PASS
+    gameplay: PARTIAL
+    art: CANDIDATE
+    vfx: N/A
+    audio: N/A
+    ui: PARTIAL
+    integration: PARTIAL
+    preview: NOT_AVAILABLE
+    placeholders: 2
+    status: INCOMPLETE

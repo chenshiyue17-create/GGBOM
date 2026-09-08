@@ -1,0 +1,86 @@
+{
+  "bplib_methods": [
+    "add_event_dispatcher",
+    "add_event_dispatcher_parameter",
+    "add_event_override",
+    "add_function_override",
+    "find_event_graph",
+    "get_node_category",
+    "get_node_pos",
+    "get_node_size",
+    "get_node_title",
+    "get_nodes_in_comment",
+    "list_event_dispatchers",
+    "list_events",
+    "remove_event_dispatcher",
+    "remove_event_dispatcher_parameter",
+    "remove_unused_nodes",
+    "set_node_pos",
+    "upgrade_operator_nodes"
+  ],
+  "ed_methods": [
+    "add_branch_node",
+    "add_call_function_node",
+    "add_comment_node",
+    "add_comment_to_nodes",
+    "add_component_bound_event_node",
+    "add_custom_event_node",
+    "add_dispatcher_event_node",
+    "add_get_local_variable_node",
+    "add_get_member_variable_node",
+    "add_macro_node",
+    "add_node_pin",
+    "add_return_node",
+    "add_set_local_variable_node",
+    "add_set_member_variable_node",
+    "create_node_from_name",
+    "find_event_node",
+    "list_all_nodes",
+    "list_available_nodes",
+    "list_comment_nodes",
+    "list_component_events",
+    "list_nodes_of_class",
+    "list_nodes_with_errors",
+    "list_nodes_with_notes",
+    "list_nodes_with_warnings",
+    "remove_comment_node",
+    "remove_node_pin",
+    "remove_nodes",
+    "retarget_node_class"
+  ],
+  "tests": {
+    "bplib_ReceiveHit": {
+      "success": true,
+      "title": "事件Hit",
+      "pins": [
+        "OutputDelegate",
+        "then",
+        "MyComp",
+        "Other",
+        "OtherComp",
+        "bSelfMoved",
+        "HitLocation",
+        "HitNormal",
+        "NormalImpulse",
+        "Hit"
+      ]
+    },
+    "bplib_ReceiveActorBeginOverlap": {
+      "success": true,
+      "title": "事件ActorBeginOverlap",
+      "pins": [
+        "OutputDelegate",
+        "then",
+        "OtherActor"
+      ]
+    },
+    "bplib_ReceiveBeginPlay": {
+      "success": true,
+      "title": "事件BeginPlay",
+      "pins": [
+        "OutputDelegate",
+        "then"
+      ]
+    }
+  }
+}

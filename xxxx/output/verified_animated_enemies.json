@@ -1,0 +1,266 @@
+{
+  "status": "FAIL",
+  "has_camera": true,
+  "camera_details": {
+    "projection_mode": "<CameraProjectionMode.ORTHOGRAPHIC: 1>",
+    "ortho_width": 941.0,
+    "aspect_ratio": 0.5627999901771545
+  },
+  "has_ground": true,
+  "enemy_count": 13,
+  "enemies": [
+    {
+      "label": "UI_BossBar_Bg",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        -60.0,
+        720.0
+      ],
+      "has_sprite_comp": true,
+      "flipbook_info": null
+    },
+    {
+      "label": "UI_BossBar_Fill",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        -60.0,
+        720.0
+      ],
+      "has_sprite_comp": true,
+      "flipbook_info": null
+    },
+    {
+      "label": "UI_Boss_SkullIcon",
+      "class": "PaperSpriteActor",
+      "location": [
+        -200.0,
+        -60.0,
+        720.0
+      ],
+      "has_sprite_comp": true,
+      "flipbook_info": null
+    },
+    {
+      "label": "Enemy_Zombie_01",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        -160.0,
+        15.0,
+        180.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Zombie_WalkerBasic_Sheet",
+        "num_frames": 4,
+        "total_duration": 1.0,
+        "scale": [
+          0.45,
+          0.45,
+          0.45
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Enemy_Zombie_02",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        0.0,
+        15.0,
+        140.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Zombie_WalkerBasic_Sheet",
+        "num_frames": 4,
+        "total_duration": 1.0,
+        "scale": [
+          0.45,
+          0.45,
+          0.45
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Enemy_Zombie_03",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        160.0,
+        15.0,
+        180.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Zombie_WalkerBasic_Sheet",
+        "num_frames": 4,
+        "total_duration": 1.0,
+        "scale": [
+          0.45,
+          0.45,
+          0.45
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Enemy_Runner_01",
+      "class": "BP_Enemy_ZombieRunner_C",
+      "location": [
+        -120.0,
+        15.0,
+        260.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Zombie_RunnerAgile_Sheet",
+        "num_frames": 4,
+        "total_duration": 0.7272727489471436,
+        "scale": [
+          0.45,
+          0.45,
+          0.45
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Enemy_VenomShooter_01",
+      "class": "BP_Enemy_VenomShooter_C",
+      "location": [
+        120.0,
+        15.0,
+        260.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Zombie_SpitterMinor_Sheet",
+        "num_frames": 4,
+        "total_duration": 1.0526316165924072,
+        "scale": [
+          0.45,
+          0.45,
+          0.45
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Enemy_ArmoredGuard_01",
+      "class": "BP_Enemy_ArmoredGuard_C",
+      "location": [
+        0.0,
+        15.0,
+        290.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Zombie_ArmoredGuard_Sheet",
+        "num_frames": 4,
+        "total_duration": 1.25,
+        "scale": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Enemy_Hound_01",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        -220.0,
+        15.0,
+        350.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Hound_Run_Dir_01_Down_Sheet",
+        "num_frames": 4,
+        "total_duration": 0.6666666865348816,
+        "scale": [
+          0.48,
+          0.48,
+          0.48
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Enemy_Hound_02",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        220.0,
+        15.0,
+        350.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Hound_Run_Dir_01_Down_Sheet",
+        "num_frames": 4,
+        "total_duration": 0.6666666865348816,
+        "scale": [
+          0.48,
+          0.48,
+          0.48
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Enemy_Brute_Elite",
+      "class": "BP_Enemy_MutantBrute_C",
+      "location": [
+        0.0,
+        15.0,
+        430.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Zombie_ShamblerHeavy_Sheet",
+        "num_frames": 4,
+        "total_duration": 1.25,
+        "scale": [
+          0.58,
+          0.58,
+          0.58
+        ],
+        "looping": true
+      }
+    },
+    {
+      "label": "Boss_Overlord_Live",
+      "class": "BP_Boss_Overlord_C",
+      "location": [
+        0.0,
+        15.0,
+        560.0
+      ],
+      "has_sprite_comp": false,
+      "flipbook_info": {
+        "has_flipbook_comp": true,
+        "flipbook_name": "FB_T_Boss_Walk_Dir_01_Down_Sheet",
+        "num_frames": 4,
+        "total_duration": 1.1428571939468384,
+        "scale": [
+          0.68,
+          0.68,
+          0.68
+        ],
+        "looping": true
+      }
+    }
+  ]
+}

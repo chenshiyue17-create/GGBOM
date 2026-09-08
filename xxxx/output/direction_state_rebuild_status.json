@@ -1,0 +1,55 @@
+{
+  "DIRECTION_STATE_STATUS": "PASS",
+  "pure_blueprint": true,
+  "model": {
+    "MoveInput": "current 7.5 uu fixed-frame movement step; zero after release",
+    "FacingDirection": "last non-zero MoveInput; never cleared on release",
+    "ShotDirection": "snapshot of FacingDirection copied at fire time"
+  },
+  "projectile": {
+    "removed_stale_nodes": 12,
+    "node_count": 11,
+    "variables": [
+      "HitStopDurationMs",
+      "HitSparkScale",
+      "EnableDamagePop",
+      "Damage",
+      "ShotDirection",
+      "ProjectileSpeed"
+    ],
+    "compiled": true,
+    "compiler_errors": [],
+    "saved": true
+  },
+  "player": {
+    "removed_stale_nodes": 12,
+    "node_count": 14,
+    "variables": [
+      "CurrentExp",
+      "ExpToNextLevel",
+      "PlayerLevel",
+      "MoveInput",
+      "FacingDirection",
+      "ShotDirection",
+      "MoveSpeed",
+      "ProjectileSpeed",
+      "FireCooldown",
+      "FireCooldownRemaining"
+    ],
+    "compiled": true,
+    "compiler_errors": [],
+    "saved": true,
+    "function_graphs": [
+      "SampleMoveInput",
+      "UpdateFacingDirection",
+      "UpdateFacingScale",
+      "UpdateFireCooldown",
+      "UpdateRunAnimation",
+      "UpdateIdleAnimation",
+      "TryFireProjectile",
+      "SpawnDirectionalProjectile"
+    ]
+  },
+  "game_mode_compiled": true,
+  "game_mode_saved": true
+}

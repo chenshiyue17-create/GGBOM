@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MS Project Snapshot",
+  "type": "object",
+  "required": [
+    "project",
+    "engine",
+    "objects",
+    "validation"
+  ],
+  "properties": {
+    "project": {
+      "type": "string"
+    },
+    "engine": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stableId",
+          "type",
+          "definitionPath"
+        ],
+        "properties": {
+          "stableId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "definitionPath": {
+            "type": "string"
+          },
+          "blueprintPath": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "parent": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "validation": {
+      "type": "object"
+    }
+  }
+}

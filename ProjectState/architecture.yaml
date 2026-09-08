@@ -1,0 +1,31 @@
+protocol_version: '1.0'
+architecture_pattern: Data-Driven Policy-Based Pure Blueprint
+core_principles:
+- No single monolithic God Component
+- Data / Policies / Presentation / UI decoupled
+- Semantic Event Broadcasting over tight coupling
+- Orthographic 2D Retro Action rendering with locked Camera (941.0) & Sampling (TA_Clamp,
+  TMGS_NoMipmaps)
+- Zero Hardcoded Weapon/Enemy branches in core mechanics
+core_subsystems:
+- name: AttributeSystem
+  owner: Gameplay
+  status: ESTABLISHED
+- name: DamageSystem
+  owner: Combat
+  status: ESTABLISHED
+- name: WeaponSystem
+  owner: Combat
+  status: ESTABLISHED
+- name: ProjectileSystem
+  owner: Combat
+  status: ESTABLISHED
+- name: EnemyAISystem
+  owner: AI
+  status: IN_PROGRESS
+- name: UISystem
+  owner: UI
+  status: ESTABLISHED
+- name: PresentationSystem
+  owner: VFX_Audio
+  status: ESTABLISHED

@@ -1,0 +1,1390 @@
+{
+  "Player_Medic": {
+    "DisplayName": "终末特勤医疗兵",
+    "Avatar": "01_Player/Avatar/T_Player_Medic_Avatar.png",
+    "MaxHealth": 1500,
+    "MoveSpeed": 380,
+    "Armor": 20,
+    "CritChance": 0.2,
+    "CritMultiplier": 1.75,
+    "PickupRadius": 150,
+    "DefaultWeaponID": "WPN_Rifle_Standard",
+    "SecondaryWeaponID": "WPN_Shotgun_Heavy",
+    "TacticalCooldown": 7,
+    "CollisionRadius": 24,
+    "CollisionHeight": 48,
+    "SortPriority": 2000,
+    "VFX": {
+      "HitVFX": "05_VFX/11_Hit_Kinetic",
+      "SkillVFX": "05_VFX/09_Nanite_Heal",
+      "MuzzleVFX": "05_VFX/13_Muzzle_Flash",
+      "DashVFX": "05_VFX/17_Dash_Ghost"
+    },
+    "Animations": {
+      "Idle": {
+        "Dir_01_Down": {
+          "path": "01_Player/01_Idle_Run/Dir_01_Down/Idle",
+          "fps": 5,
+          "customFrames": []
+        },
+        "Dir_02_DownLeft": {
+          "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle",
+          "fps": 5,
+          "customFrames": []
+        },
+        "Dir_03_Left": {
+          "path": "01_Player/01_Idle_Run/Dir_03_Left/Idle",
+          "fps": 5,
+          "customFrames": []
+        },
+        "Dir_04_UpLeft": {
+          "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle",
+          "fps": 5,
+          "customFrames": []
+        },
+        "Dir_05_Up": {
+          "path": "01_Player/01_Idle_Run/Dir_05_Up/Idle",
+          "fps": 5,
+          "customFrames": []
+        }
+      },
+      "Run": {
+        "Dir_01_Down": {
+          "path": "01_Player/01_Idle_Run/Dir_01_Down/Run",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_02_DownLeft": {
+          "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_03_Left": {
+          "path": "01_Player/01_Idle_Run/Dir_03_Left/Run",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_04_UpLeft": {
+          "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_05_Up": {
+          "path": "01_Player/01_Idle_Run/Dir_05_Up/Run",
+          "fps": 6,
+          "customFrames": []
+        }
+      },
+      "Attack": {
+        "Dir_01_Down": {
+          "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack",
+          "fps": 8,
+          "customFrames": []
+        },
+        "Dir_02_DownLeft": {
+          "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack",
+          "fps": 8,
+          "customFrames": []
+        },
+        "Dir_03_Left": {
+          "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack",
+          "fps": 8,
+          "customFrames": []
+        },
+        "Dir_04_UpLeft": {
+          "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack",
+          "fps": 8,
+          "customFrames": []
+        },
+        "Dir_05_Up": {
+          "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack",
+          "fps": 8,
+          "customFrames": []
+        }
+      },
+      "Hurt": {
+        "Dir_01_Down": {
+          "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_02_DownLeft": {
+          "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_03_Left": {
+          "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_04_UpLeft": {
+          "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_05_Up": {
+          "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt",
+          "fps": 6,
+          "customFrames": []
+        }
+      },
+      "Skill": {
+        "Default": {
+          "path": "01_Player/03_Death_Revive/Revive",
+          "fps": 6,
+          "customFrames": []
+        },
+        "Dir_01_Down": {
+          "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack",
+          "fps": 5,
+          "customFrames": [
+            "01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_01.png",
+            "01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_02.png",
+            "01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_03.png",
+            "01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_04.png"
+          ]
+        },
+        "Dir_05_Up": {
+          "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack",
+          "fps": 5,
+          "customFrames": [
+            "01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_01.png",
+            "01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_02.png",
+            "01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_03.png",
+            "01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_04.png"
+          ]
+        },
+        "Dir_03_Left": {
+          "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack",
+          "fps": 5,
+          "customFrames": [
+            "01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_01.png",
+            "01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_02.png",
+            "01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_03.png",
+            "01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_04.png"
+          ]
+        },
+        "Dir_04_UpLeft": {
+          "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack",
+          "fps": 5,
+          "customFrames": [
+            "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_01.png",
+            "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_02.png",
+            "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_03.png",
+            "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_04.png"
+          ]
+        },
+        "Dir_02_DownLeft": {
+          "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack",
+          "fps": 5,
+          "customFrames": [
+            "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_01.png",
+            "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_02.png",
+            "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_03.png",
+            "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_04.png"
+          ]
+        }
+      },
+      "Death": {
+        "Default": {
+          "path": "01_Player/03_Death_Revive/Death_Collapse",
+          "fps": 4,
+          "customFrames": []
+        }
+      }
+    },
+    "CandidateAvatars": [
+      {
+        "name": "T_Player_Medic_Avatar.png",
+        "path": "01_Player/Avatar/T_Player_Medic_Avatar.png",
+        "url": "/art/01_Player/Avatar/T_Player_Medic_Avatar.png",
+        "is_priority": true,
+        "folder": "01_Player/Avatar"
+      },
+      {
+        "name": "医疗兵.png",
+        "path": "01_Player/touxaing/医疗兵.png",
+        "url": "/art/01_Player/touxaing/%E5%8C%BB%E7%96%97%E5%85%B5.png",
+        "is_priority": true,
+        "folder": "01_Player/touxaing"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_01_Down_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_01_Down/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_01_Down_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_01_Down/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_01_Down_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_01_Down/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_01_Down_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_01_Down/Idle/T_Player_Medic_Idle_Dir_01_Down_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_01_Down/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_01_Down_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_01_Down/Run/T_Player_Medic_Run_Dir_01_Down_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_01_Down/Run/T_Player_Medic_Run_Dir_01_Down_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_01_Down/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_01_Down_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_01_Down/Run/T_Player_Medic_Run_Dir_01_Down_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_01_Down/Run/T_Player_Medic_Run_Dir_01_Down_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_01_Down/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_01_Down_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_01_Down/Run/T_Player_Medic_Run_Dir_01_Down_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_01_Down/Run/T_Player_Medic_Run_Dir_01_Down_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_01_Down/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_01_Down_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_01_Down/Run/T_Player_Medic_Run_Dir_01_Down_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_01_Down/Run/T_Player_Medic_Run_Dir_01_Down_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_01_Down/Run"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_02_DownLeft_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle/T_Player_Medic_Idle_Dir_02_DownLeft_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_02_DownLeft/Idle/T_Player_Medic_Idle_Dir_02_DownLeft_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_02_DownLeft_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle/T_Player_Medic_Idle_Dir_02_DownLeft_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_02_DownLeft/Idle/T_Player_Medic_Idle_Dir_02_DownLeft_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_02_DownLeft_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle/T_Player_Medic_Idle_Dir_02_DownLeft_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_02_DownLeft/Idle/T_Player_Medic_Idle_Dir_02_DownLeft_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_02_DownLeft_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle/T_Player_Medic_Idle_Dir_02_DownLeft_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_02_DownLeft/Idle/T_Player_Medic_Idle_Dir_02_DownLeft_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_02_DownLeft/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_02_DownLeft_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run/T_Player_Medic_Run_Dir_02_DownLeft_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_02_DownLeft/Run/T_Player_Medic_Run_Dir_02_DownLeft_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_02_DownLeft_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run/T_Player_Medic_Run_Dir_02_DownLeft_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_02_DownLeft/Run/T_Player_Medic_Run_Dir_02_DownLeft_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_02_DownLeft_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run/T_Player_Medic_Run_Dir_02_DownLeft_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_02_DownLeft/Run/T_Player_Medic_Run_Dir_02_DownLeft_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_02_DownLeft_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run/T_Player_Medic_Run_Dir_02_DownLeft_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_02_DownLeft/Run/T_Player_Medic_Run_Dir_02_DownLeft_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_02_DownLeft/Run"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_03_Left_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_03_Left/Idle/T_Player_Medic_Idle_Dir_03_Left_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_03_Left/Idle/T_Player_Medic_Idle_Dir_03_Left_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_03_Left/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_03_Left_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_03_Left/Idle/T_Player_Medic_Idle_Dir_03_Left_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_03_Left/Idle/T_Player_Medic_Idle_Dir_03_Left_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_03_Left/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_03_Left_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_03_Left/Idle/T_Player_Medic_Idle_Dir_03_Left_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_03_Left/Idle/T_Player_Medic_Idle_Dir_03_Left_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_03_Left/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_03_Left_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_03_Left/Idle/T_Player_Medic_Idle_Dir_03_Left_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_03_Left/Idle/T_Player_Medic_Idle_Dir_03_Left_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_03_Left/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_03_Left_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_03_Left/Run/T_Player_Medic_Run_Dir_03_Left_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_03_Left/Run/T_Player_Medic_Run_Dir_03_Left_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_03_Left/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_03_Left_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_03_Left/Run/T_Player_Medic_Run_Dir_03_Left_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_03_Left/Run/T_Player_Medic_Run_Dir_03_Left_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_03_Left/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_03_Left_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_03_Left/Run/T_Player_Medic_Run_Dir_03_Left_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_03_Left/Run/T_Player_Medic_Run_Dir_03_Left_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_03_Left/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_03_Left_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_03_Left/Run/T_Player_Medic_Run_Dir_03_Left_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_03_Left/Run/T_Player_Medic_Run_Dir_03_Left_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_03_Left/Run"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_04_UpLeft_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle/T_Player_Medic_Idle_Dir_04_UpLeft_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_04_UpLeft/Idle/T_Player_Medic_Idle_Dir_04_UpLeft_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_04_UpLeft_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle/T_Player_Medic_Idle_Dir_04_UpLeft_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_04_UpLeft/Idle/T_Player_Medic_Idle_Dir_04_UpLeft_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_04_UpLeft_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle/T_Player_Medic_Idle_Dir_04_UpLeft_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_04_UpLeft/Idle/T_Player_Medic_Idle_Dir_04_UpLeft_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_04_UpLeft_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle/T_Player_Medic_Idle_Dir_04_UpLeft_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_04_UpLeft/Idle/T_Player_Medic_Idle_Dir_04_UpLeft_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_04_UpLeft/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_04_UpLeft_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run/T_Player_Medic_Run_Dir_04_UpLeft_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_04_UpLeft/Run/T_Player_Medic_Run_Dir_04_UpLeft_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_04_UpLeft_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run/T_Player_Medic_Run_Dir_04_UpLeft_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_04_UpLeft/Run/T_Player_Medic_Run_Dir_04_UpLeft_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_04_UpLeft_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run/T_Player_Medic_Run_Dir_04_UpLeft_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_04_UpLeft/Run/T_Player_Medic_Run_Dir_04_UpLeft_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_04_UpLeft_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run/T_Player_Medic_Run_Dir_04_UpLeft_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_04_UpLeft/Run/T_Player_Medic_Run_Dir_04_UpLeft_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_04_UpLeft/Run"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_05_Up_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_05_Up/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_05_Up_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_05_Up/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_05_Up_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_05_Up/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Idle_Dir_05_Up_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_05_Up/Idle/T_Player_Medic_Idle_Dir_05_Up_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_05_Up/Idle"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_05_Up_01.png",
+        "path": "01_Player/01_Idle_Run/Dir_05_Up/Run/T_Player_Medic_Run_Dir_05_Up_01.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_05_Up/Run/T_Player_Medic_Run_Dir_05_Up_01.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_05_Up/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_05_Up_02.png",
+        "path": "01_Player/01_Idle_Run/Dir_05_Up/Run/T_Player_Medic_Run_Dir_05_Up_02.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_05_Up/Run/T_Player_Medic_Run_Dir_05_Up_02.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_05_Up/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_05_Up_03.png",
+        "path": "01_Player/01_Idle_Run/Dir_05_Up/Run/T_Player_Medic_Run_Dir_05_Up_03.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_05_Up/Run/T_Player_Medic_Run_Dir_05_Up_03.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_05_Up/Run"
+      },
+      {
+        "name": "T_Player_Medic_Run_Dir_05_Up_04.png",
+        "path": "01_Player/01_Idle_Run/Dir_05_Up/Run/T_Player_Medic_Run_Dir_05_Up_04.png",
+        "url": "/art/01_Player/01_Idle_Run/Dir_05_Up/Run/T_Player_Medic_Run_Dir_05_Up_04.png",
+        "is_priority": false,
+        "folder": "01_Player/01_Idle_Run/Dir_05_Up/Run"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_01_Down_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_01_Down_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_01_Down_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_01_Down_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_01_Down/Attack/T_Player_Medic_Attack_Dir_01_Down_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_01_Down/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_01_Down_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt/T_Player_Medic_Hurt_Dir_01_Down_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_01_Down/Hurt/T_Player_Medic_Hurt_Dir_01_Down_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_01_Down_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt/T_Player_Medic_Hurt_Dir_01_Down_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_01_Down/Hurt/T_Player_Medic_Hurt_Dir_01_Down_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_01_Down_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt/T_Player_Medic_Hurt_Dir_01_Down_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_01_Down/Hurt/T_Player_Medic_Hurt_Dir_01_Down_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_01_Down_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt/T_Player_Medic_Hurt_Dir_01_Down_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_01_Down/Hurt/T_Player_Medic_Hurt_Dir_01_Down_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_01_Down/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_02_DownLeft_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_02_DownLeft_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_02_DownLeft_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_02_DownLeft_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack/T_Player_Medic_Attack_Dir_02_DownLeft_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_02_DownLeft_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt/T_Player_Medic_Hurt_Dir_02_DownLeft_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt/T_Player_Medic_Hurt_Dir_02_DownLeft_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_02_DownLeft_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt/T_Player_Medic_Hurt_Dir_02_DownLeft_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt/T_Player_Medic_Hurt_Dir_02_DownLeft_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_02_DownLeft_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt/T_Player_Medic_Hurt_Dir_02_DownLeft_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt/T_Player_Medic_Hurt_Dir_02_DownLeft_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_02_DownLeft_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt/T_Player_Medic_Hurt_Dir_02_DownLeft_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt/T_Player_Medic_Hurt_Dir_02_DownLeft_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_02_DownLeft/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_03_Right_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_03_Right_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_03_Right_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_03_Right_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_03_Right/Attack/T_Player_Medic_Attack_Dir_03_Right_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_03_Right/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_03_Right_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt/T_Player_Medic_Hurt_Dir_03_Right_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_03_Right/Hurt/T_Player_Medic_Hurt_Dir_03_Right_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_03_Right_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt/T_Player_Medic_Hurt_Dir_03_Right_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_03_Right/Hurt/T_Player_Medic_Hurt_Dir_03_Right_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_03_Right_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt/T_Player_Medic_Hurt_Dir_03_Right_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_03_Right/Hurt/T_Player_Medic_Hurt_Dir_03_Right_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_03_Right_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt/T_Player_Medic_Hurt_Dir_03_Right_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_03_Right/Hurt/T_Player_Medic_Hurt_Dir_03_Right_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_03_Right/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_04_UpLeft_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_04_UpLeft_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_04_UpLeft_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_04_UpLeft_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack/T_Player_Medic_Attack_Dir_04_UpLeft_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_04_UpLeft_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt/T_Player_Medic_Hurt_Dir_04_UpLeft_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt/T_Player_Medic_Hurt_Dir_04_UpLeft_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_04_UpLeft_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt/T_Player_Medic_Hurt_Dir_04_UpLeft_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt/T_Player_Medic_Hurt_Dir_04_UpLeft_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_04_UpLeft_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt/T_Player_Medic_Hurt_Dir_04_UpLeft_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt/T_Player_Medic_Hurt_Dir_04_UpLeft_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_04_UpLeft_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt/T_Player_Medic_Hurt_Dir_04_UpLeft_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt/T_Player_Medic_Hurt_Dir_04_UpLeft_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_04_UpLeft/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_05_Up_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_05_Up_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_05_Up_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Attack_Dir_05_Up_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_05_Up/Attack/T_Player_Medic_Attack_Dir_05_Up_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_05_Up/Attack"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_05_Up_01.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt/T_Player_Medic_Hurt_Dir_05_Up_01.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_05_Up/Hurt/T_Player_Medic_Hurt_Dir_05_Up_01.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_05_Up_02.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt/T_Player_Medic_Hurt_Dir_05_Up_02.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_05_Up/Hurt/T_Player_Medic_Hurt_Dir_05_Up_02.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_05_Up_03.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt/T_Player_Medic_Hurt_Dir_05_Up_03.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_05_Up/Hurt/T_Player_Medic_Hurt_Dir_05_Up_03.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Hurt_Dir_05_Up_04.png",
+        "path": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt/T_Player_Medic_Hurt_Dir_05_Up_04.png",
+        "url": "/art/01_Player/02_Attack_Hurt/Dir_05_Up/Hurt/T_Player_Medic_Hurt_Dir_05_Up_04.png",
+        "is_priority": false,
+        "folder": "01_Player/02_Attack_Hurt/Dir_05_Up/Hurt"
+      },
+      {
+        "name": "T_Player_Medic_Death_01.png",
+        "path": "01_Player/03_Death_Revive/Death_Collapse/T_Player_Medic_Death_01.png",
+        "url": "/art/01_Player/03_Death_Revive/Death_Collapse/T_Player_Medic_Death_01.png",
+        "is_priority": false,
+        "folder": "01_Player/03_Death_Revive/Death_Collapse"
+      },
+      {
+        "name": "T_Player_Medic_Death_02.png",
+        "path": "01_Player/03_Death_Revive/Death_Collapse/T_Player_Medic_Death_02.png",
+        "url": "/art/01_Player/03_Death_Revive/Death_Collapse/T_Player_Medic_Death_02.png",
+        "is_priority": false,
+        "folder": "01_Player/03_Death_Revive/Death_Collapse"
+      },
+      {
+        "name": "T_Player_Medic_Death_03.png",
+        "path": "01_Player/03_Death_Revive/Death_Collapse/T_Player_Medic_Death_03.png",
+        "url": "/art/01_Player/03_Death_Revive/Death_Collapse/T_Player_Medic_Death_03.png",
+        "is_priority": false,
+        "folder": "01_Player/03_Death_Revive/Death_Collapse"
+      },
+      {
+        "name": "T_Player_Medic_Death_04.png",
+        "path": "01_Player/03_Death_Revive/Death_Collapse/T_Player_Medic_Death_04.png",
+        "url": "/art/01_Player/03_Death_Revive/Death_Collapse/T_Player_Medic_Death_04.png",
+        "is_priority": false,
+        "folder": "01_Player/03_Death_Revive/Death_Collapse"
+      },
+      {
+        "name": "T_Player_Medic_Revive_01.png",
+        "path": "01_Player/03_Death_Revive/Revive/T_Player_Medic_Revive_01.png",
+        "url": "/art/01_Player/03_Death_Revive/Revive/T_Player_Medic_Revive_01.png",
+        "is_priority": false,
+        "folder": "01_Player/03_Death_Revive/Revive"
+      },
+      {
+        "name": "T_Player_Medic_Revive_02.png",
+        "path": "01_Player/03_Death_Revive/Revive/T_Player_Medic_Revive_02.png",
+        "url": "/art/01_Player/03_Death_Revive/Revive/T_Player_Medic_Revive_02.png",
+        "is_priority": false,
+        "folder": "01_Player/03_Death_Revive/Revive"
+      },
+      {
+        "name": "T_Player_Medic_Revive_03.png",
+        "path": "01_Player/03_Death_Revive/Revive/T_Player_Medic_Revive_03.png",
+        "url": "/art/01_Player/03_Death_Revive/Revive/T_Player_Medic_Revive_03.png",
+        "is_priority": false,
+        "folder": "01_Player/03_Death_Revive/Revive"
+      },
+      {
+        "name": "T_Player_Medic_Revive_04.png",
+        "path": "01_Player/03_Death_Revive/Revive/T_Player_Medic_Revive_04.png",
+        "url": "/art/01_Player/03_Death_Revive/Revive/T_Player_Medic_Revive_04.png",
+        "is_priority": false,
+        "folder": "01_Player/03_Death_Revive/Revive"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_01/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_01/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_01"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_01/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_01/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_01"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_01/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_01/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_01"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_01/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_01/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_01"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_01/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_01/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_01"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_01/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_01/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_01"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_01/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_01/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_01"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_01/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_01/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_01"
+      },
+      {
+        "name": "T_Asset_02_01.png",
+        "path": "01_Player/Export_02/T_Asset_02_01.png",
+        "url": "/art/01_Player/Export_02/T_Asset_02_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_02"
+      },
+      {
+        "name": "T_Asset_02_02.png",
+        "path": "01_Player/Export_02/T_Asset_02_02.png",
+        "url": "/art/01_Player/Export_02/T_Asset_02_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_02"
+      },
+      {
+        "name": "T_Asset_02_03.png",
+        "path": "01_Player/Export_02/T_Asset_02_03.png",
+        "url": "/art/01_Player/Export_02/T_Asset_02_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_02"
+      },
+      {
+        "name": "T_Asset_02_04.png",
+        "path": "01_Player/Export_02/T_Asset_02_04.png",
+        "url": "/art/01_Player/Export_02/T_Asset_02_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_02"
+      },
+      {
+        "name": "T_Asset_02_05.png",
+        "path": "01_Player/Export_02/T_Asset_02_05.png",
+        "url": "/art/01_Player/Export_02/T_Asset_02_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_02"
+      },
+      {
+        "name": "T_Asset_02_06.png",
+        "path": "01_Player/Export_02/T_Asset_02_06.png",
+        "url": "/art/01_Player/Export_02/T_Asset_02_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_02"
+      },
+      {
+        "name": "T_Asset_02_07.png",
+        "path": "01_Player/Export_02/T_Asset_02_07.png",
+        "url": "/art/01_Player/Export_02/T_Asset_02_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_02"
+      },
+      {
+        "name": "T_Asset_02_08.png",
+        "path": "01_Player/Export_02/T_Asset_02_08.png",
+        "url": "/art/01_Player/Export_02/T_Asset_02_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_02"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_03/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_03/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_03"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_03/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_03/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_03"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_03/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_03/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_03"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_03/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_03/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_03"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_03/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_03/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_03"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_03/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_03/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_03"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_03/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_03/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_03"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_03/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_03/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_03"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_04/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_04/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_04"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_04/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_04/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_04"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_04/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_04/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_04"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_04/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_04/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_04"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_04/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_04/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_04"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_04/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_04/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_04"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_04/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_04/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_04"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_04/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_04/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_04"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_06/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_06/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_06"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_06/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_06/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_06"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_06/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_06/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_06"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_06/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_06/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_06"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_06/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_06/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_06"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_06/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_06/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_06"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_06/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_06/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_06"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_06/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_06/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_06"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_07/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_07/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_07"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_07/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_07/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_07"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_07/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_07/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_07"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_07/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_07/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_07"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_07/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_07/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_07"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_07/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_07/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_07"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_07/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_07/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_07"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_07/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_07/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_07"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_08/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_08/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_08"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_08/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_08/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_08"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_08/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_08/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_08"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_08/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_08/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_08"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_08/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_08/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_08"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_08/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_08/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_08"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_08/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_08/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_08"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_08/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_08/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_08"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_09/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_09/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_09"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_09/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_09/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_09"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_09/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_09/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_09"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_09/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_09/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_09"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_09/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_09/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_09"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_09/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_09/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_09"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_09/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_09/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_09"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_09/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_09/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_09"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_10/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_10/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_10"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_10/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_10/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_10"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_10/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_10/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_10"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_10/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_10/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_10"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_10/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_10/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_10"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_10/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_10/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_10"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_10/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_10/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_10"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_10/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_10/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_10"
+      },
+      {
+        "name": "T_Asset_01_01.png",
+        "path": "01_Player/Export_11/T_Asset_01_01.png",
+        "url": "/art/01_Player/Export_11/T_Asset_01_01.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_11"
+      },
+      {
+        "name": "T_Asset_01_02.png",
+        "path": "01_Player/Export_11/T_Asset_01_02.png",
+        "url": "/art/01_Player/Export_11/T_Asset_01_02.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_11"
+      },
+      {
+        "name": "T_Asset_01_03.png",
+        "path": "01_Player/Export_11/T_Asset_01_03.png",
+        "url": "/art/01_Player/Export_11/T_Asset_01_03.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_11"
+      },
+      {
+        "name": "T_Asset_01_04.png",
+        "path": "01_Player/Export_11/T_Asset_01_04.png",
+        "url": "/art/01_Player/Export_11/T_Asset_01_04.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_11"
+      },
+      {
+        "name": "T_Asset_01_05.png",
+        "path": "01_Player/Export_11/T_Asset_01_05.png",
+        "url": "/art/01_Player/Export_11/T_Asset_01_05.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_11"
+      },
+      {
+        "name": "T_Asset_01_06.png",
+        "path": "01_Player/Export_11/T_Asset_01_06.png",
+        "url": "/art/01_Player/Export_11/T_Asset_01_06.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_11"
+      },
+      {
+        "name": "T_Asset_01_07.png",
+        "path": "01_Player/Export_11/T_Asset_01_07.png",
+        "url": "/art/01_Player/Export_11/T_Asset_01_07.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_11"
+      },
+      {
+        "name": "T_Asset_01_08.png",
+        "path": "01_Player/Export_11/T_Asset_01_08.png",
+        "url": "/art/01_Player/Export_11/T_Asset_01_08.png",
+        "is_priority": false,
+        "folder": "01_Player/Export_11"
+      }
+    ]
+  }
+}

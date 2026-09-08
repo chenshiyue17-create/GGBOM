@@ -1,0 +1,35 @@
+{
+  "phase": "P06",
+  "name": "EnemyAI",
+  "precondition": "P05_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Enemies/BP_EnemyBase2D",
+    "/Game/Blueprints/Enemies/BP_Enemy_Zombie",
+    "/Game/Blueprints/Enemies/BP_Enemy_VenomShooter",
+    "/Game/Blueprints/Enemies/BP_Enemy_Hound",
+    "/Game/Tests/P06/BP_Test_EnemyArena"
+  ],
+  "variables_and_defaults": [
+    "EnemyBase: AIThinkInterval=0.20, TargetActor=None, AIState=Spawn, FacingIndex=0",
+    "Zombie: MaxHP60 Walk180 Chase250 AttackDamage12 ExpDrop10",
+    "Venom: MaxHP380 Walk140 KeepDistance650 SingleSpitDamage28 PoisonDuration4.0",
+    "Hound: MaxHP260 Sprint420 PounceDistance450 PounceDamage35 StunTime0.8",
+    "4 directions: S,E,N,W",
+    "ZombieVisualVariants=18; P06全部沿用Base数值"
+  ],
+  "functions_and_dispatchers": [
+    "EnemyBase: InitializeEnemy, AIThink, MoveTowardTarget, TryAttack, HandleDeath, UpdateFacing4, UpdateYSort",
+    "Implements BPI_CombatInterface and BPI_Targetable"
+  ],
+  "data_rows_or_constants": [
+    "Target priority: Zombie=1, Venom=2, Hound=2"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

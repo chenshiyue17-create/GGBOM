@@ -1,0 +1,22 @@
+{
+  "skill": "ue5-lite-runner",
+  "target": "Antigravity IDE",
+  "platform": "macOS",
+  "default_mode": {
+    "window": [
+      360,
+      640
+    ],
+    "fps": 30,
+    "ue_mode": "-game"
+  },
+  "visual_mode": {
+    "window": [
+      540,
+      960
+    ],
+    "fps": 60
+  },
+  "headless": true,
+  "install_path": "<project>/.agents/skills/ue5-lite-runner"
+}

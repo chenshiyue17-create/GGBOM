@@ -1,0 +1,62 @@
+{
+  "FX_Hit_Sparks": {
+    "DisplayName": "金属动能跳弹火花",
+    "EffectType": "HitImpact",
+    "VFXFolder": "05_VFX/01_Explosion_Fire",
+    "Scale": 0.45,
+    "FPS": 12,
+    "LifeDuration": 0.25,
+    "HitStopDurationMs": 25,
+    "CameraShakeIntensity": 0.15
+  },
+  "FX_Hit_Acid": {
+    "DisplayName": "腐蚀强酸飞溅",
+    "EffectType": "HitImpact",
+    "VFXFolder": "05_VFX/09_Nanite_Heal",
+    "Scale": 0.55,
+    "FPS": 10,
+    "LifeDuration": 0.35,
+    "HitStopDurationMs": 30,
+    "CameraShakeIntensity": 0.2
+  },
+  "FX_Death_Explosion": {
+    "DisplayName": "高爆烈焰解体爆裂",
+    "EffectType": "DeathExplosion",
+    "VFXFolder": "05_VFX/05_Smoke_Dust",
+    "Scale": 0.75,
+    "FPS": 12,
+    "LifeDuration": 0.5,
+    "HitStopDurationMs": 40,
+    "CameraShakeIntensity": 0.35
+  },
+  "FX_Muzzle_Flash_Rifle": {
+    "DisplayName": "突击步枪枪口火光",
+    "EffectType": "MuzzleFlash",
+    "VFXFolder": "05_VFX/04_Blood_Gore",
+    "Scale": 0.4,
+    "FPS": 15,
+    "LifeDuration": 0.15,
+    "HitStopDurationMs": 0,
+    "CameraShakeIntensity": 0.05
+  },
+  "FX_Plasma_Burst": {
+    "DisplayName": "等离子电弧脉冲爆发",
+    "EffectType": "HitImpact",
+    "VFXFolder": "05_VFX/06_Toxic_Splatter",
+    "Scale": 0.6,
+    "FPS": 12,
+    "LifeDuration": 0.3,
+    "HitStopDurationMs": 35,
+    "CameraShakeIntensity": 0.25
+  },
+  "FX_Acid_Cloud_Area": {
+    "DisplayName": "酸蚀持续毒雾区域",
+    "EffectType": "AreaField",
+    "VFXFolder": "05_VFX/09_Nanite_Heal",
+    "Scale": 0.8,
+    "FPS": 8,
+    "LifeDuration": 1.2,
+    "HitStopDurationMs": 0,
+    "CameraShakeIntensity": 0.1
+  }
+}

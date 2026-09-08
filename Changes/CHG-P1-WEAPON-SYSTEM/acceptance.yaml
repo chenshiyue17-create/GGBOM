@@ -1,0 +1,9 @@
+criteria:
+- 'PASS_FORMULA: Asset && Structure && Logic && Functional && Integration && Logs
+  && Evidence'
+- 'THIRD_WEAPON_CORE_DIFF: 0'
+- 'PLACEHOLDERS: 0'
+- 'BLUEPRINT_RUNTIME_ERRORS: 0'
+- 'ACCESSED_NONE: 0'
+- 'STANDALONE_RUNNABLE: true'
+- 'VISUAL_REVIEW_GATE: APPROVED'

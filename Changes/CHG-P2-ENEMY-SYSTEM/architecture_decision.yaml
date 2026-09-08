@@ -1,0 +1,11 @@
+change_id: CHG-P2-ENEMY-SYSTEM
+decision: SYSTEM_EXTENSION
+rationale: |
+  1. Leverage decoupled BPC_Health and BP_Projectile_Base established in Phase 1.
+  2. Implement mathematical 4-direction facing state machine in BP_EnemyBase2D.
+  3. Ensure HitStun, FlashRed and DeathGore Presentation adapters are fully decoupled from core AI logic.
+  4. Build dedicated L_Preview_Enemy review room for offline 4-direction & action animation validation.
+forbidden_patterns:
+  - Hardcoded enemy-specific branching inside player blueprints
+  - Direct mesh scaling without ScaleX flip protection
+  - Tick-based SetFlipbook without animation lock checks

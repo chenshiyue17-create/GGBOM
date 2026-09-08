@@ -1,0 +1,478 @@
+{
+  "/Game/Blueprints/Player/BP_Player_Medic": {
+    "path": "/Game/Blueprints/Player/BP_Player_Medic",
+    "parent": "None",
+    "root_component": "None",
+    "components": []
+  },
+  "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker": {
+    "path": "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker",
+    "parent": "None",
+    "root_component": "RenderComponent (PaperFlipbookComponent)",
+    "components": [
+      {
+        "name": "RenderComponent",
+        "class": "PaperFlipbookComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile": "BlockAllDynamic"
+      }
+    ]
+  },
+  "/Game/Blueprints/Characters/Enemies/BP_Boss_Overlord": {
+    "path": "/Game/Blueprints/Characters/Enemies/BP_Boss_Overlord",
+    "parent": "None",
+    "root_component": "RenderComponent (PaperFlipbookComponent)",
+    "components": [
+      {
+        "name": "RenderComponent",
+        "class": "PaperFlipbookComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile": "BlockAllDynamic"
+      }
+    ]
+  },
+  "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase": {
+    "path": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+    "parent": "None",
+    "root_component": "None",
+    "components": []
+  },
+  "level_actors": [
+    {
+      "label": "PlayerStart",
+      "class": "PlayerStart",
+      "loc": [
+        0.0,
+        0.0,
+        -480.0
+      ],
+      "primitives": [
+        {
+          "comp": "CollisionCapsule",
+          "class": "CapsuleComponent",
+          "col_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+          "profile": "NoCollision"
+        },
+        {
+          "comp": "Sprite",
+          "class": "BillboardComponent",
+          "col_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+          "profile": "NoCollision"
+        },
+        {
+          "comp": "Sprite2",
+          "class": "BillboardComponent",
+          "col_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+          "profile": "NoCollision"
+        },
+        {
+          "comp": "Arrow",
+          "class": "ArrowComponent",
+          "col_enabled": "<CollisionEnabled.NO_COLLISION: 0>",
+          "profile": "NoCollision"
+        }
+      ]
+    },
+    {
+      "label": "PortraitCamera_9x16",
+      "class": "CameraActor",
+      "loc": [
+        0.0,
+        -600.0,
+        0.0
+      ],
+      "primitives": []
+    },
+    {
+      "label": "Ground_Stage00",
+      "class": "PaperSpriteActor",
+      "loc": [
+        0.0,
+        80.0,
+        0.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "Barricade_Top_L",
+      "class": "PaperSpriteActor",
+      "loc": [
+        -200.0,
+        30.0,
+        420.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "Barricade_Top_R",
+      "class": "PaperSpriteActor",
+      "loc": [
+        200.0,
+        30.0,
+        420.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "DefenseLine_L",
+      "class": "PaperSpriteActor",
+      "loc": [
+        -220.0,
+        30.0,
+        -50.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "DefenseLine_R",
+      "class": "PaperSpriteActor",
+      "loc": [
+        220.0,
+        30.0,
+        -50.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "UI_BossBar_Bg",
+      "class": "PaperSpriteActor",
+      "loc": [
+        0.0,
+        -60.0,
+        720.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "UI_BossBar_Fill",
+      "class": "PaperSpriteActor",
+      "loc": [
+        0.0,
+        -60.0,
+        720.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "UI_Boss_SkullIcon",
+      "class": "PaperSpriteActor",
+      "loc": [
+        -200.0,
+        -60.0,
+        720.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "UI_Btn_Pause",
+      "class": "PaperSpriteActor",
+      "loc": [
+        360.0,
+        -60.0,
+        720.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "UI_Player_HP_Bg",
+      "class": "PaperSpriteActor",
+      "loc": [
+        -200.0,
+        -60.0,
+        -680.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "UI_Player_HP_Fill",
+      "class": "PaperSpriteActor",
+      "loc": [
+        -200.0,
+        -60.0,
+        -680.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "UI_Player_EXP_Fill",
+      "class": "PaperSpriteActor",
+      "loc": [
+        -200.0,
+        -60.0,
+        -730.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "UI_HUD_AmmoRadial",
+      "class": "PaperSpriteActor",
+      "loc": [
+        320.0,
+        -60.0,
+        -680.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperSpriteComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAll"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_01",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "loc": [
+        -160.0,
+        15.0,
+        180.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_02",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "loc": [
+        0.0,
+        15.0,
+        140.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_03",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "loc": [
+        160.0,
+        15.0,
+        180.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_Runner_01",
+      "class": "BP_Enemy_ZombieRunner_C",
+      "loc": [
+        -120.0,
+        15.0,
+        260.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_VenomShooter_01",
+      "class": "BP_Enemy_VenomShooter_C",
+      "loc": [
+        120.0,
+        15.0,
+        260.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_ArmoredGuard_01",
+      "class": "BP_Enemy_ArmoredGuard_C",
+      "loc": [
+        0.0,
+        15.0,
+        290.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_Hound_01",
+      "class": "BP_Enemy_MutantHound_C",
+      "loc": [
+        -220.0,
+        15.0,
+        350.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_Hound_02",
+      "class": "BP_Enemy_MutantHound_C",
+      "loc": [
+        220.0,
+        15.0,
+        350.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Enemy_Brute_Elite",
+      "class": "BP_Enemy_MutantBrute_C",
+      "loc": [
+        0.0,
+        15.0,
+        430.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    },
+    {
+      "label": "Boss_Overlord_Live",
+      "class": "BP_Boss_Overlord_C",
+      "loc": [
+        0.0,
+        15.0,
+        560.0
+      ],
+      "primitives": [
+        {
+          "comp": "RenderComponent",
+          "class": "PaperFlipbookComponent",
+          "col_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+          "profile": "BlockAllDynamic"
+        }
+      ]
+    }
+  ]
+}

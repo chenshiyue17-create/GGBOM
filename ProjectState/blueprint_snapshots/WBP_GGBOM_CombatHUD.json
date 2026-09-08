@@ -1,0 +1,21 @@
+{
+  "blueprint_path": "/Game/GGBOM/UI/WBP_GGBOM_CombatHUD",
+  "blueprint_name": "WBP_GGBOM_CombatHUD",
+  "exists_on_disk": true,
+  "file_size_bytes": 20911,
+  "parent_class": "Actor",
+  "components": [
+    {
+      "name": "RootComponent",
+      "class": "SceneComponent"
+    },
+    {
+      "name": "RenderComponent",
+      "class": "PaperSpriteComponent"
+    }
+  ],
+  "variables": [],
+  "functions": [],
+  "interfaces": [],
+  "structural_hash_sha256": "67f8fcc24c5b45a78ef86cdebb3d48d61cbcd7b4ef83b6e2fc938600fd2c96a5"
+}

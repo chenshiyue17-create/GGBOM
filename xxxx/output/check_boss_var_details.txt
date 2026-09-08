@@ -1,0 +1,7 @@
+=== BP_Boss_Overlord 变量检查 ===
+find_blueprint_variables: []
+CDO hasattr 'currenthealth': False
+CDO hasattr 'current_health': False
+CDO hasattr 'health': False
+CDO hasattr 'maxhealth': False
+CDO hasattr 'hp': False

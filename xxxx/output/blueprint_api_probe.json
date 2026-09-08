@@ -1,0 +1,232 @@
+{
+  "actions": {
+    "Space Bar": {
+      "valid": false
+    },
+    "A": {
+      "valid": false
+    },
+    "D": {
+      "valid": false
+    },
+    "Left": {
+      "valid": false
+    },
+    "Right": {
+      "valid": false
+    },
+    "InputKey SpaceBar": {
+      "valid": false
+    },
+    "Get Player Controller": {
+      "valid": false
+    },
+    "Spawn Actor from Class": {
+      "valid": false
+    },
+    "Restart Level": {
+      "valid": false
+    }
+  },
+  "functions": {
+    "/Script/Engine.GameplayStatics.GetPlayerController": {
+      "valid": true,
+      "in": [
+        "PlayerIndex"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.PlayerController.IsInputKeyDown": {
+      "valid": true,
+      "in": [
+        "self",
+        "Key"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.GameplayStatics.GetActorOfClass": {
+      "valid": true,
+      "in": [
+        "execute",
+        "ActorClass"
+      ],
+      "out": [
+        "then",
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.Actor.K2_GetActorLocation": {
+      "valid": true,
+      "in": [
+        "self"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.Actor.K2_SetActorLocation": {
+      "valid": true,
+      "in": [
+        "execute",
+        "self",
+        "NewLocation",
+        "bSweep",
+        "bTeleport"
+      ],
+      "out": [
+        "then",
+        "SweepHitResult",
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.Actor.K2_AddActorWorldOffset": {
+      "valid": true,
+      "in": [
+        "execute",
+        "self",
+        "DeltaLocation",
+        "bSweep",
+        "bTeleport"
+      ],
+      "out": [
+        "then",
+        "SweepHitResult"
+      ]
+    },
+    "/Script/Engine.KismetMathLibrary.MakeVector": {
+      "valid": true,
+      "in": [
+        "X",
+        "Y",
+        "Z"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.KismetMathLibrary.Multiply_DoubleDouble": {
+      "valid": true,
+      "in": [
+        "A",
+        "B"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.KismetMathLibrary.Multiply_VectorFloat": {
+      "valid": true,
+      "in": [
+        "A",
+        "B"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.KismetMathLibrary.GetDirectionUnitVector": {
+      "valid": true,
+      "in": [
+        "From",
+        "To"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.KismetMathLibrary.Vector_Distance": {
+      "valid": true,
+      "in": [
+        "V1",
+        "V2"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.KismetMathLibrary.LessEqual_DoubleDouble": {
+      "valid": true,
+      "in": [
+        "A",
+        "B"
+      ],
+      "out": [
+        "ReturnValue"
+      ]
+    },
+    "/Script/Engine.KismetSystemLibrary.PrintString": {
+      "valid": true,
+      "in": [
+        "execute",
+        "InString",
+        "bPrintToScreen",
+        "bPrintToLog",
+        "TextColor",
+        "Duration",
+        "Key"
+      ],
+      "out": [
+        "then"
+      ]
+    },
+    "/Script/Engine.GameplayStatics.OpenLevel": {
+      "valid": true,
+      "in": [
+        "execute",
+        "LevelName",
+        "bAbsolute",
+        "Options"
+      ],
+      "out": [
+        "then"
+      ]
+    },
+    "/Script/Engine.KismetSystemLibrary.QuitGame": {
+      "valid": true,
+      "in": [
+        "execute",
+        "SpecificPlayer",
+        "QuitPreference",
+        "bIgnorePlatformRestrictions"
+      ],
+      "out": [
+        "then"
+      ]
+    }
+  },
+  "events": {
+    "ReceiveBeginPlay": {
+      "valid": true,
+      "in": [],
+      "out": [
+        "OutputDelegate",
+        "then"
+      ]
+    },
+    "ReceiveTick": {
+      "valid": true,
+      "in": [],
+      "out": [
+        "OutputDelegate",
+        "then",
+        "DeltaSeconds"
+      ]
+    },
+    "ReceiveActorBeginOverlap": {
+      "valid": true,
+      "in": [],
+      "out": [
+        "OutputDelegate",
+        "then",
+        "OtherActor"
+      ]
+    },
+    "ReceiveAnyDamage": {
+      "valid": false
+    }
+  }
+}

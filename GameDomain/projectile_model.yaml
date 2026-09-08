@@ -1,0 +1,7 @@
+base_class: BP_Projectile_Base
+speed_range:
+- 350.0
+- 1500.0
+world_size_range_uu:
+- 32.0
+- 48.0

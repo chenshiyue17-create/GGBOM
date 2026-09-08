@@ -1,0 +1,109 @@
+# -*- coding: utf-8 -*-
+"""
+================================================================================
+《GGBOM: 终末医疗兵》UE5 纯蓝图系统构建套件: 02 投射物与战术放置 Actor 生成
+================================================================================
+"""
+
+import os
+import json
+
+try:
+    import unreal
+    UNREAL = True
+except ImportError:
+    UNREAL = False
+
+def log(msg):
+    print(f"[CombatProps] {msg}")
+    if UNREAL:
+        unreal.log(f"[CombatProps] {msg}")
+
+PROJECTILES_SPEC = {
+    "BP_Bullet_AssaultRifle": {
+        "Sprite": "/Game/Art/03_Weapons/02_AssaultRifle/T_Bullet_AssaultRifle_02_Flight",
+        "Speed": 1600.0,
+        "Damage": 28.0,
+        "AoeRadius": 0.0,
+        "Color": [1.0, 0.84, 0.0, 1.0],
+        "HitVFX": "/Game/Art/05_VFX/11_Hit_Kinetic/T_VFX_Hit_Kinetic_01"
+    },
+    "BP_Bullet_Buckshot": {
+        "Sprite": "/Game/Art/03_Weapons/03_BuckshotShotgun/T_Bullet_Buckshot_02_Flight",
+        "Speed": 1400.0,
+        "Damage": 16.0,
+        "AoeRadius": 0.0,
+        "Color": [1.0, 0.55, 0.0, 1.0],
+        "HitVFX": "/Game/Art/05_VFX/11_Hit_Kinetic/T_VFX_Hit_Kinetic_01"
+    },
+    "BP_Bullet_Rocket": {
+        "Sprite": "/Game/Art/03_Weapons/09_MicroMissile/T_Bullet_MicroMissile_02_Flight",
+        "Speed": 950.0,
+        "Damage": 140.0,
+        "AoeRadius": 220.0,
+        "Color": [1.0, 0.16, 0.55, 1.0],
+        "HitVFX": "/Game/Art/05_VFX/01_Explosion_Fire/T_VFX_Explosion_Fire_01"
+    },
+    "BP_Bullet_TeslaGun": {
+        "Sprite": "/Game/Art/03_Weapons/08_PlasmaArcBlaster/T_Bullet_PlasmaArc_02_Flight",
+        "Speed": 1800.0,
+        "Damage": 45.0,
+        "AoeRadius": 140.0,
+        "Color": [0.0, 0.95, 1.0, 1.0],
+        "HitVFX": "/Game/Art/05_VFX/08_Electric_Arc/T_VFX_Electric_Arc_01"
+    },
+    "BP_Bullet_VenomAcidStream": {
+        "Sprite": "/Game/Art/03_Weapons/04_BioAcidLauncher/T_Bullet_BioAcid_02_Flight",
+        "Speed": 650.0,
+        "Damage": 15.0,
+        "AoeRadius": 60.0,
+        "Color": [0.46, 1.0, 0.01, 1.0],
+        "HitVFX": "/Game/Art/05_VFX/06_Toxic_Splatter/T_VFX_Toxic_Splatter_01"
+    }
+}
+
+TACTICAL_ACTORS_SPEC = {
+    "BP_Prop_Barrier": {
+        "Sprite": "/Game/Art/04_Props/09_SecurityBarricade/T_Prop_Barricade_01_Intact",
+        "MaxDurability": 450.0,
+        "BoxExtent": [110.0, 35.0, 40.0],
+        "HasDestructionSequence": True
+    },
+    "BP_Prop_ExplosiveBarrel": {
+        "Sprite": "/Game/Art/04_Props/01_RedExplosiveBarrel/T_Prop_Barrel_01_Intact",
+        "MaxDurability": 50.0,
+        "ExplosionRadius": 260.0,
+        "ExplosionDamage": 220.0,
+        "ExplosionVFX": "/Game/Art/05_VFX/01_Explosion_Fire/T_VFX_Explosion_Fire_01"
+    },
+    "BP_Prop_ToxicBarrel": {
+        "Sprite": "/Game/Art/04_Props/02_ToxicWasteDrum/T_Prop_ToxicDrum_01_Intact",
+        "MaxDurability": 60.0,
+        "PuddleRadius": 200.0,
+        "PuddleDuration": 6.0,
+        "PuddleVFX": "/Game/Art/05_VFX/07_Acid_Cloud/T_VFX_Acid_Cloud_01"
+    },
+    "BP_Prop_LandMine": {
+        "Sprite": "/Game/Art/04_Props/10_OverloadedTerminal/T_Prop_Terminal_01_Intact",
+        "MaxDurability": 1.0,
+        "TriggerRadius": 55.0,
+        "ExplosionDamage": 190.0
+    },
+    "BP_Prop_HealingStation": {
+        "Sprite": "/Game/Art/04_Props/05_MedicalSupplyPod/T_Prop_MedPod_01_Intact",
+        "MaxDurability": 180.0,
+        "HealRadius": 180.0,
+        "HealRate": 35.0,
+        "HealVFX": "/Game/Art/05_VFX/09_Nanite_Heal/T_VFX_Nanite_Heal_01"
+    }
+}
+
+def export_combat_specs():
+    out_p = "/Users/cc/Desktop/GGBOM/xxxx/Content/Blueprints/Combat/combat_actors_spec.json"
+    os.makedirs(os.path.dirname(out_p), exist_ok=True)
+    with open(out_p, "w", encoding="utf-8") as f:
+        json.dump({"Projectiles": PROJECTILES_SPEC, "TacticalActors": TACTICAL_ACTORS_SPEC}, f, ensure_ascii=False, indent=2)
+    log("投射物与战术道具 Actor 规约已生成。")
+
+if __name__ == "__main__":
+    export_combat_specs()

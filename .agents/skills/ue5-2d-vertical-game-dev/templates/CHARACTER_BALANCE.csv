@@ -1,0 +1,2 @@
+﻿CharacterID,DisplayNameCN,MaxHealth,MaxShield,Defense,MoveSpeed,DamageMultiplier,CritChance,CritMultiplier,PickupRadius
+Assault,突击兵,100,20,5,500,1.0,0.05,1.5,250

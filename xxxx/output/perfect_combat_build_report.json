@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "total_nodes": 15,
+  "branch_else_connected": true,
+  "finish_spawn_connected": true,
+  "destroy_self_connected": true,
+  "collision_ecc_world_dynamic": "ECR_OVERLAP",
+  "collision_ecc_pawn": "ECR_OVERLAP",
+  "bullet_saved": true
+}

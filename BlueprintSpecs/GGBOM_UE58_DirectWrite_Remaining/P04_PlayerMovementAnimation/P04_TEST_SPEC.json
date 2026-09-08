@@ -1,0 +1,11 @@
+{
+  "required_log": "P04_PLAYER_OK",
+  "manual": [
+    "8方向",
+    "Idle/Run",
+    "Dash",
+    "碰撞",
+    "Pivot稳定"
+  ],
+  "next_gate": "ALLOW_P05"
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "PlayerHealth",
+  "engine_version": "5.x",
+  "assets": [
+    {
+      "path": "/Game/Blueprints/Components/BPC_Health",
+      "asset_type": "ActorComponent",
+      "parent": "ActorComponent",
+      "required": true
+    }
+  ],
+  "structure_checks": [
+    "MaxHP Float default 100",
+    "CurrentHP Float default 100",
+    "OnDeath dispatcher exists"
+  ],
+  "functional_tests": [
+    {
+      "id": "HEALTH-001",
+      "input": "ApplyDamage(30)",
+      "precondition": "CurrentHP=100, bInvulnerable=false",
+      "expected": "CurrentHP=70",
+      "test_mode": "PIE"
+    },
+    {
+      "id": "HEALTH-002",
+      "input": "ApplyDamage(200)",
+      "precondition": "CurrentHP=100",
+      "expected": "CurrentHP=0 and OnDeath fires exactly once",
+      "test_mode": "FunctionalTest"
+    }
+  ],
+  "required_log_absence": [
+    "Blueprint Runtime Error",
+    "Accessed None"
+  ],
+  "gate_on_pass": "ALLOW",
+  "gate_on_fail": "BLOCK"
+}

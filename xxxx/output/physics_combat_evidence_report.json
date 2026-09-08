@@ -1,0 +1,167 @@
+{
+  "title": "物理战斗系统落实与实测验证全量证据链",
+  "timestamp": "",
+  "verification_status": "ALL_PASS",
+  "items": [
+    {
+      "id": "EXP_BP_CREATE",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_Combat_HitExplosion",
+      "component": "Asset",
+      "property": "does_asset_exist",
+      "before": "True",
+      "after": "True",
+      "expected": "True",
+      "status": "PASS"
+    },
+    {
+      "id": "EXP_BP_SCALE",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_Combat_HitExplosion",
+      "component": "PaperFlipbookComponent",
+      "property": "relative_scale3d",
+      "before": "X=0.850 Y=0.850 Z=0.850",
+      "after": "X=0.850 Y=0.850 Z=0.850",
+      "expected": "X=0.850 Y=0.850 Z=0.850",
+      "status": "PASS"
+    },
+    {
+      "id": "EXP_BP_SAVED",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_Combat_HitExplosion",
+      "component": "Asset",
+      "property": "save_loaded_asset",
+      "before": "False",
+      "after": "True",
+      "expected": "True",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJ_SCALE",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+      "component": "BulletFlipbook",
+      "property": "relative_scale3d",
+      "before": "X=0.650 Y=0.650 Z=0.650",
+      "after": "X=0.650 Y=0.650 Z=0.650",
+      "expected": "X=0.650 Y=0.650 Z=0.650",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJ_SPEED",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+      "component": "ProjectileMovement",
+      "property": "initial_speed",
+      "before": "1200.0",
+      "after": "1200.0",
+      "expected": "1200.0",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJ_SPHERE_RADIUS",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+      "component": "SphereComponent",
+      "property": "sphere_radius",
+      "before": "22.0",
+      "after": "22.0",
+      "expected": "22.0",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJ_PAWN_OVERLAP",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+      "component": "SphereComponent",
+      "property": "CollisionResponse_ECC_Pawn",
+      "before": "<CollisionResponseType.ECR_OVERLAP: 1>",
+      "after": "<CollisionResponseType.ECR_OVERLAP: 1>",
+      "expected": "CollisionResponseType.ECR_OVERLAP",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJ_LIFESPAN",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+      "component": "CDO",
+      "property": "initial_life_span",
+      "before": "None",
+      "after": "1.7999999523162842",
+      "expected": "1.8",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJ_GRAPH_NODE_COUNT",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+      "component": "EventGraph",
+      "property": "NodeCount",
+      "before": "10",
+      "after": "0",
+      "expected": "0",
+      "status": "PASS"
+    },
+    {
+      "id": "PROJ_BP_SAVED",
+      "asset": "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
+      "component": "Asset",
+      "property": "save_loaded_asset",
+      "before": "False",
+      "after": "True",
+      "expected": "True",
+      "status": "PASS"
+    },
+    {
+      "id": "PLAYER_PAWN_BLOCK",
+      "asset": "/Game/Blueprints/Player/BP_Player_Medic",
+      "component": "CapsuleComponent",
+      "property": "CollisionResponse_ECC_Pawn",
+      "before": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "after": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "expected": "CollisionResponseType.ECR_BLOCK",
+      "status": "PASS"
+    },
+    {
+      "id": "BOSS_PAWN_BLOCK",
+      "asset": "/Game/Blueprints/Characters/Enemies/BP_Boss_Overlord",
+      "component": "CollisionComponent",
+      "property": "CollisionResponse_ECC_Pawn",
+      "before": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "after": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "expected": "CollisionResponseType.ECR_BLOCK",
+      "status": "PASS"
+    },
+    {
+      "id": "ZOMBIE_PAWN_BLOCK",
+      "asset": "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker",
+      "component": "CollisionComponent",
+      "property": "CollisionResponse_ECC_Pawn",
+      "before": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "after": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "expected": "CollisionResponseType.ECR_BLOCK",
+      "status": "PASS"
+    },
+    {
+      "id": "LIVE_BOSS_LOCATION",
+      "asset": "MAP_GGBOM_Main",
+      "component": "Live_Boss_Overlord",
+      "property": "Location",
+      "before": "X=0.000 Y=0.000 Z=520.000",
+      "after": "X=0.000 Y=0.000 Z=520.000",
+      "expected": "X=0.000 Y=0.000 Z=520.000",
+      "status": "PASS"
+    },
+    {
+      "id": "LIVE_PLAYER_DEPTH",
+      "asset": "MAP_GGBOM_Main",
+      "component": "PlayerStart",
+      "property": "Location.Y",
+      "before": "0.0",
+      "after": "-10.0",
+      "expected": "-10.0",
+      "status": "PASS"
+    },
+    {
+      "id": "LEVEL_MAP_SAVED",
+      "asset": "MAP_GGBOM_Main",
+      "component": "World",
+      "property": "save_map",
+      "before": "False",
+      "after": "True",
+      "expected": "True",
+      "status": "PASS"
+    }
+  ]
+}

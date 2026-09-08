@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scale": [
+    0.35,
+    0.35,
+    0.35
+  ],
+  "cast_shadow": false,
+  "life_span": 0.25,
+  "saved": true
+}

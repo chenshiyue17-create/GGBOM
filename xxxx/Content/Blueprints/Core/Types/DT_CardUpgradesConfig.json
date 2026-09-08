@@ -1,0 +1,38 @@
+[
+  {
+    "RowName": "NaniteCore",
+    "Title": "纳米自愈核心",
+    "Description": "最大生命值 +250，每秒生命恢复 +15 HP",
+    "Rarity": "Epic",
+    "ModType": "Health",
+    "Value": 250.0,
+    "Icon": "/Game/Art/06_Cards/03_TacticalAbilityCards/Icons/T_Icon_Tactical_01_DeployStation"
+  },
+  {
+    "RowName": "CorrosiveAmmo",
+    "Title": "穿甲腐蚀弹头",
+    "Description": "武器攻击附带 25% 生化酸蚀伤害，穿透 +1",
+    "Rarity": "Rare",
+    "ModType": "Damage",
+    "Value": 25.0,
+    "Icon": "/Game/Art/06_Cards/01_UpgradeCards_3Choice/Cards/T_Card_Upgrade_02_CorrosiveAmmo"
+  },
+  {
+    "RowName": "TrajectoryOverload",
+    "Title": "多联弹道过载",
+    "Description": "主武器单次发射弹丸数量 +2，射速提升 30%",
+    "Rarity": "Legendary",
+    "ModType": "Pellets",
+    "Value": 2.0,
+    "Icon": "/Game/Art/06_Cards/01_UpgradeCards_3Choice/Cards/T_Card_Upgrade_04_Overdrive"
+  },
+  {
+    "RowName": "TacticalRoll",
+    "Title": "战术翻滚冲刺",
+    "Description": "移动速度 +20%，闪避无敌帧增加 0.2 秒",
+    "Rarity": "Rare",
+    "ModType": "Speed",
+    "Value": 20.0,
+    "Icon": "/Game/Art/06_Cards/02_PassiveBuffCards/Icons/T_Icon_Buff_02_MovementSpeed"
+  }
+]

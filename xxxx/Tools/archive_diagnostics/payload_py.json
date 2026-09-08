@@ -1,0 +1,8 @@
+{
+  "objectPath": "/Script/PythonScriptPlugin.Default__PythonScriptLibrary",
+  "functionName": "ExecutePythonCommand",
+  "parameters": {
+    "PythonCommand": "import unreal; unreal.log('=== PYTHON VIA REMOTE API SUCCESS ===')"
+  },
+  "generateTransaction": false
+}

@@ -1,0 +1,7 @@
+change_id: CHG-P1-WEAPON-SYSTEM
+title: Phase 1 武器系统架构重构与视觉生产闭环验证
+requested_by: Phase 0 Architecture + Art Stabilization Plan
+target_phase: Phase 1
+scope: Weapon Runtime, Projectile Base, Weapon Inventory Component, Muzzle/Impact
+  VFX, Weapon HUD Slot, Weapon Preview Level
+status: IN_PROGRESS

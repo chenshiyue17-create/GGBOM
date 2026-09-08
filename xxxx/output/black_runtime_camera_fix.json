@@ -1,0 +1,17 @@
+{
+  "BLACK_SCREEN_CAMERA_FIX": "PASS",
+  "camera": "PortraitCamera_9x16",
+  "location": [
+    0,
+    -1000,
+    0
+  ],
+  "rotation": [
+    0,
+    90,
+    0
+  ],
+  "projection": "ORTHOGRAPHIC",
+  "ortho_width": 941.0,
+  "saved": true
+}

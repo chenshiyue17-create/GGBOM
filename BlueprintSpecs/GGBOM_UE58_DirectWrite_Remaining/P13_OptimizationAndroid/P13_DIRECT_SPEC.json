@@ -1,0 +1,33 @@
+{
+  "phase": "P13",
+  "name": "OptimizationAndroid",
+  "precondition": "P12_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Core/Managers/BP_PoolManager",
+    "/Game/Tests/P13/L_StressTest"
+  ],
+  "variables_and_defaults": [
+    "Budgets: VisibleEnemies<=50 Projectiles<=100 WorldVFX<=50 XPPickups<=50 DamageNumbers<=30",
+    "Timers: Target0.15 AI0.20 Wave0.25 HUD=EventOnly",
+    "Android Portrait; Target60FPS; sustained floor45",
+    "Stress: 120s, Enemies40-50, Projectiles80-100, VFX30-50"
+  ],
+  "functions_and_dispatchers": [
+    "PoolManager: Acquire, Release, Prewarm, ClearAll",
+    "Pooled actors: ActivateFromPool, DeactivateToPool",
+    "Profile: stat unit, stat game, stat gpu, Unreal Insights, memreport"
+  ],
+  "data_rows_or_constants": [
+    "Pools: Projectile, Enemy, VFX, Pickup, DamageNumber",
+    "Package: APK or AAB",
+    "True device evidence required"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

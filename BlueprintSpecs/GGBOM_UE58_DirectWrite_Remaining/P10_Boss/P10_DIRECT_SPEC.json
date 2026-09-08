@@ -1,0 +1,50 @@
+{
+  "phase": "P10",
+  "name": "Boss",
+  "precondition": "P09_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Boss/BP_Boss_Overlord",
+    "/Game/Blueprints/Boss/BP_BossSkill_Base",
+    "/Game/Blueprints/Boss/BP_BossSkill_ShockwaveRing",
+    "/Game/Blueprints/Boss/BP_BossSkill_LaserBeam",
+    "/Game/Blueprints/Boss/BP_BossSkill_SpikeTrap",
+    "/Game/Blueprints/Boss/BP_BossSkill_AcidPool",
+    "/Game/Blueprints/Boss/BP_BossSkill_SporeRain",
+    "/Game/Blueprints/Boss/BP_BossSkill_EggNode",
+    "/Game/Blueprints/Boss/BP_BossSkill_BlackHole",
+    "/Game/Blueprints/Boss/BP_BossSkill_BreathCone",
+    "/Game/Blueprints/Boss/BP_BossSkill_MeteorStrike",
+    "/Game/Blueprints/Boss/BP_BossSkill_ShieldNode",
+    "/Game/Tests/P10/BP_Test_Boss"
+  ],
+  "variables_and_defaults": [
+    "Boss MaxHP=8000 CapsuleRadius=65 HalfHeight=110",
+    "Phase1 100-70%, Phase2 70-30%, Phase3 30-0%",
+    "Actions: Idle12 Walk12 GroundSlam14 HeavyCleave14 Enrage12 Death10",
+    "HeavyCleaveDamage=120"
+  ],
+  "functions_and_dispatchers": [
+    "Boss: EnterPhase2, EnterPhase3, SelectSkill, HandleDeath",
+    "BossSkillBase lifecycle: Telegraph, WindUp, Active, Recover, Cleanup"
+  ],
+  "data_rows_or_constants": [
+    "ShockwaveRing|BP_BossSkill_ShockwaveRing|Damage80|360Ring",
+    "CorrosiveBeam|BP_BossSkill_LaserBeam|Damage150|180Sweep",
+    "EarthSpikes|BP_BossSkill_SpikeTrap|Damage90|Telegraph1.0",
+    "AcidPool|BP_BossSkill_AcidPool|Damage25|6Pools|Duration8",
+    "SporeRain|BP_BossSkill_SporeRain|Damage60|8Projectiles",
+    "EggSummon|BP_BossSkill_EggNode|Damage0|Hatch10",
+    "GravityVortex|BP_BossSkill_BlackHole|Damage110|PullThenExplode",
+    "BlightBreath|BP_BossSkill_BreathCone|Damage45|Duration3.5|Angle60",
+    "MeteorRain|BP_BossSkill_MeteorStrike|Damage130|RandomFullMap",
+    "BioShield|BP_BossSkill_ShieldNode|Damage0|Crystals3"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

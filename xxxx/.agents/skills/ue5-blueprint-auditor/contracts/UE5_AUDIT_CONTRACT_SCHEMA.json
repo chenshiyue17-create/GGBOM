@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UE5 Blueprint Audit Contract",
+  "type": "object",
+  "properties": {
+    "scope": {
+      "type": "string"
+    },
+    "engine_version": {
+      "type": "string"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "asset_type": {
+            "type": "string"
+          },
+          "parent": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "required": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    },
+    "structure_checks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "logic_checks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "functional_tests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "precondition": {
+            "type": "string"
+          },
+          "expected": {
+            "type": "string"
+          },
+          "test_mode": {
+            "type": "string",
+            "enum": [
+              "PIE",
+              "FunctionalTest",
+              "AutomationTest",
+              "PackagedBuild",
+              "Manual"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "expected"
+        ]
+      }
+    },
+    "integration_tests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "network_tests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "performance_targets": {
+      "type": "object"
+    },
+    "required_log_absence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_log_markers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gate_on_pass": {
+      "type": "string"
+    },
+    "gate_on_fail": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "scope"
+  ]
+}

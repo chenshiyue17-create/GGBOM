@@ -1,0 +1,9 @@
+﻿Direction,X,Y,Z,ExpectedAngleDeg_XZ,Notes
+Down,0,0,-1,-90,Default initial aim
+DownLeft,0.7071068,0,-0.7071068,-45,Normalized
+Left,1,0,0,0,A key
+UpLeft,0.7071068,0,0.7071068,45,Normalized
+Up,0,0,1,90,W key
+UpRight,-0.7071068,0,0.7071068,135,Normalized
+Right,-1,0,0,180,D key
+DownRight,-0.7071068,0,-0.7071068,-135,Normalized

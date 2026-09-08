@@ -1,0 +1,280 @@
+{
+  "time": "2026-09-02T17:52:51",
+  "map": "/Game/GGBOM/Maps/MAP_GGBOM_Main",
+  "pure_blueprint": true,
+  "actor_count": 35,
+  "folder_set_success": 35,
+  "folder_set_failures": [],
+  "legacy_world_hud_archived": 15,
+  "legacy_world_hud_hidden": 15,
+  "widget_blueprints": {
+    "WBP_GGBOM_CombatHUD": true,
+    "WBP_HUD_WeaponSlot": true,
+    "WBP_HUD_TacticalSlot": true,
+    "WBP_HUD_ZoneTracker": true
+  },
+  "hud_presenter_blueprint": true,
+  "map_saved": true,
+  "outliner_folders": {
+    "core": "00_Core_Runtime",
+    "camera": "01_Camera",
+    "stage": "02_Stage_Map",
+    "player": "03_Player",
+    "enemies": "04_Enemies",
+    "boss": "04_Enemies/Boss",
+    "defense": "05_Defense_Lanes",
+    "props": "06_Combat_Props",
+    "pickups": "07_Pickups_VFX",
+    "hud_runtime": "08_HUD_Runtime",
+    "hud_legacy": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+    "system": "99_Engine_Runtime"
+  },
+  "actors": [
+    {
+      "label": "Master_Orthographic_Camera",
+      "class": "CameraActor",
+      "folder": "01_Camera",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "PP_2D_Color_Accuracy",
+      "class": "PostProcessVolume",
+      "folder": "99_Engine_Runtime",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Ground_Stage00",
+      "class": "PaperSpriteActor",
+      "folder": "02_Stage_Map",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Overhead_Stage00",
+      "class": "PaperSpriteActor",
+      "folder": "02_Stage_Map",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Boss_Overlord",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies/Boss",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Barricade_Top_L",
+      "class": "PaperSpriteActor",
+      "folder": "05_Defense_Lanes",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Barricade_Top_M",
+      "class": "PaperSpriteActor",
+      "folder": "05_Defense_Lanes",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Barricade_Top_R",
+      "class": "PaperSpriteActor",
+      "folder": "05_Defense_Lanes",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Zombie_01",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Zombie_02",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Zombie_03",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Brute_Elite",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "ZombieSpitter_01",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "ZombieArmored_01",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Hound_01",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "Hound_02",
+      "class": "PaperSpriteActor",
+      "folder": "04_Enemies",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "DefenseLine_L",
+      "class": "PaperSpriteActor",
+      "folder": "05_Defense_Lanes",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "DefenseLine_M",
+      "class": "PaperSpriteActor",
+      "folder": "05_Defense_Lanes",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "DefenseLine_R",
+      "class": "PaperSpriteActor",
+      "folder": "05_Defense_Lanes",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "PlayerStart",
+      "class": "PlayerStart",
+      "folder": "03_Player",
+      "legacy_world_hud": false,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_BossBar_Bg",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_BossBar_Fill",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Btn_Pause",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Tactical_Barricade",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Tactical_RedBarrel",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Tactical_ToxicDrum",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Tactical_MedPod",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Player_HP_Bg",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Player_HP_Fill",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Player_EXP_Bg",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Player_EXP_Fill",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Card_AutoRifle_Active",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Card_Shotgun",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Card_Rocket",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    },
+    {
+      "label": "HUD_Card_Tesla",
+      "class": "PaperSpriteActor",
+      "folder": "90_ARCHIVE_Legacy_WorldSpace_HUD",
+      "legacy_world_hud": true,
+      "folder_set": true
+    }
+  ],
+  "status": "PASS"
+}

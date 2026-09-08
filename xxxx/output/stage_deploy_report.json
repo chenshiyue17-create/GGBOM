@@ -1,0 +1,52 @@
+{
+  "STAGE_DEPLOY_STATUS": "PASS",
+  "removed_legacy_enemy_actors": [],
+  "spawned": [
+    {
+      "label": "CombatWave_Zombie_01",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        0,
+        0,
+        120
+      ]
+    },
+    {
+      "label": "CombatWave_Zombie_02",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        -115,
+        0,
+        250
+      ]
+    },
+    {
+      "label": "CombatWave_Zombie_03",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        115,
+        0,
+        315
+      ]
+    },
+    {
+      "label": "CombatWave_Hound_01",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        -180,
+        0,
+        435
+      ]
+    },
+    {
+      "label": "CombatWave_Boss",
+      "class": "BP_Boss_Overlord_C",
+      "location": [
+        0,
+        0,
+        590
+      ]
+    }
+  ],
+  "saved": true
+}

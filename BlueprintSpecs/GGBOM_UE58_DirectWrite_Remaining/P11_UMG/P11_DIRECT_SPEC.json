@@ -1,0 +1,47 @@
+{
+  "phase": "P11",
+  "name": "UMG",
+  "precondition": "P10_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/UI/WBP_GameHUD",
+    "/Game/Blueprints/UI/WBP_PlayerStatus",
+    "/Game/Blueprints/UI/WBP_WeaponBar",
+    "/Game/Blueprints/UI/WBP_ItemPlacementBar",
+    "/Game/Blueprints/UI/WBP_BossHUD",
+    "/Game/Blueprints/UI/WBP_ZoneRail",
+    "/Game/Blueprints/UI/WBP_TopRightCounters",
+    "/Game/Blueprints/UI/WBP_CardSelectionModal",
+    "/Game/Blueprints/UI/WBP_PauseSettingsMenu",
+    "/Game/Blueprints/UI/WBP_GameOverScreen",
+    "/Game/Blueprints/UI/WBP_DragVisual"
+  ],
+  "variables_and_defaults": [
+    "Reference=1080x1920 SafeZone=true PropertyBinding=false TickBinding=false",
+    "BossHUD TopCenter Pos(0,18) Size560x86",
+    "ZoneRail LeftCenter Pos(18,-10) Size112x1050",
+    "TopRightCounters TopRight Pos(-18,18) Size212x182",
+    "PlayerStatus BottomLeft Pos(18,-18) Size224x202",
+    "WeaponBar BottomCenter Pos(-22,-18) Size552x218",
+    "WeaponSlot132x202 x4 Spacing8",
+    "ItemPlacementBar RightCenter Pos(-18,120) Size238x790",
+    "ItemSlot206x138 Icon92x92 Count48x30",
+    "DragVisual96x96",
+    "Icon Pivot0.5/0.5 Translation0 Scale1"
+  ],
+  "functions_and_dispatchers": [
+    "UI更新函数: SetHealth, SetShield, SetXP, SetLevel, SetAmmo, SetWeapon, SetItemCount, SetBossHP, SetStage",
+    "Card modal: Populate3, SelectCard, Reroll, Skip",
+    "Placement drag: OnDragDetected, OnDragOver, OnDrop, OnDragCancelled"
+  ],
+  "data_rows_or_constants": [
+    "Original UI screens: MainHUD, CardSelectionModal, BossHealthBar, PauseSettingsMenu, GameOverScreen"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

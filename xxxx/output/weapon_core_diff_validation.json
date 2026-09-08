@@ -1,0 +1,16 @@
+{
+  "VALIDATION": "THIRD_WEAPON_CORE_DIFF_ZERO",
+  "base_weapons": [
+    "Weapon.AR01",
+    "Weapon.SG01"
+  ],
+  "third_weapon": "Weapon.KineticPistol",
+  "core_blueprints_checked": [
+    "/Game/Blueprints/Projectiles/BP_Projectile_Base",
+    "/Game/GGBOM/Blueprints/Components/BPC_WeaponInventory",
+    "/Game/GGBOM/UI/WBP_HUD_WeaponSlot"
+  ],
+  "core_blueprint_diff_lines": 0,
+  "data_driven_success": true,
+  "status": "PASS"
+}

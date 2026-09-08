@@ -1,0 +1,2 @@
+﻿WaveID,StartTime,EndTime,EnemyID,SpawnRate,MaxAlive,HealthMultiplier,DamageMultiplier,SpeedMultiplier,EliteChance,SpawnArea,DropMultiplier
+Street01_001,0,60,Shambler,0.8,15,1.0,1.0,1.0,0.0,Street_A,1.0

@@ -1,0 +1,19 @@
+semantic_mappings:
+  Weapon.AR01:
+    weapon_visual: WPN.AUTO_RIFLE.VISUAL
+    projectile: PROJ.AUTO_RIFLE.FLIGHT
+    muzzle_vfx: VFX.AUTO_RIFLE.MUZZLE
+    impact_vfx: VFX.AUTO_RIFLE.IMPACT
+    icon: ICON.WPN.AUTO_RIFLE
+  Weapon.SG01:
+    weapon_visual: WPN.SHOTGUN.VISUAL
+    projectile: PROJ.BUCKSHOT.FLIGHT
+    muzzle_vfx: VFX.BUCKSHOT.MUZZLE
+    impact_vfx: VFX.BUCKSHOT.IMPACT
+    icon: ICON.WPN.SHOTGUN
+  Weapon.KineticPistol:
+    weapon_visual: WPN.KINETIC_PISTOL.VISUAL
+    projectile: PROJ.KINETIC_PISTOL.FLIGHT
+    muzzle_vfx: VFX.KINETIC_PISTOL.MUZZLE
+    impact_vfx: VFX.KINETIC_PISTOL.IMPACT
+    icon: ICON.WPN.KINETIC_PISTOL

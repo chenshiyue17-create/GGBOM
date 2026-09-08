@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MS Validation Report",
+  "type": "object",
+  "required": [
+    "stableId",
+    "gates",
+    "final"
+  ],
+  "properties": {
+    "stableId": {
+      "type": "string"
+    },
+    "gates": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          "PASS",
+          "FAIL",
+          "WARNING",
+          "NOT_EXECUTED",
+          "NOT_REQUIRED"
+        ]
+      }
+    },
+    "unexpectedChanges": {
+      "type": "integer"
+    },
+    "duplicates": {
+      "type": "integer"
+    },
+    "final": {
+      "enum": [
+        "READY",
+        "INCOMPLETE",
+        "FAILED"
+      ]
+    }
+  }
+}

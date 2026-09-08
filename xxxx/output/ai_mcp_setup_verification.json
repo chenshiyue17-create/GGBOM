@@ -1,0 +1,61 @@
+{
+  "title": "Unreal Engine 5.8 官方 AI / MCP 全量配置与通信自检报告",
+  "uproject_plugins": {
+    "status": "PASS",
+    "plugins": {
+      "ModelContextProtocol": true,
+      "ToolsetRegistry": true,
+      "AllToolsets": true,
+      "RemoteControl": true
+    }
+  },
+  "ini_autostart_settings": {
+    "DefaultEditorPerProjectUserSettings.ini": {
+      "exists": true,
+      "configured": true
+    },
+    "DefaultEngine.ini": {
+      "exists": true,
+      "configured": true
+    },
+    "status": "PASS"
+  },
+  "client_mcp_configs": {
+    "status": "PASS",
+    "configs": {
+      ".mcp.json": {
+        "exists": true,
+        "valid_json": true
+      },
+      "xxxx/.mcp.json": {
+        "exists": true,
+        "valid_json": true
+      },
+      ".agents/mcp_config.json": {
+        "exists": true,
+        "valid_json": true
+      },
+      "xxxx/.agents/mcp_config.json": {
+        "exists": true,
+        "valid_json": true
+      }
+    }
+  },
+  "mcp_stdio_bridge": {
+    "status": "PASS",
+    "server_info": {
+      "name": "unreal-mcp-bridge",
+      "version": "1.0.0"
+    }
+  },
+  "live_ports": {
+    "30010_RemoteControl": {
+      "online": true,
+      "routes": 34
+    },
+    "8000_OfficialMCP": {
+      "online": false,
+      "notice": "将在虚幻编辑器启动或执行 ModelContextProtocol.StartServer 后就绪"
+    }
+  }
+}

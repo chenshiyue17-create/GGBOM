@@ -1,0 +1,25 @@
+weapons:
+  Weapon.AR01:
+    name: 突击步枪 (Assault Rifle)
+    fire_rate: 0.18
+    pellet_count: 1
+    spread_angle: 0.0
+    speed: 600.0
+    damage: 25.0
+    fire_mode: Auto
+  Weapon.SG01:
+    name: 霰弹枪 (Shotgun)
+    fire_rate: 0.75
+    pellet_count: 5
+    spread_angle: 30.0
+    speed: 550.0
+    damage: 18.0
+    fire_mode: BurstSpread
+  Weapon.KineticPistol:
+    name: 动能手枪 (Kinetic Pistol)
+    fire_rate: 0.35
+    pellet_count: 1
+    spread_angle: 0.0
+    speed: 700.0
+    damage: 35.0
+    fire_mode: SemiAuto

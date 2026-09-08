@@ -1,0 +1,509 @@
+[
+  {
+    "id": "commit_1788621544249",
+    "timestamp": "2026-09-05 23:19:04",
+    "author": "策划/开发者",
+    "comment": "通过全实体配置中心微调提交",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、动作特效与武器挂载",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": [
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "BulletImage",
+        "oldVal": "03_Weapons/01_KineticPistol/T_Bullet_KineticPistol_01_Muzzle.png",
+        "newVal": "03_Weapons/03_BuckshotShotgun/T_Bullet_Buckshot_01_Muzzle.png"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "MuzzleFX",
+        "oldVal": "03_Weapons/01_KineticPistol/T_Bullet_KineticPistol_01_Muzzle.png",
+        "newVal": "05_VFX/01_Explosion_Fire/T_VFX_Explosion_Fire_01.png"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "ImpactFX",
+        "oldVal": "05_VFX/01_Explosion_Fire/T_VFX_Explosion_Fire_01.png",
+        "newVal": "05_VFX/01_Explosion_Fire/T_VFX_Explosion_Fire_03.png"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "TrailFX",
+        "oldVal": "03_Weapons/01_KineticPistol",
+        "newVal": "05_VFX/01_Explosion_Fire"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "近战重型霰弹枪",
+        "property": "BulletImage",
+        "oldVal": "03_Weapons/03_BuckshotShotgun/T_Bullet_Buckshot_02_Flight.png",
+        "newVal": "03_Weapons/01_KineticPistol/T_Bullet_KineticPistol_01_Muzzle.png"
+      }
+    ]
+  },
+  {
+    "id": "commit_1788618150024",
+    "timestamp": "2026-09-05 22:22:30",
+    "author": "策划/开发者",
+    "comment": "通过全实体配置中心微调提交",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、动作特效与武器挂载",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": []
+  },
+  {
+    "id": "commit_1788618116319",
+    "timestamp": "2026-09-05 22:21:56",
+    "author": "策划/开发者",
+    "comment": "通过全实体配置中心微调提交",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、动作特效与武器挂载",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": [
+      {
+        "category": "战斗特效配置",
+        "target": "金属动能跳弹火花",
+        "property": "VFXFolder",
+        "oldVal": "05_VFX/11_Hit_Kinetic",
+        "newVal": "05_VFX/01_Explosion_Fire"
+      },
+      {
+        "category": "战斗特效配置",
+        "target": "腐蚀强酸飞溅",
+        "property": "VFXFolder",
+        "oldVal": "05_VFX/12_Hit_Acid",
+        "newVal": "05_VFX/09_Nanite_Heal"
+      },
+      {
+        "category": "战斗特效配置",
+        "target": "高爆烈焰解体爆裂",
+        "property": "VFXFolder",
+        "oldVal": "05_VFX/01_Explosion_Fire",
+        "newVal": "05_VFX/05_Smoke_Dust"
+      },
+      {
+        "category": "战斗特效配置",
+        "target": "突击步枪枪口火光",
+        "property": "VFXFolder",
+        "oldVal": "05_VFX/13_Muzzle_Flash",
+        "newVal": "05_VFX/04_Blood_Gore"
+      },
+      {
+        "category": "战斗特效配置",
+        "target": "等离子电弧脉冲爆发",
+        "property": "VFXFolder",
+        "oldVal": "05_VFX/16_EMP_Pulse",
+        "newVal": "05_VFX/06_Toxic_Splatter"
+      },
+      {
+        "category": "战斗特效配置",
+        "target": "酸蚀持续毒雾区域",
+        "property": "VFXFolder",
+        "oldVal": "05_VFX/07_Acid_Cloud",
+        "newVal": "05_VFX/09_Nanite_Heal"
+      }
+    ]
+  },
+  {
+    "id": "commit_1788617987227",
+    "timestamp": "2026-09-05 22:19:47",
+    "author": "策划/开发者",
+    "comment": "通过全实体配置中心微调提交",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、动作特效与武器挂载",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": []
+  },
+  {
+    "id": "commit_1788617943022",
+    "timestamp": "2026-09-05 22:19:03",
+    "author": "策划/开发者",
+    "comment": "通过全实体配置中心微调提交",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、动作特效与武器挂载",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": [
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "Icon",
+        "oldVal": "06_Cards/04_WeaponModCards/T_Card_WeaponMod_01.png",
+        "newVal": "07_UI/03_BossHealthBar/T_UI_BossBar_06_Skull_Enraged.png"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "BulletImage",
+        "oldVal": "03_Weapons/02_AssaultRifle/T_Bullet_AssaultRifle_02_Flight.png",
+        "newVal": "03_Weapons/01_KineticPistol/T_Bullet_KineticPistol_01_Muzzle.png"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "MuzzleFX",
+        "oldVal": "03_Weapons/02_AssaultRifle/T_Bullet_AssaultRifle_01_Muzzle.png",
+        "newVal": "03_Weapons/01_KineticPistol/T_Bullet_KineticPistol_01_Muzzle.png"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "ImpactFX",
+        "oldVal": "03_Weapons/02_AssaultRifle/T_Bullet_AssaultRifle_03_Impact.png",
+        "newVal": "05_VFX/01_Explosion_Fire/T_VFX_Explosion_Fire_01.png"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "战术突击步枪",
+        "property": "TrailFX",
+        "oldVal": "05_VFX/14_Spark_Tiny",
+        "newVal": "03_Weapons/01_KineticPistol"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "近战重型霰弹枪",
+        "property": "Icon",
+        "oldVal": "06_Cards/04_WeaponModCards/T_Card_WeaponMod_02.png",
+        "newVal": "07_UI/03_BossHealthBar/T_UI_BossBar_09_PhaseDivider.png"
+      },
+      {
+        "category": "武器与子弹属性",
+        "target": "腐蚀毒液发射器",
+        "property": "Icon",
+        "oldVal": "06_Cards/04_WeaponModCards/T_Card_WeaponMod_04.png",
+        "newVal": "06_Cards/04_WeaponModCards/T_Card_WeaponMod_09.png"
+      }
+    ]
+  },
+  {
+    "id": "commit_1788529063027",
+    "timestamp": "2026-09-04 21:37:43",
+    "author": "端到端自动化测试器",
+    "comment": "验证武器子弹全物理参数与战斗特效原子落盘",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788528712474",
+    "timestamp": "2026-09-04 21:31:52",
+    "author": "测试选目录实时预览",
+    "comment": "验证选目录实时预览与原子落盘",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788528594286",
+    "timestamp": "2026-09-04 21:29:54",
+    "author": "端到端自动化测试器",
+    "comment": "验证武器子弹全物理参数与战斗特效原子落盘",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788528055242",
+    "timestamp": "2026-09-04 21:20:55",
+    "author": "端到端自动化测试器",
+    "comment": "验证武器子弹全物理参数与战斗特效原子落盘",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788527409990",
+    "timestamp": "2026-09-04 21:10:09",
+    "author": "清理测试数据",
+    "comment": "恢复标准武器配置",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788527316415",
+    "timestamp": "2026-09-04 21:08:36",
+    "author": "自动化新增验证",
+    "comment": "测试新增试验型等离子脉冲步枪",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 4 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788527169203",
+    "timestamp": "2026-09-04 21:06:09",
+    "author": "端到端自动化测试器",
+    "comment": "验证武器子弹全物理参数与战斗特效原子落盘",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788527154246",
+    "timestamp": "2026-09-04 21:05:54",
+    "author": "端到端自动化测试器",
+    "comment": "验证武器子弹全物理参数与战斗特效原子落盘",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json",
+      "DT_HitEffects.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据",
+      "更新 6 种战斗特效属性与切片"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788526490088",
+    "timestamp": "2026-09-04 20:54:50",
+    "author": "端到端测试器",
+    "comment": "自动化测试提交",
+    "modified_tables": [
+      "DT_Characters.json",
+      "DT_Enemies.json",
+      "DT_Weapons.json",
+      "DT_TacticalCards.json",
+      "DT_WaveProgression.json",
+      "DT_MapTiles.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置",
+      "更新 6 种敌人数值与素材映射",
+      "更新 3 把武器射击属性",
+      "更新 6 张战术强化卡牌",
+      "更新关卡出怪波次时间轴",
+      "更新 4 块土地地表数据"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788525212516",
+    "timestamp": "2026-09-04 20:33:32",
+    "author": "策划验证",
+    "comment": "测试主角全属性与特效配置提交",
+    "modified_tables": [
+      "DT_Characters.json"
+    ],
+    "diff_summary": [
+      "更新主角全属性、武器与动作特效配置"
+    ],
+    "raw_diff": {}
+  },
+  {
+    "id": "commit_1788524617834",
+    "timestamp": "2026-09-04 20:23:37",
+    "author": "测试员",
+    "comment": "自动连通性验证提交",
+    "modified_tables": [],
+    "diff_summary": [],
+    "raw_diff": [
+      {
+        "category": "敌人蓝图属性",
+        "target": "基础感染行尸",
+        "property": "MaxHealth",
+        "oldVal": 65.0,
+        "newVal": 65.0
+      }
+    ]
+  }
+]

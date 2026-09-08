@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "bullet_saved": true,
+  "self_hit_immune": true,
+  "hit_explosion_scale": 0.35,
+  "cast_shadow": false
+}

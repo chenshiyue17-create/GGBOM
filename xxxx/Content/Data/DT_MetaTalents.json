@@ -1,0 +1,38 @@
+{
+  "TALENT_Tenacity": {
+    "DisplayName": "坚韧体魄",
+    "MaxLevel": 20,
+    "CostPerLevel": 100,
+    "CostMultiplier": 1.25,
+    "StatType": "MaxHealth",
+    "ValuePerLevel": 50.0,
+    "Description": "每级永久提升 +50 点生命上限"
+  },
+  "TALENT_Firepower": {
+    "DisplayName": "毁灭装药",
+    "MaxLevel": 20,
+    "CostPerLevel": 150,
+    "CostMultiplier": 1.30,
+    "StatType": "BaseDamageMultiplier",
+    "ValuePerLevel": 0.05,
+    "Description": "每级永久提升 +5% 基础武器伤害"
+  },
+  "TALENT_Agility": {
+    "DisplayName": "战术机动",
+    "MaxLevel": 10,
+    "CostPerLevel": 200,
+    "CostMultiplier": 1.35,
+    "StatType": "MoveSpeedMultiplier",
+    "ValuePerLevel": 0.03,
+    "Description": "每级永久提升 +3% 移动速度"
+  },
+  "TALENT_Resurrection": {
+    "DisplayName": "战地急救",
+    "MaxLevel": 1,
+    "CostPerLevel": 2000,
+    "CostMultiplier": 1.0,
+    "StatType": "ReviveCount",
+    "ValuePerLevel": 1.0,
+    "Description": "每局战斗获得 1 次濒死瞬间复活机会"
+  }
+}

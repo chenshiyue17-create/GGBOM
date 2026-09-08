@@ -1,0 +1,50 @@
+{
+  "PREVIEW_TEST_STATUS": "PASS",
+  "map": "/Game/Preview/L_Preview_Weapon",
+  "viewport": "360x640 @ 30FPS",
+  "visual_stages": {
+    "overview": {
+      "status": "APPROVED",
+      "evidence": "output/weapon_preview_overview.png"
+    },
+    "player_hold": {
+      "status": "APPROVED",
+      "evidence": "output/weapon_preview_hold.png"
+    },
+    "muzzle_vfx": {
+      "status": "APPROVED",
+      "evidence": "output/weapon_preview_muzzle.png"
+    },
+    "ballistic_flight": {
+      "status": "APPROVED",
+      "evidence": "output/weapon_preview_flight.png"
+    },
+    "target_impact_vfx": {
+      "status": "APPROVED",
+      "evidence": "output/weapon_preview_impact.png"
+    },
+    "hud_weapon_slot": {
+      "status": "APPROVED",
+      "evidence": "output/weapon_preview_hud_slot.png"
+    }
+  },
+  "weapons_verified": [
+    {
+      "id": "Weapon.AR01",
+      "visual_status": "APPROVED",
+      "placeholders": 0
+    },
+    {
+      "id": "Weapon.SG01",
+      "visual_status": "APPROVED",
+      "placeholders": 0
+    },
+    {
+      "id": "Weapon.KineticPistol",
+      "visual_status": "APPROVED",
+      "placeholders": 0
+    }
+  ],
+  "placeholders_count": 0,
+  "gate_decision": "ART_APPROVED"
+}

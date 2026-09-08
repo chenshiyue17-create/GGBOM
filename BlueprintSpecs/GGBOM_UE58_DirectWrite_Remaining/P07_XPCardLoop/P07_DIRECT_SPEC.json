@@ -1,0 +1,35 @@
+{
+  "phase": "P07",
+  "name": "XPCardLoop",
+  "precondition": "P06_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Pickups/BP_Pickup_Base",
+    "/Game/Blueprints/Pickups/BP_Pickup_XP",
+    "/Game/Blueprints/Cards/BP_CardManager",
+    "/Game/Tests/P07/BP_Test_XPCard"
+  ],
+  "variables_and_defaults": [
+    "Pickup MagnetRadius=220 MagnetSpeed=650",
+    "Card rarity weights Common60 Rare25 Epic12 Legendary3"
+  ],
+  "functions_and_dispatchers": [
+    "Pickup: BeginMagnet, Consume",
+    "CardManager: GetEligibleCards, DrawThreeRandomCards, ApplySelectedCard"
+  ],
+  "data_rows_or_constants": [
+    "CARD_01_NaniteSyringe|Common|MaxHP+25|Regen+1.5|MaxStack3",
+    "CARD_02_CorrosiveAmmo|Rare|ToxinDamage+0.15|Pierce+1|MaxStack3",
+    "CARD_03_MedicalDrone|Epic|Heal35Every6s|SlowProjectile|MaxStack1",
+    "CARD_04_MultishotOverdrive|Rare|ExtraProjectiles+2|FireRate+20%|Spread+5deg|MaxStack3",
+    "CARD_05_BioChainReaction|Epic|ToxicAcidKillExplosionDamage60|Radius150|MaxStack1",
+    "CARD_06_AbyssalReckoning|Legendary|OrbitalLaser5s|MaxStack1"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

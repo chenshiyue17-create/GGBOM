@@ -1,0 +1,46 @@
+{
+  "Tile_Stage00_Start": {
+    "DisplayName": "初始停机坪整备地面",
+    "GroundTexture": "08_Maps/Stage00_Start/T_Map_Stage00_Start_Ground.png",
+    "OverheadTexture": "08_Maps/Stage00_Start/T_Map_Stage00_Start_Overhead.png",
+    "FrictionMultiplier": 1,
+    "DamagePerSecond": 0,
+    "NavWalkable": true,
+    "SpawnWeight": 1,
+    "TileSize": 1024,
+    "SurfaceType": "Surface_Metal_Floor"
+  },
+  "Tile_Stage01_Z1": {
+    "DisplayName": "核心沦陷区破损水泥地",
+    "GroundTexture": "08_Maps/Stage01_Z1/T_Map_Stage01_Z1_Ground.png",
+    "OverheadTexture": "08_Maps/Stage01_Z1/T_Map_Stage01_Z1_Overhead.png",
+    "FrictionMultiplier": 1,
+    "DamagePerSecond": 0,
+    "NavWalkable": true,
+    "SpawnWeight": 1.5,
+    "TileSize": 1024,
+    "SurfaceType": "Surface_Concrete"
+  },
+  "Tile_Stage02_Z2": {
+    "DisplayName": "生化废墟酸蚀毒液土地",
+    "GroundTexture": "08_Maps/Stage02_Z2/T_Map_Stage02_Z2_Ground.png",
+    "OverheadTexture": "",
+    "FrictionMultiplier": 0.75,
+    "DamagePerSecond": 8,
+    "NavWalkable": true,
+    "SpawnWeight": 2,
+    "TileSize": 1024,
+    "SurfaceType": "Surface_Toxic_Acid"
+  },
+  "Tile_Stage04_Boss": {
+    "DisplayName": "决战地下巢穴强化合金地",
+    "GroundTexture": "08_Maps/Stage04_Boss/T_Map_Stage04_Boss_Ground.png",
+    "OverheadTexture": "",
+    "FrictionMultiplier": 1.1,
+    "DamagePerSecond": 0,
+    "NavWalkable": true,
+    "SpawnWeight": 3,
+    "TileSize": 1024,
+    "SurfaceType": "Surface_Heavy_Steel"
+  }
+}

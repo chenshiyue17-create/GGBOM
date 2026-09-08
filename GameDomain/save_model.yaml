@@ -1,0 +1,6 @@
+schema_version: '1.0'
+persisted_fields:
+- SaveSlot
+- HighScores
+- UnlockedCards
+- MetaCurrencies

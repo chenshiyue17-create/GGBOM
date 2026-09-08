@@ -1,0 +1,5 @@
+﻿RowName,DisplayName,Icon,Magazine,Reserve
+AutoRifle,自动步枪,/Game/UI/Weapons/T_UI_WPN_AutoRifle,30,999
+Shotgun,散弹枪,/Game/UI/Weapons/T_UI_WPN_Shotgun,6,999
+RocketLauncher,火箭筒,/Game/UI/Weapons/T_UI_WPN_RocketLauncher,12,999
+TeslaGun,特斯拉枪,/Game/UI/Weapons/T_UI_WPN_TeslaGun,8,999

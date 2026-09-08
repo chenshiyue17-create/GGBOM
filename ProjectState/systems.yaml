@@ -1,0 +1,34 @@
+systems:
+  AttributeSystem:
+    description: Owns resolved attributes and modifiers
+    debt_level: LOW
+  DamageSystem:
+    description: Owns damage resolution pipeline
+    debt_level: LOW
+  HealthSystem:
+    description: Owns health, damage intake, and death states
+    debt_level: LOW
+  WeaponSystem:
+    description: Owns weapon execution and inventory
+    debt_level: LOW
+  ProjectileSystem:
+    description: Owns projectile lifecycle and flight
+    debt_level: LOW
+  AbilitySystem:
+    description: Owns tactical and ultimate abilities
+    debt_level: MEDIUM
+  StatusSystem:
+    description: Owns buffs and debuffs
+    debt_level: MEDIUM
+  ProgressionSystem:
+    description: Owns XP, Level, and Card Upgrades
+    debt_level: MEDIUM
+  SceneSystem:
+    description: Owns dual-layer map and collisions
+    debt_level: LOW
+  UISystem:
+    description: Owns UMG 9-Slice view rendering
+    debt_level: LOW
+  PresentationSystem:
+    description: Owns Muzzle/Impact VFX and SFX instantiation
+    debt_level: LOW

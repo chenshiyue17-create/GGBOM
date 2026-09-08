@@ -1,0 +1,42 @@
+{
+  "enum_NumEnums": {
+    "ok": false,
+    "error": "UserDefinedEnum: Failed to find function 'NumEnums' on 'UserDefinedEnum'"
+  },
+  "enum_GetNameStringByIndex": {
+    "ok": false,
+    "error": "UserDefinedEnum: Failed to find function 'GetNameStringByIndex' on 'UserDefinedEnum'"
+  },
+  "enum_SetEnums": {
+    "ok": false,
+    "error": "UserDefinedEnum: Failed to find function 'SetEnums' on 'UserDefinedEnum'"
+  },
+  "enum_SetMetaData": {
+    "ok": false,
+    "error": "UserDefinedEnum: Failed to find function 'SetMetaData' on 'UserDefinedEnum'"
+  },
+  "enum_GetDisplayNameTextByIndex": {
+    "ok": false,
+    "error": "UserDefinedEnum: Failed to find function 'GetDisplayNameTextByIndex' on 'UserDefinedEnum'"
+  },
+  "enum_AddNewEnumeratorForUserDefinedEnum": {
+    "ok": false,
+    "error": "UserDefinedEnum: Failed to find function 'AddNewEnumeratorForUserDefinedEnum' on 'UserDefinedEnum'"
+  },
+  "struct_AddVariable": {
+    "ok": false,
+    "error": "UserDefinedStruct: Failed to find function 'AddVariable' on 'UserDefinedStruct'"
+  },
+  "struct_GetGuid": {
+    "ok": false,
+    "error": "UserDefinedStruct: Failed to find function 'GetGuid' on 'UserDefinedStruct'"
+  },
+  "struct_SetMetaData": {
+    "ok": false,
+    "error": "UserDefinedStruct: Failed to find function 'SetMetaData' on 'UserDefinedStruct'"
+  },
+  "struct_GetAuthoredNameForField": {
+    "ok": false,
+    "error": "UserDefinedStruct: Failed to find function 'GetAuthoredNameForField' on 'UserDefinedStruct'"
+  }
+}

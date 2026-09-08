@@ -1,0 +1,10 @@
+{
+  "required_log": "P07_XP_CARD_OK",
+  "checks": {
+    "cards": 6,
+    "draw": 3,
+    "unique": true,
+    "nanite_hp": 125
+  },
+  "next_gate": "ALLOW_P08"
+}

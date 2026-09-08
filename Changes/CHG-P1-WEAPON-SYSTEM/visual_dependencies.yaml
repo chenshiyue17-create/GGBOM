@@ -1,0 +1,10 @@
+dependencies:
+- role: Muzzle VFX Socket
+  location: Z+55, Y-5 relative to Player origin
+  status: APPROVED
+- role: Bullet Dimensions Standard
+  range: 32x32 to 48x48 uu
+  status: APPROVED
+- role: HUD Slot Frame
+  dimensions: 128x128 screen space
+  status: APPROVED

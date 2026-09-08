@@ -1,0 +1,25 @@
+phases:
+  Phase 0:
+    name: Project Takeover & Audit
+    status: COMPLETED
+  Phase 0-B:
+    name: Art & Feature Completeness Governance
+    status: COMPLETED
+  Phase 0-C:
+    name: Registry Integrity & Runtime Contract
+    status: COMPLETED
+  Phase 1:
+    name: Weapon System Migration & Production Proof
+    status: COMPLETED
+  Phase 2:
+    name: Enemy AI & 4-Direction Animation Pipeline
+    status: COMPLETED
+  Phase 3:
+    name: Combat Depth & Roguelike Card Upgrades
+    status: PLANNED
+  Phase 4:
+    name: Boss Encounters & Multi-Phase Mechanics
+    status: PLANNED
+  Phase 5:
+    name: Performance, Packaging & Platform Verification
+    status: PLANNED

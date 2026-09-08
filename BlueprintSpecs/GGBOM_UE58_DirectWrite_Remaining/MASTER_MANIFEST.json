@@ -1,0 +1,17 @@
+{
+  "package": "GGBOM_UE58_P03-P13_DirectWrite",
+  "phases": [
+    "P04_PlayerMovementAnimation",
+    "P06_EnemyAI",
+    "P12_GameFlowSave",
+    "P09_StagesWaves",
+    "P07_XPCardLoop",
+    "P13_OptimizationAndroid",
+    "P11_UMG",
+    "P05_CombatWeaponsProjectiles",
+    "P03_Components",
+    "P10_Boss",
+    "P08_PropsPlacement"
+  ],
+  "final_gate": "SHIPPING_CANDIDATE"
+}

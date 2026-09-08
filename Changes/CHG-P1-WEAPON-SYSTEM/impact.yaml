@@ -1,0 +1,21 @@
+affected_gameplay_systems:
+- SYS.WEAPON_PROJECTILE
+- SYS.PLAYER_CONTROLLER
+- SYS.HEALTH_COMBAT
+affected_ui_systems:
+- SYS.UMG_HUD
+unaffected_systems:
+- SYS.CAMERA_MANAGER
+- SYS.STAGE_WAVE
+- SYS.DEFENSE_PROPS
+reused_capabilities:
+- CAP.AUTOSHOOT_DIRECTION_LOCK
+- CAP.PROJECTILE_STRAIGHT_FLIGHT
+- CAP.ORTHO_DUAL_LAYER_RENDER
+new_capabilities:
+- CAP.PROJECTILE_SPREAD_BURST
+- CAP.MUZZLE_IMPACT_VFX_PIPELINE
+- CAP.WEAPON_INVENTORY_SLOT_DRIVE
+risk_analysis:
+  player_movement_regression: LOW (Movement/Facing logic remains untouched)
+  visual_breakage: LOW (All existing approved assets locked with MD5 hash)

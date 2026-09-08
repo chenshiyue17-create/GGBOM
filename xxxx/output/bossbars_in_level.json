@@ -1,0 +1,102 @@
+{
+  "BossBar_Armor": {
+    "class": "PaperSpriteActor",
+    "parent": "Live_Boss_Overlord",
+    "loc": [
+      0.0,
+      -3.0,
+      605.0
+    ],
+    "scale": [
+      0.38,
+      1.0,
+      0.34
+    ],
+    "rel_loc": [
+      0.0,
+      -2.53,
+      71.73
+    ],
+    "rel_scale": [
+      0.3207,
+      0.8439,
+      0.2869
+    ],
+    "sprite": "/Game/P01/Imported/Content/Asset/Art/07_UI/01_CombatHUD/Sprites/SP_T_UI_HUD_08_Minimap_Frame.SP_T_UI_HUD_08_Minimap_Frame"
+  },
+  "BossBar_Track": {
+    "class": "PaperSpriteActor",
+    "parent": "Live_Boss_Overlord",
+    "loc": [
+      0.0,
+      -4.0,
+      605.0
+    ],
+    "scale": [
+      0.36,
+      1.0,
+      0.36
+    ],
+    "rel_loc": [
+      0.0,
+      -3.38,
+      71.73
+    ],
+    "rel_scale": [
+      0.3038,
+      0.8439,
+      0.3038
+    ],
+    "sprite": "/Game/P01/Imported/Content/Asset/Art/07_UI/02_CardSelectionModal/Sprites/SP_T_UI_Modal_09_ProgressTrack.SP_T_UI_Modal_09_ProgressTrack"
+  },
+  "BossBar_Fill": {
+    "class": "PaperSpriteActor",
+    "parent": "Live_Boss_Overlord",
+    "loc": [
+      -68.0,
+      -5.0,
+      605.0
+    ],
+    "scale": [
+      0.27,
+      1.0,
+      0.2
+    ],
+    "rel_loc": [
+      -57.38,
+      -4.22,
+      71.73
+    ],
+    "rel_scale": [
+      0.2278,
+      0.8439,
+      0.1688
+    ],
+    "sprite": "/Game/P01/Imported/Content/Asset/Art/07_UI/02_CardSelectionModal/Sprites/SP_T_UI_Modal_10_GlowBorder.SP_T_UI_Modal_10_GlowBorder"
+  },
+  "BossBar_Insignia": {
+    "class": "PaperSpriteActor",
+    "parent": "Live_Boss_Overlord",
+    "loc": [
+      -85.0,
+      -6.0,
+      605.0
+    ],
+    "scale": [
+      0.28,
+      1.0,
+      0.28
+    ],
+    "rel_loc": [
+      -71.73,
+      -5.06,
+      71.73
+    ],
+    "rel_scale": [
+      0.2363,
+      0.8439,
+      0.2363
+    ],
+    "sprite": "/Game/P01/Imported/Content/Asset/Art/07_UI/02_CardSelectionModal/Sprites/SP_T_UI_Modal_02_HeaderRibbon.SP_T_UI_Modal_02_HeaderRibbon"
+  }
+}

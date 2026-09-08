@@ -1,0 +1,49 @@
+summary:
+  total_png_source_files: 949
+  standard_art_png_files: 801
+  legacy_png_files: 148
+  total_imported_uassets: 2384
+  p01_imported_uassets: 2179
+  ggbom_uassets: 154
+  blueprints_uassets: 47
+  maps_count: 5
+asset_breakdown:
+  01_Player:
+    png_count: 110
+    imported_flipbooks: 88
+    imported_sprites: 88
+    status: APPROVED_CORE / CANDIDATE_ADVANCED
+  02_Enemies:
+    png_count: 351
+    zombies: 18
+    hounds: 5
+    spitters: 6
+    boss_lord: 16
+    status: CANDIDATE
+  03_Weapons:
+    png_count: 40
+    weapon_types: 10
+    stages_per_weapon: 3
+    status: APPROVED_KP / CANDIDATE_REST
+  04_Props:
+    png_count: 40
+    prop_types: 10
+    stages_per_prop: 3
+    status: CANDIDATE
+  05_VFX:
+    png_count: 77
+    vfx_groups: 18
+    status: CANDIDATE
+  06_Cards:
+    png_count: 100
+    card_sets: 6
+    status: CANDIDATE
+  07_UI:
+    png_count: 73
+    ui_sets: 5
+    status: CANDIDATE
+  08_Maps:
+    png_count: 10
+    map_stages: 5
+    layers_per_map: 2
+    status: APPROVED_STAGE00 / CANDIDATE_REST

@@ -1,0 +1,11 @@
+{
+  "required_log": "P09_STAGE_OK",
+  "stages": [
+    "STAGE_00_START|L_Stage00_Start|KillCount>=20",
+    "STAGE_01_Z1|L_Stage01_Z1|Elapsed>=90 AND VenomKills>=3",
+    "STAGE_02_Z2|L_Stage02_Z2|OverloadTerminalDestroyed AND AliveHounds==0",
+    "STAGE_03_Z3|L_Stage03_Z3|KillCount>=150",
+    "STAGE_04_BOSS|L_Stage04_Boss|BossDefeated"
+  ],
+  "next_gate": "ALLOW_P10"
+}

@@ -1,0 +1,5 @@
+mechanic: 3-Card Selection on LevelUp
+card_types:
+- StatBoost
+- WeaponEvolution
+- TacticalAugment

@@ -1,0 +1,36 @@
+=== BlueprintEditorLibrary API ===
+  bplib.add_event_dispatcher
+  bplib.add_event_dispatcher_parameter
+  bplib.add_event_override
+  bplib.add_function_graph
+  bplib.add_function_override
+  bplib.add_member_variable
+  bplib.change_member_variable_type
+  bplib.get_blueprint_variable_category
+  bplib.get_blueprint_variable_replication
+  bplib.get_member_variable_type
+  bplib.list_member_variable_names
+  bplib.remove_unused_variables
+  bplib.replace_variable_references
+  bplib.set_blueprint_variable_category
+  bplib.set_blueprint_variable_expose_on_spawn
+  bplib.set_blueprint_variable_expose_to_cinematics
+  bplib.set_blueprint_variable_instance_editable
+  bplib.set_blueprint_variable_replication
+
+=== Blueprint methods ===
+  bp.change_member_variable_type
+  bp.get_blueprint_variable_category
+  bp.get_blueprint_variable_replication
+  bp.get_editor_property
+  bp.get_member_variable_type
+  bp.is_editor_property_overridden
+  bp.list_member_variable_names
+  bp.reset_editor_property
+  bp.set_blueprint_variable_category
+  bp.set_blueprint_variable_expose_on_spawn
+  bp.set_blueprint_variable_expose_to_cinematics
+  bp.set_blueprint_variable_instance_editable
+  bp.set_blueprint_variable_replication
+  bp.set_editor_properties
+  bp.set_editor_property

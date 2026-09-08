@@ -1,0 +1,14 @@
+{
+  "PAPER2D_STAGE_ORIENTATION": "PASS",
+  "plane": "XZ",
+  "camera_axis": "+Y",
+  "rotated_actor_count": 5,
+  "actors": [
+    "Ground_Stage00",
+    "Barricade_Top_L",
+    "Barricade_Top_R",
+    "DefenseLine_L",
+    "DefenseLine_R"
+  ],
+  "saved": true
+}

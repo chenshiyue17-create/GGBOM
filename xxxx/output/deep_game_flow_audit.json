@@ -1,0 +1,470 @@
+{
+  "Player": {
+    "exists": true,
+    "parent_class": "'BlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [
+      "MoveInput",
+      "FacingDirection",
+      "ShotDirection",
+      "MoveSpeed",
+      "FireCooldownRemaining",
+      "FireCooldown",
+      "ProjectileSpeed",
+      "CurrentExp",
+      "ExpToNextLevel",
+      "PlayerLevel"
+    ],
+    "graphs": [
+      "UserConstructionScript",
+      "SampleMoveInput",
+      "UpdateFacingDirection",
+      "UpdateFacingScale",
+      "UpdateRunAnimation",
+      "UpdateIdleAnimation",
+      "UpdateFireCooldown",
+      "SpawnDirectionalProjectile",
+      "TryFireProjectile",
+      "EventGraph"
+    ],
+    "components": []
+  },
+  "Projectile": {
+    "exists": true,
+    "parent_class": "'BlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [
+      "ShotDirection",
+      "Damage",
+      "ProjectileSpeed",
+      "HitStopDurationMs",
+      "HitSparkScale",
+      "EnableDamagePop"
+    ],
+    "graphs": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "components": []
+  },
+  "Zombie": {
+    "exists": true,
+    "parent_class": "'BlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [
+      "MaxHealth",
+      "CurrentHealth",
+      "MoveSpeed",
+      "ContactDamage",
+      "ScoreReward",
+      "ExpGemValue",
+      "UnidirectionalForwardOnly"
+    ],
+    "graphs": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "components": [
+      {
+        "name": "RenderComponent",
+        "class": "PaperFlipbookComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile": "BlockAllDynamic",
+        "generate_overlap_events": true
+      }
+    ]
+  },
+  "Hound": {
+    "exists": true,
+    "parent_class": "'BlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [
+      "MaxHealth",
+      "CurrentHealth",
+      "MoveSpeed",
+      "ContactDamage",
+      "ScoreReward",
+      "ExpGemValue",
+      "UnidirectionalForwardOnly"
+    ],
+    "graphs": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "components": [
+      {
+        "name": "RenderComponent",
+        "class": "PaperFlipbookComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile": "BlockAllDynamic",
+        "generate_overlap_events": true
+      }
+    ]
+  },
+  "Boss": {
+    "exists": true,
+    "parent_class": "'BlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [
+      "MaxHealth",
+      "CurrentHealth",
+      "MoveSpeed",
+      "ContactDamage",
+      "ScoreReward",
+      "ExpGemValue",
+      "UnidirectionalForwardOnly",
+      "CurrentPhase"
+    ],
+    "graphs": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "components": [
+      {
+        "name": "RenderComponent",
+        "class": "PaperFlipbookComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile": "BlockAllDynamic",
+        "generate_overlap_events": true
+      }
+    ]
+  },
+  "WaveManager": {
+    "exists": true,
+    "parent_class": "'BlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [
+      "ElapsedTime",
+      "TotalDuration"
+    ],
+    "graphs": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "components": []
+  },
+  "ExpGem": {
+    "exists": true,
+    "parent_class": "'BlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [
+      "ExpValue"
+    ],
+    "graphs": [
+      "UserConstructionScript",
+      "EventGraph"
+    ],
+    "components": [
+      {
+        "name": "RenderComponent",
+        "class": "PaperSpriteComponent",
+        "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+        "collision_profile": "BlockAll",
+        "generate_overlap_events": true
+      }
+    ]
+  },
+  "CombatHUD": {
+    "exists": true,
+    "parent_class": "'WidgetBlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [],
+    "graphs": [
+      "EventGraph"
+    ],
+    "components": [],
+    "cdo_err": "'UserWidget' object has no attribute 'get_components_by_class'"
+  },
+  "BossBar": {
+    "exists": true,
+    "parent_class": "'WidgetBlueprintGeneratedClass' object has no attribute 'get_super_class'",
+    "variables": [],
+    "graphs": [
+      "EventGraph"
+    ],
+    "components": [],
+    "cdo_err": "'UserWidget' object has no attribute 'get_components_by_class'"
+  },
+  "map_actors": [
+    {
+      "label": "PlayerStart",
+      "class": "PlayerStart",
+      "location": [
+        0.0,
+        0.0,
+        -480.0
+      ]
+    },
+    {
+      "label": "PortraitCamera_9x16",
+      "class": "CameraActor",
+      "location": [
+        0.0,
+        -600.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Ground_Stage00",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        80.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Barricade_Top_L",
+      "class": "PaperSpriteActor",
+      "location": [
+        -200.0,
+        30.0,
+        420.0
+      ]
+    },
+    {
+      "label": "Barricade_Top_R",
+      "class": "PaperSpriteActor",
+      "location": [
+        200.0,
+        30.0,
+        420.0
+      ]
+    },
+    {
+      "label": "DefenseLine_L",
+      "class": "PaperSpriteActor",
+      "location": [
+        -220.0,
+        30.0,
+        -50.0
+      ]
+    },
+    {
+      "label": "DefenseLine_R",
+      "class": "PaperSpriteActor",
+      "location": [
+        220.0,
+        30.0,
+        -50.0
+      ]
+    },
+    {
+      "label": "UI_BossBar_Bg",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        -60.0,
+        720.0
+      ]
+    },
+    {
+      "label": "UI_BossBar_Fill",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        -60.0,
+        720.0
+      ]
+    },
+    {
+      "label": "UI_Boss_SkullIcon",
+      "class": "PaperSpriteActor",
+      "location": [
+        -200.0,
+        -60.0,
+        720.0
+      ]
+    },
+    {
+      "label": "UI_Btn_Pause",
+      "class": "PaperSpriteActor",
+      "location": [
+        360.0,
+        -60.0,
+        720.0
+      ]
+    },
+    {
+      "label": "UI_Player_HP_Bg",
+      "class": "PaperSpriteActor",
+      "location": [
+        -200.0,
+        -60.0,
+        -680.0
+      ]
+    },
+    {
+      "label": "UI_Player_HP_Fill",
+      "class": "PaperSpriteActor",
+      "location": [
+        -200.0,
+        -60.0,
+        -680.0
+      ]
+    },
+    {
+      "label": "UI_Player_EXP_Fill",
+      "class": "PaperSpriteActor",
+      "location": [
+        -200.0,
+        -60.0,
+        -730.0
+      ]
+    },
+    {
+      "label": "UI_HUD_AmmoRadial",
+      "class": "PaperSpriteActor",
+      "location": [
+        320.0,
+        -60.0,
+        -680.0
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_01",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        -150.0,
+        0.0,
+        220.0
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_02",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        0.0,
+        0.0,
+        180.0
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_03",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        150.0,
+        0.0,
+        220.0
+      ]
+    },
+    {
+      "label": "Enemy_Runner_01",
+      "class": "BP_Enemy_ZombieRunner_C",
+      "location": [
+        -120.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Enemy_VenomShooter_01",
+      "class": "BP_Enemy_VenomShooter_C",
+      "location": [
+        120.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Enemy_ArmoredGuard_01",
+      "class": "BP_Enemy_ArmoredGuard_C",
+      "location": [
+        0.0,
+        0.0,
+        370.0
+      ]
+    },
+    {
+      "label": "Enemy_Hound_01",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        -220.0,
+        0.0,
+        460.0
+      ]
+    },
+    {
+      "label": "Enemy_Hound_02",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        220.0,
+        0.0,
+        460.0
+      ]
+    },
+    {
+      "label": "Enemy_Brute_Elite",
+      "class": "BP_Enemy_MutantBrute_C",
+      "location": [
+        0.0,
+        0.0,
+        550.0
+      ]
+    },
+    {
+      "label": "Boss_Overlord_Live",
+      "class": "BP_Boss_Overlord_C",
+      "location": [
+        0.0,
+        0.0,
+        680.0
+      ]
+    },
+    {
+      "label": "Wall_Barricade_Top_L",
+      "class": "StaticMeshActor",
+      "location": [
+        -200.0,
+        0.0,
+        420.0
+      ]
+    },
+    {
+      "label": "Wall_Barricade_Top_R",
+      "class": "StaticMeshActor",
+      "location": [
+        200.0,
+        0.0,
+        420.0
+      ]
+    },
+    {
+      "label": "Wall_DefenseLine_L",
+      "class": "StaticMeshActor",
+      "location": [
+        -220.0,
+        0.0,
+        -50.0
+      ]
+    },
+    {
+      "label": "Wall_DefenseLine_R",
+      "class": "StaticMeshActor",
+      "location": [
+        220.0,
+        0.0,
+        -50.0
+      ]
+    },
+    {
+      "label": "Wall_Boundary_Left",
+      "class": "StaticMeshActor",
+      "location": [
+        -330.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Wall_Boundary_Right",
+      "class": "StaticMeshActor",
+      "location": [
+        330.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Wall_Boundary_Bottom",
+      "class": "StaticMeshActor",
+      "location": [
+        0.0,
+        0.0,
+        -640.0
+      ]
+    }
+  ]
+}

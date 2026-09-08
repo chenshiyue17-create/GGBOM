@@ -1,0 +1,54 @@
+visual_workflow_gate:
+  forward_pipeline:
+  - MISSING
+  - ART_WORK_ORDER
+  - CANDIDATE
+  - ASSET_VALIDATED
+  - PREVIEW_READY
+  - HUMAN_VISUAL_REVIEW
+  - ART_APPROVED
+  - HASH_LOCKED
+  - GAMEPLAY_INTEGRATION
+  rejection_pipeline:
+  - PREVIEW_READY
+  - ART_REJECTED
+  - REVISION
+  - PREVIEW_READY
+  blocking_rule: Any Mandatory Art Missing causes feature state to become BLOCKED_BY_ART.
+    Gameplay integration is strictly forbidden until HASH_LOCKED.
+  ai_permission_rule: AI is STRICTLY FORBIDDEN from autonomously promoting CANDIDATE
+    to ART_APPROVED. Promotion requires explicit human visual sign-off.
+visual_lock_policy:
+  rule: Approved visual assets are MD5 hashed and locked. Subsequent bug fixes or
+    gameplay changes modifying an approved asset trigger VISUAL_LOCK_VIOLATION.
+  enforcement: Pre-commit and test runners halt upon detecting unauthorized hash modification.
+preview_environments:
+  L_Preview_UI:
+    purpose: Offline review of all HUD states via decoupled ViewModel without running
+      gameplay
+    target_resolution: 1080x1920 (9:16 Portrait)
+    mock_hud_state:
+      HP: 67 / 100
+      XP: 43%
+      Ammo: 17 / 30
+      Skill1: Ready
+      Skill2: Cooldown 53%
+      Skill3: Locked
+      Ultimate: 87%
+      Boss_HP: 64%
+    supported_preview_modes:
+    - HUD_NORMAL
+    - HP_LOW
+    - AMMO_EMPTY
+    - SKILL_COOLDOWN
+    - ULT_READY
+    - BOSS_ACTIVE
+  L_Preview_Weapon:
+    purpose: Standalone weapon visual and VFX inspection before gameplay integration
+    command_interface: python dev.py preview weapon <WEAPON_ID>
+    required_inspection_zones:
+    - Character_Dummy (Hold & Pivot)
+    - Muzzle_Anchor (Muzzle VFX position & scale)
+    - Ballistic_Range (Flight trajectory & bullet dimensions 32-48 uu)
+    - Target_Dummy (Impact VFX & hit flash)
+    - HUD_WeaponSlot_Preview (Icon mapping & ammo radial)

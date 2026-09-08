@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGBOM Sprite Studio - 2D 资产智能可视化描边与裁切工坊</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/slicer/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- TOP HEADER -->
+        <header class="app-header">
+            <div class="logo-area">
+                <a href="/" class="back-to-studio-btn" title="返回 Unreal Canvas Studio 全局工作台">
+                    <span class="icon">🏠</span>
+                    <span>Studio 首页</span>
+                </a>
+                <div class="divider"></div>
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">
+                    <h1>GGBOM <span>Sprite Studio</span></h1>
+                    <span class="status-pill online">● 106张原画在线</span>
+                </div>
+            </div>
+
+            <!-- TOOLBAR ACTIONS -->
+            <div class="toolbar-center">
+                <div class="tool-group">
+                    <button class="tool-btn active" id="tool-select" title="选择与调整框 (V)">
+                        <span class="icon">↖</span>
+                        <span>选择/微调</span>
+                    </button>
+                    <button class="tool-btn" id="tool-draw" title="手动绘制新选区框 (B)">
+                        <span class="icon">⊞</span>
+                        <span>绘制框</span>
+                    </button>
+                    <button class="tool-btn" id="tool-wand" title="智能魔棒点选轮廓 (W)">
+                        <span class="icon">🪄</span>
+                        <span>智能魔棒</span>
+                    </button>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- CUT LINES CONTROLS (可自由控制的横竖切线) -->
+                <div class="tool-group cutlines-group">
+                    <button class="tool-btn" id="tool-cutlines" title="自由切线模式：在画布上随意添加并拖动横竖切线">
+                        <span class="icon">📐</span>
+                        <span>自由切线</span>
+                    </button>
+                    <button class="cut-mini-btn" id="btn-add-hline" title="➕ 添加一条水平横切线 (可任意上下拖动调节)">
+                        <span>+横线</span>
+                    </button>
+                    <button class="cut-mini-btn" id="btn-add-vline" title="➕ 添加一条垂直竖切线 (可任意左右拖动调节)">
+                        <span>+竖线</span>
+                    </button>
+                    <button class="cut-action-btn glow" id="btn-slice-by-cutlines" title="✂️ 按照当前所有横竖切线一键分割切片并生成框">
+                        <span class="icon">✂️</span>
+                        <span>按线切割</span>
+                    </button>
+                    <button class="cut-clear-btn" id="btn-clear-cutlines" title="清空全部切线">
+                        <span>✕线</span>
+                    </button>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- SMART CONTOUR CONTROLS -->
+                <div class="tool-group outline-settings">
+                    <label class="toggle-pill active" id="btn-toggle-contour" title="开启/关闭实时发光智能描边">
+                        <span class="dot"></span>
+                        <span>智能描边</span>
+                    </label>
+                    <div class="thresh-pill" title="Alpha 透明度识别容差">
+                        <span>容差:</span>
+                        <input type="number" id="input-thresh" min="1" max="100" value="15">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="tool-group">
+                    <button class="preset-btn" id="preset-auto" title="智能识别全部独立实体并计算描边">
+                        <span class="icon">✨</span>
+                        <span>AI智能识别</span>
+                    </button>
+                    <button class="preset-btn" id="preset-h4" title="横向 4 帧等分 (子弹/武器)">
+                        <span class="icon">▦</span>
+                        <span>4帧预设</span>
+                    </button>
+                    <button class="preset-btn" id="preset-h3" title="横向 3 状态 (道具/三态)">
+                        <span class="icon">▤</span>
+                        <span>3态预设</span>
+                    </button>
+                    <button class="preset-btn" id="preset-grid24" title="2行 x 4列 网格 (角色/怪物)">
+                        <span class="icon">🪟</span>
+                        <span>2×4网格</span>
+                    </button>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="tool-group">
+                    <button class="action-btn text-danger" id="btn-clear-boxes" title="清空全部选区">
+                        <span class="icon">🗑️</span>
+                        <span>清空</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <!-- 进度持久化自动保存指示器 & 手动保存 -->
+                <div class="save-status-group" title="进度实时自动持久化保存到本地（退出/刷新不丢失）。仅在点击【导出】时才会同步到 UE 工程">
+                    <span id="save-status-badge" class="save-badge saved">
+                        <span class="save-dot"></span>
+                        <span id="save-status-text">💾 进度已保存</span>
+                    </span>
+                    <button id="btn-save-progress" class="save-mini-btn" title="立即永久化保存当前所有选区与切线进度（保存在本地工具，不同步到 UE）">
+                        <span>💾 保存</span>
+                    </button>
+                    <button id="btn-reset-current-progress" class="reset-mini-btn" title="清空当前原画的切片与切线进度，重新智能推荐">
+                        <span>↺ 重置本图</span>
+                    </button>
+                </div>
+
+                <div class="zoom-controls">
+                    <button id="btn-zoom-out" title="缩小">-</button>
+                    <span id="zoom-level">100%</span>
+                    <button id="btn-zoom-in" title="放大">+</button>
+                    <button id="btn-zoom-fit" title="适应画布">适应</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN WORKSPACE -->
+        <main class="workspace-layout">
+            <!-- LEFT: ASSET NAVIGATOR -->
+            <aside class="sidebar-left" id="sidebar-left">
+                <div class="sidebar-header">
+                    <div class="folder-header-row">
+                        <div class="folder-title-box">
+                            <span class="folder-icon">📁</span>
+                            <span class="folder-text">素材库</span>
+                            <span id="current-folder-badge" class="folder-badge-btn" title="点击切换素材文件夹">Content/美术 ▾</span>
+                        </div>
+                        <div class="folder-btn-group">
+                            <button id="btn-folder-toggle" class="btn-icon-square" title="展开/切换文件夹路径">📂</button>
+                            <button id="btn-refresh-tree" class="btn-icon-square" title="重新扫描素材">🔄</button>
+                        </div>
+                    </div>
+
+                    <!-- 展开的任意文件夹选择抽屉 -->
+                    <div class="folder-drawer" id="folder-drawer" style="display:none;">
+                        <div class="drawer-title">选择或输入任意本地文件夹：</div>
+                        <div class="drawer-input-row">
+                            <input type="text" id="input-custom-folder" placeholder="粘贴/输入电脑任意绝对路径..." autocomplete="off">
+                            <button id="btn-browse-folder" class="btn-drawer-browse" title="呼出 Mac 访达窗口自由点选任意文件夹">浏览...</button>
+                            <button id="btn-load-custom-folder" class="btn-drawer-go">打开</button>
+                        </div>
+                        <div class="drawer-presets">
+                            <span class="preset-chip" data-path="xxxx/Content/美术">🎨 默认美术</span>
+                            <span class="preset-chip" data-path="xxxx/Content/美术/Art">📦 Art目录</span>
+                            <span class="preset-chip" data-path="~/Desktop">🖥️ 桌面</span>
+                            <span class="preset-chip" data-path="~/Downloads">📥 下载</span>
+                        </div>
+                        <div class="drawer-footer-hint">
+                            <span>提示: 可直接从访达拖拽文件夹到此栏</span>
+                        </div>
+                    </div>
+
+                    <!-- 搜索框 -->
+                    <div class="search-input-wrap">
+                        <input type="text" id="asset-search" placeholder="🔍 搜索过滤素材 (子弹/怪物/特效)..." autocomplete="off">
+                    </div>
+                </div>
+                <div class="asset-tree-container" id="asset-tree">
+                    <div class="loading-spinner">正在扫描美术素材目录...</div>
+                </div>
+            </aside>
+
+            <!-- CENTER: CANVAS WORKSPACE -->
+            <section class="canvas-workspace">
+                <div class="canvas-viewport" id="canvas-viewport">
+                    <div class="canvas-stage" id="canvas-stage">
+                        <canvas id="main-canvas"></canvas>
+                        <!-- SVG Layer for Glowing Neon Contours -->
+                        <svg id="contours-svg" class="contours-svg"></svg>
+                        <!-- Interactive DOM Overlay for boxes and resize handles -->
+                        <div id="boxes-overlay" class="boxes-overlay"></div>
+                        <!-- Interactive DOM Overlay for Cut Lines (横竖可自由控制切线) -->
+                        <div id="cutlines-overlay" class="cutlines-overlay"></div>
+                    </div>
+                </div>
+
+                <!-- BOTTOM: PREVIEW STRIP & ANIMATION PLAYER -->
+                <div class="bottom-preview-panel">
+                    <div class="preview-header">
+                        <div class="preview-title">
+                            <span class="icon">🎞️</span>
+                            <span>实时抠图帧序列预览 (<span id="box-count">0</span> 帧)</span>
+                        </div>
+                        <div class="player-controls">
+                            <button id="btn-play-anim" class="play-btn">▶ 播放动画</button>
+                            <div class="fps-control">
+                                <label>帧率: <span id="fps-val">8</span> FPS</label>
+                                <input type="range" id="fps-slider" min="1" max="30" value="8">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-content-row">
+                        <!-- Animation Player Box -->
+                        <div class="anim-player-box" id="anim-player-box">
+                            <canvas id="anim-canvas" width="160" height="160"></canvas>
+                            <span class="anim-label">实时动画视口</span>
+                        </div>
+
+                        <!-- Thumbnails list -->
+                        <div class="frames-strip" id="frames-strip">
+                            <div class="empty-hint">加载原画并在画布中调整选区框以查看切片预览</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RIGHT: EXPORT CONFIG PANEL -->
+            <aside class="sidebar-right">
+                <div class="sidebar-header">
+                    <div class="sidebar-header-title">
+                        <h3>⚙️ 导出与对齐配置</h3>
+                        <span id="folder-status-badge" class="folder-badge safe">● 新目录 (无冲突)</span>
+                    </div>
+                </div>
+
+                <div class="config-content-scroll">
+                    <!-- 卡片 1：导出目标与防覆盖 -->
+                    <div class="config-card">
+                        <div class="card-caption">
+                            <span class="caption-icon">📦</span>
+                            <span class="caption-text">目标分类与目录</span>
+                        </div>
+                        <div class="field-item">
+                            <label class="field-label">主分类 (Category)</label>
+                            <select id="export-category" class="custom-select">
+                                <option value="01_Player">🦸 01_Player (主角医疗兵)</option>
+                                <option value="02_Enemies">👾 02_Enemies (敌人怪物)</option>
+                                <option value="03_Weapons" selected>🔫 03_Weapons (武器与子弹)</option>
+                                <option value="04_Props">📦 04_Props (可破坏道具)</option>
+                                <option value="05_VFX">✨ 05_VFX (视觉与打击特效)</option>
+                                <option value="06_Cards">🃏 06_Cards (升级与战术卡牌)</option>
+                                <option value="07_UI">📱 07_UI (界面与HUD图标)</option>
+                            </select>
+                        </div>
+                        <div class="field-row-2">
+                            <div class="field-item">
+                                <label class="field-label">子文件夹名 (SubFolder)</label>
+                                <input type="text" id="export-subfolder" class="custom-input" placeholder="例: 01_KineticPistol" value="01_KineticPistol">
+                            </div>
+                            <div class="field-item">
+                                <label class="field-label">前缀 (Base Name)</label>
+                                <input type="text" id="export-basename" class="custom-input" placeholder="例: T_Bullet_Pistol" value="T_Bullet_Pistol">
+                            </div>
+                        </div>
+                        <!-- 实时路径预览条 (极易识别，让用户彻底明确输出到哪) -->
+                        <div class="live-path-preview-box">
+                            <span class="preview-tag">实时输出路径预览:</span>
+                            <code id="live-path-preview" class="live-path-code">Content/美术/Art/03_Weapons/01_KineticPistol/T_Bullet_Pistol_01.png</code>
+                        </div>
+                        <div class="field-item" style="margin-top: 6px;">
+                            <label class="field-label">防覆盖保护策略 (Collision)</label>
+                            <select id="export-collision-mode" class="custom-select">
+                                <option value="auto_rename">🛡️ 智能独立目录保护 (推荐：独占子目录)</option>
+                                <option value="overwrite">⚠️ 覆盖重写当前目录</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 卡片 2：对齐规格与特性开关 -->
+                    <div class="config-card">
+                        <div class="card-caption">
+                            <span class="caption-icon">📐</span>
+                            <span class="caption-text">对齐模式与切片规则</span>
+                        </div>
+                        <div class="field-item">
+                            <label class="field-label">画布对齐锚点</label>
+                            <div class="align-mode-cards">
+                                <label class="align-card-btn">
+                                    <input type="radio" name="align-mode" value="center" checked>
+                                    <div class="align-card-inner">
+                                        <span class="align-icon">🎯</span>
+                                        <span class="align-text">居中对齐 (子弹/特效/卡牌)</span>
+                                    </div>
+                                </label>
+                                <label class="align-card-btn">
+                                    <input type="radio" name="align-mode" value="bottom_center">
+                                    <div class="align-card-inner">
+                                        <span class="align-icon">🦶</span>
+                                        <span class="align-text">脚底居中 (角色/道具)</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field-item" style="margin-top: 6px;">
+                            <div class="label-with-val">
+                                <label class="field-label">切片安全外边距 (Padding)</label>
+                                <span id="pad-val" class="field-val-badge">10 px</span>
+                            </div>
+                            <input type="range" id="pad-slider" class="custom-slider" min="0" max="30" value="10">
+                        </div>
+                        <div class="features-toggles">
+                            <label class="toggle-checkbox-row">
+                                <input type="checkbox" id="chk-smart-mask" checked>
+                                <span class="toggle-box"></span>
+                                <span class="toggle-text">🪄 应用发光智能轮廓精准抠图</span>
+                            </label>
+                            <label class="toggle-checkbox-row">
+                                <input type="checkbox" id="chk-generate-sheet" checked>
+                                <span class="toggle-box"></span>
+                                <span class="toggle-text">🎞️ 自动生成 UE5 动画条带图 (_Sheet.png)</span>
+                            </label>
+                        </div>
+                        <div class="cutline-helper-row" style="margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(255,255,255,0.08);">
+                            <div class="label-with-val">
+                                <label class="field-label">📐 自由切线网格预设</label>
+                                <span id="cutline-count-badge" class="field-val-badge">0 横 / 0 竖</span>
+                            </div>
+                            <div class="cutline-chips-group">
+                                <button class="btn-micro-chip" id="btn-grid-preset-2x4" title="生成 2 行 4 列切线（1横3竖），可自由拖动微调">2×4 网格</button>
+                                <button class="btn-micro-chip" id="btn-grid-preset-1x8" title="生成 1 行 8 列切线（7竖），可自由拖动微调">1×8 条带</button>
+                                <button class="btn-micro-chip" id="btn-grid-preset-1x4" title="生成 1 行 4 列切线（3竖），可自由拖动微调">1×4 条带</button>
+                                <button class="btn-micro-chip" id="btn-grid-preset-3x3" title="生成 3 行 3 列切线（2横2竖），可自由拖动微调">3×3 网格</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 卡片 3：选中实体切片微调 -->
+                    <div class="config-card" id="box-props-panel">
+                        <div class="card-caption flex-between">
+                            <div style="display:flex; align-items:center; gap:6px;">
+                                <span class="caption-icon">🎯</span>
+                                <span class="caption-text">当前切片参数 (<strong id="selected-box-id" style="color:var(--primary);">01</strong>)</span>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:6px;">
+                                <span id="contour-pts-count" class="pts-badge">0 描边点</span>
+                                <button id="btn-recompute-contour" class="btn-micro-action" title="重新贴合发光描边">🪄 贴合描边</button>
+                            </div>
+                        </div>
+                        <div class="props-grid-4">
+                            <div class="prop-input-unit"><label>X</label><input type="number" id="prop-x" min="0"></div>
+                            <div class="prop-input-unit"><label>Y</label><input type="number" id="prop-y" min="0"></div>
+                            <div class="prop-input-unit"><label>W</label><input type="number" id="prop-w" min="1"></div>
+                            <div class="prop-input-unit"><label>H</label><input type="number" id="prop-h" min="1"></div>
+                        </div>
+                        <div class="field-item" style="margin-top: 6px;">
+                            <label class="field-label">自定义帧标签 / 单张文件名</label>
+                            <input type="text" id="prop-label" class="custom-input" placeholder="例: 01 或 Attack_01">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 进度持久化说明条 -->
+                <div class="progress-notice-bar">
+                    <span class="notice-icon">💾</span>
+                    <span class="notice-text">进度实时持久化自动保存（刷新/重开不丢失）。仅在点击下方导出时才写入 UE。</span>
+                </div>
+
+                <!-- 吸底固定导出行动栏 (永远处于第一屏右下角，100%立即可见无需滚轮寻找) -->
+                <div class="export-sticky-footer">
+                    <button class="export-hero-btn glow" id="btn-export">
+                        <span class="hero-icon">🚀</span>
+                        <div class="hero-text-col">
+                            <span class="hero-title">一键精准导出至工程</span>
+                            <span class="hero-sub">自动隔离独立子目录 · 零碰撞覆盖 · 自动生成条带图</span>
+                        </div>
+                    </button>
+                    <div class="status-result" id="status-result" style="display: none;"></div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- EXPORT RESULT MODAL -->
+    <div id="export-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>🎉 资产切片与导出成功！</h3>
+                <button class="btn-close-modal" id="btn-close-modal">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="export-meta-info">
+                    <p><strong>保存目录：</strong> <code id="modal-saved-path"></code></p>
+                    <p><strong>生成规格：</strong> <span id="modal-saved-specs"></span></p>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-action-btn primary" id="modal-btn-open-finder">📂 在 Mac 访达 (Finder) 中查看</button>
+                    <button class="modal-action-btn secondary" id="modal-btn-copy-path">📋 复制绝对路径</button>
+                </div>
+                <div class="modal-gallery-title">已生成的切片与图集序列 (<span id="modal-file-count">0</span> 个文件)：</div>
+                <div class="modal-gallery-grid" id="modal-gallery-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/slicer/app.js"></script>
+</body>
+</html>

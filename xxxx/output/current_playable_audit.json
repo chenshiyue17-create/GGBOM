@@ -1,0 +1,1703 @@
+{
+  "assets": {
+    "/Game/Blueprints/Player/BP_Player_Medic": {
+      "graphs": [
+        {
+          "name": "UserConstructionScript",
+          "count": 1,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "Construction Script",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SampleMoveInput",
+          "count": 14,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "SampleMoveInput",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "GetPlayerController",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 4
+                }
+              ]
+            },
+            {
+              "title": "IsInputKeyDown",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "IsInputKeyDown",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "IsInputKeyDown",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "IsInputKeyDown",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SelectFloat",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SelectFloat",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SelectFloat",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SelectFloat",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float + float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float + float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "MakeVector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Set MoveInput",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "Output_Get",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "UpdateFacingDirection",
+          "count": 7,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "UpdateFacingDirection",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get MoveInput",
+              "outputs": [
+                {
+                  "name": "MoveInput",
+                  "links": 2
+                }
+              ]
+            },
+            {
+              "title": "Vector_IsNearlyZero",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "NOT Boolean",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get FacingDirection",
+              "outputs": [
+                {
+                  "name": "FacingDirection",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SelectVector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Set FacingDirection",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "Output_Get",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "UpdateFacingScale",
+          "count": 8,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "UpdateFacingScale",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get FacingDirection",
+              "outputs": [
+                {
+                  "name": "FacingDirection",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "BreakVector",
+              "outputs": [
+                {
+                  "name": "X",
+                  "links": 1
+                },
+                {
+                  "name": "Y",
+                  "links": 0
+                },
+                {
+                  "name": "Z",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "float < float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SelectFloat",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "MakeVector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "GetComponentByClass",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SetRelativeScale3D",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "UpdateRunAnimation",
+          "count": 17,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "UpdateRunAnimation",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get MoveInput",
+              "outputs": [
+                {
+                  "name": "MoveInput",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Vector_IsNearlyZero",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "NOT Boolean",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "分支",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "else",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "Get FacingDirection",
+              "outputs": [
+                {
+                  "name": "FacingDirection",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "BreakVector",
+              "outputs": [
+                {
+                  "name": "X",
+                  "links": 1
+                },
+                {
+                  "name": "Y",
+                  "links": 0
+                },
+                {
+                  "name": "Z",
+                  "links": 2
+                }
+              ]
+            },
+            {
+              "title": "Absolute (Float)",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Absolute (Float)",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float > float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float > float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "GetComponentByClass",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 3
+                }
+              ]
+            },
+            {
+              "title": "分支",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "else",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SetFlipbook",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "分支",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "else",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SetFlipbook",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "SetFlipbook",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "UpdateIdleAnimation",
+          "count": 16,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "UpdateIdleAnimation",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get MoveInput",
+              "outputs": [
+                {
+                  "name": "MoveInput",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Vector_IsNearlyZero",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "分支",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "else",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "Get FacingDirection",
+              "outputs": [
+                {
+                  "name": "FacingDirection",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "BreakVector",
+              "outputs": [
+                {
+                  "name": "X",
+                  "links": 1
+                },
+                {
+                  "name": "Y",
+                  "links": 0
+                },
+                {
+                  "name": "Z",
+                  "links": 2
+                }
+              ]
+            },
+            {
+              "title": "Absolute (Float)",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Absolute (Float)",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float > float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float > float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "GetComponentByClass",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 3
+                }
+              ]
+            },
+            {
+              "title": "分支",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "else",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SetFlipbook",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "分支",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "else",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SetFlipbook",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "SetFlipbook",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "UpdateFireCooldown",
+          "count": 7,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "UpdateFireCooldown",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get FireCooldownRemaining",
+              "outputs": [
+                {
+                  "name": "FireCooldownRemaining",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "GetWorldDeltaSeconds",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float - float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 2
+                }
+              ]
+            },
+            {
+              "title": "float > float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SelectFloat",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Set FireCooldownRemaining",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "Output_Get",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SpawnDirectionalProjectile",
+          "count": 9,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "SpawnDirectionalProjectile",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get Actor Location",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get ShotDirection",
+              "outputs": [
+                {
+                  "name": "ShotDirection",
+                  "links": 2
+                }
+              ]
+            },
+            {
+              "title": "vector + vector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "vector + vector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "MakeRotFromX",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "MakeTransform",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 2
+                }
+              ]
+            },
+            {
+              "title": "BeginDeferredActorSpawnFromClass",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "FinishSpawningActor",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "TryFireProjectile",
+          "count": 9,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "TryFireProjectile",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get FireCooldownRemaining",
+              "outputs": [
+                {
+                  "name": "FireCooldownRemaining",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float <= float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "分支",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "else",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "Get FireCooldown",
+              "outputs": [
+                {
+                  "name": "FireCooldown",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Set FireCooldownRemaining",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "Output_Get",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "Get FacingDirection",
+              "outputs": [
+                {
+                  "name": "FacingDirection",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Set ShotDirection",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "Output_Get",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "SpawnDirectionalProjectile",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "EventGraph",
+          "count": 14,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "事件BeginPlay",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "事件Tick",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "DeltaSeconds",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "GetPlayerController",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "GetActorOfClass",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SetViewTargetWithBlend",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "Get MoveInput",
+              "outputs": [
+                {
+                  "name": "MoveInput",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Add Actor World Offset",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "SweepHitResult",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "SampleMoveInput",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "UpdateFacingDirection",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "UpdateFacingScale",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "UpdateFireCooldown",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "UpdateRunAnimation",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "UpdateIdleAnimation",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "TryFireProjectile",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    },
+    "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase": {
+      "graphs": [
+        {
+          "name": "UserConstructionScript",
+          "count": 1,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "Construction Script",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "EventGraph",
+          "count": 11,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "事件BeginPlay",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "事件Tick",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "DeltaSeconds",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "GetActorForwardVector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Set ShotDirection",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "Output_Get",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "SetLifeSpan",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "Get ShotDirection",
+              "outputs": [
+                {
+                  "name": "ShotDirection",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Normalize",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get ProjectileSpeed",
+              "outputs": [
+                {
+                  "name": "ProjectileSpeed",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "vector * vector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "vector * vector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Add Actor World Offset",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "SweepHitResult",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    },
+    "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker": {
+      "graphs": [
+        {
+          "name": "UserConstructionScript",
+          "count": 1,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "Construction Script",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "EventGraph",
+          "count": 21,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "事件BeginPlay",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "事件Tick",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "DeltaSeconds",
+                  "links": 2
+                }
+              ]
+            },
+            {
+              "title": "GetPlayerPawn",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get Actor Location",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Get Actor Location",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "vector - vector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Normalize",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "BreakVector",
+              "outputs": [
+                {
+                  "name": "X",
+                  "links": 2
+                },
+                {
+                  "name": "Y",
+                  "links": 0
+                },
+                {
+                  "name": "Z",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float * float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float * float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "MakeVector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Add Actor World Offset",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "SweepHitResult",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "float * float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "float * float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "MakeVector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "Add Actor World Offset",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 1
+                },
+                {
+                  "name": "SweepHitResult",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "float > float",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SelectFloat",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "MakeVector",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "GetComponentByClass",
+              "outputs": [
+                {
+                  "name": "ReturnValue",
+                  "links": 1
+                }
+              ]
+            },
+            {
+              "title": "SetRelativeScale3D",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "components": [
+        {
+          "name": "RenderComponent",
+          "class": "PaperFlipbookComponent"
+        }
+      ]
+    },
+    "/Game/Blueprints/Stage/BP_StageWaveManager": {
+      "graphs": [
+        {
+          "name": "UserConstructionScript",
+          "count": 1,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "Construction Script",
+              "outputs": [
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "EventGraph",
+          "count": 3,
+          "errors": [],
+          "nodes": [
+            {
+              "title": "事件BeginPlay",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "事件ActorBeginOverlap",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "OtherActor",
+                  "links": 0
+                }
+              ]
+            },
+            {
+              "title": "事件Tick",
+              "outputs": [
+                {
+                  "name": "OutputDelegate",
+                  "links": 0
+                },
+                {
+                  "name": "then",
+                  "links": 0
+                },
+                {
+                  "name": "DeltaSeconds",
+                  "links": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "components": []
+    }
+  },
+  "map": [
+    {
+      "label": "PlayerStart",
+      "class": "PlayerStart",
+      "location": "<Struct 'Vector' (0x3a39929a0) {x: 0.000000, y: 0.000000, z: -480.000000}>"
+    },
+    {
+      "label": "PortraitCamera_9x16",
+      "class": "CameraActor",
+      "location": "<Struct 'Vector' (0x3a395af40) {x: 0.000000, y: -1000.000000, z: 0.000000}>",
+      "right": "<Struct 'Vector' (0x3a395af40) {x: 0.000000, y: 1.000000, z: 0.000000}>",
+      "up": "<Struct 'Vector' (0x3a395af40) {x: -1.000000, y: 0.000000, z: 0.000000}>",
+      "rotation": "<Struct 'Rotator' (0x3a395af40) {pitch: 90.000000, yaw: 0.000000, roll: 0.000000}>"
+    },
+    {
+      "label": "Ground_Stage00",
+      "class": "PaperSpriteActor",
+      "location": "<Struct 'Vector' (0x3a395a180) {x: 0.000000, y: 80.000000, z: 0.000000}>"
+    },
+    {
+      "label": "Barricade_Top_L",
+      "class": "PaperSpriteActor",
+      "location": "<Struct 'Vector' (0x3a395b210) {x: -200.000000, y: 30.000000, z: 420.000000}>"
+    },
+    {
+      "label": "Barricade_Top_R",
+      "class": "PaperSpriteActor",
+      "location": "<Struct 'Vector' (0x3a38c30d0) {x: 200.000000, y: 30.000000, z: 420.000000}>"
+    },
+    {
+      "label": "DefenseLine_L",
+      "class": "PaperSpriteActor",
+      "location": "<Struct 'Vector' (0x3a38c2cc0) {x: -220.000000, y: 30.000000, z: -50.000000}>"
+    },
+    {
+      "label": "DefenseLine_R",
+      "class": "PaperSpriteActor",
+      "location": "<Struct 'Vector' (0x3a38c3120) {x: 220.000000, y: 30.000000, z: -50.000000}>"
+    },
+    {
+      "label": "Wall_Barricade_Top_L",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x3a38c2ef0) {x: -200.000000, y: 0.000000, z: 420.000000}>"
+    },
+    {
+      "label": "Wall_Barricade_Top_R",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x3a38c2e50) {x: 200.000000, y: 0.000000, z: 420.000000}>"
+    },
+    {
+      "label": "Wall_DefenseLine_L",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x3a38c1500) {x: -220.000000, y: 0.000000, z: -50.000000}>"
+    },
+    {
+      "label": "Wall_DefenseLine_R",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x39dbfdaa0) {x: 220.000000, y: 0.000000, z: -50.000000}>"
+    },
+    {
+      "label": "Wall_Boundary_Left",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x39dbfe9a0) {x: -330.000000, y: 0.000000, z: 0.000000}>"
+    },
+    {
+      "label": "Wall_Boundary_Right",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x39dc25500) {x: 330.000000, y: 0.000000, z: 0.000000}>"
+    },
+    {
+      "label": "Wall_Boundary_Bottom",
+      "class": "StaticMeshActor",
+      "location": "<Struct 'Vector' (0x39dc252d0) {x: 0.000000, y: 0.000000, z: -640.000000}>"
+    },
+    {
+      "label": "BP_StageWaveManager_Live",
+      "class": "BP_StageWaveManager_C",
+      "location": "<Struct 'Vector' (0x39dc255f0) {x: 0.000000, y: 0.000000, z: 600.000000}>"
+    },
+    {
+      "label": "Live_Zombie_01",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": "<Struct 'Vector' (0x39dc255a0) {x: -150.000000, y: 0.000000, z: 220.000000}>"
+    },
+    {
+      "label": "Live_Zombie_02",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": "<Struct 'Vector' (0x39dc25550) {x: 0.000000, y: 0.000000, z: 280.000000}>"
+    },
+    {
+      "label": "Live_Zombie_03",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": "<Struct 'Vector' (0x3a39b6810) {x: 150.000000, y: 0.000000, z: 240.000000}>"
+    },
+    {
+      "label": "Live_Hound_01",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": "<Struct 'Vector' (0x3a39b6860) {x: -180.000000, y: 0.000000, z: 360.000000}>"
+    },
+    {
+      "label": "Live_Hound_02",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": "<Struct 'Vector' (0x3a39b68b0) {x: 180.000000, y: 0.000000, z: 390.000000}>"
+    },
+    {
+      "label": "Live_Boss_Overlord",
+      "class": "BP_Boss_Overlord_C",
+      "location": "<Struct 'Vector' (0x3a39b6950) {x: 0.000000, y: 0.000000, z: 520.000000}>"
+    }
+  ]
+}

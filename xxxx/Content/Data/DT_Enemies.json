@@ -1,0 +1,76 @@
+{
+  "Enemy_Zombie_Walker": {
+    "DisplayName": "基础感染行尸",
+    "MaxHealth": 65,
+    "MoveSpeed": 75,
+    "ContactDamage": 15,
+    "ScoreReward": 10,
+    "ExpGemValue": 5,
+    "Scale": 0.45,
+    "Flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/01_Zombie_Walker_Basic/Flipbooks/FB_T_Zombie_WalkerBasic_Sheet.FB_T_Zombie_WalkerBasic_Sheet",
+    "BlueprintClass": "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker.BP_Enemy_ZombieWalker_C",
+    "Sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieWalker.SP_ZombieWalker"
+  },
+  "Enemy_Venom_Shooter": {
+    "DisplayName": "远程毒液喷射者",
+    "MaxHealth": 95,
+    "MoveSpeed": 70,
+    "ContactDamage": 10,
+    "ScoreReward": 25,
+    "ExpGemValue": 10,
+    "Scale": 0.45,
+    "Flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/04_Zombie_Spitter_Minor/Flipbooks/FB_T_Zombie_SpitterMinor_Sheet.FB_T_Zombie_SpitterMinor_Sheet",
+    "BlueprintClass": "/Game/Blueprints/Characters/Enemies/BP_Enemy_VenomShooter.BP_Enemy_VenomShooter_C",
+    "Sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieSpitter.SP_ZombieSpitter"
+  },
+  "Enemy_Mutant_Hound": {
+    "DisplayName": "疾行变异猎犬",
+    "MaxHealth": 130,
+    "MoveSpeed": 180,
+    "ContactDamage": 25,
+    "ScoreReward": 35,
+    "ExpGemValue": 15,
+    "Scale": 0.48,
+    "Flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/MutantHound/Run/Dir_01_Down/Flipbooks/FB_T_Hound_Run_Dir_01_Down_Sheet.FB_T_Hound_Run_Dir_01_Down_Sheet",
+    "BlueprintClass": "/Game/Blueprints/Characters/Enemies/BP_Enemy_MutantHound.BP_Enemy_MutantHound_C",
+    "Sprite": "/Game/GGBOM/Art/Sprites/SP_Hound.SP_Hound"
+  },
+  "Enemy_Mutant_Brute": {
+    "DisplayName": "变异重锤蛮兽",
+    "MaxHealth": 480,
+    "MoveSpeed": 45,
+    "ContactDamage": 45,
+    "ScoreReward": 80,
+    "ExpGemValue": 30,
+    "Scale": 0.58,
+    "Flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/11_Zombie_Shambler_Heavy/Flipbooks/FB_T_Zombie_ShamblerHeavy_Sheet.FB_T_Zombie_ShamblerHeavy_Sheet",
+    "BlueprintClass": "/Game/Blueprints/Characters/Enemies/BP_Enemy_MutantBrute.BP_Enemy_MutantBrute_C",
+    "Sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieBrute.SP_ZombieBrute"
+  },
+  "Enemy_Zombie_Runner": {
+    "DisplayName": "敏捷突变体",
+    "MaxHealth": 50,
+    "MoveSpeed": 120,
+    "ContactDamage": 12,
+    "ScoreReward": 15,
+    "ExpGemValue": 8,
+    "Scale": 0.45,
+    "Flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Zombie/05_Zombie_Runner_Agile/Flipbooks/FB_T_Zombie_RunnerAgile_Sheet.FB_T_Zombie_RunnerAgile_Sheet",
+    "BlueprintClass": "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieRunner.BP_Enemy_ZombieRunner_C",
+    "Sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieRunner.SP_ZombieRunner"
+  },
+  "Boss_Overlord": {
+    "DisplayName": "深渊异化领主",
+    "MaxHealth": 4500,
+    "MoveSpeed": 35,
+    "ContactDamage": 60,
+    "ScoreReward": 1000,
+    "ExpGemValue": 200,
+    "PhaseSegments": 3,
+    "Scale": 0.72,
+    "Flipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Walk/Dir_01_Down/Flipbooks/FB_T_Boss_Walk_Dir_01_Down_Sheet.FB_T_Boss_Walk_Dir_01_Down_Sheet",
+    "IdleFlipbook": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Idle/Dir_01_Down/Flipbooks/FB_T_Boss_Idle_Dir_01_Down_Sheet.FB_T_Boss_Idle_Dir_01_Down_Sheet",
+    "BlueprintClass": "/Game/Blueprints/Characters/Enemies/BP_Boss_Overlord.BP_Boss_Overlord_C",
+    "Sprite": "/Game/P01/Imported/Content/Asset/Art/02_Enemies/Boss_Overlord/Actions/Idle/Dir_01_Down/Sprites/SP_T_Boss_Idle_Dir_01_Down_01.SP_T_Boss_Idle_Dir_01_Down_01"
+  }
+}

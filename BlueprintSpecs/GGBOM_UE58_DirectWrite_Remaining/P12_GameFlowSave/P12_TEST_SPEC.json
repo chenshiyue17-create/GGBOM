@@ -1,0 +1,13 @@
+{
+  "required_log": "P12_FLOW_OK",
+  "checks": [
+    "new run reset",
+    "stage chain",
+    "card pause",
+    "one revive",
+    "gameover",
+    "victory save",
+    "retry"
+  ],
+  "next_gate": "ALLOW_P13"
+}

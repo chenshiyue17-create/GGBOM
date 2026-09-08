@@ -1,0 +1,32 @@
+{
+  "phase": "P12",
+  "name": "GameFlowSave",
+  "precondition": "P11_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Core/BP_GI_Game",
+    "/Game/Blueprints/Core/BP_SaveManager",
+    "/Game/Blueprints/Core/SG_PlayerProfile",
+    "/Game/Tests/P12/BP_Test_Flow"
+  ],
+  "variables_and_defaults": [
+    "GI FlowState=Boot CurrentStageID=STAGE_00_START CurrentRunCoins=0 bReviveAvailable=true",
+    "Save: Coins0 Crystals0 UnlockedWeapons[] PermanentUpgradeLevels Map HighestStage0 MasterVolume1 MusicVolume1 SFXVolume1"
+  ],
+  "functions_and_dispatchers": [
+    "GI: StartNewRun, SetFlowState, AdvanceStage, HandleVictory, HandleGameOver, RetryRun, ReturnMainMenu",
+    "SaveManager: LoadOrCreateProfile, SaveProfile, ApplySettings"
+  ],
+  "data_rows_or_constants": [
+    "Stage chain START→Z1→Z2→Z3→BOSS→Victory",
+    "Run-only reset: HP,XP,Level,Cards,TemporaryWeaponModifiers,Inventory,RunCoins",
+    "Persistent: Coins,Crystals,UnlockedWeapons,PermanentUpgrades,HighestStage,Settings"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

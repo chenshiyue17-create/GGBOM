@@ -1,0 +1,15 @@
+{
+  "required_log": "P13_PERF_ANDROID_OK",
+  "stress": {
+    "seconds": 120,
+    "enemies": "40-50",
+    "projectiles": "80-100",
+    "vfx": "30-50"
+  },
+  "targets": {
+    "avg_fps": 60,
+    "sustained_floor": 45
+  },
+  "device_required": true,
+  "next_gate": "SHIPPING_CANDIDATE"
+}

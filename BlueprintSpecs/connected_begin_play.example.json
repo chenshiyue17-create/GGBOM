@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "blueprint": {
+    "asset_path": "/Game/Generated/BP_AntigravityConnected",
+    "parent_class": "/Script/Engine.Actor",
+    "replace_existing": true
+  },
+  "graph": {"name": "EventGraph"},
+  "nodes": [
+    {
+      "id": "begin",
+      "kind": "event",
+      "event_name": "ReceiveBeginPlay",
+      "position": [0, 0]
+    },
+    {
+      "id": "print_first",
+      "kind": "call_function",
+      "function_path": "/Script/Engine.KismetSystemLibrary.PrintString",
+      "position": [300, 0],
+      "defaults": {
+        "InString": "Antigravity graph is connected",
+        "Duration": "5.0"
+      }
+    },
+    {
+      "id": "print_second",
+      "kind": "call_function",
+      "function_path": "/Script/Engine.KismetSystemLibrary.PrintString",
+      "position": [650, 0],
+      "defaults": {
+        "InString": "Second node executed"
+      }
+    }
+  ],
+  "connections": [
+    {"from": "begin.then", "to": "print_first.execute"},
+    {"from": "print_first.then", "to": "print_second.execute"}
+  ]
+}
+

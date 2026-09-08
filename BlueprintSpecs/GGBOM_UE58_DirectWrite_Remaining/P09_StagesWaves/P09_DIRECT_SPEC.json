@@ -1,0 +1,41 @@
+{
+  "phase": "P09",
+  "name": "StagesWaves",
+  "precondition": "P08_STATUS=PASS",
+  "assets": [
+    "/Game/Blueprints/Stage/BP_StageManager",
+    "/Game/Blueprints/Stage/BP_WaveSpawner",
+    "/Game/Blueprints/Stage/BP_EncounterZone",
+    "/Game/Blueprints/Stage/BP_StageExit",
+    "/Game/Maps/L_Stage01_Z1",
+    "/Game/Maps/L_Stage02_Z2",
+    "/Game/Maps/L_Stage03_Z3",
+    "/Game/Maps/L_Stage04_Boss",
+    "/Game/Tests/P09/BP_Test_StageFlow"
+  ],
+  "variables_and_defaults": [
+    "Ground Priority0 WorldZ0 Collision Block",
+    "Overhead Priority1000 WorldZ100 NoCollision",
+    "StageManager: StageState, KillCount, ElapsedSeconds, VenomKills, AliveHounds, bTerminalDestroyed"
+  ],
+  "functions_and_dispatchers": [
+    "StageManager: InitializeStage, StartStage, RegisterEnemy, NotifyEnemyKilled, CheckClearCondition, CompleteStage, OpenExit",
+    "WaveSpawner: StartWave, SpawnOne, HandleEnemyDeath, StopSpawning",
+    "StageExit: SetUnlocked, TravelNextStage"
+  ],
+  "data_rows_or_constants": [
+    "STAGE_00_START|L_Stage00_Start|KillCount>=20",
+    "STAGE_01_Z1|L_Stage01_Z1|Elapsed>=90 AND VenomKills>=3",
+    "STAGE_02_Z2|L_Stage02_Z2|OverloadTerminalDestroyed AND AliveHounds==0",
+    "STAGE_03_Z3|L_Stage03_Z3|KillCount>=150",
+    "STAGE_04_BOSS|L_Stage04_Boss|BossDefeated"
+  ],
+  "hard_rules": [
+    "100% Blueprint; no C++",
+    "Create real UE assets",
+    "Compile and Save each Blueprint",
+    "Do not guess missing asset paths",
+    "Do not redo assets already marked PASS",
+    "PIE validation required before PASS"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "asset": [
+    "Required asset exists and loads",
+    "Correct Blueprint/asset type",
+    "Correct parent class if specified",
+    "Compile success where applicable",
+    "No broken required references"
+  ],
+  "structure": [
+    "Required variables exist with correct types/defaults",
+    "Required functions/macros/dispatchers exist",
+    "Required components exist and attachment hierarchy is valid",
+    "Required interfaces are implemented",
+    "Class settings match contract"
+  ],
+  "logic": [
+    "Critical execution path is not empty",
+    "Branches use intended condition",
+    "Loops terminate",
+    "Null/validity handling is adequate for required path",
+    "Timers/delegates are cleaned up where needed",
+    "PASS marker is assertion-gated"
+  ],
+  "runtime_log_forbidden": [
+    "Blueprint Runtime Error",
+    "Accessed None",
+    "Infinite Loop",
+    "Fatal Error",
+    "Ensure condition failed"
+  ],
+  "performance_risks": [
+    "GetAllActorsOfClass on Tick",
+    "Large overlap query per actor per Tick",
+    "Widget property binding for frequently changing runtime stats",
+    "Repeated CreateWidget",
+    "Repeated dynamic material creation",
+    "Spawn/Destroy churn",
+    "Timers/delegates not cleared"
+  ]
+}

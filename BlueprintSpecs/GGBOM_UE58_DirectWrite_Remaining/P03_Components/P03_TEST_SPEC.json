@@ -1,0 +1,9 @@
+{
+  "required_log": "P03_COMPONENTS_OK",
+  "forbidden": [
+    "P03_COMPONENTS_FAIL",
+    "Blueprint Runtime Error",
+    "Accessed None"
+  ],
+  "next_gate": "ALLOW_P04"
+}

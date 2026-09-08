@@ -1,0 +1,15 @@
+{
+  "entry": "K2Node_FunctionEntry_0",
+  "/Game/Tests/DirectionProbe/BP_LocalFunctionProbe.BP_LocalFunctionProbe_C:ProbeFunction": {
+    "title": "ProbeFunction",
+    "inputs": [
+      "execute",
+      "self"
+    ],
+    "outputs": [
+      "then"
+    ]
+  },
+  "/Game/Tests/DirectionProbe/BP_LocalFunctionProbe.BP_LocalFunctionProbe.BP_LocalFunctionProbe_C:ProbeFunction": null,
+  "/Game/Tests/DirectionProbe/BP_LocalFunctionProbe.BP_LocalFunctionProbe:ProbeFunction": null
+}

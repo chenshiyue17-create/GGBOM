@@ -1,0 +1,6 @@
+{
+  "title": "战斗系统蓝图零编译错误净化报告",
+  "BP_Combat_HitExplosion_status": "PASS",
+  "BP_ProjectileBase_status": "FAIL",
+  "overall_status": "HAS_ERROR"
+}

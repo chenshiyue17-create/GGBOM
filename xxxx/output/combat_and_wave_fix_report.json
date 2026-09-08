@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "destroyed_dummy_count": 5,
+  "spawned_live_enemies": [
+    {
+      "label": "Live_Zombie_01",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        -150.0,
+        0.0,
+        220.0
+      ]
+    },
+    {
+      "label": "Live_Zombie_02",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        0.0,
+        0.0,
+        280.0
+      ]
+    },
+    {
+      "label": "Live_Zombie_03",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "location": [
+        150.0,
+        0.0,
+        240.0
+      ]
+    },
+    {
+      "label": "Live_Hound_01",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        -180.0,
+        0.0,
+        360.0
+      ]
+    },
+    {
+      "label": "Live_Hound_02",
+      "class": "BP_Enemy_MutantHound_C",
+      "location": [
+        180.0,
+        0.0,
+        390.0
+      ]
+    },
+    {
+      "label": "Live_Boss_Overlord",
+      "class": "BP_Boss_Overlord_C",
+      "location": [
+        0.0,
+        0.0,
+        520.0
+      ]
+    }
+  ],
+  "projectile_collision_fixed": true
+}

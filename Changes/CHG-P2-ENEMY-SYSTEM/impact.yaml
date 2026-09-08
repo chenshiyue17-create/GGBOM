@@ -1,0 +1,19 @@
+change_id: CHG-P2-ENEMY-SYSTEM
+affected_domains_count: 8
+domains:
+  - name: ENEMY
+    impact: High (Core AI behaviors and state transitions)
+  - name: AI
+    impact: High (Patrol, Chase, KeepDistance, Dash)
+  - name: ANIMATION
+    impact: High (4-direction PaperFlipbook states)
+  - name: HEALTH
+    impact: Medium (BPC_Health damage delegate & death event)
+  - name: DAMAGE
+    impact: Medium (Melee touch damage and Spit projectiles)
+  - name: PROJECTILE
+    impact: Medium (BioAcid projectile reuse BP_Projectile_Base)
+  - name: VFX
+    impact: Medium (Hit Flash Red, Acid Splash, Gore Explosion)
+  - name: VISUAL_BASELINE
+    impact: High (Ensure 2D texture clamp and pixel scale 0.5)

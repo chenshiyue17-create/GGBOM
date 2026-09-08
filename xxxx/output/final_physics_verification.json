@@ -1,0 +1,182 @@
+{
+  "enemies_upgraded": [
+    {
+      "name": "BP_Enemy_ZombieWalker",
+      "has_box_collision": true,
+      "has_projectile_movement": true
+    },
+    {
+      "name": "BP_Enemy_ZombieRunner",
+      "has_box_collision": true,
+      "has_projectile_movement": true
+    },
+    {
+      "name": "BP_Enemy_MutantHound",
+      "has_box_collision": true,
+      "has_projectile_movement": true
+    },
+    {
+      "name": "BP_Enemy_VenomShooter",
+      "has_box_collision": true,
+      "has_projectile_movement": true
+    },
+    {
+      "name": "BP_Enemy_ArmoredGuard",
+      "has_box_collision": true,
+      "has_projectile_movement": true
+    },
+    {
+      "name": "BP_Enemy_MutantBrute",
+      "has_box_collision": true,
+      "has_projectile_movement": true
+    },
+    {
+      "name": "BP_Boss_Overlord",
+      "has_box_collision": true,
+      "has_projectile_movement": true
+    }
+  ],
+  "player_upgraded": true,
+  "barricade_walls": [
+    {
+      "label": "Wall_Barricade_Top_L",
+      "location": [
+        -200.0,
+        0.0,
+        420.0
+      ]
+    },
+    {
+      "label": "Wall_Barricade_Top_R",
+      "location": [
+        200.0,
+        0.0,
+        420.0
+      ]
+    },
+    {
+      "label": "Wall_DefenseLine_L",
+      "location": [
+        -220.0,
+        0.0,
+        -50.0
+      ]
+    },
+    {
+      "label": "Wall_DefenseLine_R",
+      "location": [
+        220.0,
+        0.0,
+        -50.0
+      ]
+    }
+  ],
+  "boundary_walls": [
+    {
+      "label": "Wall_Boundary_Left",
+      "location": [
+        -330.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Wall_Boundary_Right",
+      "location": [
+        330.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "Wall_Boundary_Bottom",
+      "location": [
+        0.0,
+        0.0,
+        -640.0
+      ]
+    }
+  ],
+  "enemies_aligned": [
+    {
+      "label": "Enemy_Zombie_01",
+      "location": [
+        -150.0,
+        0.0,
+        220.0
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_02",
+      "location": [
+        0.0,
+        0.0,
+        180.0
+      ]
+    },
+    {
+      "label": "Enemy_Zombie_03",
+      "location": [
+        150.0,
+        0.0,
+        220.0
+      ]
+    },
+    {
+      "label": "Enemy_Runner_01",
+      "location": [
+        -120.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Enemy_VenomShooter_01",
+      "location": [
+        120.0,
+        0.0,
+        320.0
+      ]
+    },
+    {
+      "label": "Enemy_ArmoredGuard_01",
+      "location": [
+        0.0,
+        0.0,
+        370.0
+      ]
+    },
+    {
+      "label": "Enemy_Hound_01",
+      "location": [
+        -220.0,
+        0.0,
+        460.0
+      ]
+    },
+    {
+      "label": "Enemy_Hound_02",
+      "location": [
+        220.0,
+        0.0,
+        460.0
+      ]
+    },
+    {
+      "label": "Enemy_Brute_Elite",
+      "location": [
+        0.0,
+        0.0,
+        550.0
+      ]
+    },
+    {
+      "label": "Boss_Overlord_Live",
+      "location": [
+        0.0,
+        0.0,
+        680.0
+      ]
+    }
+  ]
+}

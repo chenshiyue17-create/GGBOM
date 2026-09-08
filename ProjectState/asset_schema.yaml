@@ -1,0 +1,126 @@
+# Machine-Authoritative Asset Registry Schema Specification (Version 3.0)
+$schema: "http://json-schema.org/draft-07/schema#"
+title: "GGBOM Art Registry Schema"
+type: object
+required:
+  - schema_version
+  - total_registered_assets
+  - summary
+  - assets
+properties:
+  schema_version:
+    type: string
+  total_registered_assets:
+    type: integer
+  summary:
+    type: object
+    required:
+      - approved_count
+      - candidate_count
+      - placeholder_count
+      - legacy_count
+      - unknown_count
+      - unreferenced_count
+    properties:
+      approved_count: { type: integer }
+      candidate_count: { type: integer }
+      placeholder_count: { type: integer }
+      legacy_count: { type: integer }
+      unknown_count: { type: integer }
+      unreferenced_count: { type: integer }
+  assets:
+    type: array
+    items:
+      type: object
+      required:
+        - semantic_id
+        - feature_id
+        - source
+        - runtime
+        - presentation
+        - usage
+        - approval
+        - flags
+      properties:
+        semantic_id:
+          type: string
+          pattern: "^[A-Z0-9]+(\.[A-Z0-9_]+)+$"
+        feature_id:
+          type: string
+        source:
+          type: object
+          required: [path, type, dimensions, source_hash]
+          properties:
+            path: { type: string }
+            type: { type: string }
+            dimensions:
+              type: object
+              required: [width, height]
+              properties:
+                width: { type: integer }
+                height: { type: integer }
+            source_hash: { type: string }
+        runtime:
+          type: object
+          required: [ue_asset_paths]
+          properties:
+            texture: { type: [string, "null"] }
+            sprites: { type: array, items: { type: string } }
+            flipbook: { type: [string, "null"] }
+            material: { type: [string, "null"] }
+            ue_asset_paths: { type: array, items: { type: string } }
+        presentation:
+          type: object
+          required: [frame_count, fps, pivot, direction, scale, world_size, mirror_policy]
+          properties:
+            frame_count: { type: integer }
+            fps: { type: number }
+            pivot:
+              type: object
+              required: [x, y]
+              properties:
+                x: { type: number }
+                y: { type: number }
+            direction: { type: string }
+            scale: { type: number }
+            world_size:
+              type: object
+              required: [width_uu, height_uu]
+              properties:
+                width_uu: { type: number }
+                height_uu: { type: number }
+            mirror_policy: { type: string }
+        usage:
+          type: object
+          required: [role, reference_type, runtime_references]
+          properties:
+            role: { type: string }
+            reference_type:
+              type: string
+              enum: [direct_reference, indirect_reference, runtime_spawn_reference, unreferenced]
+            runtime_references: { type: array, items: { type: string } }
+        approval:
+          type: object
+          required: [status, review_status, approved_version, approved_source_hash, approved_runtime_hash, approved_contract_hash, approval_evidence]
+          properties:
+            status:
+              type: string
+              enum: [APPROVED, CANDIDATE, PLACEHOLDER, LEGACY, BROKEN, DUPLICATE, UNKNOWN, UNUSED]
+            review_status:
+              type: string
+              enum: [APPROVED, UNREVIEWED, REJECTED, PREVIEW_READY]
+            approved_version: { type: [string, "null"] }
+            approved_source_hash: { type: [string, "null"] }
+            approved_runtime_hash: { type: [string, "null"] }
+            approved_contract_hash: { type: [string, "null"] }
+            approval_evidence: { type: [string, "null"] }
+        flags:
+          type: object
+          required: [placeholder, legacy, duplicate, broken, unused, release_blocking]
+          properties:
+            placeholder: { type: boolean }
+            legacy: { type: boolean }
+            duplicate: { type: boolean }
+            broken: { type: boolean }
+            unused: { type: boolean }
+            release_blocking: { type: boolean }

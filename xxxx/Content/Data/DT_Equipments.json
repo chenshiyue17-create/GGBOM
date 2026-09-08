@@ -1,0 +1,31 @@
+{
+  "EQUIP_Rifle_Tactical": {
+    "DisplayName": "先锋战术步枪",
+    "SlotType": "MainWeapon",
+    "Rarity": "Epic",
+    "BaseDamage": 45.0,
+    "FireRate": 0.18,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Wpn_AutoRifle"
+  },
+  "EQUIP_Armor_BioSuit": {
+    "DisplayName": "生化轻量防护服",
+    "SlotType": "BodyArmor",
+    "Rarity": "Rare",
+    "HealthBonus": 300.0,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Player"
+  },
+  "EQUIP_Boots_Exo": {
+    "DisplayName": "战术动力战靴",
+    "SlotType": "Boots",
+    "Rarity": "Rare",
+    "SpeedBonus": 50.0,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Tactical_Barricade"
+  },
+  "EQUIP_Chip_Overclock": {
+    "DisplayName": "超频反应核心",
+    "SlotType": "CoreChip",
+    "Rarity": "Legendary",
+    "CooldownReduction": 0.15,
+    "Icon": "/Game/GGBOM/Art/Sprites/SP_Card_Tesla"
+  }
+}

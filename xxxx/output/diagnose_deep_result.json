@@ -1,0 +1,30 @@
+{
+  "sprites": {
+    "track": {
+      "source_size": null,
+      "pivot_mode": "<SpritePivotMode.CENTER_CENTER: 4>",
+      "custom_pivot_point": [
+        376.0,
+        95.0
+      ]
+    },
+    "fill": {
+      "source_size": null,
+      "pivot_mode": "<SpritePivotMode.CENTER_LEFT: 3>",
+      "custom_pivot_point": [
+        0.0,
+        39.0
+      ]
+    },
+    "armor": "NOT_FOUND",
+    "insignia": {
+      "source_size": null,
+      "pivot_mode": "<SpritePivotMode.CENTER_CENTER: 4>",
+      "custom_pivot_point": [
+        122.0,
+        110.0
+      ]
+    }
+  },
+  "error": "Traceback (most recent call last):\n  File \"/Users/cc/Desktop/GGBOM/xxxx/Tools/test_ping_pong.py\", line 66, in <module>\n    pinlib = unreal.BlueprintPinLibrary\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'unreal' has no attribute 'BlueprintPinLibrary'\n"
+}

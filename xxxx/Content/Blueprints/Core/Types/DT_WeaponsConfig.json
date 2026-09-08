@@ -1,0 +1,58 @@
+[
+  {
+    "RowName": "AssaultRifle",
+    "DisplayName": "AUTO RIFLE",
+    "WeaponType": "AssaultRifle",
+    "BaseDamage": 28.0,
+    "FireInterval": 0.12,
+    "PelletCount": 1,
+    "SpreadAngle": 2.5,
+    "ProjectileSpeed": 1500.0,
+    "MaxAmmo": 30,
+    "ReloadTime": 1.2,
+    "AoeRadius": 0.0,
+    "ProjectileClass": "/Game/Blueprints/Combat/Projectiles/BP_Bullet_AssaultRifle"
+  },
+  {
+    "RowName": "BuckshotShotgun",
+    "DisplayName": "SHOTGUN",
+    "WeaponType": "BuckshotShotgun",
+    "BaseDamage": 16.0,
+    "FireInterval": 0.65,
+    "PelletCount": 6,
+    "SpreadAngle": 22.0,
+    "ProjectileSpeed": 1300.0,
+    "MaxAmmo": 6,
+    "ReloadTime": 1.8,
+    "AoeRadius": 0.0,
+    "ProjectileClass": "/Game/Blueprints/Combat/Projectiles/BP_Bullet_Buckshot"
+  },
+  {
+    "RowName": "RocketLauncher",
+    "DisplayName": "ROCKET LAUNCHER",
+    "WeaponType": "MicroMissile",
+    "BaseDamage": 140.0,
+    "FireInterval": 1.2,
+    "PelletCount": 1,
+    "SpreadAngle": 0.0,
+    "ProjectileSpeed": 900.0,
+    "MaxAmmo": 12,
+    "ReloadTime": 2.2,
+    "AoeRadius": 220.0,
+    "ProjectileClass": "/Game/Blueprints/Combat/Projectiles/BP_Bullet_Rocket"
+  },
+  {
+    "RowName": "TeslaGun",
+    "DisplayName": "TESLA GUN",
+    "WeaponType": "TeslaGun",
+    "BaseDamage": 45.0,
+    "FireInterval": 0.4,
+    "PelletCount": 1,
+    "SpreadAngle": 0.0,
+    "ProjectileSpeed": 1800.0,
+    "MaxAmmo": 8,
+    "ReloadTime": 1.5,
+    "AoeRadius": 140.0,
+    "ProjectileClass": "/Game/Blueprints/Combat/Projectiles/BP_Bullet_TeslaGun"
+  }
+]

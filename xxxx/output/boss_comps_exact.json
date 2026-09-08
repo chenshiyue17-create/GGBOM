@@ -1,0 +1,37 @@
+{
+  "label": "Live_Boss_Overlord",
+  "class": "BP_Boss_Overlord_C",
+  "bActorEnableCollision": true,
+  "components": [
+    {
+      "name": "RenderComponent",
+      "class": "PaperFlipbookComponent",
+      "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+      "profile": "BlockAllDynamic",
+      "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+      "gen_overlap": true,
+      "resp_pawn": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "resp_dyn": "<CollisionResponseType.ECR_BLOCK: 2>"
+    },
+    {
+      "name": "EnemyCollision",
+      "class": "BoxComponent",
+      "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+      "profile": "Custom",
+      "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+      "gen_overlap": true,
+      "resp_pawn": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "resp_dyn": "<CollisionResponseType.ECR_OVERLAP: 1>"
+    },
+    {
+      "name": "Box",
+      "class": "BoxComponent",
+      "collision_enabled": "<CollisionEnabled.QUERY_AND_PHYSICS: 3>",
+      "profile": "Custom",
+      "object_type": "<CollisionChannel.ECC_WORLD_DYNAMIC: 1>",
+      "gen_overlap": true,
+      "resp_pawn": "<CollisionResponseType.ECR_BLOCK: 2>",
+      "resp_dyn": "<CollisionResponseType.ECR_OVERLAP: 1>"
+    }
+  ]
+}

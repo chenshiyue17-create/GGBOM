@@ -1,0 +1,8 @@
+{
+  "title": "官方API直改本地游戏资产结果报告",
+  "BP_ProjectileBase_Saved": true,
+  "BP_Combat_HitExplosion_Saved": true,
+  "BulletFlipbook_Assigned": "/Game/Blueprints/Combat/Projectiles/FB_Combat_Kinetic_Flight",
+  "BulletSprite_Disabled": true,
+  "Status": "ALL_SUCCESS"
+}

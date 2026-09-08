@@ -1,0 +1,32 @@
+{
+  "blueprint_path": "/Game/Blueprints/Projectiles/BP_Projectile_Base",
+  "blueprint_name": "BP_Projectile_Base",
+  "exists_on_disk": true,
+  "file_size_bytes": 23873,
+  "parent_class": "Actor",
+  "components": [
+    {
+      "name": "RootComponent",
+      "class": "SceneComponent"
+    },
+    {
+      "name": "RenderComponent",
+      "class": "PaperSpriteComponent"
+    }
+  ],
+  "variables": [
+    {
+      "name": "ShotDirection",
+      "type": "Vector",
+      "default": "(0,0,1)"
+    },
+    {
+      "name": "ProjectileSpeed",
+      "type": "Double",
+      "default": "600.0"
+    }
+  ],
+  "functions": [],
+  "interfaces": [],
+  "structural_hash_sha256": "f029de6a4545f0afd9427ccc9a8bfbe8086654f24e7c3ee66526913053678682"
+}

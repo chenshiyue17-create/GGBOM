@@ -1,0 +1,22 @@
+{
+  "DEBUFF_Corrosive_Poison": {
+    "DisplayName": "致命强酸腐蚀",
+    "EffectCategory": "DamageOverTime",
+    "Duration": 4.0,
+    "TickInterval": 0.5,
+    "DamagePerTick": 15.0,
+    "CanStack": true,
+    "MaxStacks": 5,
+    "OverlayColor": [0.2, 0.9, 0.1, 0.7],
+    "Description": "每 0.5 秒受到 15 点腐蚀伤害，最多叠加 5 层"
+  },
+  "DEBUFF_Cryo_Freeze": {
+    "DisplayName": "极寒减速霜冻",
+    "EffectCategory": "CrowdControl",
+    "Duration": 3.0,
+    "MoveSpeedReduction": 0.40,
+    "CanStack": false,
+    "OverlayColor": [0.1, 0.6, 1.0, 0.8],
+    "Description": "目标移动速度降低 40%，持续 3 秒"
+  }
+}

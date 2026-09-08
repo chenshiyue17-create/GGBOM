@@ -1,0 +1,14 @@
+=== 关卡 Actor 探查 ===
+Boss Candidate: Live_Boss_Overlord (Class: BP_Boss_Overlord_C, Path: /Game/GGBOM/Maps/MAP_GGBOM_Main.MAP_GGBOM_Main:PersistentLevel.BP_Boss_Overlord_C_1)
+Boss Candidate: BossBar_Armor (Class: PaperSpriteActor, Path: /Game/GGBOM/Maps/MAP_GGBOM_Main.MAP_GGBOM_Main:PersistentLevel.PaperSpriteActor_5)
+Boss Candidate: BossBar_Track (Class: PaperSpriteActor, Path: /Game/GGBOM/Maps/MAP_GGBOM_Main.MAP_GGBOM_Main:PersistentLevel.PaperSpriteActor_6)
+Boss Candidate: BossBar_Fill (Class: PaperSpriteActor, Path: /Game/GGBOM/Maps/MAP_GGBOM_Main.MAP_GGBOM_Main:PersistentLevel.PaperSpriteActor_7)
+Boss Candidate: BossBar_Insignia (Class: PaperSpriteActor, Path: /Game/GGBOM/Maps/MAP_GGBOM_Main.MAP_GGBOM_Main:PersistentLevel.PaperSpriteActor_8)
+Boss Location: <Struct 'Vector' (0x3a847c970) {x: -85.000000, y: -6.000000, z: 605.000000}>
+Boss Collision: enabled=False
+  Comp: RenderComponent [PaperSpriteComponent]
+    CollisionEnabled: <CollisionEnabled.NO_COLLISION: 0>
+    CollisionProfile: BlockAll
+    ResponseToPawn: <CollisionResponseType.ECR_BLOCK: 2>
+    ResponseToWorldDynamic: <CollisionResponseType.ECR_BLOCK: 2>
+Attached count: 0

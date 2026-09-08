@@ -1,0 +1,21 @@
+=== 当前关卡保存中的 BossBar Actor 详细数据 ===
+Actor [BossBar_Armor]:
+  Parent: Live_Boss_Overlord
+  Location: (0.0, -3.0, 605.0)
+  Scale3D:  (0.380, 1.000, 0.340)
+  Sprite:   SP_T_UI_HUD_08_Minimap_Frame
+Actor [BossBar_Track]:
+  Parent: Live_Boss_Overlord
+  Location: (0.0, -4.0, 605.0)
+  Scale3D:  (0.360, 1.000, 0.360)
+  Sprite:   SP_T_UI_Modal_09_ProgressTrack
+Actor [BossBar_Fill]:
+  Parent: Live_Boss_Overlord
+  Location: (-68.0, -5.0, 605.0)
+  Scale3D:  (0.270, 1.000, 0.200)
+  Sprite:   SP_T_UI_Modal_10_GlowBorder
+Actor [BossBar_Insignia]:
+  Parent: Live_Boss_Overlord
+  Location: (-85.0, -6.0, 605.0)
+  Scale3D:  (0.280, 1.000, 0.280)
+  Sprite:   SP_T_UI_Modal_02_HeaderRibbon

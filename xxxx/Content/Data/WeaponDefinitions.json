@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "weapons": [
+    {
+      "weapon_id": "Weapon.AR01",
+      "display_name": "AR-01 突击步枪",
+      "fire_policy": "Automatic",
+      "spread_policy": "Single",
+      "fire_rate": 0.18,
+      "pellet_count": 1,
+      "spread_angle": 0.0,
+      "speed": 600.0,
+      "damage": 25.0,
+      "semantic_assets": {
+        "weapon_visual": "WEAPON.AR01.VISUAL",
+        "projectile": "PROJ.AR01.FLIGHT",
+        "muzzle_vfx": "VFX.WEAPON.AR01.MUZZLE",
+        "impact_vfx": "VFX.WEAPON.AR01.IMPACT",
+        "icon": "UI.WEAPON.AR01.ICON"
+      }
+    },
+    {
+      "weapon_id": "Weapon.SG01",
+      "display_name": "SG-01 重型霰弹枪",
+      "fire_policy": "SemiAuto",
+      "spread_policy": "ConeSpread",
+      "fire_rate": 0.75,
+      "pellet_count": 5,
+      "spread_angle": 30.0,
+      "speed": 550.0,
+      "damage": 18.0,
+      "semantic_assets": {
+        "weapon_visual": "WEAPON.SG01.VISUAL",
+        "projectile": "PROJ.BUCKSHOT.FLIGHT",
+        "muzzle_vfx": "VFX.WEAPON.SG01.MUZZLE",
+        "impact_vfx": "VFX.WEAPON.SG01.IMPACT",
+        "icon": "UI.WEAPON.SG01.ICON"
+      }
+    },
+    {
+      "weapon_id": "Weapon.SMG",
+      "display_name": "SMG 战术冲锋枪",
+      "fire_policy": "Automatic",
+      "spread_policy": "PatternSpread",
+      "fire_rate": 0.1,
+      "pellet_count": 1,
+      "spread_angle": 6.0,
+      "speed": 650.0,
+      "damage": 16.0,
+      "semantic_assets": {
+        "weapon_visual": "WEAPON.SMG.VISUAL",
+        "projectile": "PROJ.AR01.FLIGHT",
+        "muzzle_vfx": "VFX.WEAPON.AR01.MUZZLE",
+        "impact_vfx": "VFX.WEAPON.AR01.IMPACT",
+        "icon": "UI.WEAPON.AR01.ICON"
+      }
+    }
+  ]
+}

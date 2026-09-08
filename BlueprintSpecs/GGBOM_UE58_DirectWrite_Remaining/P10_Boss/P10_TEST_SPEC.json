@@ -1,0 +1,12 @@
+{
+  "required_log": "P10_BOSS_OK",
+  "checks": {
+    "hp": 8000,
+    "phase2": 0.7,
+    "phase3": 0.3,
+    "skills": 10,
+    "shield_crystals": 3,
+    "cleave_damage": 120
+  },
+  "next_gate": "ALLOW_P11"
+}

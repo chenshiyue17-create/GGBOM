@@ -1,0 +1,140 @@
+{
+  "total": 27,
+  "actors": [
+    {
+      "name": "PlayerStart_0",
+      "class": "PlayerStart",
+      "label": "PlayerStart"
+    },
+    {
+      "name": "CameraActor_0",
+      "class": "CameraActor",
+      "label": "PortraitCamera_9x16"
+    },
+    {
+      "name": "PaperSpriteActor_0",
+      "class": "PaperSpriteActor",
+      "label": "Ground_Stage00"
+    },
+    {
+      "name": "PaperSpriteActor_1",
+      "class": "PaperSpriteActor",
+      "label": "Barricade_Top_L"
+    },
+    {
+      "name": "PaperSpriteActor_2",
+      "class": "PaperSpriteActor",
+      "label": "Barricade_Top_R"
+    },
+    {
+      "name": "PaperSpriteActor_3",
+      "class": "PaperSpriteActor",
+      "label": "DefenseLine_L"
+    },
+    {
+      "name": "PaperSpriteActor_4",
+      "class": "PaperSpriteActor",
+      "label": "DefenseLine_R"
+    },
+    {
+      "name": "StaticMeshActor_0",
+      "class": "StaticMeshActor",
+      "label": "Wall_Barricade_Top_L"
+    },
+    {
+      "name": "StaticMeshActor_1",
+      "class": "StaticMeshActor",
+      "label": "Wall_Barricade_Top_R"
+    },
+    {
+      "name": "StaticMeshActor_2",
+      "class": "StaticMeshActor",
+      "label": "Wall_DefenseLine_L"
+    },
+    {
+      "name": "StaticMeshActor_3",
+      "class": "StaticMeshActor",
+      "label": "Wall_DefenseLine_R"
+    },
+    {
+      "name": "StaticMeshActor_4",
+      "class": "StaticMeshActor",
+      "label": "Wall_Boundary_Left"
+    },
+    {
+      "name": "StaticMeshActor_5",
+      "class": "StaticMeshActor",
+      "label": "Wall_Boundary_Right"
+    },
+    {
+      "name": "StaticMeshActor_6",
+      "class": "StaticMeshActor",
+      "label": "Wall_Boundary_Bottom"
+    },
+    {
+      "name": "BP_StageWaveManager_C_0",
+      "class": "BP_StageWaveManager_C",
+      "label": "BP_StageWaveManager_Live"
+    },
+    {
+      "name": "BP_Enemy_ZombieWalker_C_3",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "label": "Live_Zombie_01"
+    },
+    {
+      "name": "BP_Enemy_ZombieWalker_C_4",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "label": "Live_Zombie_02"
+    },
+    {
+      "name": "BP_Enemy_ZombieWalker_C_5",
+      "class": "BP_Enemy_ZombieWalker_C",
+      "label": "Live_Zombie_03"
+    },
+    {
+      "name": "BP_Enemy_MutantHound_C_1",
+      "class": "BP_Enemy_MutantHound_C",
+      "label": "Live_Hound_01"
+    },
+    {
+      "name": "BP_Enemy_MutantHound_C_2",
+      "class": "BP_Enemy_MutantHound_C",
+      "label": "Live_Hound_02"
+    },
+    {
+      "name": "BP_Boss_Overlord_C_1",
+      "class": "BP_Boss_Overlord_C",
+      "label": "Live_Boss_Overlord"
+    },
+    {
+      "name": "PaperSpriteActor_5",
+      "class": "PaperSpriteActor",
+      "label": "UI_Boss_Ribbon"
+    },
+    {
+      "name": "PaperSpriteActor_6",
+      "class": "PaperSpriteActor",
+      "label": "UI_BossBar_Track"
+    },
+    {
+      "name": "PaperSpriteActor_7",
+      "class": "PaperSpriteActor",
+      "label": "UI_BossBar_Glow"
+    },
+    {
+      "name": "PaperSpriteActor_8",
+      "class": "PaperSpriteActor",
+      "label": "UI_BossBar_Fill"
+    },
+    {
+      "name": "PaperSpriteActor_9",
+      "class": "PaperSpriteActor",
+      "label": "UI_Boss_Frame"
+    },
+    {
+      "name": "PaperSpriteActor_10",
+      "class": "PaperSpriteActor",
+      "label": "UI_Boss_SkullIcon"
+    }
+  ]
+}

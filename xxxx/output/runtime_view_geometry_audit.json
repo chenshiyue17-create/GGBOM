@@ -1,0 +1,645 @@
+{
+  "time": "2026-09-03T01:41:18",
+  "map": "/Game/GGBOM/Maps/MAP_GGBOM_Main",
+  "actors": [
+    {
+      "label": "Ground_Stage00",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        80.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.15,
+        1.15,
+        1.15
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          0.0,
+          80.0,
+          0.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Ground.SP_Ground",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Boss_Overlord_Visual",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        20.0,
+        440.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          0.0,
+          20.0,
+          440.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Boss.SP_Boss",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Barricade_Top_L",
+      "class": "PaperSpriteActor",
+      "location": [
+        200.0,
+        15.0,
+        310.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          200.0,
+          15.0,
+          310.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Barricade_Top_M",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        15.0,
+        310.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          0.0,
+          15.0,
+          310.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Barricade_Top_R",
+      "class": "PaperSpriteActor",
+      "location": [
+        -200.0,
+        15.0,
+        310.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          -200.0,
+          15.0,
+          310.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Zombie_01",
+      "class": "PaperSpriteActor",
+      "location": [
+        180.0,
+        0.0,
+        210.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.42,
+        0.42,
+        0.42
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          180.0,
+          0.0,
+          210.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieWalker.SP_ZombieWalker",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Zombie_02",
+      "class": "PaperSpriteActor",
+      "location": [
+        60.0,
+        0.0,
+        250.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.42,
+        0.42,
+        0.42
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          60.0,
+          0.0,
+          250.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieWalker.SP_ZombieWalker",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Zombie_03",
+      "class": "PaperSpriteActor",
+      "location": [
+        -180.0,
+        0.0,
+        240.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.42,
+        0.42,
+        0.42
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          -180.0,
+          0.0,
+          240.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieWalker.SP_ZombieWalker",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Brute_Elite",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        0.0,
+        150.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.58,
+        0.58,
+        0.58
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          0.0,
+          0.0,
+          150.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieBrute.SP_ZombieBrute",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "ZombieSpitter_01",
+      "class": "PaperSpriteActor",
+      "location": [
+        200.0,
+        0.0,
+        90.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.48,
+        0.48,
+        0.48
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          200.0,
+          0.0,
+          90.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieSpitter.SP_ZombieSpitter",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "ZombieArmored_01",
+      "class": "PaperSpriteActor",
+      "location": [
+        -150.0,
+        0.0,
+        90.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.48,
+        0.48,
+        0.48
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          -150.0,
+          0.0,
+          90.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_ZombieArmored.SP_ZombieArmored",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Hound_01",
+      "class": "PaperSpriteActor",
+      "location": [
+        270.0,
+        0.0,
+        -20.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.48,
+        0.48,
+        0.48
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          270.0,
+          0.0,
+          -20.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Hound.SP_Hound",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "Hound_02",
+      "class": "PaperSpriteActor",
+      "location": [
+        -190.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.48,
+        0.48,
+        0.48
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          -190.0,
+          0.0,
+          0.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Hound.SP_Hound",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "DefenseLine_L",
+      "class": "PaperSpriteActor",
+      "location": [
+        240.0,
+        15.0,
+        -180.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.58,
+        0.58,
+        0.58
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          240.0,
+          15.0,
+          -180.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "DefenseLine_M",
+      "class": "PaperSpriteActor",
+      "location": [
+        0.0,
+        15.0,
+        -180.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.58,
+        0.58,
+        0.58
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          0.0,
+          15.0,
+          -180.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "DefenseLine_R",
+      "class": "PaperSpriteActor",
+      "location": [
+        -240.0,
+        15.0,
+        -180.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.58,
+        0.58,
+        0.58
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          -240.0,
+          15.0,
+          -180.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_Barricade.SP_Barricade",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    },
+    {
+      "label": "PlayerStart",
+      "class": "PlayerStart",
+      "location": [
+        0.0,
+        -10.0,
+        -600.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "label": "Master_Orthographic_Camera",
+      "class": "CameraActor",
+      "location": [
+        0.0,
+        -1000.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        89.99999999437944,
+        -0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "camera": {
+        "projection_mode": "<CameraProjectionMode.ORTHOGRAPHIC: 1>",
+        "ortho_width": 941.0,
+        "aspect_ratio": 0.5627990365028381,
+        "constrain_aspect_ratio": true
+      }
+    },
+    {
+      "label": "Master_Combat_HUD",
+      "class": "BP_GGBOM_MasterHUD_C",
+      "location": [
+        0.0,
+        -60.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "sprite_component": {
+        "relative_rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "relative_location": [
+          0.0,
+          0.0,
+          770.0
+        ],
+        "source_sprite": "/Game/GGBOM/Art/Sprites/SP_HUD_BossBar_Bg.SP_HUD_BossBar_Bg",
+        "visible": true,
+        "hidden_in_game": false,
+        "bounds": null
+      }
+    }
+  ]
+}

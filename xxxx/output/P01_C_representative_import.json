@@ -1,0 +1,11 @@
+{
+  "mode": "representative",
+  "success": true,
+  "primary_record_count": 10,
+  "texture_count": 10,
+  "sprite_count": 24,
+  "flipbook_count": 5,
+  "ImportFailCount": 0,
+  "failures": [],
+  "elapsed_seconds": 2.37
+}

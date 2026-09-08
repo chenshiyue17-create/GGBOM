@@ -1,0 +1,14 @@
+{
+  "DT_Weapons": {
+    "Test_CritRate": {
+      "key": "Test_CritRate",
+      "displayName": "测试暴击率",
+      "type": "float",
+      "category": "自定义扩展",
+      "defaultValue": 0.15,
+      "scope": "table",
+      "tooltip": "攻击时触发双倍暴击的概率",
+      "options": []
+    }
+  }
+}

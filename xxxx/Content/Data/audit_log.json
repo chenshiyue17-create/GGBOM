@@ -1,0 +1,398 @@
+[
+  {
+    "timestamp": "2026-09-05 23:19:04",
+    "table": "DT_HitEffects",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 23:19:04",
+    "table": "DT_MapTiles",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 4,
+      "totalNew": 4
+    }
+  },
+  {
+    "timestamp": "2026-09-05 23:19:04",
+    "table": "DT_WaveProgression",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 23:19:04",
+    "table": "DT_TacticalCards",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 23:19:04",
+    "table": "DT_Weapons",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 3,
+      "totalNew": 3
+    }
+  },
+  {
+    "timestamp": "2026-09-05 23:19:04",
+    "table": "DT_Enemies",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 23:19:04",
+    "table": "DT_Characters",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:22:30",
+    "table": "DT_HitEffects",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:22:30",
+    "table": "DT_MapTiles",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 4,
+      "totalNew": 4
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:22:30",
+    "table": "DT_WaveProgression",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:22:30",
+    "table": "DT_TacticalCards",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:22:30",
+    "table": "DT_Weapons",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 3,
+      "totalNew": 3
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:22:30",
+    "table": "DT_Enemies",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:22:30",
+    "table": "DT_Characters",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:21:56",
+    "table": "DT_HitEffects",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:21:56",
+    "table": "DT_MapTiles",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 4,
+      "totalNew": 4
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:21:56",
+    "table": "DT_WaveProgression",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:21:56",
+    "table": "DT_TacticalCards",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:21:56",
+    "table": "DT_Weapons",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 3,
+      "totalNew": 3
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:21:56",
+    "table": "DT_Enemies",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:21:56",
+    "table": "DT_Characters",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:47",
+    "table": "DT_HitEffects",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:47",
+    "table": "DT_MapTiles",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 4,
+      "totalNew": 4
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:47",
+    "table": "DT_WaveProgression",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:47",
+    "table": "DT_TacticalCards",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:47",
+    "table": "DT_Weapons",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 3,
+      "totalNew": 3
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:47",
+    "table": "DT_Enemies",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:47",
+    "table": "DT_Characters",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:03",
+    "table": "DT_HitEffects",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:03",
+    "table": "DT_MapTiles",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 4,
+      "totalNew": 4
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:03",
+    "table": "DT_WaveProgression",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:03",
+    "table": "DT_TacticalCards",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:03",
+    "table": "DT_Weapons",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 3,
+      "totalNew": 3
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:02",
+    "table": "DT_Enemies",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 6,
+      "totalNew": 6
+    }
+  },
+  {
+    "timestamp": "2026-09-05 22:19:02",
+    "table": "DT_Characters",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  },
+  {
+    "timestamp": "2026-09-04 23:12:19",
+    "table": "DT_Characters",
+    "diff": {
+      "added": [],
+      "removed": [],
+      "modified": [],
+      "totalOld": 1,
+      "totalNew": 1
+    }
+  }
+]

@@ -219,7 +219,7 @@ class EvidenceAndPortabilityTests(unittest.TestCase):
 
     def test_machine_local_engine_discovery(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp); executable = root/'Engine/Binaries/Win64/UnrealEditor-Cmd.exe'
+            root = Path(tmp); executable = (root/'Engine/Binaries/Win64/UnrealEditor-Cmd.exe').resolve()
             executable.parent.mkdir(parents=True); executable.touch()
             with patch.dict(os.environ, {'GGBOM_UE_ROOT': str(root)}, clear=True), patch.object(paths, 'local_settings', return_value={}):
                 self.assertEqual(paths.engine_binary(commandlet=True), executable)

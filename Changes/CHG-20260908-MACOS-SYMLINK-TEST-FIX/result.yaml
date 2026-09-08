@@ -1,0 +1,9 @@
+change_id: CHG-20260908-MACOS-SYMLINK-TEST-FIX
+status: TOOLING_VERIFIED
+production_binary_assets_modified: 0
+validation:
+  tooling_and_http_tests: {run: 28, failures: 0, errors: 0}
+  project_source_smoke_tests: {run: 4, failures: 0, errors: 0}
+  current_source_data_schema: PASS
+remaining:
+  - Same as prior baseline (UE runtime checks and gameplay testing in real engine).

@@ -1,0 +1,6 @@
+request: Fix test_machine_local_engine_discovery on macOS by resolving symlink path.
+base_commit: bf0a89e
+authorization: User explicitly requested to continue after test failure report.
+decision: BUG_FIX_WITHIN_CONTRACT
+allowed: [tests, changes_records]
+forbidden: [production_uasset, production_umap, approved_art, camera_baseline, runtime_cpp]

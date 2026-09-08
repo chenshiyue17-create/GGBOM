@@ -1,0 +1,5 @@
+steps:
+  - Normalize path with resolve() in test_machine_local_engine_discovery for macOS /var symlink.
+  - Run python3 tools/dev.py test to achieve 100% PASS.
+  - Run python3 tools/dev.py validate.
+ue_followup: None (tooling test fix only).

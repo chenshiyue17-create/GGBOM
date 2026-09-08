@@ -1,0 +1,6 @@
+direct_change:
+  - TESTS: resolve path in test_machine_local_engine_discovery to support macOS symlinked temp directories.
+indirect_impact: []
+no_production_asset_change:
+  - ALL: tooling test edit only; no production assets or gameplay logic changed.
+reason: Test assertion normalization only.

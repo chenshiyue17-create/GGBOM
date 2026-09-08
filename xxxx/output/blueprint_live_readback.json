@@ -1,6 +1,6 @@
 {
   "engine_version": "5.8.2-56702186+++UE5+Release-5.8",
-  "sync_timestamp": "2026-09-08T22:58:29.722936",
+  "sync_timestamp": "2026-09-08T23:13:23.461144",
   "live_sync_verified": true,
   "blueprints": {
     "/Game/Blueprints/Player/BP_Player_Medic": {
@@ -8,28 +8,28 @@
       "disk": "/Users/cc/Desktop/GGBOM/xxxx/Content/Blueprints/Player/BP_Player_Medic.uasset",
       "meta": {
         "exists": true,
-        "size": 324154,
-        "sha256": "00455588af8e2d9d2c6534c74826e4aaae493b93eb9fd26b42c38cee6ccaff61",
-        "mtime": "2026-09-08T22:26:50.499605"
+        "size": 358356,
+        "sha256": "11cab68f3c76ad3e078e752468109c126fa282ce9e395227a6c2485033fc1276",
+        "mtime": "2026-09-08T23:12:29.267535"
       },
       "parent": "Actor",
       "variables": [
         "CurrentExp",
         "ExpToNextLevel",
         "PlayerLevel",
+        "CurrentHealth",
+        "MaxHealth",
+        "InputDirection",
         "MoveInput",
         "FacingDirection",
         "ShotDirection",
         "MoveSpeed",
         "ProjectileSpeed",
         "FireCooldown",
-        "FireCooldownRemaining",
-        "CurrentHealth",
-        "MaxHealth",
-        "InputDirection"
+        "FireCooldownRemaining"
       ],
-      "node_count": 7,
-      "edge_count": 6,
+      "node_count": 14,
+      "edge_count": 13,
       "nodes": [
         {
           "id": "K2Node_Event_0_0",
@@ -58,8 +58,8 @@
           "title": "事件Tick",
           "class": "K2Node_Event",
           "pos": [
-            40,
-            100
+            0,
+            0
           ],
           "inputs": [],
           "outputs": [
@@ -78,103 +78,138 @@
           ]
         },
         {
-          "id": "K2Node_VariableGet_0_2",
-          "name": "K2Node_VariableGet_0",
-          "title": "Get MoveSpeed",
-          "class": "K2Node_VariableGet",
-          "pos": [
-            260,
-            240
-          ],
-          "inputs": [],
-          "outputs": [
-            {
-              "name": "MoveSpeed",
-              "type": "浮点（双精度）"
-            }
-          ]
-        },
-        {
-          "id": "K2Node_PromotableOperator_2_3",
-          "name": "K2Node_PromotableOperator_2",
-          "title": "vector * vector",
-          "class": "K2Node_PromotableOperator",
-          "pos": [
-            480,
-            200
-          ],
-          "inputs": [
-            {
-              "name": "A",
-              "type": "浮点（双精度）",
-              "default": ""
-            },
-            {
-              "name": "B",
-              "type": "浮点（单精度）",
-              "default": ""
-            }
-          ],
-          "outputs": [
-            {
-              "name": "ReturnValue",
-              "type": "向量"
-            }
-          ]
-        },
-        {
-          "id": "K2Node_VariableGet_3_4",
-          "name": "K2Node_VariableGet_3",
-          "title": "Get InputDirection",
-          "class": "K2Node_VariableGet",
-          "pos": [
-            480,
-            360
-          ],
-          "inputs": [],
-          "outputs": [
-            {
-              "name": "InputDirection",
-              "type": "向量"
-            }
-          ]
-        },
-        {
-          "id": "K2Node_PromotableOperator_3_5",
-          "name": "K2Node_PromotableOperator_3",
-          "title": "vector * vector",
-          "class": "K2Node_PromotableOperator",
-          "pos": [
-            720,
-            240
-          ],
-          "inputs": [
-            {
-              "name": "A",
-              "type": "向量",
-              "default": ""
-            },
-            {
-              "name": "B",
-              "type": "向量",
-              "default": ""
-            }
-          ],
-          "outputs": [
-            {
-              "name": "ReturnValue",
-              "type": "向量"
-            }
-          ]
-        },
-        {
-          "id": "K2Node_CallFunction_0_6",
+          "id": "K2Node_CallFunction_0_2",
           "name": "K2Node_CallFunction_0",
+          "title": "GetPlayerController",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            220,
+            -360
+          ],
+          "inputs": [
+            {
+              "name": "PlayerIndex",
+              "type": "整数",
+              "default": "0"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "ReturnValue",
+              "type": "玩家控制器 对象引用"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_1_3",
+          "name": "K2Node_CallFunction_1",
+          "title": "GetActorOfClass",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            220,
+            -240
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "ActorClass",
+              "type": "Actor 类引用",
+              "default": "/Script/Engine.CameraActor"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            },
+            {
+              "name": "ReturnValue",
+              "type": "摄像机 Actor 对象引用"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_2_4",
+          "name": "K2Node_CallFunction_2",
+          "title": "SetViewTargetWithBlend",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            460,
+            -300
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "self",
+              "type": "玩家控制器 对象引用",
+              "default": ""
+            },
+            {
+              "name": "NewViewTarget",
+              "type": "Actor 对象引用",
+              "default": ""
+            },
+            {
+              "name": "BlendTime",
+              "type": "浮点（单精度）",
+              "default": "0.000000"
+            },
+            {
+              "name": "BlendFunc",
+              "type": "EViewTargetBlendFunction枚举值",
+              "default": "VTBlend_Linear"
+            },
+            {
+              "name": "BlendExp",
+              "type": "浮点（单精度）",
+              "default": "0.000000"
+            },
+            {
+              "name": "bLockOutgoing",
+              "type": "布尔",
+              "default": "false"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_VariableGet_0_5",
+          "name": "K2Node_VariableGet_0",
+          "title": "Get MoveInput",
+          "class": "K2Node_VariableGet",
+          "pos": [
+            470,
+            130
+          ],
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "MoveInput",
+              "type": "向量"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_3_6",
+          "name": "K2Node_CallFunction_3",
           "title": "Add Actor World Offset",
           "class": "K2Node_CallFunction",
           "pos": [
-            980,
-            100
+            700,
+            20
           ],
           "inputs": [
             {
@@ -213,50 +248,295 @@
               "type": "命中结果 结构"
             }
           ]
+        },
+        {
+          "id": "K2Node_CallFunction_4_7",
+          "name": "K2Node_CallFunction_4",
+          "title": "SampleMoveInput",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            240,
+            0
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "self",
+              "type": "Self 对象引用",
+              "default": ""
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_5_8",
+          "name": "K2Node_CallFunction_5",
+          "title": "UpdateFacingDirection",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            470,
+            0
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "self",
+              "type": "Self 对象引用",
+              "default": ""
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_6_9",
+          "name": "K2Node_CallFunction_6",
+          "title": "UpdateFacingScale",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            700,
+            0
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "self",
+              "type": "Self 对象引用",
+              "default": ""
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_7_10",
+          "name": "K2Node_CallFunction_7",
+          "title": "UpdateFireCooldown",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            930,
+            0
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "self",
+              "type": "Self 对象引用",
+              "default": ""
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_8_11",
+          "name": "K2Node_CallFunction_8",
+          "title": "UpdateRunAnimation",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            1160,
+            0
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "self",
+              "type": "Self 对象引用",
+              "default": ""
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_9_12",
+          "name": "K2Node_CallFunction_9",
+          "title": "UpdateIdleAnimation",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            1390,
+            0
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "self",
+              "type": "Self 对象引用",
+              "default": ""
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_10_13",
+          "name": "K2Node_CallFunction_10",
+          "title": "TryFireProjectile",
+          "class": "K2Node_CallFunction",
+          "pos": [
+            1620,
+            0
+          ],
+          "inputs": [
+            {
+              "name": "execute",
+              "type": "执行",
+              "default": ""
+            },
+            {
+              "name": "self",
+              "type": "Self 对象引用",
+              "default": ""
+            }
+          ],
+          "outputs": [
+            {
+              "name": "then",
+              "type": "执行"
+            }
+          ]
         }
       ],
       "edges": [
         {
-          "from_node": "K2Node_Event_2_1",
+          "from_node": "K2Node_Event_0_0",
           "from_pin": "then",
-          "to_node": "K2Node_CallFunction_0_6",
+          "to_node": "K2Node_CallFunction_1_3",
           "to_pin": "execute",
           "type": "exec"
         },
         {
           "from_node": "K2Node_Event_2_1",
-          "from_pin": "DeltaSeconds",
-          "to_node": "K2Node_PromotableOperator_2_3",
-          "to_pin": "B",
-          "type": "data"
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_4_7",
+          "to_pin": "execute",
+          "type": "exec"
         },
         {
-          "from_node": "K2Node_VariableGet_0_2",
-          "from_pin": "MoveSpeed",
-          "to_node": "K2Node_PromotableOperator_2_3",
-          "to_pin": "A",
-          "type": "data"
-        },
-        {
-          "from_node": "K2Node_PromotableOperator_2_3",
+          "from_node": "K2Node_CallFunction_0_2",
           "from_pin": "ReturnValue",
-          "to_node": "K2Node_PromotableOperator_3_5",
-          "to_pin": "B",
+          "to_node": "K2Node_CallFunction_2_4",
+          "to_pin": "self",
           "type": "data"
         },
         {
-          "from_node": "K2Node_VariableGet_3_4",
-          "from_pin": "InputDirection",
-          "to_node": "K2Node_PromotableOperator_3_5",
-          "to_pin": "A",
-          "type": "data"
+          "from_node": "K2Node_CallFunction_1_3",
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_2_4",
+          "to_pin": "execute",
+          "type": "exec"
         },
         {
-          "from_node": "K2Node_PromotableOperator_3_5",
+          "from_node": "K2Node_CallFunction_1_3",
           "from_pin": "ReturnValue",
-          "to_node": "K2Node_CallFunction_0_6",
+          "to_node": "K2Node_CallFunction_2_4",
+          "to_pin": "NewViewTarget",
+          "type": "data"
+        },
+        {
+          "from_node": "K2Node_VariableGet_0_5",
+          "from_pin": "MoveInput",
+          "to_node": "K2Node_CallFunction_3_6",
           "to_pin": "DeltaLocation",
           "type": "data"
+        },
+        {
+          "from_node": "K2Node_CallFunction_3_6",
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_6_9",
+          "to_pin": "execute",
+          "type": "exec"
+        },
+        {
+          "from_node": "K2Node_CallFunction_4_7",
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_5_8",
+          "to_pin": "execute",
+          "type": "exec"
+        },
+        {
+          "from_node": "K2Node_CallFunction_5_8",
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_3_6",
+          "to_pin": "execute",
+          "type": "exec"
+        },
+        {
+          "from_node": "K2Node_CallFunction_6_9",
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_7_10",
+          "to_pin": "execute",
+          "type": "exec"
+        },
+        {
+          "from_node": "K2Node_CallFunction_7_10",
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_8_11",
+          "to_pin": "execute",
+          "type": "exec"
+        },
+        {
+          "from_node": "K2Node_CallFunction_8_11",
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_9_12",
+          "to_pin": "execute",
+          "type": "exec"
+        },
+        {
+          "from_node": "K2Node_CallFunction_9_12",
+          "from_pin": "then",
+          "to_node": "K2Node_CallFunction_10_13",
+          "to_pin": "execute",
+          "type": "exec"
         }
       ]
     },

@@ -1,0 +1,22 @@
+id: CHG-20260908-PLAYER-MOVE-SHOOT-BOSSBAR-ALIGNMENT
+date: "2026-09-08"
+author: chenshiyue17
+title: "全面修复玩家移动死锁、按键采样、自动射击循环与 Boss 头顶血条高精校准"
+scope:
+  - "xxxx/Content/Blueprints/Player/BP_Player_Medic.uasset"
+  - "xxxx/Content/GGBOM/Maps/MAP_GGBOM_Main.umap"
+  - "xxxx/Tools/apply_all_fixes.py"
+  - "Docs/blueprint_live_readback.js"
+  - "Docs/blueprint_live_readback.json"
+  - "blueprint_live_readback.js"
+
+summary:
+  1. 【不能移动修复】：在 BP_Player_Medic 中接入 SampleMoveInput，支持 WASD 与方向键双重监听，计算安全归一化步长，解除 bSweep 碰撞死锁并配置 PLAYER0 控制权；
+  2. 【不能射击修复】：在 BP_Player_Medic 中接入 UpdateFireCooldown 与 TryFireProjectile，按 0.18s 冷却沿朝向发射 BP_ProjectileBase 子弹实体；
+  3. 【血条偏移修复】：在关卡 MAP_GGBOM_Main 中，将 Attach 在 Live_Boss_Overlord 上的四个血条部件从腹部 Z=115.0 拔高至头顶黄金区域 Z=245.0，彻底消除对 Boss 身体的遮挡；
+  4. 【实装回读同步】：执行 sync_game_and_export_blueprints.py 将全新实装拓扑无缝更新至 H5 审计系统。
+
+verification:
+  test_suite: "python3 tools/dev.py test (32/32 PASS)"
+  schema_validation: "python3 tools/dev.py validate (PASS)"
+  blueprint_rebuild: "apply_all_fixes.py executed with Exit Code 0"

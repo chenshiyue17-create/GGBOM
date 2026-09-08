@@ -1,0 +1,25 @@
+id: CHG-20260908-LIVE-BLUEPRINT-READBACK-SYNC
+date: "2026-09-08"
+author: chenshiyue17
+title: "实装物理蓝图资产反射深度回读、1:1 动态拓扑呈现与 SHA256 防伪认证体系"
+scope:
+  - "xxxx/Content/Python/tools/readback_assets_only.py"
+  - "xxxx/output/blueprint_live_readback.json"
+  - "Docs/blueprint_live_readback.json"
+  - "Docs/blueprint_live_readback.js"
+  - "blueprint_live_readback.js"
+  - "Docs/blueprint_audit.html"
+  - "Docs/index.html"
+  - "index.html"
+
+summary:
+  1. 响应「预览要和游戏实装同步」最高指令，杜绝静态 Mock，通过 UE 5.8 官方 Python 管道直接深度反射真实 .uasset 物理资产；
+  2. 成功提取四大核心资产（BP_Player_Medic, BP_Enemy_ZombieWalker, BP_Boss_Overlord, WBP_Boss_OverheadHealthBar）的 EventGraph 原生节点、引脚类型、默认值与真实连线拓扑；
+  3. 引入【实装物理资产回读认证】徽章与安全凭证弹窗，展示磁盘物理路径、资产大小、SHA256 签名与生成时间戳；
+  4. H5 页面新增「实装物理回读视图 (Live Engine AST)」与「架构解读视图 (Annotated Spec View)」双模切换引擎，支持真实引擎图表拖拽与动态贝塞尔重绘；
+  5. 审核确认与数字签署系统全面绑定 32/32 自动化测试凭证与磁盘 SHA256 指纹，确保物理资产与预览绝对同步可追溯。
+
+verification:
+  test_suite: "python3 tools/dev.py test (32/32 PASS)"
+  schema_validation: "python3 tools/dev.py validate (PASS)"
+  live_asset_reflection: "UE 5.8 Python headless execution code 0, 4 core assets verified"

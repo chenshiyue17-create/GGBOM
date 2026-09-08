@@ -1,0 +1,17 @@
+direct_change:
+  - DATA / DEFINITIONS: validated JSON saves, real diff, recoverable writes; numeric enemy-default application is scoped.
+  - TESTS: eliminate synthetic PASS and cover known failure modes.
+  - ARCHITECTURE: supported portable CLI and clear ownership of outputs.
+  - TECH DEBT: retire unsafe global rebuild/obsolete phase entries.
+indirect_impact:
+  - ENEMY / ATTRIBUTES / HEALTH: optional importer updates existing defaults; runtime consumption unverified.
+  - UI: Config Studio messages now match save/application scope; gameplay HUD untouched.
+  - ASSET REGISTRY: counter error handling fixed; approval/hash verification not asserted.
+  - PERFORMANCE / ANDROID: no performance or packaging claims.
+no_production_asset_change:
+  - PRODUCT RULES / GAME LOOP / PLAYER / DAMAGE / COMBAT / WEAPON / PROJECTILE
+  - ABILITY / STATUS EFFECT / BOSS / AI / UPGRADE / PROGRESSION / XP
+  - DROP / REWARD / ECONOMY / SCENE / ENCOUNTER / SPAWN / CAMERA
+  - COLLISION / PHYSICS / INPUT / SAVE / LOAD / VIEWMODEL
+  - PRESENTATION / ANIMATION / ART / VFX / AUDIO / VISUAL BASELINE
+reason: All changes are text/tooling; no UE-generated assets were mutated in this environment.

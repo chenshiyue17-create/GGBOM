@@ -18,21 +18,22 @@ import sys
 import time
 from urllib.parse import urlparse, unquote, parse_qs
 
-PORT = 8899
-HOST = "0.0.0.0"
+PORT = int(os.environ.get("GGBOM_CONFIG_PORT", "8899"))
+HOST = "127.0.0.1"
 
-PROJECT_ROOT = Path("/Users/cc/Desktop/GGBOM/xxxx").resolve()
+REPO_ROOT = Path(__file__).resolve().parents[5]
+sys.path.insert(0, str(REPO_ROOT / "tools"))
+from ggbom.config_service import save_request
+from ggbom.config_io import atomic_json, recover_pending
+from ggbom.runner import apply_config
+PROJECT_ROOT = REPO_ROOT / "xxxx"
 DATA_DIR = PROJECT_ROOT / "Content" / "Data"
 ART_DIR = PROJECT_ROOT / "Content" / "美术" / "Art"
 WEB_DIR = (Path(__file__).parent / "web").resolve()
-OUTPUT_DIR = PROJECT_ROOT / "output"
+OUTPUT_DIR = PROJECT_ROOT / "Saved" / "GGBOM"
 COMMIT_LOG_PATH = OUTPUT_DIR / "config_commits.json"
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-UE_CMD = "/Volumes/NINJAV 2/UE_5.8/UE_5.8/Engine/Binaries/Mac/UnrealEditor-Cmd"
-UPROJECT = str(PROJECT_ROOT / "xxxx.uproject")
-DEPLOY_SCRIPT = str(PROJECT_ROOT / "Content" / "Python" / "tools" / "deploy_animated_enemies.py")
 
 # 敌人专属 4 帧美术切片智能映射
 ENEMY_ART_MAP = {
@@ -357,13 +358,6 @@ def read_json_file(filename: str) -> dict:
             print(f"[Error] 读取 {filename} 失败: {e}")
     return {}
 
-def write_json_file(filename: str, data: dict):
-    fp = DATA_DIR / filename
-    backup = DATA_DIR / f"{filename}.bak"
-    if fp.exists():
-        backup.write_bytes(fp.read_bytes())
-    fp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-
 class ConfigStudioHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")
@@ -533,113 +527,32 @@ class ConfigStudioHandler(http.server.SimpleHTTPRequestHandler):
             self.send_json({"status": "error", "message": f"JSON解析错误: {e}"}, 400)
             return
 
-        # 1. API: 保存配置 (原子落盘并记录审计)
         if path == "/api/save":
-            modified_tables = []
-            diff_summary = []
-
-            if "characters" in body:
-                write_json_file("DT_Characters.json", body["characters"])
-                modified_tables.append("DT_Characters.json")
-                diff_summary.append("更新主角全属性、武器与动作特效配置")
-
-            if "enemies" in body:
-                enemies_clean = {}
-                for k, v in body["enemies"].items():
-                    # 剔除前端辅助字段
-                    clean_item = {ik: iv for ik, iv in v.items() if ik != "ArtInfo"}
-                    enemies_clean[k] = clean_item
-                write_json_file("DT_Enemies.json", enemies_clean)
-                modified_tables.append("DT_Enemies.json")
-                diff_summary.append(f"更新 {len(enemies_clean)} 种敌人数值与素材映射")
-
-            if "weapons" in body:
-                weapons_clean = {}
-                for k, v in body["weapons"].items():
-                    clean_item = {ik: iv for ik, iv in v.items() if ik != "ArtInfo"}
-                    weapons_clean[k] = clean_item
-                write_json_file("DT_Weapons.json", weapons_clean)
-                modified_tables.append("DT_Weapons.json")
-                diff_summary.append(f"更新 {len(weapons_clean)} 把武器射击属性")
-
-            if "cards" in body:
-                cards_clean = {}
-                for k, v in body["cards"].items():
-                    clean_item = {ik: iv for ik, iv in v.items() if ik != "ArtInfo"}
-                    cards_clean[k] = clean_item
-                write_json_file("DT_TacticalCards.json", cards_clean)
-                modified_tables.append("DT_TacticalCards.json")
-                diff_summary.append(f"更新 {len(cards_clean)} 张战术强化卡牌")
-
-            if "waves" in body:
-                write_json_file("DT_WaveProgression.json", body["waves"])
-                modified_tables.append("DT_WaveProgression.json")
-                diff_summary.append("更新关卡出怪波次时间轴")
-
-            if "tiles" in body:
-                write_json_file("DT_MapTiles.json", body["tiles"])
-                modified_tables.append("DT_MapTiles.json")
-                diff_summary.append(f"更新 {len(body['tiles'])} 块土地地表数据")
-
-            if "hit_effects" in body:
-                write_json_file("DT_HitEffects.json", body["hit_effects"])
-                modified_tables.append("DT_HitEffects.json")
-                diff_summary.append(f"更新 {len(body['hit_effects'])} 种战斗特效属性与切片")
-
-            # 记录 Commit 审计日志
+            try:
+                saved = save_request(DATA_DIR, body)
+            except (ValueError, OSError, RuntimeError, TypeError) as exc:
+                self.send_json({"status": "error", "message": str(exc)}, 400)
+                return
             commit_record = {
-                "id": f"commit_{int(time.time()*1000)}",
-                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
-                "author": body.get("author", "策划/开发者"),
-                "comment": body.get("comment", "通过可视化配置中心提交数值调优"),
-                "modified_tables": modified_tables,
-                "diff_summary": diff_summary,
-                "raw_diff": body.get("raw_diff", {})
+                "id": f"config_{time.time_ns()}",
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+                "author": body.get("author", "开发者"),
+                "comment": body.get("comment", "配置更新"),
+                "diff_summary": [f"更新 {name}" for name in saved["modified_tables"]],
+                **saved,
             }
-
-            all_commits = []
-            if COMMIT_LOG_PATH.exists():
-                try:
-                    all_commits = json.loads(COMMIT_LOG_PATH.read_text(encoding="utf-8"))
-                except Exception:
-                    pass
-            all_commits.insert(0, commit_record)
-            COMMIT_LOG_PATH.write_text(json.dumps(all_commits[:50], ensure_ascii=False, indent=2), encoding="utf-8")
-
-            print(f"[ConfigStudio] 收到配置提交: {commit_record['comment']} (涉及: {', '.join(modified_tables)})")
-
-            self.send_json({
-                "status": "success",
-                "message": "配置已成功保存并原子化写盘！",
-                "commit": commit_record
-            })
+            warning = None
+            try:
+                history = json.loads(COMMIT_LOG_PATH.read_text(encoding="utf-8")) if COMMIT_LOG_PATH.exists() else []
+                atomic_json(COMMIT_LOG_PATH, [commit_record] + history[:49])
+            except (ValueError, OSError, TypeError) as exc:
+                warning = f"配置已保存，但历史记录写入失败: {exc}"
+            self.send_json({"status": "success", "message": warning or "配置源文件已校验并保存；游戏运行生效尚未验证。",
+                            "commit": commit_record, "runtime_status": "NOT_RUN"})
             return
 
-        # 2. API: 一键热同步至 UE5 关卡
         if path == "/api/deploy":
-            print("[ConfigStudio] 收到 UE5 部署请求，正在触发 deploy_animated_enemies.py ...")
-            cmd = [
-                UE_CMD,
-                UPROJECT,
-                "-run=pythonscript",
-                f"-script={DEPLOY_SCRIPT}",
-                "-stdout",
-                "-FullStdOutLogOutput",
-                "-unattended",
-                "-nopause",
-                "-nosplash"
-            ]
-            try:
-                proc = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
-                is_ok = proc.returncode == 0
-                self.send_json({
-                    "status": "success" if is_ok else "warning",
-                    "returncode": proc.returncode,
-                    "output": proc.stdout[-1500:] if proc.stdout else "",
-                    "message": "UE5 关卡蓝图与实例部署成功！" if is_ok else "UE5 部署返回非零状态，请查阅日志"
-                })
-            except Exception as e:
-                self.send_json({"status": "error", "message": f"执行 UE5 部署脚本失败: {e}"}, 500)
+            self.send_json(apply_config())
             return
 
         self.send_error(404, "Not Found")
@@ -675,6 +588,7 @@ class ConfigStudioHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(body)
 
 def main():
+    recover_pending(DATA_DIR)
     class ReusableTCPServer(socketserver.TCPServer):
         allow_reuse_address = True
 
@@ -693,3 +607,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

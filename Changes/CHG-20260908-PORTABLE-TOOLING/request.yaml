@@ -1,0 +1,6 @@
+request: Optimize code and update the GitHub repository for multi-device IDE synchronization.
+base_commit: 6b3125e2eb9f069f8580b5b58ac8989ae9ec9238
+authorization: User explicitly requested code changes and repository update.
+decision: BUG_FIX_WITHIN_CONTRACT
+allowed: [tools, configuration_UI, developer_entries, tests, documentation, verification_metadata]
+forbidden: [production_uasset, production_umap, approved_art, camera_baseline, runtime_cpp]

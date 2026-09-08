@@ -116,7 +116,7 @@
           <button class="nav-item" data-tab="tab-commits">
             <span class="nav-icon">📋</span>
             <div class="nav-text">
-              <span class="title">提交审计 & UE5热同步</span>
+              <span class="title">提交记录与敌人数值应用</span>
               <span class="desc">原子保存履历/一键更新CDO</span>
             </div>
           </button>
@@ -698,20 +698,20 @@
         <section id="tab-commits" class="tab-pane">
           <div class="pane-header">
             <div class="pane-title-group">
-              <h2>DataTable 提交审计日志与 UE5 热同步</h2>
-              <p>查看属性修改履历，一键直接将修改同步至 UE5 关卡与蓝图 CDO</p>
+              <h2>配置修改记录与敌人数值应用</h2>
+              <p>查看配置保存记录；敌人数值可单独应用，运行生效需在游戏中验证</p>
             </div>
           </div>
 
           <div class="commits-layout">
             <div class="card deploy-panel-card">
-              <h3 class="card-title">🚀 UE5 引擎热部署与关卡同步</h3>
+              <h3 class="card-title">敌人数值默认值应用</h3>
               <p class="deploy-desc">
-                点击下方按钮将自动调用 <code>UnrealEditor-Cmd</code> 运行部署脚本，重新加载修改后的 <code>DT_Characters.json</code> 与 <code>DT_Enemies.json</code>，更新 <code>MAP_GGBOM_Main</code> 场景！
+                应用已保存的敌人血量、移速、伤害和奖励默认值。武器、波次、主角、美术及当前运行实例不在此次应用范围内。保存成功后，需在游戏中验证实际效果。
               </p>
               <div class="deploy-actions">
                 <button id="btnDeployUE5" class="btn btn-primary glow">
-                  <span>⚡</span> 一键热同步至 UE5 关卡
+                  <span>⚡</span> 应用敌人数值默认值
                 </button>
                 <span id="deployStatusText" class="deploy-status">就绪</span>
               </div>
@@ -847,3 +847,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+

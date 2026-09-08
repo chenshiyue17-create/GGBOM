@@ -3,7 +3,7 @@
 import os, sys, yaml, json
 from pathlib import Path
 
-workspace = Path("/Users/cc/Desktop/GGBOM")
+workspace = Path(__file__).resolve().parents[1]
 registry_path = workspace / "ProjectState" / "art_registry.yaml"
 
 print(f"=== Validating Art Registry: {registry_path} ===")
@@ -32,13 +32,13 @@ actual_placeholder = len([x for x in assets if x["approval"]["status"] == "PLACE
 actual_legacy = len([x for x in assets if x["approval"]["status"] == "LEGACY"])
 
 if actual_approved != summary.get("approved_count"):
-    errors.append(f"Approved count mismatch: declared={summary.get(approved_count)}, actual={actual_approved}")
+    errors.append(f"Approved count mismatch: declared={summary.get('approved_count')}, actual={actual_approved}")
 if actual_candidate != summary.get("candidate_count"):
-    errors.append(f"Candidate count mismatch: declared={summary.get(candidate_count)}, actual={actual_candidate}")
+    errors.append(f"Candidate count mismatch: declared={summary.get('candidate_count')}, actual={actual_candidate}")
 if actual_placeholder != summary.get("placeholder_count"):
-    errors.append(f"Placeholder count mismatch: declared={summary.get(placeholder_count)}, actual={actual_placeholder}")
+    errors.append(f"Placeholder count mismatch: declared={summary.get('placeholder_count')}, actual={actual_placeholder}")
 if actual_legacy != summary.get("legacy_count"):
-    errors.append(f"Legacy count mismatch: declared={summary.get(legacy_count)}, actual={actual_legacy}")
+    errors.append(f"Legacy count mismatch: declared={summary.get('legacy_count')}, actual={actual_legacy}")
 
 # 2. Validate Semantic ID Uniqueness
 seen_ids = set()
@@ -98,4 +98,5 @@ if errors:
         print(f"  [ERROR] {e}")
     sys.exit(1)
 else:
-    print("\n[VALIDATION SUCCESS] All Machine-Authoritative Registry Rules PASSED 100%.")
+    print("\n[SCHEMA PASS] Registry fields are consistent; asset hashes and visual approval are NOT verified.")
+

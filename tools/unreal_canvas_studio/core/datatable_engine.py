@@ -11,6 +11,9 @@ import shutil
 import time
 from pathlib import Path
 from .datatable_templates import STANDARD_TEMPLATES
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from ggbom.config_io import diff_rows, atomic_json
 
 class DataTableEngine:
     def __init__(self, project_adapter):
@@ -80,6 +83,11 @@ class DataTableEngine:
         if not data_dir:
             raise RuntimeError("未配置数据表目录")
 
+        if Path(table_name).name != table_name or "\\" in table_name or format_type not in ("json", "csv"):
+            raise ValueError("Invalid table name or format")
+        if format_type == "csv" and not rows_data:
+            raise ValueError("Empty CSV requires an explicit column schema")
+
         target_file = data_dir / f"{table_name}.{format_type}"
         bak_file = data_dir / f"{table_name}.{format_type}.bak"
 
@@ -95,7 +103,7 @@ class DataTableEngine:
         temp_file = data_dir / f"{table_name}.{format_type}.tmp"
         if format_type == "json":
             with open(temp_file, "w", encoding="utf-8") as f:
-                json.dump(rows_data, f, ensure_ascii=False, indent=2)
+                json.dump(rows_data, f, ensure_ascii=False, indent=2, allow_nan=False)
         elif format_type == "csv":
             if rows_data:
                 fieldnames = list(rows_data[0].keys())
@@ -120,25 +128,7 @@ class DataTableEngine:
 
     def _compute_diff_summary(self, old_rows, new_rows):
         """计算行级变更摘要"""
-        old_keys = {r.get("Name", str(i)): r for i, r in enumerate(old_rows)} if isinstance(old_rows, list) else {}
-        new_keys = {r.get("Name", str(i)): r for i, r in enumerate(new_rows)} if isinstance(new_rows, list) else {}
-
-        added = [k for k in new_keys if k not in old_keys]
-        removed = [k for k in old_keys if k not in new_keys]
-        modified = []
-
-        for k in new_keys:
-            if k in old_keys:
-                if json.dumps(old_keys[k], sort_keys=True) != json.dumps(new_keys[k], sort_keys=True):
-                    modified.append(k)
-
-        return {
-            "added": added,
-            "removed": removed,
-            "modified": modified,
-            "totalOld": len(old_rows),
-            "totalNew": len(new_rows)
-        }
+        return diff_rows(old_rows, new_rows)
 
     def _record_audit(self, table_name, diff_summary):
         """写入本地审计日志"""
@@ -164,3 +154,4 @@ class DataTableEngine:
                 json.dump(history, f, ensure_ascii=False, indent=2)
         except Exception as e:
             print(f"⚠️ 写入审计日志失败: {e}")
+

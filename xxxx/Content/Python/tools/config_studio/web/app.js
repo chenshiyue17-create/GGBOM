@@ -2212,7 +2212,7 @@ async function handleConfirmCommit() {
       state.original = JSON.parse(JSON.stringify(state.current));
       updateDiffState();
       closeCommitModal();
-      showToast("🎉 全实体属性与特效已成功原子化保存至工程！");
+      showToast(result.message || "配置源文件已保存；运行生效待验证。");
       loadCommits();
       renderPlayerStudio();
       renderEnemyDetail();
@@ -2261,7 +2261,7 @@ async function handleDeployToUE5() {
   const logBox = document.getElementById("deployLogBox");
 
   btn.disabled = true;
-  statusText.textContent = "正在调用 UnrealEditor-Cmd 部署...";
+  statusText.textContent = "正在应用敌人现有数值默认值...";
   logBox.textContent = "启动 UE5 命令行引擎任务...\n";
 
   try {
@@ -2271,9 +2271,9 @@ async function handleDeployToUE5() {
     statusText.textContent = result.message;
     logBox.textContent = result.output || result.message;
     if (result.status === "success") {
-      showToast("🚀 UE5 关卡蓝图与实例部署成功！");
+      showToast(result.message, 6000);
     } else {
-      showToast("⚠️ UE5 部署已完成，请检查日志", 3000);
+      showToast(result.message || "应用未完成，请检查日志", 6000);
     }
   } catch (err) {
     statusText.textContent = "部署失败";
@@ -3041,3 +3041,4 @@ window.addEventListener("beforeunload", (e) => {
     }
   }
 });
+

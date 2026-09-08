@@ -38,3 +38,9 @@ __pycache__/
 .env
 .backups/
 output/.backups/
+
+# Machine-local settings and recoverable config transactions
+.ggbom.local.json
+**/.ggbom-write.lock
+**/.ggbom-transaction.json
+**/.DT_*.tmp

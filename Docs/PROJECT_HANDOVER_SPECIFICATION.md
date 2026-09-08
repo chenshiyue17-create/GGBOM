@@ -1,3 +1,5 @@
+> 更新提示（2026-09-08）：本文包含历史架构与验收声明，不能直接作为当前功能PASS。常用入口、跨端配置和运行边界以仓库 README.md、Docs/MULTI_DEVICE_DEVELOPMENT.md、ProjectState/verification.yaml 为准。
+
 # 《GGBOM: 终末医疗兵》完整项目技术交接白皮书
 > **Project Handover & Architecture Specification (v2.0)**  
 > **文档密级**：内部技术基准  
@@ -195,3 +197,4 @@ cd /Users/cc/Desktop/GGBOM/xxxx
 ---
 *白皮书制定人：Antigravity Agentic Pair Programmer*  
 *如对工程有任何疑问，请优先参考 [`PROJECT_LESSONS_AND_STABILITY_RULES.md`](file:///Users/cc/Desktop/GGBOM/PROJECT_LESSONS_AND_STABILITY_RULES.md) 与 [`xxxx/DEVELOPMENT_LOG.md`](file:///Users/cc/Desktop/GGBOM/xxxx/DEVELOPMENT_LOG.md)。*
+

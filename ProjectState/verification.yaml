@@ -1,0 +1,22 @@
+verification_schema: 1
+scope: portable_tooling_and_config_source
+base_commit: 6b3125e2eb9f069f8580b5b58ac8989ae9ec9238
+historical_reports_are_current_acceptance: false
+source_data_validation: PASS
+ue_editor_execution: NOT_RUN
+ue_asset_disk_reload: NOT_RUN
+gameplay_consumption: NOT_RUN
+blueprint_structure: BLOCKED
+visual_review: NOT_RUN
+android_packaging: NOT_RUN
+runtime_error_count: null
+accessed_none_count: null
+rules:
+  - Legacy ProjectState, Changes and output PASS claims require fresh matching evidence.
+  - Asset byte hashes are not Blueprint structural exports.
+  - Saving enemy defaults is not proof that gameplay consumes them.
+remaining_work:
+  - Verify numeric importer in UE5.8 and re-open persisted assets.
+  - Inspect active graphs before movement, damage and wave data migration.
+  - Resolve duplicate runtime assets and canonical weapon IDs.
+  - Capture real visual, functional and packaged-device evidence.

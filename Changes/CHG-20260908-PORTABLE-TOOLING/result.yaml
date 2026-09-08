@@ -1,0 +1,29 @@
+change_id: CHG-20260908-PORTABLE-TOOLING
+status: TOOLING_VERIFIED
+production_binary_assets_modified: 0
+validation:
+  tooling_and_http_tests: {run: 28, failures: 0, errors: 0}
+  project_source_smoke_tests: {run: 4, failures: 0, errors: 0}
+  current_source_data_schema: PASS
+  python_3_9_syntax: PASS
+  javascript_syntax: PASS
+  diff_whitespace: PASS
+  actual_windows_or_macos_execution: NOT_RUN
+  ue_editor_script_execution: NOT_RUN
+  ue_asset_disk_reload: NOT_RUN
+  gameplay: NOT_RUN
+  visual: NOT_RUN
+  packaging: NOT_RUN
+repaired:
+  - Portable supported developer entry points and machine-local UE paths.
+  - Synthetic preview PASS and fabricated structural snapshot outputs removed.
+  - Core asset-byte comparison now compares supplied complete captures.
+  - Invalid numbers, wave bounds and duplicate JSON keys rejected.
+  - Dictionary-based data changes detected with old/new values.
+  - Configuration writes validated under the writer lock and recoverable after interrupted commits.
+  - Enemy defaults use saved JSON with preflight/readback and per-run report checks.
+  - Obsolete paths and global destructive rebuild entry points retired explicitly.
+remaining:
+  - Existing enemy default importer must be tested in actual UE5.8, then reopened from disk and checked in gameplay.
+  - Runtime weapon and wave data consumption, active graphs and frame-dependent movement require UE migration.
+  - Art approval and all runtime/Android acceptance gates require fresh evidence.

@@ -1,0 +1,8 @@
+steps:
+  - Freeze source commit and preserve all binary assets in Git tree update.
+  - Add portable path, validation, persistence, diff and report modules.
+  - Connect configuration save and narrowly scoped enemy-default application.
+  - Replace fabricated/obsolete acceptance entry points with explicit BLOCKED.
+  - Run offline regression, source smoke, API contract and syntax checks.
+  - Publish a single commit with a non-forced fast-forward update.
+ue_followup: Verify current active graphs and the editor numeric importer before runtime acceptance.

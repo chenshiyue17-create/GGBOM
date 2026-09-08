@@ -1,7 +1,7 @@
 (function(root) {
   var data = {
   "engine_version": "5.8.2-56702186+++UE5+Release-5.8",
-  "sync_timestamp": "2026-09-08T22:34:28.762376",
+  "sync_timestamp": "2026-09-08T22:58:29.722936",
   "live_sync_verified": true,
   "blueprints": {
     "/Game/Blueprints/Player/BP_Player_Medic": {
@@ -5261,9 +5261,8 @@
       "edges": []
     }
   }
-  };
-  if (typeof window !== "undefined") { window.GGBOM_LIVE_READBACK = data; }
-  if (typeof global !== "undefined") { global.GGBOM_LIVE_READBACK = data; }
-  if (typeof module !== "undefined" && module.exports) { module.exports = data; }
-})(typeof globalThis !== "undefined" ? globalThis : this);
-
+};
+  if (typeof window !== 'undefined') { window.GGBOM_LIVE_READBACK = data; }
+  if (typeof global !== 'undefined') { global.GGBOM_LIVE_READBACK = data; }
+  if (typeof module !== 'undefined' && module.exports) { module.exports = data; }
+})(typeof globalThis !== 'undefined' ? globalThis : this);

@@ -1,0 +1,14 @@
+change_id: CHG-20260908-OVERHEAD-HEALTHBAR-ZERO-DELAY-DESTROY
+status: IMPLEMENTATION_VERIFIED
+production_binary_assets_modified: 4
+validation:
+  tooling_and_http_tests: {run: 28, failures: 0, errors: 0}
+  project_source_smoke_tests: {run: 4, failures: 0, errors: 0}
+  current_source_data_schema: PASS
+  readback_verified: true
+  bossbar_world_z: 656.275
+repaired:
+  - Overhead healthbar moved out of Boss face up to Z=656.275 with proper nesting.
+  - Zero delay instant destruction implemented across Zombie, Hound and Boss.
+remaining:
+  - Runtime visual check and packaging tests.

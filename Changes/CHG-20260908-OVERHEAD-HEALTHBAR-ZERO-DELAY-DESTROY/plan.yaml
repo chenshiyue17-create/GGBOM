@@ -1,0 +1,5 @@
+steps:
+  - Isolate each BP step (Zombie, Hound, Boss) into separate UE commandlet runs to avoid graph editor memory corruption.
+  - Inject instant vanish pipeline into enemy damage graphs: SetActorEnableCollision(False) -> SetActorHiddenInGame(True) -> K2_DestroyActor.
+  - Recalibrate overhead boss healthbar in MAP_GGBOM_Main taking Boss scale (1.185) into account, raising Z to 656.275 (rel_loc.z = 115) and aligning horizontal nested layers with CENTER_LEFT pivot.
+  - Read back actor positions and verify.

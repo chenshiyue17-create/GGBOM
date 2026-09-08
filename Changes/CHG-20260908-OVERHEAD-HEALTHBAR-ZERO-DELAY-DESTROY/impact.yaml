@@ -1,0 +1,11 @@
+direct_change:
+  - BLUEPRINTS: BP_Enemy_ZombieWalker, BP_Enemy_MutantHound, BP_Boss_Overlord updated with instant vanish pipeline upon death.
+  - MAPS: MAP_GGBOM_Main recalibrated overhead healthbar relative location and attachment.
+  - TOOLS: run_steps.sh and step scripts created for robust execution.
+indirect_impact:
+  - COMBAT: enemies disappear instantly upon reaching 0 HP without physical lag or visual stalling.
+  - UI: overhead healthbar aligns cleanly with Boss and follows smoothly without facial overlap.
+no_production_asset_change:
+  - ART: no source textures modified.
+  - DATA: data tables untouched.
+reason: User requested bug fix for healthbar position and death delay.

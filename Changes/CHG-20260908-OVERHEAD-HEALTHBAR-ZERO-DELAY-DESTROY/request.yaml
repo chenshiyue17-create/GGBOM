@@ -1,0 +1,6 @@
+request: Fix overhead boss healthbar position offset and eliminate enemy destroy delay.
+base_commit: 1ab7166
+authorization: User explicitly requested fixing healthbar offset and delay in destruction.
+decision: GAMEPLAY_ASSET_AND_TOOLING_ALIGNMENT
+allowed: [tools, Blueprints, Maps, changes_records]
+forbidden: [runtime_cpp, approved_art]

@@ -1,0 +1,26 @@
+id: CHG-20260908-BLUEPRINT-VISUAL-AUDIT-PAGES
+date: "2026-09-08"
+author: chenshiyue17
+title: "1:1 UE5 蓝图节点逻辑可视化审核系统、GitHub Pages 自动化公网部署及玩家移动死锁修复"
+scope:
+  - "Docs/blueprint_audit.html"
+  - "Docs/index.html"
+  - ".github/workflows/pages.yml"
+  - "AGENTS.md"
+  - ".agents/rules/GGBOM_GLOBAL_GOVERNANCE_PROTOCOL.md"
+  - ".agents/rules/ue-blueprint-generator.md"
+  - "xxxx/Content/Blueprints/Player/BP_Player_Medic.uasset"
+  - "xxxx/Tools/rebuild_player_medic.py"
+  - "xxxx/Tools/fix_player_medic_movement.py"
+
+summary:
+  1. 彻底解决《GGBOM: 终末医疗兵》主角移动物理扫掠死锁 (bSweep=false) 与 A/D 键位颠倒纠正，添加静止零保护分支；
+  2. 1:1 像素级还原虚幻引擎 5 原生蓝图编辑器视觉体系，包括中文官方节点名、副标题、原生引脚与内联默认值输入框；
+  3. 实现节点全自由拖拽与贝塞尔引脚连线动态高频联动重绘引擎；
+  4. 建立 GitHub Pages 自动部署 CI/CD 流水线，实现全球公网永久在线访问与审核；
+  5. 将「修改蓝图必须提供 1:1 H5 可视化页面审核」作为最高工程铁律固化写入项目治理协议。
+
+verification:
+  test_suite: "python3 tools/dev.py test (32/32 PASS)"
+  schema_validation: "python3 tools/dev.py validate (PASS)"
+  git_status: "CLEAN_AFTER_PUSH"

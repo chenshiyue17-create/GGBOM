@@ -91,3 +91,10 @@ AFFECTED FEATURE COMPLETENESS: ...
 REMAINING BLOCKERS: ...
 FINAL RESULT: PASS / FAIL / BLOCKED
 ```
+
+---
+
+## 9. 蓝图逻辑修改 H5 可视化审核铁律 (Mandatory H5 Blueprint Visual Audit)
+1. **全覆盖范围**：对任何蓝图资产（`.uasset` / `.umap`）、事件图表（EventGraph）、函数图表（Function Graph）、引脚连线、变量默认值、节点新增或重构的修改，**必须同步生成或更新 1:1 虚幻引擎原生风格的交互式 H5 可视化审核页面**（`Docs/blueprint_audit.html`）。
+2. **中文本地化要求**：H5 页面内所有节点名称、副标题、输入引脚、输出引脚、默认值标签、注释框（Comment Box）必须采用 100% 地道规范的虚幻引擎官方简体中文。
+3. **交互与验收门禁**：H5 必须支持节点自由拖动、贝塞尔连线实时联动重绘、平移缩放视口、属性检查，并由 AI 自动在本地浏览器中打开供用户审核签署。未提供 H5 审核页面或未经用户审核的蓝图修改，一律不得判定为交付完成。

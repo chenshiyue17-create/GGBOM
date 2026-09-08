@@ -125,7 +125,7 @@ def build_sample_move_input(bp):
         connect(pc, "ReturnValue", key, "self")
         keys[key_name] = key
     values = {}
-    for key_name, value, y in (("A", 7.5, -240), ("D", -7.5, -150), ("W", 7.5, -60), ("S", -7.5, 30)):
+    for key_name, value, y in (("A", -7.5, -240), ("D", 7.5, -150), ("W", 7.5, -60), ("S", -7.5, 30)):
         select = fn(ed, "/Script/Engine.KismetMathLibrary.SelectFloat", 440, y)
         set_value(select, "A", value); set_value(select, "B", 0.0)
         connect(keys[key_name], "ReturnValue", select, "bPickA")
@@ -143,10 +143,22 @@ def build_sample_move_input(bp):
     scaled_vec = fn(ed, "/Script/Engine.KismetMathLibrary.Multiply_VectorFloat", 1320, -105)
     connect(norm_vec, "ReturnValue", scaled_vec, "A")
     set_value(scaled_vec, "B", 7.5)
+
+    is_zero = fn(ed, "/Script/Engine.KismetMathLibrary.Vector_IsNearlyZero", 1320, 50)
+    connect(vector, "ReturnValue", is_zero, "A")
+    set_value(is_zero, "Tolerance", 0.001)
+
+    zero_vec = fn(ed, "/Script/Engine.KismetMathLibrary.MakeVector", 1540, 50)
+    set_value(zero_vec, "X", 0.0); set_value(zero_vec, "Y", 0.0); set_value(zero_vec, "Z", 0.0)
+
+    safe_vec = fn(ed, "/Script/Engine.KismetMathLibrary.SelectVector", 1760, -105)
+    connect(zero_vec, "ReturnValue", safe_vec, "A")
+    connect(scaled_vec, "ReturnValue", safe_vec, "B")
+    connect(is_zero, "ReturnValue", safe_vec, "bPickA")
     
-    set_move = place(ed.add_set_member_variable_node("MoveInput"), 1540, -105)
+    set_move = place(ed.add_set_member_variable_node("MoveInput"), 1980, -105)
     link_entry(ed, set_move)
-    connect(scaled_vec, "ReturnValue", set_move, "MoveInput")
+    connect(safe_vec, "ReturnValue", set_move, "MoveInput")
 
 def build_update_facing(bp):
     ed, _ = fresh_function(bp, "UpdateFacingDirection")
@@ -316,7 +328,7 @@ def rebuild_player(vector_type, real_type):
 
     move_input = place(editor.add_get_member_variable_node("MoveInput"), 470, 130)
     apply_move = fn(editor, "/Script/Engine.Actor.K2_AddActorWorldOffset", 700, 20)
-    set_value(apply_move, "bSweep", "true"); connect(move_input, "MoveInput", apply_move, "DeltaLocation")
+    set_value(apply_move, "bSweep", "false"); connect(move_input, "MoveInput", apply_move, "DeltaLocation")
 
     names = ["SampleMoveInput", "UpdateFacingDirection", "UpdateFacingScale", "UpdateFireCooldown", "UpdateRunAnimation", "UpdateIdleAnimation", "TryFireProjectile"]
     calls = []

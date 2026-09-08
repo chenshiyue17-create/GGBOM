@@ -9,3 +9,5 @@
 - Source JSON save, editor default application, disk reload and gameplay consumption are separate results. The existing numeric enemy importer does not validate runtime behavior or apply weapons/waves/art.
 - Every change needs a scoped `Changes/` record listing edits, validation and remaining gates. Do not change approved art, camera or map while fixing unrelated tooling.
 - Multiple devices synchronize using normal Git commits; never force-push to overwrite another device. Binary asset conflicts require choosing/validating the intended asset revision, not a text merge.
+- Whenever any Blueprint logic or graph is created or modified, you MUST generate or update the 1:1 UE-style interactive H5 visual audit page (`Docs/blueprint_audit.html`) with complete Chinese node names, pin parameters, and comments, and open/present it to the user for review and sign-off before concluding the change.
+

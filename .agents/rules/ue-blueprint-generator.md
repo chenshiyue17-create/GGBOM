@@ -51,3 +51,5 @@ NEVER respond with instructions asking the user to copy code or a script path in
 Use the MCP tools' structured live responses as the default source of truth. `ue_status`, tool results, and the JSON acceptance report provide the current project, engine version, process, node/connection counts, compiler errors, and save result.
 
 Do not ask the user to capture, crop, or upload screenshots merely to determine whether a Blueprint was generated, connected, compiled, or saved. Do not use OCR or screen recognition as a substitute for the live bridge or report. A screenshot is appropriate only when the requested acceptance criterion is inherently visual, such as viewport composition, rendered appearance, animation pose, material appearance, or in-game HUD visibility.
+- **Mandatory H5 Visual Audit**: Every Blueprint creation or modification must update the 1:1 UE-style interactive H5 visual audit page (`Docs/blueprint_audit.html`) with localized Chinese node titles, pin parameters, and comments, and open it for user review and sign-off.
+

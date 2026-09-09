@@ -1,0 +1,36 @@
+id: CHG-20260909-FIX-MOVE-BULLET-DEATH-ANIM
+date: "2026-09-09"
+author: chenshiyue17
+title: "全面修复三大核心战斗缺陷：950速远程弹道穿透、双重8向移动按键采样与Boss跪地崩塌死亡动画"
+scope:
+  - "xxxx/Content/Blueprints/Player/BP_Player_Medic.uasset"
+  - "xxxx/Content/Blueprints/Characters/Enemies/BP_Boss_Overlord.uasset"
+  - "xxxx/Content/Blueprints/Combat/Projectiles/BP_ProjectileBase.uasset"
+  - "xxxx/Content/GGBOM/Maps/MAP_GGBOM_Main.umap"
+  - "tools/sync_game_and_export_blueprints.py"
+  - "xxxx/Content/Python/tools/sync_game_and_export_blueprints.py"
+  - "Docs/blueprint_live_readback.js"
+  - "Docs/blueprint_live_readback.json"
+  - "Docs/blueprint_audit.html"
+
+summary:
+  1. 【贴脸才会掉血修复】：
+     - 彻底查明根因：原子弹生成后无向上朝向与初速度，静止滞留在角色脚下，仅怪贴脸撞击才扣血；
+     - 在 BP_Player_Medic 中接入 MakeRotFromX(Vector(0,0,1))，枪口偏移 (0, -10, 45)，朝世界 +Z 顶部垂直发射；
+     - 配置 BP_ProjectileBase 的 ProjectileMovementComponent：InitialSpeed=950.0, MaxSpeed=950.0, GravityScale=0.0；
+     - 接入 0.20s 自动连射冷却机制，形成连续远程高速弹道，敌人与 Boss 远距离直接被击退削血；
+  2. 【不能移动修复】：
+     - 查明根因：关卡中摆放的 Player 实例 AutoPossessPlayer 属性覆盖未开启，且按键只采样了 WASD；
+     - 在 BP_Player_Medic EventGraph 顶层 Tick 中实现平铺采样，支持 WASD 与 方向键（Left/Right/Up/Down）双重监听，解除 bSweep 碰撞死锁；
+     - 在 BeginPlay 中锁定 SetInputMode_GameOnly，并在关卡加载中强制将场景玩家 Actor 设为 AutoPossessPlayer = PLAYER0 与 MOVABLE 移动性；
+  3. 【没有死亡动画修复】：
+     - 查明根因：原逻辑在生命值 <= 0 分支直接调用 DestroyActor，同一帧销毁 Actor，无法播放任何死亡帧；
+     - 彻底切断并移除 DestroyActor，重构为：关闭碰撞 SetActorEnableCollision(false) ➡️ 切换 FB_T_Boss_Death_Dir_01_Down_Sheet 跪地倒地崩塌 Flipbook ➡️ 设定 SetLifeSpan(2.5) 延迟平滑销毁；
+     - 关卡 Boss 头顶血条维持 Z=245.0 黄金悬浮区，且 Mobility 设为 MOVABLE；
+  4. 【物理蓝图回读与 H5 审计同步】：
+     - 通过 tools/sync_game_and_export_blueprints.py 反射提取 100% 真实蓝图 AST，实时同步至 Docs/blueprint_audit.html。
+
+verification:
+  test_suite: "python3 tools/dev.py test (32/32 PASS)"
+  schema_validation: "python3 tools/dev.py validate (PASS)"
+  headless_engine_sync: "tools/sync_game_and_export_blueprints.py (Exit Code 0)"

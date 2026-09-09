@@ -34,3 +34,4 @@ verification:
   test_suite: "python3 tools/dev.py test (32/32 PASS)"
   schema_validation: "python3 tools/dev.py validate (PASS)"
   headless_engine_sync: "tools/sync_game_and_export_blueprints.py (Exit Code 0)"
+  audit_signoff: "APPROVED (用户于 2026-09-09 实测体验并审核签署通过)"

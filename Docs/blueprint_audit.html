@@ -802,6 +802,9 @@
       <button class="tab-btn" onclick="switchAsset('enemy')">
         <span>🧟</span> 感染体 (BP_Enemy_*)
       </button>
+      <button class="tab-btn" onclick="switchAsset('projectile')">
+        <span>🚀</span> 远程弹道 (BP_ProjectileBase)
+      </button>
       <button class="tab-btn" onclick="switchAsset('map')">
         <span>🗺️</span> 关卡空间树 (MAP_GGBOM_Main)
       </button>
@@ -1911,6 +1914,21 @@
             ]
           }
         ]
+      },
+      projectile: {
+        name: "远程弹道 (BP_ProjectileBase)",
+        graphs: [
+          {
+            id: "proj_live",
+            name: "物理资产实时反射 (950速度远程高速弹道)",
+            icon: "🚀",
+            comments: [
+              { x: 40, y: 70, w: 900, h: 260, title: "// 远程高速弹道配置：InitialSpeed=950.0, MaxSpeed=950.0, GravityScale=0.0, 自动向上飞行" }
+            ],
+            nodes: [],
+            wires: []
+          }
+        ]
       }
     };
 
@@ -1925,6 +1943,7 @@
       player: "/Game/Blueprints/Player/BP_Player_Medic",
       enemy: "/Game/Blueprints/Characters/Enemies/BP_Enemy_ZombieWalker",
       boss: "/Game/Blueprints/Characters/Enemies/BP_Boss_Overlord",
+      projectile: "/Game/Blueprints/Combat/Projectiles/BP_ProjectileBase",
       map: "/Game/GGBOM/UI/WBP_Boss_OverheadHealthBar"
     };
 
@@ -2128,7 +2147,7 @@
       currentAssetKey = assetKey;
       currentGraphIndex = 0;
       document.querySelectorAll(".asset-tabs .tab-btn").forEach((btn, idx) => {
-        btn.classList.toggle("active", ["player", "boss", "enemy", "map"][idx] === assetKey);
+        btn.classList.toggle("active", ["player", "boss", "enemy", "projectile", "map"][idx] === assetKey);
       });
       currentAssetLabel.innerText = BLUEPRINT_DATA[assetKey].name.split(" ")[0];
       renderGraphList();
